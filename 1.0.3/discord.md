@@ -1,9 +1,8 @@
-# Release 1.0.2
+# Release 1.0.3
 ## Script Documentation
-Only added the following `on_action`:
-- `on_union_merging`
+No changes.
 ## File Changes
-Thanks to CaesarVincens we do have a proper changelog for this update.
+File changes can be found below.
 
 **Link:** [File Changes](./changes_files.md)
 ## Digest Repository

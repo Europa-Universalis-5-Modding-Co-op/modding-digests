@@ -1,0 +1,961 @@
+On Action Documentation:
+
+--------------------
+
+on_tamil_rebel_death:
+From Code: No
+Expected Scope: none
+
+--------------------
+
+yearly_country_pulse:
+From Code: Yes
+Expected Scope: country
+
+--------------------
+
+on_ruler_death_delhi_tombs_construction:
+From Code: No
+Expected Scope: country
+
+--------------------
+
+on_new_country_formed:
+From Code: Yes
+Expected Scope: none
+
+--------------------
+
+on_storm_reached_location:
+From Code: Yes
+Expected Scope: none
+
+--------------------
+
+wor_on_wallenstein_prison_timeout:
+From Code: No
+Expected Scope: none
+
+--------------------
+
+on_annexing_subject_monthly_pulse:
+From Code: Yes
+Expected Scope: country
+
+--------------------
+
+on_io_parliament_passed:
+From Code: Yes
+Expected Scope: none
+
+--------------------
+
+on_mission_task_completion:
+From Code: Yes
+Expected Scope: none
+
+--------------------
+
+on_command_gained:
+From Code: Yes
+Expected Scope: none
+
+--------------------
+
+on_timurid_occupy_location_horde:
+From Code: No
+Expected Scope: none
+
+--------------------
+
+on_fraticide_underage_succession_waiting:
+From Code: No
+Expected Scope: none
+
+--------------------
+
+on_royal_marriage:
+From Code: Yes
+Expected Scope: country
+
+--------------------
+
+wor_on_wallenstein_prison_occupation:
+From Code: No
+Expected Scope: none
+
+--------------------
+
+on_loan_repaid:
+From Code: Yes
+Expected Scope: none
+
+--------------------
+
+on_diplomatic_annex:
+From Code: Yes
+Expected Scope: country
+
+--------------------
+
+on_bankruptcy:
+From Code: Yes
+Expected Scope: none
+
+--------------------
+
+on_pre_winning_war:
+From Code: Yes
+Expected Scope: none
+
+--------------------
+
+on_military_annex:
+From Code: Yes
+Expected Scope: none
+
+--------------------
+
+on_location_lost:
+From Code: Yes
+Expected Scope: country
+
+--------------------
+
+on_annexation_cancel:
+From Code: Yes
+Expected Scope: none
+
+--------------------
+
+on_annex:
+From Code: Yes
+Expected Scope: none
+
+--------------------
+
+on_cabinet_assigned:
+From Code: Yes
+Expected Scope: none
+
+--------------------
+
+on_pre_losing_war:
+From Code: Yes
+Expected Scope: none
+
+--------------------
+
+on_exploration_monthly_pulse:
+From Code: Yes
+Expected Scope: exploration
+
+--------------------
+
+on_lose_great_power_status:
+From Code: Yes
+Expected Scope: none
+
+--------------------
+
+on_battle_lost_character:
+From Code: Yes
+Expected Scope: none
+
+--------------------
+
+on_milanese_library_occupied:
+From Code: No
+Expected Scope: country
+
+--------------------
+
+on_marriage_union_formation:
+From Code: Yes
+Expected Scope: none
+
+--------------------
+
+on_gain_great_power_status:
+From Code: Yes
+Expected Scope: none
+
+--------------------
+
+on_diplomatic_annexed:
+From Code: Yes
+Expected Scope: none
+
+--------------------
+
+on_heir_selection_changed:
+From Code: Yes
+Expected Scope: none
+
+--------------------
+
+religion_flavor_pulse:
+From Code: Yes
+Expected Scope: country
+
+--------------------
+
+on_battle_lost:
+From Code: Yes
+Expected Scope: none
+
+--------------------
+
+on_mission_task_bypass:
+From Code: Yes
+Expected Scope: none
+
+--------------------
+
+on_reform_change:
+From Code: Yes
+Expected Scope: none
+
+--------------------
+
+on_four_yearly_check_for_script:
+From Code: No
+Expected Scope: none
+
+--------------------
+
+on_location_occupied:
+From Code: Yes
+Expected Scope: country
+
+--------------------
+
+parliament_monthly_pulse:
+From Code: Yes
+Expected Scope: country
+
+--------------------
+
+on_great_battle_lost:
+From Code: Yes
+Expected Scope: none
+
+--------------------
+
+on_work_of_art_moved:
+From Code: Yes
+Expected Scope: none
+
+--------------------
+
+on_location_changed_rank:
+From Code: Yes
+Expected Scope: none
+
+--------------------
+
+on_civil_war_start:
+From Code: Yes
+Expected Scope: none
+
+--------------------
+
+on_regency_start:
+From Code: Yes
+Expected Scope: none
+
+--------------------
+
+on_ruler_death:
+From Code: Yes
+Expected Scope: country
+
+--------------------
+
+on_parliament_passed:
+From Code: Yes
+Expected Scope: none
+
+--------------------
+
+on_international_organization_creation:
+From Code: Yes
+Expected Scope: none
+
+--------------------
+
+on_raw_material_changed:
+From Code: Yes
+Expected Scope: none
+
+--------------------
+
+biyearly_country_pulse:
+From Code: Yes
+Expected Scope: country
+
+--------------------
+
+government_flavor_pulse:
+From Code: Yes
+Expected Scope: country
+
+--------------------
+
+on_institution_embraced:
+From Code: Yes
+Expected Scope: none
+
+--------------------
+
+on_took_location_in_peace_treaty:
+From Code: Yes
+Expected Scope: none
+
+--------------------
+
+on_vassalized_appanage:
+From Code: No
+Expected Scope: none
+
+--------------------
+
+on_siege_lost:
+From Code: Yes
+Expected Scope: country
+
+--------------------
+
+on_command_lost:
+From Code: Yes
+Expected Scope: none
+
+--------------------
+
+on_regency_end:
+From Code: Yes
+Expected Scope: none
+
+--------------------
+
+on_gift_sent:
+From Code: Yes
+Expected Scope: none
+
+--------------------
+
+on_international_organization_policy_changed:
+From Code: Yes
+Expected Scope: none
+
+--------------------
+
+on_disloyal_independent_appanage:
+From Code: No
+Expected Scope: none
+
+--------------------
+
+on_cabinet_death:
+From Code: No
+Expected Scope: none
+
+--------------------
+
+colonial_charter_monthly_pulse:
+From Code: Yes
+Expected Scope: country
+
+--------------------
+
+in_battle:
+From Code: Yes
+Expected Scope: none
+
+--------------------
+
+on_capital_moved:
+From Code: Yes
+Expected Scope: none
+
+--------------------
+
+on_civil_war_annex:
+From Code: Yes
+Expected Scope: none
+
+--------------------
+
+on_loan_taken:
+From Code: Yes
+Expected Scope: none
+
+--------------------
+
+on_game_start:
+From Code: Yes
+Expected Scope: none
+
+--------------------
+
+on_io_parliament_started:
+From Code: Yes
+Expected Scope: none
+
+--------------------
+
+on_siege_won:
+From Code: Yes
+Expected Scope: country
+
+--------------------
+
+on_international_organization_changed_leader:
+From Code: Yes
+Expected Scope: none
+
+--------------------
+
+on_international_organization_disbanded:
+From Code: Yes
+Expected Scope: none
+
+--------------------
+
+chinese_expedition_event_pulse:
+From Code: No
+Expected Scope: country
+
+--------------------
+
+on_shatter_country:
+From Code: Yes
+Expected Scope: none
+
+--------------------
+
+volcano_location_pulse:
+From Code: Yes
+Expected Scope: location
+
+--------------------
+
+on_union_merging:
+From Code: Yes
+Expected Scope: none
+
+--------------------
+
+on_papal_opinion_added:
+From Code: No
+Expected Scope: none
+
+--------------------
+
+on_join_war:
+From Code: Yes
+Expected Scope: none
+
+--------------------
+
+on_loan_renewed:
+From Code: Yes
+Expected Scope: none
+
+--------------------
+
+on_character_death:
+From Code: Yes
+Expected Scope: country
+
+--------------------
+
+on_parliament_started:
+From Code: Yes
+Expected Scope: none
+
+--------------------
+
+country_pulse_for_high_infamy:
+From Code: Yes
+Expected Scope: country
+
+--------------------
+
+on_exploration_success:
+From Code: Yes
+Expected Scope: country
+
+--------------------
+
+on_horde_pretender_death:
+From Code: No
+Expected Scope: none
+
+--------------------
+
+on_annexed:
+From Code: Yes
+Expected Scope: none
+
+--------------------
+
+on_character_moved_country:
+From Code: Yes
+Expected Scope: none
+
+--------------------
+
+on_mission_task_start:
+From Code: Yes
+Expected Scope: none
+
+--------------------
+
+monthly_country_pulse:
+From Code: Yes
+Expected Scope: country
+
+--------------------
+
+on_character_divorce:
+From Code: Yes
+Expected Scope: none
+
+--------------------
+
+on_papacy_reform_removed:
+From Code: No
+Expected Scope: none
+
+--------------------
+
+on_international_organization_parliament_agenda_accepted:
+From Code: Yes
+Expected Scope: none
+
+--------------------
+
+on_cabinet_removed:
+From Code: Yes
+Expected Scope: none
+
+--------------------
+
+on_union_formation:
+From Code: Yes
+Expected Scope: none
+
+--------------------
+
+on_rejected_call_to_arms:
+From Code: Yes
+Expected Scope: none
+
+--------------------
+
+on_work_of_art_destroyed:
+From Code: Yes
+Expected Scope: none
+
+--------------------
+
+on_io_parliament_failed:
+From Code: Yes
+Expected Scope: none
+
+--------------------
+
+on_country_specific_pulse:
+From Code: No
+Expected Scope: country
+
+--------------------
+
+on_civil_war_lost:
+From Code: Yes
+Expected Scope: country
+
+--------------------
+
+on_civil_war_won:
+From Code: Yes
+Expected Scope: country
+
+--------------------
+
+on_character_birth:
+From Code: Yes
+Expected Scope: none
+
+--------------------
+
+on_annexation_start:
+From Code: Yes
+Expected Scope: none
+
+--------------------
+
+on_military_annexed:
+From Code: Yes
+Expected Scope: none
+
+--------------------
+
+on_government_type_change:
+From Code: Yes
+Expected Scope: none
+
+--------------------
+
+on_policy_changed:
+From Code: Yes
+Expected Scope: none
+
+--------------------
+
+on_dependency_gained:
+From Code: Yes
+Expected Scope: none
+
+--------------------
+
+on_work_of_art_created:
+From Code: Yes
+Expected Scope: none
+
+--------------------
+
+on_timurid_ruler_death:
+From Code: No
+Expected Scope: none
+
+--------------------
+
+on_mission_completion:
+From Code: Yes
+Expected Scope: none
+
+--------------------
+
+on_war_declared:
+From Code: Yes
+Expected Scope: none
+
+--------------------
+
+on_mission_start:
+From Code: Yes
+Expected Scope: none
+
+--------------------
+
+on_colonial_charter_failed:
+From Code: Yes
+Expected Scope: country
+
+--------------------
+
+on_new_age:
+From Code: Yes
+Expected Scope: country
+
+--------------------
+
+on_character_marriage:
+From Code: Yes
+Expected Scope: none
+
+--------------------
+
+on_max_doom_reached:
+From Code: Yes
+Expected Scope: country
+
+--------------------
+
+on_new_appanage:
+From Code: No
+Expected Scope: none
+
+--------------------
+
+on_union_split:
+From Code: Yes
+Expected Scope: none
+
+--------------------
+
+on_pre_ending_war:
+From Code: Yes
+Expected Scope: none
+
+--------------------
+
+on_prussian_crusader_death:
+From Code: No
+Expected Scope: none
+
+--------------------
+
+on_location_changed_owner:
+From Code: Yes
+Expected Scope: location
+
+--------------------
+
+chinese_expedition_movement_events:
+From Code: No
+Expected Scope: country
+
+--------------------
+
+on_released_country:
+From Code: Yes
+Expected Scope: none
+
+--------------------
+
+on_character_created:
+From Code: Yes
+Expected Scope: none
+
+--------------------
+
+on_election:
+From Code: Yes
+Expected Scope: country
+
+--------------------
+
+on_timurid_occupy_location:
+From Code: No
+Expected Scope: none
+
+--------------------
+
+on_battle_won:
+From Code: Yes
+Expected Scope: country
+
+--------------------
+
+on_parliament_failed:
+From Code: Yes
+Expected Scope: none
+
+--------------------
+
+on_integrated_in_union_removal:
+From Code: No
+Expected Scope: none
+
+--------------------
+
+on_nation_changing:
+From Code: Yes
+Expected Scope: country
+
+--------------------
+
+on_insult:
+From Code: Yes
+Expected Scope: none
+
+--------------------
+
+france_naples_administration_broken:
+From Code: No
+Expected Scope: none
+
+--------------------
+
+four_yearly_country_pulse_50_percent:
+From Code: No
+Expected Scope: country
+
+--------------------
+
+on_former_independent_appanage:
+From Code: No
+Expected Scope: none
+
+--------------------
+
+on_new_ruler:
+From Code: Yes
+Expected Scope: country
+
+--------------------
+
+in_regency_yearly_pulse:
+From Code: Yes
+Expected Scope: country
+
+--------------------
+
+on_become_revolution_target:
+From Code: Yes
+Expected Scope: country
+
+--------------------
+
+on_embrace_revolution:
+From Code: Yes
+Expected Scope: country
+
+--------------------
+
+on_subject_type_changed:
+From Code: Yes
+Expected Scope: none
+
+--------------------
+
+on_lose_revolution:
+From Code: Yes
+Expected Scope: none
+
+--------------------
+
+on_papal_opinion_removed:
+From Code: No
+Expected Scope: none
+
+--------------------
+
+on_made_saint:
+From Code: Yes
+Expected Scope: none
+
+--------------------
+
+on_timurid_governor_death:
+From Code: No
+Expected Scope: country
+
+--------------------
+
+on_overrun_imprisoned:
+From Code: Yes
+Expected Scope: none
+
+--------------------
+
+four_yearly_country_pulse_25_percent:
+From Code: No
+Expected Scope: country
+
+--------------------
+
+on_battle_won_character:
+From Code: Yes
+Expected Scope: none
+
+--------------------
+
+on_colonial_charter_finished:
+From Code: Yes
+Expected Scope: country
+
+--------------------
+
+on_lose_revolution_target:
+From Code: Yes
+Expected Scope: none
+
+--------------------
+
+on_international_organization_disbanding:
+From Code: Yes
+Expected Scope: none
+
+--------------------
+
+on_becoming_free:
+From Code: Yes
+Expected Scope: country
+
+--------------------
+
+on_accepted_call_to_arms:
+From Code: Yes
+Expected Scope: none
+
+--------------------
+
+weather_monthly_pulse:
+From Code: Yes
+Expected Scope: none
+
+--------------------
+
+on_work_of_art_looted:
+From Code: Yes
+Expected Scope: none
+
+--------------------
+
+on_great_battle_won:
+From Code: Yes
+Expected Scope: country
+
+--------------------
+
+on_ending_war:
+From Code: Yes
+Expected Scope: none
+
+--------------------
+
+on_settle_the_frontier_monthly_pulse:
+From Code: No
+Expected Scope: country
+
+--------------------
+
+on_losing_war:
+From Code: Yes
+Expected Scope: none
+
+--------------------
+
+on_mission_abort:
+From Code: Yes
+Expected Scope: none
+
+--------------------
+
+earthquake_location_pulse:
+From Code: Yes
+Expected Scope: location
+
+--------------------
+
+on_winning_war:
+From Code: Yes
+Expected Scope: none
+
+--------------------
+
+on_civil_war_annexed:
+From Code: Yes
+Expected Scope: none
+
+--------------------
+
+on_religion_changed:
+From Code: Yes
+Expected Scope: country
+
+--------------------
+
+four_yearly_country_pulse:
+From Code: Yes
+Expected Scope: country
+
+--------------------
+
+delhi_four_yearly_pulse:
+From Code: No
+Expected Scope: country

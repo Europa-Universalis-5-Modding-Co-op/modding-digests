@@ -1,0 +1,29 @@
+# Update 1.0.3 - Game File Changes
+**Only the following filetypes are included:** txt, gui, yml, asset
+- **M** caesar_branch.txt
+- **M** caesar_rev.txt
+- **M** clausewitz_branch.txt
+- **M** clausewitz_rev.txt
+- **M** game/dlc/D017_sacred_sites_pack/in_game/gfx/images/D017_images_location.txt
+- **M** game/in_game/gui/panels/organization/autocephalous_patriarchate.gui
+- **M** game/in_game/gui/panels/organization/catholic_church.gui
+- **M** game/in_game/gui/panels/organization/common.gui
+- **M** game/in_game/gui/panels/organization/hre.gui
+- **M** game/in_game/gui/panels/organization/japanese_shogunate.gui
+- **M** game/in_game/gui/panels/organization/middle_kingdom.gui
+- **M** game/in_game/gui/panels/organization/sect.gui
+- **M** game/in_game/gui/panels/organization/swiss_confederation.gui
+- **M** game/in_game/gui/panels/organization/tribal_confederation.gui
+- **M** game/in_game/gui/panels/organization/union.gui
+- **M** game/loading_screen/settings_layout.txt
+- **M** game/main_menu/localization/braz_por/settings_l_braz_por.yml
+- **M** game/main_menu/localization/english/settings_l_english.yml
+- **M** game/main_menu/localization/french/settings_l_french.yml
+- **M** game/main_menu/localization/german/settings_l_german.yml
+- **M** game/main_menu/localization/japanese/settings_l_japanese.yml
+- **M** game/main_menu/localization/korean/settings_l_korean.yml
+- **M** game/main_menu/localization/polish/settings_l_polish.yml
+- **M** game/main_menu/localization/russian/settings_l_russian.yml
+- **M** game/main_menu/localization/simp_chinese/settings_l_simp_chinese.yml
+- **M** game/main_menu/localization/spanish/settings_l_spanish.yml
+- **M** game/main_menu/localization/turkish/settings_l_turkish.yml
