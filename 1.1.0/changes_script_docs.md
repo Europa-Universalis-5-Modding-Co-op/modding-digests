@@ -31,23 +31,30 @@
 | Added              | `add_complacency`                                                     | Adds complacency                                                                             |
 | Added              | `change_<type>_modifier_size`                                         | Change the strength of a modifier applied to the scope (e.g. `change_country_modifier_size`) |
 | Added              | `change_siege_progress`                                               | Advances the siege by the given script value                                                 |
+| Added              | `define_unique_country_tag`                                           | defines a unique country tag for a dynamic country                                           |
 | Added              | `{every\|random\|ordered}_advance_definition`                         | Iterate through all advance definitions                                                      |
 | Added              | `{every\|random\|ordered}_country_with_relation_that_can_be_annulled` | Iterate through all countries which have an annullable relation with the scope country       |
+| Added              | `{every\|random\|ordered}_food_goods`                                 | Iterate through all food-goods                                                               |
+| Added              | `{every\|random\|ordered}_known_institution`                          | Iterate through all institutions a country knows of                                          |
+| Added              | `{every\|random\|ordered}_new_world_goods`                            | Iterate through all newworld-goods                                                           |
+| Added              | `{every\|random\|ordered}_old_world_goods`                            | Iterate through all oldworld-goods                                                           |
 | Added              | `{every\|random\|ordered}_religious_school_in_religion`               | Iterate through all Religious Schools in a Religion                                          |
 | Added              | `{every\|random\|ordered}_sound_toll_in_country`                      | Iterate through all Sound Tolls in a country                                                 |
 | Added              | `leave_all_wars_with`                                                 | The current country scope will leave every war with or against the target country            |
+| Added              | `set_complacency`                                                     | Sets complacency                                                                             |
 | Added              | `transfer_location_occupation`                                        | Transfers occupation of a Location to the target country                                     |
 | Added              | `transfer_subject`                                                    | Copy the name and adjective of the target country and apply it to the current country scope  |
 | Changed            | `declare_war`                                                         |                                                                                              |
 | Changed            | `declare_war_with_cb`                                                 |                                                                                              |
-| Changed            | `join_war_against`                                                    |                                                                                              |
-| Changed            | `join_war_as_attacker`                                                |                                                                                              |
-| Changed            | `join_war_as_defender`                                                |                                                                                              |
-| Changed            | `join_war_with`                                                       |                                                                                              |
+| Changed            | `join_war_against`                                                    | Add `ignore_rules` option                                                                    |
+| Changed            | `join_war_as_attacker`                                                | Add `ignore_rules` option                                                                    |
+| Changed            | `join_war_as_defender`                                                | Add `ignore_rules` option                                                                    |
+| Changed            | `join_war_with`                                                       | Add `ignore_rules` option                                                                    |
 | Changed            | `perform_diplomatic_action`                                           |                                                                                              |
 | Changed            | `set_new_foreign_ruler_no_update`                                     |                                                                                              |
 | Changed            | `set_new_ruler_no_update`                                             |                                                                                              |
 | Removed            | `{every\|random\|ordered}_culture_in_group`                           |                                                                                              |
+| Removed            | `change_country_tag`                                                  |                                                                                              |
 ## Triggers
 ### Variable Maps
 | Modififcation Type | Trigger                           | Description                                                     |
@@ -97,11 +104,18 @@
 | Added              | `advance_no_longer_activated`                    | Checks if a country has researched a certain advance but it's not useable at the moment because of conditions                |
 | Added              | `any_advance_definition`                         | Iterate through all advance definitions                                                                                      |
 | Added              | `any_country_with_relation_that_can_be_annulled` | Iterate through all countries which have an annullable relation with the scope country                                       |
+| Added              | `any_food_goods`                                 | Iterate through all food-goods                                                                                               |
+| Added              | `any_known_institution`                          | Iterate through all institutions a country knows of                                                                          |
+| Added              | `any_new_world_goods`                            | Iterate through all newworld-goods                                                                                           |
+| Added              | `any_old_world_goods`                            | Iterate through all oldworld-goods                                                                                           |
 | Added              | `any_religious_school_in_religion`               | Iterate through all Religious Schools in a Religion                                                                          |
 | Added              | `any_sound_toll_in_country`                      | Iterate through all Sound Tolls in a country                                                                                 |
 | Added              | `birth_age`                                      | What Age was the character born in? E.g. age_1_traditions                                                                    |
 | Added              | `blocks_full_annexation`                         | Checks if the peace treaty blocks full annexation                                                                            |
+| Added              | `building_can_be_upgraded_by`                    | Checks if a building can be upgraded by the target country                                                                   |
 | Added              | `can_rival`                                      | Could the current country scope rival the target country ignoring slots and range?                                           |
+| Added              | `climate_count`                                  | Returns the amount of owned locations with the specified climate.                                                            |
+| Added              | `climate_percent`                                | Returns the percentage of owned locations with the specified climate.                                                        |
 | Added              | `<type>_modifier_strength`                       | Does the scope have a given modifier with the compared strength (e.g. `country_modifier_strength`)                           |
 | Added              | `complacency`                                    | How much complacency does the country/IO have?                                                                               |
 | Added              | `complacency_percentage`                         | How high the percentage of the current complacency compared to the maximum does the country/IO have?                         |
@@ -110,6 +124,9 @@
 | Added              | `days_of_service_as_general`                     | Check how many days the character has served as a general                                                                    |
 | Added              | `days_of_service_in_cabinet`                     | Check how many days the character has served in a cabinet                                                                    |
 | Added              | `favors_needed_to_annul_relations_with`          | Gets the number of favours needed to annul relations with the target country diplomatically                                  |
+| Added              | `has_new_world_goods_in_market`                  | Checks if a market has a supply of any new world goods                                                                       |
+| Added              | `has_origin_in_new_world`                        | Check if a goods has origin in the new world                                                                                 |
+| Added              | `has_origin_in_old_world`                        | Check if a goods has origin in the old world                                                                                 |
 | Added              | `has_road_to_capital`                            | Check if a location has a road to capital                                                                                    |
 | Added              | `is_a_threat_for_us`                             | Is the country views the target country as a threat?                                                                         |
 | Added              | `is_cut_down_in_size_cb`                         | is it a cut down in size CB                                                                                                  |
@@ -176,23 +193,25 @@
 | Added              | `transfer_subject_price_cost_modifier`           |
 | Removed            | `annexation_speed`                               |
 ## Event Targets
-| Modififcation Type | Event Target                                   | Description                                                                       |
-|--------------------|------------------------------------------------|-----------------------------------------------------------------------------------|
-| Added              | `original_attacker_leader`                     |                                                                                   |
-| Added              | `original_defender_leader`                     | Returns the country which was the original defender                               |
-| Added              | `original_capital`                             |                                                                                   |
-| Added              | `total_building_levels_including_construction` | The amount of total  building levels including construction in a speficic Country |
-| Added              | `advance_age`                                  |                                                                                   |
-| Added              | `global_variable_map`                          |                                                                                   |
-| Added              | `local_variable_map`                           |                                                                                   |
-| Added              | `variable_map`                                 |                                                                                   |
-| Added              | `scripted_geography`                           |                                                                                   |
-| Added              | `unit_formation_preference`                    |                                                                                   |
+| Modififcation Type | Event Target                                   | Description                                                                                                                                                        |
+|--------------------|------------------------------------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| Added              | `original_attacker_leader`                     |                                                                                                                                                                    |
+| Added              | `original_defender_leader`                     | Returns the country which was the original defender                                                                                                                |
+| Added              | `original_capital`                             |                                                                                                                                                                    |
+| Added              | `total_building_levels_including_construction` | The amount of total  building levels including construction in a speficic Country                                                                                  |
+| Added              | `advance_age`                                  |                                                                                                                                                                    |
+| Added              | `global_variable_map`                          | Reference a previous set variable via its name eg: "global_variable_map(average_relation_map|c:FRA)"                                                               |
+| Added              | `local_variable_map`                           | Reference a previous set variable via its name eg: "local_variable_map(rewards_for_country|c:FRA)"                                                                 |
+| Added              | `variable_map`                                 | Reference a variable set under a specified scope in a named container on this scope: "variable_map(our_relations_with|c:FRA)"                                      |
+| Added              | `scripted_geography`                           |                                                                                                                                                                    |
+| Added              | `unit_formation_preference`                    |                                                                                                                                                                    |
+| Added              | `war_goal_province`                            | Links to the war goal of the war. If no war goal is set or is unrelated to locations (such as superiority) the link returns the capital of the defender war leader |
 ## On Actions
-| Modififcation Type | On Action                |
-|--------------------|--------------------------|
-| Added              | `on_lose_hegemon_status` |
-| Added              | `on_gain_hegemon_status` |
-| Added              | `on_culture_changed`     |
+| Modififcation Type | On Action                                      | Description                      |
+|--------------------|------------------------------------------------|----------------------------------|
+| Added              | `on_lose_hegemon_status`                       |                                  |
+| Added              | `on_culture_changed`                           |                                  |
+| Added              | `on_gain_hegemon_status`                       |                                  |
+| Changed            | `on_character_death`                           | The expected scope is now `none` |
 
 **Link:** [Script Documentation](./docs)
