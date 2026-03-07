@@ -496,7 +496,7 @@ Expected Scope: none
 
 on_character_death:
 From Code: Yes
-Expected Scope: country
+Expected Scope: none
 
 --------------------
 

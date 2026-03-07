@@ -178,6 +178,11 @@ Returns the country which was the original defender. In cases where the war is s
 Input Scopes: war
 Output Scopes: country
 
+### war_goal_province
+Links to the war goal of the war. If no war goal is set or is unrelated to locations (such as superiority) the link returns the capital of the defender war leader
+Input Scopes: war
+Output Scopes: province
+
 ### law
 Unknown, add something in code registration
 Input Scopes: policy

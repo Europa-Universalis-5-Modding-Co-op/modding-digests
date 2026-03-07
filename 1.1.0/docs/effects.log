@@ -709,10 +709,6 @@ change_country_modifier_size = { modifier = <modifier> value = <script math> [re
 changes the name of a country
 **Supported Scopes**: country  
 
-## change_country_tag
-changes the historical tag of a country
-**Supported Scopes**: country  
-
 ## change_country_type
 Changes the country type!
 **Supported Scopes**: country  
@@ -1316,6 +1312,10 @@ declares a war with the target country. The country scope will leave all wars th
 
 ## declare_war_with_cb
 declares a war with a specific cb  { target = <country> type = <cb_type> [target_province = ; target_country =, character =] } The country scope will leave all wars they fight together with the target country.
+**Supported Scopes**: country  
+
+## define_unique_country_tag
+defines a unique country tag for a dynamic country
 **Supported Scopes**: country  
 
 ## destroy_all_buildings_of_type
@@ -2041,6 +2041,12 @@ every_export_from_location = { limit = { <triggers> } <effects> }
 **Supported Scopes**: location  
 **Supported Targets**: location  
 
+## every_food_goods
+Iterate through all food-goods  
+every_food_goods = { limit = { <triggers> } <effects> }
+**Supported Scopes**: none  
+**Supported Targets**: goods  
+
 ## every_foreign_building_countries_in_location
 Iterate through all foreign building countries in a location  
 every_foreign_building_countries_in_location = { limit = { <triggers> } <effects> }
@@ -2285,17 +2291,29 @@ every_invited_religious_figure = { limit = { <triggers> } <effects> }
 **Supported Targets**: character  
 
 ## every_key_in_global_variable_map
-Iterate through all keys in global variable map. variable = name  
+Iterate through all keys in a global variable map.  
+key_in_global_variable_map = {  
+	variable = name  
+	<...>  
+}  
 every_key_in_global_variable_map = { limit = { <triggers> } <effects> }
 **Supported Scopes**: none  
 
 ## every_key_in_local_variable_map
-Iterate through all keys in local variable map. variable = name  
+Iterate through all keys in a local variable map.  
+key_in_local_variable_map = {  
+	variable = name  
+	<...>  
+}  
 every_key_in_local_variable_map = { limit = { <triggers> } <effects> }
 **Supported Scopes**: none  
 
 ## every_key_in_variable_map
-Iterate through all keys in variable map. variable = name  
+Iterate through all keys in a variable map.  
+key_in_variable_map = {  
+	variable = name  
+	<...>  
+}  
 every_key_in_variable_map = { limit = { <triggers> } <effects> }
 **Supported Scopes**: none  
 
@@ -2304,6 +2322,12 @@ Iterate through all known countries
 every_known_country = { limit = { <triggers> } <effects> }
 **Supported Scopes**: country  
 **Supported Targets**: country  
+
+## every_known_institution
+Iterate through all institutions a country knows of  
+every_known_institution = { limit = { <triggers> } <effects> }
+**Supported Scopes**: country  
+**Supported Targets**: institution  
 
 ## every_left_flank
 Iterate through all subunits on the left-flank of a combat-side  
@@ -2467,6 +2491,12 @@ every_neighbor_province_definition = { limit = { <triggers> } <effects> }
 **Supported Scopes**: province_definition  
 **Supported Targets**: province_definition  
 
+## every_new_world_goods
+Iterate through all newworld-goods  
+every_new_world_goods = { limit = { <triggers> } <effects> }
+**Supported Scopes**: none  
+**Supported Targets**: goods  
+
 ## every_nomad_countries_in_location
 Iterate through all nomad pop countries in a location  
 every_nomad_countries_in_location = { limit = { <triggers> } <effects> }
@@ -2478,6 +2508,12 @@ Iterate through all NonStateReligion locations in a country
 every_non_state_religion_location = { limit = { <triggers> } <effects> }
 **Supported Scopes**: country  
 **Supported Targets**: location  
+
+## every_old_world_goods
+Iterate through all oldworld-goods  
+every_old_world_goods = { limit = { <triggers> } <effects> }
+**Supported Scopes**: none  
+**Supported Targets**: goods  
 
 ## every_other_core_country
 Iterate through all other countries which have a core on the current country  
@@ -4599,6 +4635,19 @@ check_range_bounds = no # If you don't want an error logged if the list is small
 **Supported Scopes**: location  
 **Supported Targets**: location  
 
+## ordered_food_goods
+Iterate through all food-goods  
+ordered_food_goods = {  
+limit = { <triggers> }  
+order_by = script_value  
+position = int  
+min = int  
+max = script_value  
+check_range_bounds = no # If you don't want an error logged if the list is smaller than the min/max  
+<effects> }
+**Supported Scopes**: none  
+**Supported Targets**: goods  
+
 ## ordered_foreign_building_countries_in_location
 Iterate through all foreign building countries in a location  
 ordered_foreign_building_countries_in_location = {  
@@ -5130,7 +5179,11 @@ check_range_bounds = no # If you don't want an error logged if the list is small
 **Supported Targets**: character  
 
 ## ordered_key_in_global_variable_map
-Iterate through all keys in global variable map. variable = name  
+Iterate through all keys in a global variable map.  
+key_in_global_variable_map = {  
+	variable = name  
+	<...>  
+}  
 ordered_key_in_global_variable_map = {  
 limit = { <triggers> }  
 order_by = script_value  
@@ -5142,7 +5195,11 @@ check_range_bounds = no # If you don't want an error logged if the list is small
 **Supported Scopes**: none  
 
 ## ordered_key_in_local_variable_map
-Iterate through all keys in local variable map. variable = name  
+Iterate through all keys in a local variable map.  
+key_in_local_variable_map = {  
+	variable = name  
+	<...>  
+}  
 ordered_key_in_local_variable_map = {  
 limit = { <triggers> }  
 order_by = script_value  
@@ -5154,7 +5211,11 @@ check_range_bounds = no # If you don't want an error logged if the list is small
 **Supported Scopes**: none  
 
 ## ordered_key_in_variable_map
-Iterate through all keys in variable map. variable = name  
+Iterate through all keys in a variable map.  
+key_in_variable_map = {  
+	variable = name  
+	<...>  
+}  
 ordered_key_in_variable_map = {  
 limit = { <triggers> }  
 order_by = script_value  
@@ -5177,6 +5238,19 @@ check_range_bounds = no # If you don't want an error logged if the list is small
 <effects> }
 **Supported Scopes**: country  
 **Supported Targets**: country  
+
+## ordered_known_institution
+Iterate through all institutions a country knows of  
+ordered_known_institution = {  
+limit = { <triggers> }  
+order_by = script_value  
+position = int  
+min = int  
+max = script_value  
+check_range_bounds = no # If you don't want an error logged if the list is smaller than the min/max  
+<effects> }
+**Supported Scopes**: country  
+**Supported Targets**: institution  
 
 ## ordered_left_flank
 Iterate through all subunits on the left-flank of a combat-side  
@@ -5529,6 +5603,19 @@ check_range_bounds = no # If you don't want an error logged if the list is small
 **Supported Scopes**: province_definition  
 **Supported Targets**: province_definition  
 
+## ordered_new_world_goods
+Iterate through all newworld-goods  
+ordered_new_world_goods = {  
+limit = { <triggers> }  
+order_by = script_value  
+position = int  
+min = int  
+max = script_value  
+check_range_bounds = no # If you don't want an error logged if the list is smaller than the min/max  
+<effects> }
+**Supported Scopes**: none  
+**Supported Targets**: goods  
+
 ## ordered_nomad_countries_in_location
 Iterate through all nomad pop countries in a location  
 ordered_nomad_countries_in_location = {  
@@ -5554,6 +5641,19 @@ check_range_bounds = no # If you don't want an error logged if the list is small
 <effects> }
 **Supported Scopes**: country  
 **Supported Targets**: location  
+
+## ordered_old_world_goods
+Iterate through all oldworld-goods  
+ordered_old_world_goods = {  
+limit = { <triggers> }  
+order_by = script_value  
+position = int  
+min = int  
+max = script_value  
+check_range_bounds = no # If you don't want an error logged if the list is smaller than the min/max  
+<effects> }
+**Supported Scopes**: none  
+**Supported Targets**: goods  
 
 ## ordered_other_core_country
 Iterate through all other countries which have a core on the current country  
@@ -7523,6 +7623,12 @@ random_export_from_location = { limit = { <triggers> } (optional) weight = { mtt
 **Supported Scopes**: location  
 **Supported Targets**: location  
 
+## random_food_goods
+Iterate through all food-goods  
+random_food_goods = { limit = { <triggers> } (optional) weight = { mtth } <effects> }
+**Supported Scopes**: none  
+**Supported Targets**: goods  
+
 ## random_foreign_building_countries_in_location
 Iterate through all foreign building countries in a location  
 random_foreign_building_countries_in_location = { limit = { <triggers> } (optional) weight = { mtth } <effects> }
@@ -7767,17 +7873,29 @@ random_invited_religious_figure = { limit = { <triggers> } (optional) weight = {
 **Supported Targets**: character  
 
 ## random_key_in_global_variable_map
-Iterate through all keys in global variable map. variable = name  
+Iterate through all keys in a global variable map.  
+key_in_global_variable_map = {  
+	variable = name  
+	<...>  
+}  
 random_key_in_global_variable_map = { limit = { <triggers> } (optional) weight = { mtth } <effects> }
 **Supported Scopes**: none  
 
 ## random_key_in_local_variable_map
-Iterate through all keys in local variable map. variable = name  
+Iterate through all keys in a local variable map.  
+key_in_local_variable_map = {  
+	variable = name  
+	<...>  
+}  
 random_key_in_local_variable_map = { limit = { <triggers> } (optional) weight = { mtth } <effects> }
 **Supported Scopes**: none  
 
 ## random_key_in_variable_map
-Iterate through all keys in variable map. variable = name  
+Iterate through all keys in a variable map.  
+key_in_variable_map = {  
+	variable = name  
+	<...>  
+}  
 random_key_in_variable_map = { limit = { <triggers> } (optional) weight = { mtth } <effects> }
 **Supported Scopes**: none  
 
@@ -7786,6 +7904,12 @@ Iterate through all known countries
 random_known_country = { limit = { <triggers> } (optional) weight = { mtth } <effects> }
 **Supported Scopes**: country  
 **Supported Targets**: country  
+
+## random_known_institution
+Iterate through all institutions a country knows of  
+random_known_institution = { limit = { <triggers> } (optional) weight = { mtth } <effects> }
+**Supported Scopes**: country  
+**Supported Targets**: institution  
 
 ## random_left_flank
 Iterate through all subunits on the left-flank of a combat-side  
@@ -7980,6 +8104,12 @@ random_neighbor_province_definition = { limit = { <triggers> } (optional) weight
 **Supported Scopes**: province_definition  
 **Supported Targets**: province_definition  
 
+## random_new_world_goods
+Iterate through all newworld-goods  
+random_new_world_goods = { limit = { <triggers> } (optional) weight = { mtth } <effects> }
+**Supported Scopes**: none  
+**Supported Targets**: goods  
+
 ## random_nomad_countries_in_location
 Iterate through all nomad pop countries in a location  
 random_nomad_countries_in_location = { limit = { <triggers> } (optional) weight = { mtth } <effects> }
@@ -7991,6 +8121,12 @@ Iterate through all NonStateReligion locations in a country
 random_non_state_religion_location = { limit = { <triggers> } (optional) weight = { mtth } <effects> }
 **Supported Scopes**: country  
 **Supported Targets**: location  
+
+## random_old_world_goods
+Iterate through all oldworld-goods  
+random_old_world_goods = { limit = { <triggers> } (optional) weight = { mtth } <effects> }
+**Supported Scopes**: none  
+**Supported Targets**: goods  
 
 ## random_other_core_country
 Iterate through all other countries which have a core on the current country  
