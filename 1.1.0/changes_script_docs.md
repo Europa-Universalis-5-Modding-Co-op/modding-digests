@@ -135,20 +135,33 @@
 | Added              | `is_produced_in_location_market`                 | Checks if a specific goods in produced in the location market                                                                |
 | Added              | `is_special_building`                            | Checks if a building is special                                                                                              |
 | Added              | `is_subject_type_annullable`                     | Check if a subject type can be annulled by a peace treaty                                                                    |
+| Added              | `location_net_building_profit`                   | Checks the net profit from buildings in a location                                                                           |
 | Added              | `num_owned_foreign_buildings_in_location`        | The number of foreign buildings in a location owned by a count                                                               |
 | Added              | `offer_relation_acceptance`                      | How high is the target country's AI value of accepting the scripted relation offered by the current country scope?           |
 | Added              | `owned_by_or_its_subjects`                       | Checks if the geographic scope is completely owned by the target country or its subjects.                                    |
 | Added              | `owns_most_foreign_buildings_in_location`        | Does the country own the majority of the foreign buildings in the target location?                                           |
+| Added              | `owns_or_has_subject_in`                         | country has a presence in the geography supplied?                                                                            |
 | Added              | `peace_treaty_antagonism`                        | Get how much antagonism the specified peace treaty type would cause for the current country scope against the target country |
 | Added              | `peace_treaty_war_score_cost`                    | Get how much war score the specified peace treaty type would cost for the current country scope against the target country   |
+| Added              | `peasant_enfranchisment`                         | Checks the level of peasant enfranchisement in a location                                                                    |
 | Added              | `policy_level`                                   | Check the defined level of the policy                                                                                        |
+| Added              | `regular_navy_size`                              | Checks if a country has a certain amount of regular ships                                                                    |
 | Added              | `request_relation_acceptance`                    | How high is the target country's AI value of accepting the scripted relation requested by the current country scope?         |
 | Added              | `reverse_offer_relation_acceptance`              | How high is the current country's AI value of accepting the scripted relation offered by the specified country scope?        |
+| Added              | `reverse_religious_view_impact`                  | Reverse opinion impact of a particular religion on another                                                                   |
 | Added              | `reverse_request_relation_acceptance`            | How high is the current country's AI value of accepting the scripted relation requested by the specified country scope?      |
 | Added              | `subject_type_annullment_favours_required`       | returns the favours needed to annul this relation diplomatically                                                             |
+| Added              | `topography_count`                               | Returns the amount of owned locations with the specified topography.                                                         |
+| Added              | `topography_percent`                             | Returns the percentage of owned locations with the specified topography.                                                     |
 | Added              | `total_foreign_buildings_levels`                 | Checks the total number of foreign buildings of a country                                                                    |
-| Added              | `used_fort_limit_percentage`                     | What percentager of our Fort Limit is currently being used?                                                                  |
+| Added              | `used_fort_limit`                                | How much Fort Limit is currently being used?                                                                                 |
+| Added              | `used_fort_limit_percentage`                     | What percentage of our Fort Limit is currently being used?                                                                   |
 | Added              | `uses_elections`                                 | Does this succession law use elections?                                                                                      |
+| Added              | `vegetation_count`                               | Returns the amount of owned locations with the specified vegetation.                                                         |
+| Added              | `vegetation_percent`                             | Returns the percentage of owned locations with the specified vegetation.                                                     |
+| Added              | `war_goal_type`                                  | Check if the war goal type of the war is the specified type.                                                                 |
+| Added              | `war_score_in_war_whole_side`                    | Check how much war score the war side of the current country has in the target war.                                          |
+| Added              | `war_score_of_country_side`                      | Check how much war score the war side of the target country has in the current war.                                          |
 | Added              | `years_as_rebel`                                 | Check how many years the character has been a rebel                                                                          |
 | Added              | `years_of_service_as_admiral`                    | Check how many years the character has served as an admiral                                                                  |
 | Added              | `years_of_service_as_general`                    | Check how many years the character has served as a general                                                                   |
@@ -159,39 +172,51 @@
 | Removed            | `any_culture_in_group`                           |                                                                                                                              |
 | Removed            | `unit_has_leader`                                |                                                                                                                              |
 ## Modifiers
-| Modififcation Type | Modifier                                         |
-|--------------------|--------------------------------------------------|
-| Added              | `ai_require_cb_for_war`                          |
-| Added              | `ai_opinion_bias`                                |
-| Added              | `global_food_decay`                              |
-| Added              | `local_food_decay`                               |
-| Added              | `num_bailiffs`                                   |
-| Added              | `num_local_governors`                            |
-| Added              | `global_peasant_enfranchisment`                  |
-| Added              | `local_peasant_enfranchisment`                   |
-| Added              | `monthly_complacency`                            |
-| Added              | `combined_arms_max_threshold`                    |
-| Added              | `combined_arms_min_percent_for_bonus`            |
-| Added              | `combined_bonus_per_type`                        |
-| Added              | `local_repair_speed`                             |
-| Added              | `produced_in_market_bonus`                       |
-| Added              | `annexation_speed_base`                          |
-| Added              | `annexation_speed_modifier`                      |
-| Added              | `enable_doom`                                    |
-| Added              | `ignore_doom`                                    |
-| Added              | `ai_months_between_wars`                         |
-| Added              | `rtr_demand_annexation_price_cost_modifier`      |
-| Added              | `complacent_decline_actions_price_cost_modifier` |
-| Added              | `unlock_withdraw_from_organization_treasury`     |
-| Added              | `enabled_union_enforcement_actions`              |
-| Added              | `global_slave_pop_satisfaction`                  |
-| Added              | `local_slave_pop_satisfaction`                   |
-| Added              | `<terrain>_proximity_impact`                     |
-| Added              | `<good>_impacts_inflation`                       |
-| Added              | `improve_our_cultural_view_price_cost_modifier`  |
-| Added              | `provoke_rebels_price_cost_modifier`             |
-| Added              | `transfer_subject_price_cost_modifier`           |
-| Removed            | `annexation_speed`                               |
+| Modififcation Type | Modifier                                           |
+|--------------------|----------------------------------------------------|
+| Added              | `ai_require_cb_for_war`                            |
+| Added              | `ai_opinion_bias`                                  |
+| Added              | `global_food_decay`                                |
+| Added              | `local_food_decay`                                 |
+| Added              | `num_bailiffs`                                     |
+| Added              | `num_local_governors`                              |
+| Added              | `num_naval_governors`                              |
+| Added              | `global_peasant_enfranchisment`                    |
+| Added              | `local_peasant_enfranchisment`                     |
+| Added              | `monthly_complacency`                              |
+| Added              | `has_complacency_effects`                          |
+| Added              | `combined_arms_max_threshold`                      |
+| Added              | `combined_arms_min_percent_for_bonus`              |
+| Added              | `combined_bonus_per_type`                          |
+| Added              | `local_repair_speed`                               |
+| Added              | `produced_in_market_bonus`                         |
+| Added              | `annexation_speed_base`                            |
+| Added              | `annexation_speed_modifier`                        |
+| Added              | `antagonism_peace_treaty_demands_giving_modifier`  |
+| Added              | `enable_doom`                                      |
+| Added              | `ignore_doom`                                      |
+| Added              | `ai_months_between_wars`                           |
+| Added              | `rtr_demand_annexation_price_cost_modifier`        |
+| Added              | `<estate>_allowed_to_build_rgo`                    |
+| Added              | `complacent_decline_actions_price_cost_modifier`   |
+| Added              | `unlock_withdraw_from_organization_treasury`       |
+| Added              | `enabled_union_enforcement_actions`                |
+| Added              | `global_slave_pop_satisfaction`                    |
+| Added              | `local_slave_pop_satisfaction`                     |
+| Added              | `<terrain>_proximity_impact`                       |
+| Added              | `<good>_impacts_inflation`                         |
+| Added              | `<good>_used_for_minting`                          |
+| Added              | `improve_our_cultural_view_price_cost_modifier`    |
+| Added              | `provoke_rebels_price_cost_modifier`               |
+| Added              | `transfer_subject_price_cost_modifier`             |
+| Removed            | `annexation_speed`                                 |
+### Distance modifiers
+| Modification Type  | Old name                                         | New Name                                                   |
+|--------------------|--------------------------------------------------|------------------------------------------------------------|
+| Changed            | `land_cost_on_distance_from_capital_modifier`    | Now `land_cost_on_distance_from_capital_speed_propagation` |
+| Changed            | `global_distance_from_capital_cost_modifier`     | Now `global_distance_from_capital_speed_propagation`       |
+| Changed            | `local_distance_from_capital_cost_modifier`      | Now `local_distance_from_capital_speed_propagation`        |
+| Changed            | `local_port_cost_distance_from_capital_modifier` | Now `local_port_cost_distance_impact`                      |
 ## Event Targets
 | Modififcation Type | Event Target                                   | Description                                                                                                                                                        |
 |--------------------|------------------------------------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------|
