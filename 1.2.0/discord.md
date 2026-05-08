@@ -45,11 +45,15 @@
 ### Town Rights
 - New Type
 
-**Link:** [Type Documentation](./types)
-## Script Documentation
-Detailed script documentation changes can be found below.
-
-**Link:** [Script Documentation Changes](./changes_script_docs.md)
+## Data Type Documentation 
+ * [Types](changes_data_types.md#types)
+ * [Global Promotes](changes_data_types.md#global-promotes)
+## Script Documentation 
+ * [Effects](changes_script_docs.md#effects)
+ * [Triggers](changes_script_docs.md#triggers)
+ * [Event Targets](changes_script_docs.md#event-targets)
+ * [Iterators](changes_script_docs.md#iterators)
+ * [On Actions](changes_script_docs.md#on-actions)
 ## File Changes
 File changes can be found below.
 
