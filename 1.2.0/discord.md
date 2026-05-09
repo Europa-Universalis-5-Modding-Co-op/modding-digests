@@ -11,7 +11,8 @@
 - Replaced `{global\local}_war_score_cost` modifiers with `{global\local}_war_score_efficiency`
 - Consolidated `pilgrimage_{religion}_cost_modifier` modifiers into `pilgrimage_action_cost_modifier`
 - Split `{disease}_resistance_modifier` modifiers into `local_{disease}_resistance_modifier` and `national_{disease}_resistance_modifier`
-- Split `trade_land_efficiency` modifier into `trade_land_efficiency` and `trade_sea_efficiency`
+- Replaced `trade_{land\sea}_movement_cost_modifier` modifier with `trade_{land\sea}_efficiency`
+- Split `trade_efficiency` modifier into `export_efficiency`, `import_efficieny`, and `selling_efficiency`
 ## Type Documentation
 ### Area Preferences
 - New type
