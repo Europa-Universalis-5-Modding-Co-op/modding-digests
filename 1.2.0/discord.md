@@ -7,12 +7,12 @@
 - Removed `get_trust` trigger
 - Split `army_cavalry_` modifiers into `army_heavy_cavalry_` and `army_light_cavalry_`
 - Split `army_infantry_` modifiers into `army_heavy_infantry_` and `army_light_infantry_`
-- Replaced `{army\mercenary\merchance\navy}_maintentance_cost` modifiers with `{army\mercenary\merchance\navy}_maintentance_efficiency`
+- Replaced `{army\mercenary\merchance\navy}_maintenance_cost` modifiers with `{army\mercenary\merchance\navy}_maintenance_efficiency`
 - Replaced `{global\local}_war_score_cost` modifiers with `{global\local}_war_score_efficiency`
 - Consolidated `pilgrimage_{religion}_cost_modifier` modifiers into `pilgrimage_action_cost_modifier`
 - Split `{disease}_resistance_modifier` modifiers into `local_{disease}_resistance_modifier` and `national_{disease}_resistance_modifier`
 - Replaced `trade_{land\sea}_movement_cost_modifier` modifier with `trade_{land\sea}_efficiency`
-- Split `trade_efficiency` modifier into `export_efficiency`, `import_efficieny`, and `selling_efficiency`
+- Split `trade_efficiency` modifier into `export_efficiency`, `import_efficiency`, and `selling_efficiency`
 ## Type Documentation
 ### Area Preferences
 - New type
