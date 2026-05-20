@@ -134,6 +134,12 @@ Expected Scope: none
 
 --------------------
 
+on_lose_hegemon_status:
+From Code: Yes
+Expected Scope: none
+
+--------------------
+
 on_cabinet_assigned:
 From Code: Yes
 Expected Scope: none
@@ -332,6 +338,12 @@ Expected Scope: none
 
 --------------------
 
+on_gain_hegemon_status:
+From Code: Yes
+Expected Scope: none
+
+--------------------
+
 on_siege_lost:
 From Code: Yes
 Expected Scope: country
@@ -470,6 +482,12 @@ Expected Scope: none
 
 --------------------
 
+on_culture_changed:
+From Code: Yes
+Expected Scope: none
+
+--------------------
+
 on_loan_renewed:
 From Code: Yes
 Expected Scope: none
@@ -478,7 +496,7 @@ Expected Scope: none
 
 on_character_death:
 From Code: Yes
-Expected Scope: country
+Expected Scope: none
 
 --------------------
 

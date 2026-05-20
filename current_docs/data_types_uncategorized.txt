@@ -484,6 +484,12 @@ Return type: CountryNeeds
 
 -----------------------
 
+GetCountryUpgradeableBuildings( Arg0 )
+Definition type: Global promote
+Return type: CountryUpgradeableBuildings
+
+-----------------------
+
 GetCultureByKey( Arg0 )
 Definition type: Global promote
 Return type: Culture
@@ -586,6 +592,18 @@ Return type: CoatOfArmsWrapper
 
 -----------------------
 
+GetImportantBuildingsCountryNeeds( Arg0 )
+Definition type: Global promote
+Return type: ImportantBuildingsCountryNeeds
+
+-----------------------
+
+GetImportantBuildingsMarketCountryNeeds( Arg0, Arg1 )
+Definition type: Global promote
+Return type: MarketCountryNeeds
+
+-----------------------
+
 GetInstitutionByKey( Arg0 )
 Definition type: Global promote
 Return type: Institution
@@ -658,6 +676,12 @@ Return type: MarketCountryNeeds
 
 -----------------------
 
+GetMarketUpgradeableBuildings( Arg0, Arg1 )
+Definition type: Global promote
+Return type: MarketUpgradeableBuildings
+
+-----------------------
+
 GetMessageLog
 Definition type: Global promote
 Return type: MessageLog
@@ -673,6 +697,12 @@ Return type: StaticModifier
 GetMultiplayerChat
 Definition type: Global promote
 Return type: MultiplayerChat
+
+-----------------------
+
+GetNextRelevantLocation( Arg0 )
+Definition type: Global promote
+Return type: Location
 
 -----------------------
 
@@ -709,6 +739,12 @@ Return type: TargettedActionParameters
 GetPopTypeByName( Arg0 )
 Definition type: Global promote
 Return type: PopType
+
+-----------------------
+
+GetPrevRelevantLocation( Arg0 )
+Definition type: Global promote
+Return type: Location
 
 -----------------------
 
@@ -781,6 +817,12 @@ Return type: Resolution
 GetScenario( Arg0 )
 Definition type: Global promote
 Return type: Scenario
+
+-----------------------
+
+GetScriptedGeographyByKey( Arg0 )
+Definition type: Global promote
+Return type: ScriptedGeography
 
 -----------------------
 
@@ -1207,6 +1249,12 @@ Return type: LateralView
 SCRIPTABLE_HINT_DEFINITION
 Definition type: Global promote
 Return type: ScriptableHintDefinition
+
+-----------------------
+
+SCRIPTED_GEOGRAPHY
+Definition type: Global promote
+Return type: ScriptedGeography
 
 -----------------------
 
@@ -1996,6 +2044,12 @@ Return type: ScriptableHintDefinition
 
 -----------------------
 
+TARGET_SCRIPTED_GEOGRAPHY
+Definition type: Global promote
+Return type: ScriptedGeography
+
+-----------------------
+
 TARGET_SIEGE
 Definition type: Global promote
 Return type: Siege
@@ -2086,6 +2140,12 @@ Return type: UnitAbility
 
 -----------------------
 
+TARGET_UNIT_TEMPLATE
+Definition type: Global promote
+Return type: UnitTemplate
+
+-----------------------
+
 TARGET_UNIT_TYPE
 Definition type: Global promote
 Return type: SubUnitType
@@ -2155,6 +2215,12 @@ Return type: Unit
 UNIT_ABILITY
 Definition type: Global promote
 Return type: UnitAbility
+
+-----------------------
+
+UNIT_TEMPLATE
+Definition type: Global promote
+Return type: UnitTemplate
 
 -----------------------
 
@@ -2315,6 +2381,12 @@ Return type: void
 -----------------------
 
 BuildingHasProductionMethodActive( Arg0, Arg1, Arg2 )
+Definition type: Global function
+Return type: bool
+
+-----------------------
+
+CanAffordUpgradeSubUnit( Arg0, Arg1 )
 Definition type: Global function
 Return type: bool
 
@@ -2812,6 +2884,12 @@ Return type: void
 
 -----------------------
 
+ChangeUnitFormationPreference( Arg0 )
+Definition type: Global function
+Return type: void
+
+-----------------------
+
 CharactersCanMarry( Arg0, Arg1 )
 Definition type: Global function
 Return type: bool
@@ -2831,6 +2909,12 @@ Return type: void
 -----------------------
 
 ClearSelectedInstitution
+Definition type: Global function
+Return type: void
+
+-----------------------
+
+CloseAllSettings
 Definition type: Global function
 Return type: void
 
@@ -2962,6 +3046,12 @@ Return type: void
 
 -----------------------
 
+DeleteUnitTemplate( Arg0 )
+Definition type: Global function
+Return type: void
+
+-----------------------
+
 DelistMercenary( Arg0 )
 Definition type: Global function
 Return type: void
@@ -2998,7 +3088,19 @@ Return type: void
 
 -----------------------
 
+DetachCategoryAndSelect( Arg0, Arg1 )
+Definition type: Global function
+Return type: void
+
+-----------------------
+
 DetachHalfCategory( Arg0, Arg1 )
+Definition type: Global function
+Return type: void
+
+-----------------------
+
+DetachHalfCategoryAndSelect( Arg0, Arg1 )
 Definition type: Global function
 Return type: void
 
@@ -3190,6 +3292,12 @@ Return type: [unregistered]
 
 -----------------------
 
+GetAdvancesMapModeInfo( Arg0 )
+Definition type: Global function
+Return type: CString
+
+-----------------------
+
 GetAgeEndingDate( Arg0 )
 Definition type: Global function
 Return type: CString
@@ -3364,6 +3472,12 @@ Return type: [unregistered]
 
 -----------------------
 
+GetBuildingTypeIncomeToOwnerInLocation( Arg0, Arg1 )
+Definition type: Global function
+Return type: CFixedPoint
+
+-----------------------
+
 GetBuildingTypePotentialProfitInLocation( Arg0, Arg1 )
 Definition type: Global function
 Return type: CFixedPoint
@@ -3379,6 +3493,12 @@ Return type: CFixedPoint
 GetBuildingTypeProfitInLocationInfo( Arg0, Arg1 )
 Definition type: Global function
 Return type: CString
+
+-----------------------
+
+GetBuildingTypeTaxBaseInLocation( Arg0, Arg1 )
+Definition type: Global function
+Return type: CFixedPoint
 
 -----------------------
 
@@ -3455,6 +3575,12 @@ Return type: [unregistered]
 -----------------------
 
 GetCloseBuildingInfo( Arg0 )
+Definition type: Global function
+Return type: CString
+
+-----------------------
+
+GetComplacencyDisasters
 Definition type: Global function
 Return type: CString
 
@@ -3647,12 +3773,6 @@ Return type: CString
 -----------------------
 
 GetDestroyBuildingInfo( Arg0 )
-Definition type: Global function
-Return type: CString
-
------------------------
-
-GetDestroyBuildingInfoOnlyWithCosts( Arg0 )
 Definition type: Global function
 Return type: CString
 
@@ -3865,6 +3985,12 @@ Return type: CString
 GetGameTimeDurationMonths( Arg0 )
 Definition type: Global function
 Return type: CString
+
+-----------------------
+
+GetGlobalMapKeys( Arg0 )
+Definition type: Global function
+Return type: [unregistered]
 
 -----------------------
 
@@ -4360,12 +4486,6 @@ Return type: CFixedPoint
 
 -----------------------
 
-GetNeedInformation( Arg0, Arg1 )
-Definition type: Global function
-Return type: CString
-
------------------------
-
 GetNoLawsInfo
 Definition type: Global function
 Return type: CString
@@ -4561,6 +4681,18 @@ Return type: [unregistered]
 GetProductionMethods
 Definition type: Global function
 Return type: [unregistered]
+
+-----------------------
+
+GetPruDealWithRobberBaronsProgressForProvince( Arg0 )
+Definition type: Global function
+Return type: CFixedPoint
+
+-----------------------
+
+GetPruDealWithRobberBaronsTooltipForProvince( Arg0 )
+Definition type: Global function
+Return type: CString
 
 -----------------------
 
@@ -5080,9 +5212,27 @@ Return type: [unregistered]
 
 -----------------------
 
+GetUnitFormationPreferenceIcon( Arg0 )
+Definition type: Global function
+Return type: [unregistered]
+
+-----------------------
+
 GetUnitIcon( Arg0 )
 Definition type: Global function
 Return type: [unregistered]
+
+-----------------------
+
+GetUpgradeSubUnitCostInfo( Arg0 )
+Definition type: Global function
+Return type: CString
+
+-----------------------
+
+GetUpgradeSubUnitCostValue( Arg0 )
+Definition type: Global function
+Return type: CFixedPoint
 
 -----------------------
 
@@ -5155,6 +5305,24 @@ Return type: CVector2f
 GetZoomStep
 Definition type: Global function
 Return type: int32
+
+-----------------------
+
+GlobalVariableMapContainsKey( Arg0, Arg1 )
+Definition type: Global function
+Return type: bool
+
+-----------------------
+
+GlobalVariableMapContainsValue( Arg0, Arg1 )
+Definition type: Global function
+Return type: bool
+
+-----------------------
+
+GlobalVariableMapExists( Arg0 )
+Definition type: Global function
+Return type: bool
 
 -----------------------
 
@@ -5728,6 +5896,12 @@ Return type: bool
 
 -----------------------
 
+IsMusicPlayerPaused
+Definition type: Global function
+Return type: bool
+
+-----------------------
+
 IsObserving
 Definition type: Global function
 Return type: bool
@@ -5855,6 +6029,12 @@ Return type: bool
 -----------------------
 
 IsPlaythroughSkipped
+Definition type: Global function
+Return type: bool
+
+-----------------------
+
+IsProvinceTargetOfPruDealWithRobberBarons( Arg0 )
 Definition type: Global function
 Return type: bool
 
@@ -5995,6 +6175,12 @@ Return type: CString
 LocationWithInRange_Format( Arg0, Arg1 )
 Definition type: Global function
 Return type: CString
+
+-----------------------
+
+LockProductionMethods( Arg0 )
+Definition type: Global function
+Return type: void
 
 -----------------------
 
@@ -6304,6 +6490,12 @@ Return type: void
 
 -----------------------
 
+OpenMusicSettings
+Definition type: Global function
+Return type: void
+
+-----------------------
+
 OpenRenameCountryDialog( Arg0 )
 Definition type: Global function
 Return type: void
@@ -6520,7 +6712,25 @@ Return type: void
 
 -----------------------
 
+SelectLocationToRaiseAllArmyLevies
+Definition type: Global function
+Return type: void
+
+-----------------------
+
+SelectLocationToRaiseAllNavyLevies
+Definition type: Global function
+Return type: void
+
+-----------------------
+
 SelectLocationToRecruit( Arg0, Arg1 )
+Definition type: Global function
+Return type: void
+
+-----------------------
+
+SelectLocationToRecruitTemplate( Arg0, Arg1 )
 Definition type: Global function
 Return type: void
 
@@ -6551,12 +6761,6 @@ Return type: void
 -----------------------
 
 SelectNextRelevantCountry( Arg0 )
-Definition type: Global function
-Return type: void
-
------------------------
-
-SelectNextRelevantLocation( Arg0 )
 Definition type: Global function
 Return type: void
 
@@ -6593,12 +6797,6 @@ Return type: void
 -----------------------
 
 SelectPrevRelevantCountry( Arg0 )
-Definition type: Global function
-Return type: void
-
------------------------
-
-SelectPrevRelevantLocation( Arg0 )
 Definition type: Global function
 Return type: void
 
@@ -7168,6 +7366,12 @@ Return type: CString
 
 -----------------------
 
+ShowCreateUnitTemplateLateralView( Arg0 )
+Definition type: Global function
+Return type: void
+
+-----------------------
+
 ShowCulture( Arg0 )
 Definition type: Global function
 Return type: void
@@ -7303,6 +7507,12 @@ Return type: CString
 ShowDynastyNameWithNoTooltip( Arg0 )
 Definition type: Global function
 Return type: CString
+
+-----------------------
+
+ShowEditUnitTemplateLateralView( Arg0 )
+Definition type: Global function
+Return type: void
 
 -----------------------
 
@@ -7645,6 +7855,12 @@ Return type: CString
 ShowLocationNameWithNoTooltip( Arg0 )
 Definition type: Global function
 Return type: CString
+
+-----------------------
+
+ShowLocationProductionView( Arg0, Arg1 )
+Definition type: Global function
+Return type: void
 
 -----------------------
 
@@ -8140,6 +8356,18 @@ Return type: CString
 
 -----------------------
 
+ShowScriptedGeographyName( Arg0 )
+Definition type: Global function
+Return type: CString
+
+-----------------------
+
+ShowScriptedGeographyNameWithNoTooltip( Arg0 )
+Definition type: Global function
+Return type: CString
+
+-----------------------
+
 ShowSeaZone( Arg0 )
 Definition type: Global function
 Return type: void
@@ -8153,6 +8381,12 @@ Return type: void
 -----------------------
 
 ShowSelectCabinetForContextMenu
+Definition type: Global function
+Return type: void
+
+-----------------------
+
+ShowSelectCabinetToDealWithRobberBarons( Arg0 )
 Definition type: Global function
 Return type: void
 
@@ -8530,6 +8764,12 @@ Return type: CString
 
 -----------------------
 
+ToVector2f( Arg0, Arg1 )
+Definition type: Global function
+Return type: CVector2f
+
+-----------------------
+
 ToggleAllowExtendMercenary( Arg0 )
 Definition type: Global function
 Return type: void
@@ -8680,6 +8920,12 @@ Return type: void
 
 -----------------------
 
+ToggleMusicPlayerPaused
+Definition type: Global function
+Return type: void
+
+-----------------------
+
 ToggleOpenModTools
 Definition type: Global function
 Return type: void
@@ -8803,6 +9049,12 @@ Return type: bool
 TutorialVarNotExistOrHasValue( Arg0, Arg1 )
 Definition type: Global function
 Return type: bool
+
+-----------------------
+
+UnPauseMusicPlayer
+Definition type: Global function
+Return type: void
 
 -----------------------
 
@@ -11992,6 +12244,24 @@ Return type: [unregistered]
 
 -----------------------
 
+combined_arms
+Definition type: Global function
+Return type: [unregistered]
+
+-----------------------
+
+combined_arms_icon
+Definition type: Global function
+Return type: [unregistered]
+
+-----------------------
+
+combined_arms_with_icon
+Definition type: Global function
+Return type: [unregistered]
+
+-----------------------
+
 commander
 Definition type: Global function
 Return type: [unregistered]
@@ -12077,6 +12347,42 @@ Return type: [unregistered]
 -----------------------
 
 common_languages_with_icon
+Definition type: Global function
+Return type: [unregistered]
+
+-----------------------
+
+complacency
+Definition type: Global function
+Return type: [unregistered]
+
+-----------------------
+
+complacency_i
+Definition type: Global function
+Return type: [unregistered]
+
+-----------------------
+
+complacency_i_icon
+Definition type: Global function
+Return type: [unregistered]
+
+-----------------------
+
+complacency_i_with_icon
+Definition type: Global function
+Return type: [unregistered]
+
+-----------------------
+
+complacency_icon
+Definition type: Global function
+Return type: [unregistered]
+
+-----------------------
+
+complacency_with_icon
 Definition type: Global function
 Return type: [unregistered]
 
@@ -13432,6 +13738,12 @@ Return type: [unregistered]
 
 -----------------------
 
+d10
+Definition type: Global function
+Return type: [unregistered]
+
+-----------------------
+
 d100
 Definition type: Global function
 Return type: [unregistered]
@@ -13450,6 +13762,18 @@ Return type: [unregistered]
 
 -----------------------
 
+d10_icon
+Definition type: Global function
+Return type: [unregistered]
+
+-----------------------
+
+d10_with_icon
+Definition type: Global function
+Return type: [unregistered]
+
+-----------------------
+
 d20
 Definition type: Global function
 Return type: [unregistered]
@@ -13463,24 +13787,6 @@ Return type: [unregistered]
 -----------------------
 
 d20_with_icon
-Definition type: Global function
-Return type: [unregistered]
-
------------------------
-
-d6
-Definition type: Global function
-Return type: [unregistered]
-
------------------------
-
-d6_icon
-Definition type: Global function
-Return type: [unregistered]
-
------------------------
-
-d6_with_icon
 Definition type: Global function
 Return type: [unregistered]
 
@@ -14530,6 +14836,42 @@ Return type: [unregistered]
 
 -----------------------
 
+distant_market
+Definition type: Global function
+Return type: [unregistered]
+
+-----------------------
+
+distant_market_icon
+Definition type: Global function
+Return type: [unregistered]
+
+-----------------------
+
+distant_market_with_icon
+Definition type: Global function
+Return type: [unregistered]
+
+-----------------------
+
+distant_markets
+Definition type: Global function
+Return type: [unregistered]
+
+-----------------------
+
+distant_markets_icon
+Definition type: Global function
+Return type: [unregistered]
+
+-----------------------
+
+distant_markets_with_icon
+Definition type: Global function
+Return type: [unregistered]
+
+-----------------------
+
 distribute_food
 Definition type: Global function
 Return type: [unregistered]
@@ -14561,6 +14903,42 @@ Return type: [unregistered]
 -----------------------
 
 distributing_food_with_icon
+Definition type: Global function
+Return type: [unregistered]
+
+-----------------------
+
+domestic_market
+Definition type: Global function
+Return type: [unregistered]
+
+-----------------------
+
+domestic_market_icon
+Definition type: Global function
+Return type: [unregistered]
+
+-----------------------
+
+domestic_market_with_icon
+Definition type: Global function
+Return type: [unregistered]
+
+-----------------------
+
+domestic_markets
+Definition type: Global function
+Return type: [unregistered]
+
+-----------------------
+
+domestic_markets_icon
+Definition type: Global function
+Return type: [unregistered]
+
+-----------------------
+
+domestic_markets_with_icon
 Definition type: Global function
 Return type: [unregistered]
 
@@ -16552,6 +16930,24 @@ Return type: [unregistered]
 
 -----------------------
 
+food_decay
+Definition type: Global function
+Return type: [unregistered]
+
+-----------------------
+
+food_decay_icon
+Definition type: Global function
+Return type: [unregistered]
+
+-----------------------
+
+food_decay_with_icon
+Definition type: Global function
+Return type: [unregistered]
+
+-----------------------
+
 food_icon
 Definition type: Global function
 Return type: [unregistered]
@@ -16787,6 +17183,42 @@ Return type: [unregistered]
 -----------------------
 
 foreign_language_with_icon
+Definition type: Global function
+Return type: [unregistered]
+
+-----------------------
+
+foreign_market
+Definition type: Global function
+Return type: [unregistered]
+
+-----------------------
+
+foreign_market_icon
+Definition type: Global function
+Return type: [unregistered]
+
+-----------------------
+
+foreign_market_with_icon
+Definition type: Global function
+Return type: [unregistered]
+
+-----------------------
+
+foreign_markets
+Definition type: Global function
+Return type: [unregistered]
+
+-----------------------
+
+foreign_markets_icon
+Definition type: Global function
+Return type: [unregistered]
+
+-----------------------
+
+foreign_markets_with_icon
 Definition type: Global function
 Return type: [unregistered]
 
@@ -17405,6 +17837,18 @@ Return type: [unregistered]
 -----------------------
 
 generals_with_icon
+Definition type: Global function
+Return type: [unregistered]
+
+-----------------------
+
+geographical_term
+Definition type: Global function
+Return type: [unregistered]
+
+-----------------------
+
+geographical_terms
 Definition type: Global function
 Return type: [unregistered]
 
@@ -21202,24 +21646,6 @@ Return type: [unregistered]
 
 -----------------------
 
-max_tax_base
-Definition type: Global function
-Return type: [unregistered]
-
------------------------
-
-max_tax_base_icon
-Definition type: Global function
-Return type: [unregistered]
-
------------------------
-
-max_tax_base_with_icon
-Definition type: Global function
-Return type: [unregistered]
-
------------------------
-
 max_tax_icon
 Definition type: Global function
 Return type: [unregistered]
@@ -21983,6 +22409,42 @@ Return type: [unregistered]
 -----------------------
 
 minimum_tax_with_icon
+Definition type: Global function
+Return type: [unregistered]
+
+-----------------------
+
+minor_revolt
+Definition type: Global function
+Return type: [unregistered]
+
+-----------------------
+
+minor_revolt_icon
+Definition type: Global function
+Return type: [unregistered]
+
+-----------------------
+
+minor_revolt_with_icon
+Definition type: Global function
+Return type: [unregistered]
+
+-----------------------
+
+minor_revolts
+Definition type: Global function
+Return type: [unregistered]
+
+-----------------------
+
+minor_revolts_icon
+Definition type: Global function
+Return type: [unregistered]
+
+-----------------------
+
+minor_revolts_with_icon
 Definition type: Global function
 Return type: [unregistered]
 
@@ -23752,6 +24214,24 @@ Return type: [unregistered]
 
 -----------------------
 
+peasant_enfranchisement
+Definition type: Global function
+Return type: [unregistered]
+
+-----------------------
+
+peasant_enfranchisement_icon
+Definition type: Global function
+Return type: [unregistered]
+
+-----------------------
+
+peasant_enfranchisement_with_icon
+Definition type: Global function
+Return type: [unregistered]
+
+-----------------------
+
 people
 Definition type: Global function
 Return type: [unregistered]
@@ -24251,24 +24731,6 @@ Return type: [unregistered]
 -----------------------
 
 ports_with_icon
-Definition type: Global function
-Return type: [unregistered]
-
------------------------
-
-potential_profit
-Definition type: Global function
-Return type: [unregistered]
-
------------------------
-
-potential_profit_icon
-Definition type: Global function
-Return type: [unregistered]
-
------------------------
-
-potential_profit_with_icon
 Definition type: Global function
 Return type: [unregistered]
 
@@ -25018,6 +25480,24 @@ Return type: [unregistered]
 
 -----------------------
 
+province_capitals
+Definition type: Global function
+Return type: [unregistered]
+
+-----------------------
+
+province_capitals_icon
+Definition type: Global function
+Return type: [unregistered]
+
+-----------------------
+
+province_capitals_with_icon
+Definition type: Global function
+Return type: [unregistered]
+
+-----------------------
+
 province_definition
 Definition type: Global function
 Return type: [unregistered]
@@ -25031,6 +25511,24 @@ Return type: [unregistered]
 -----------------------
 
 province_definition_with_icon
+Definition type: Global function
+Return type: [unregistered]
+
+-----------------------
+
+province_definitions
+Definition type: Global function
+Return type: [unregistered]
+
+-----------------------
+
+province_definitions_icon
+Definition type: Global function
+Return type: [unregistered]
+
+-----------------------
+
+province_definitions_with_icon
 Definition type: Global function
 Return type: [unregistered]
 
@@ -27412,6 +27910,24 @@ Return type: [unregistered]
 
 -----------------------
 
+secure_flanks_defense
+Definition type: Global function
+Return type: [unregistered]
+
+-----------------------
+
+secure_flanks_defense_icon
+Definition type: Global function
+Return type: [unregistered]
+
+-----------------------
+
+secure_flanks_defense_with_icon
+Definition type: Global function
+Return type: [unregistered]
+
+-----------------------
+
 secure_flanks_icon
 Definition type: Global function
 Return type: [unregistered]
@@ -28936,24 +29452,6 @@ Return type: [unregistered]
 
 -----------------------
 
-tax_base_share
-Definition type: Global function
-Return type: [unregistered]
-
------------------------
-
-tax_base_share_icon
-Definition type: Global function
-Return type: [unregistered]
-
------------------------
-
-tax_base_share_with_icon
-Definition type: Global function
-Return type: [unregistered]
-
------------------------
-
 tax_base_with_icon
 Definition type: Global function
 Return type: [unregistered]
@@ -29008,6 +29506,24 @@ Return type: [unregistered]
 
 -----------------------
 
+taxable_profit
+Definition type: Global function
+Return type: [unregistered]
+
+-----------------------
+
+taxable_profit_icon
+Definition type: Global function
+Return type: [unregistered]
+
+-----------------------
+
+taxable_profit_with_icon
+Definition type: Global function
+Return type: [unregistered]
+
+-----------------------
+
 taxes
 Definition type: Global function
 Return type: [unregistered]
@@ -29039,6 +29555,42 @@ Return type: [unregistered]
 -----------------------
 
 terra_incognita_with_icon
+Definition type: Global function
+Return type: [unregistered]
+
+-----------------------
+
+threat
+Definition type: Global function
+Return type: [unregistered]
+
+-----------------------
+
+threat_icon
+Definition type: Global function
+Return type: [unregistered]
+
+-----------------------
+
+threat_with_icon
+Definition type: Global function
+Return type: [unregistered]
+
+-----------------------
+
+threatening
+Definition type: Global function
+Return type: [unregistered]
+
+-----------------------
+
+threatening_icon
+Definition type: Global function
+Return type: [unregistered]
+
+-----------------------
+
+threatening_with_icon
 Definition type: Global function
 Return type: [unregistered]
 
@@ -29501,6 +30053,42 @@ Return type: [unregistered]
 -----------------------
 
 trading_icon
+Definition type: Global function
+Return type: [unregistered]
+
+-----------------------
+
+trading_market
+Definition type: Global function
+Return type: [unregistered]
+
+-----------------------
+
+trading_market_icon
+Definition type: Global function
+Return type: [unregistered]
+
+-----------------------
+
+trading_market_with_icon
+Definition type: Global function
+Return type: [unregistered]
+
+-----------------------
+
+trading_markets
+Definition type: Global function
+Return type: [unregistered]
+
+-----------------------
+
+trading_markets_icon
+Definition type: Global function
+Return type: [unregistered]
+
+-----------------------
+
+trading_markets_with_icon
 Definition type: Global function
 Return type: [unregistered]
 
@@ -30076,6 +30664,24 @@ Return type: [unregistered]
 
 -----------------------
 
+unit_formation_preference
+Definition type: Global function
+Return type: [unregistered]
+
+-----------------------
+
+unit_formation_preference_icon
+Definition type: Global function
+Return type: [unregistered]
+
+-----------------------
+
+unit_formation_preference_with_icon
+Definition type: Global function
+Return type: [unregistered]
+
+-----------------------
+
 unit_icon
 Definition type: Global function
 Return type: [unregistered]
@@ -30113,6 +30719,42 @@ Return type: [unregistered]
 -----------------------
 
 unit_modifiers_with_icon
+Definition type: Global function
+Return type: [unregistered]
+
+-----------------------
+
+unit_template
+Definition type: Global function
+Return type: [unregistered]
+
+-----------------------
+
+unit_template_icon
+Definition type: Global function
+Return type: [unregistered]
+
+-----------------------
+
+unit_template_with_icon
+Definition type: Global function
+Return type: [unregistered]
+
+-----------------------
+
+unit_templates
+Definition type: Global function
+Return type: [unregistered]
+
+-----------------------
+
+unit_templates_icon
+Definition type: Global function
+Return type: [unregistered]
+
+-----------------------
+
+unit_templates_with_icon
 Definition type: Global function
 Return type: [unregistered]
 
@@ -30803,6 +31445,42 @@ Return type: [unregistered]
 -----------------------
 
 wastelands_with_icon
+Definition type: Global function
+Return type: [unregistered]
+
+-----------------------
+
+wealth
+Definition type: Global function
+Return type: [unregistered]
+
+-----------------------
+
+wealth_icon
+Definition type: Global function
+Return type: [unregistered]
+
+-----------------------
+
+wealth_share
+Definition type: Global function
+Return type: [unregistered]
+
+-----------------------
+
+wealth_share_icon
+Definition type: Global function
+Return type: [unregistered]
+
+-----------------------
+
+wealth_share_with_icon
+Definition type: Global function
+Return type: [unregistered]
+
+-----------------------
+
+wealth_with_icon
 Definition type: Global function
 Return type: [unregistered]
 
@@ -33040,6 +33718,12 @@ Return type: [unregistered]
 
 -----------------------
 
+Age.GetChangingModifierImpact
+Definition type: Function
+Return type: CString
+
+-----------------------
+
 Age.GetDesc
 Definition type: Function
 Return type: CString
@@ -33059,12 +33743,6 @@ Return type: int32
 -----------------------
 
 Age.GetInstitutions
-Definition type: Function
-Return type: CString
-
------------------------
-
-Age.GetModifierImpact
 Definition type: Function
 Return type: CString
 
@@ -33094,6 +33772,12 @@ Return type: CString
 
 -----------------------
 
+Age.GetReformsForCountryInfo( Arg0 )
+Definition type: Function
+Return type: CString
+
+-----------------------
+
 Age.GetResearchTreeStatus
 Definition type: Function
 Return type: CString
@@ -33112,7 +33796,19 @@ Return type: CString
 
 -----------------------
 
-Age.HasModifierImpact
+Age.GetUniqueModifierImpact
+Definition type: Function
+Return type: CString
+
+-----------------------
+
+Age.HasChangingModifierImpact
+Definition type: Function
+Return type: bool
+
+-----------------------
+
+Age.HasUniqueModifierImpact
 Definition type: Function
 Return type: bool
 
@@ -33890,6 +34586,105 @@ Return type: [unregistered]
 
 -----------------------
 
+AlertAboutToLoseGreatPowerStatus
+Definition type: Type
+
+-----------------------
+
+AlertAboutToLoseGreatPowerStatus.AccessSelf
+Definition type: Function
+Return type: [unregistered]
+
+-----------------------
+
+AlertAboutToLoseGreatPowerStatus.Self
+Definition type: Function
+Return type: [unregistered]
+
+-----------------------
+
+AlertAboutToLoseHegemony
+Definition type: Type
+
+-----------------------
+
+AlertAboutToLoseHegemony.AccessSelf
+Definition type: Function
+Return type: [unregistered]
+
+-----------------------
+
+AlertAboutToLoseHegemony.Self
+Definition type: Function
+Return type: [unregistered]
+
+-----------------------
+
+AlertAction
+Definition type: Type
+
+-----------------------
+
+AlertAction.AccessSelf
+Definition type: Function
+Return type: [unregistered]
+
+-----------------------
+
+AlertAction.GetConditions
+Definition type: Function
+Return type: CString
+
+-----------------------
+
+AlertAction.GetCost
+Definition type: Function
+Return type: CString
+
+-----------------------
+
+AlertAction.GetDescription
+Definition type: Function
+Return type: CString
+
+-----------------------
+
+AlertAction.GetEffects
+Definition type: Function
+Return type: CString
+
+-----------------------
+
+AlertAction.GetName
+Definition type: Function
+Return type: CString
+
+-----------------------
+
+AlertAction.IsEnabled
+Definition type: Function
+Return type: bool
+
+-----------------------
+
+AlertAction.IsVisible
+Definition type: Function
+Return type: bool
+
+-----------------------
+
+AlertAction.PerformAction
+Definition type: Function
+Return type: void
+
+-----------------------
+
+AlertAction.Self
+Definition type: Function
+Return type: [unregistered]
+
+-----------------------
+
 AlertActiveIOResolution
 Definition type: Type
 
@@ -34416,6 +35211,202 @@ Return type: [unregistered]
 
 -----------------------
 
+AlertDescription
+Definition type: Type
+
+-----------------------
+
+AlertDescription.AccessSelf
+Definition type: Function
+Return type: [unregistered]
+
+-----------------------
+
+AlertDescription.GetIcon
+Definition type: Function
+Return type: [unregistered]
+
+-----------------------
+
+AlertDescription.GetPriority
+Definition type: Function
+Return type: CString
+
+-----------------------
+
+AlertDescription.GetTitle
+Definition type: Function
+Return type: CString
+
+-----------------------
+
+AlertDescription.GetTitleKey
+Definition type: Function
+Return type: CString
+
+-----------------------
+
+AlertDescription.GetTitleWithTooltip
+Definition type: Function
+Return type: CString
+
+-----------------------
+
+AlertDescription.HasIcon
+Definition type: Function
+Return type: bool
+
+-----------------------
+
+AlertDescription.IsPriority( Arg0 )
+Definition type: Function
+Return type: bool
+
+-----------------------
+
+AlertDescription.Self
+Definition type: Function
+Return type: [unregistered]
+
+-----------------------
+
+AlertEntry
+Definition type: Type
+
+-----------------------
+
+AlertEntry.GetAlertAction
+Definition type: Promote
+Return type: AlertAction
+
+-----------------------
+
+AlertEntry.GetDescription
+Definition type: Promote
+Return type: AlertDescription
+
+-----------------------
+
+AlertEntry.AccessSelf
+Definition type: Function
+Return type: [unregistered]
+
+-----------------------
+
+AlertEntry.GetAlertAction
+Definition type: Function
+Return type: [unregistered]
+
+-----------------------
+
+AlertEntry.GetDescription
+Definition type: Function
+Return type: [unregistered]
+
+-----------------------
+
+AlertEntry.GetHintText
+Definition type: Function
+Return type: CString
+
+-----------------------
+
+AlertEntry.GetHintTitle
+Definition type: Function
+Return type: CString
+
+-----------------------
+
+AlertEntry.GetTooltip
+Definition type: Function
+Return type: CString
+
+-----------------------
+
+AlertEntry.GetTriggerValue
+Definition type: Function
+Return type: uint32
+
+-----------------------
+
+AlertEntry.Hide
+Definition type: Function
+Return type: void
+
+-----------------------
+
+AlertEntry.IsActive
+Definition type: Function
+Return type: bool
+
+-----------------------
+
+AlertEntry.IsDiscarted
+Definition type: Function
+Return type: bool
+
+-----------------------
+
+AlertEntry.IsMuted
+Definition type: Function
+Return type: bool
+
+-----------------------
+
+AlertEntry.IsNew
+Definition type: Function
+Return type: bool
+
+-----------------------
+
+AlertEntry.IsUnmuted
+Definition type: Function
+Return type: bool
+
+-----------------------
+
+AlertEntry.Self
+Definition type: Function
+Return type: [unregistered]
+
+-----------------------
+
+AlertEntry.SetAsOld
+Definition type: Function
+Return type: void
+
+-----------------------
+
+AlertEntry.SetDiscarded
+Definition type: Function
+Return type: void
+
+-----------------------
+
+AlertEntry.SetMuted
+Definition type: Function
+Return type: void
+
+-----------------------
+
+AlertEntry.SetUnmuted
+Definition type: Function
+Return type: void
+
+-----------------------
+
+AlertEntry.Show
+Definition type: Function
+Return type: void
+
+-----------------------
+
+AlertEntry.ShowHint
+Definition type: Function
+Return type: bool
+
+-----------------------
+
 AlertExiledUnits
 Definition type: Type
 
@@ -34780,6 +35771,52 @@ Return type: [unregistered]
 
 -----------------------
 
+AlertHasUnmarriedAdultHeir
+Definition type: Type
+
+-----------------------
+
+AlertHasUnmarriedAdultHeir.AccessSelf
+Definition type: Function
+Return type: [unregistered]
+
+-----------------------
+
+AlertHasUnmarriedAdultHeir.OpenMarriageFinder
+Definition type: Function
+Return type: void
+
+-----------------------
+
+AlertHasUnmarriedAdultHeir.Self
+Definition type: Function
+Return type: [unregistered]
+
+-----------------------
+
+AlertHasUnmarriedAdultRuler
+Definition type: Type
+
+-----------------------
+
+AlertHasUnmarriedAdultRuler.AccessSelf
+Definition type: Function
+Return type: [unregistered]
+
+-----------------------
+
+AlertHasUnmarriedAdultRuler.OpenMarriageFinder
+Definition type: Function
+Return type: void
+
+-----------------------
+
+AlertHasUnmarriedAdultRuler.Self
+Definition type: Function
+Return type: [unregistered]
+
+-----------------------
+
 AlertHasUnmarriedChildren
 Definition type: Type
 
@@ -34872,6 +35909,29 @@ Return type: [unregistered]
 
 -----------------------
 
+AlertHeirCanHaveBetterEducation
+Definition type: Type
+
+-----------------------
+
+AlertHeirCanHaveBetterEducation.AccessSelf
+Definition type: Function
+Return type: [unregistered]
+
+-----------------------
+
+AlertHeirCanHaveBetterEducation.Self
+Definition type: Function
+Return type: [unregistered]
+
+-----------------------
+
+AlertHeirCanHaveBetterEducation.ShowHeir
+Definition type: Function
+Return type: void
+
+-----------------------
+
 AlertIOBreaking
 Definition type: Type
 
@@ -34890,6 +35950,29 @@ Return type: void
 -----------------------
 
 AlertIOBreaking.Self
+Definition type: Function
+Return type: [unregistered]
+
+-----------------------
+
+AlertImportantBuildingsMissingInput
+Definition type: Type
+
+-----------------------
+
+AlertImportantBuildingsMissingInput.AccessSelf
+Definition type: Function
+Return type: [unregistered]
+
+-----------------------
+
+AlertImportantBuildingsMissingInput.Next
+Definition type: Function
+Return type: void
+
+-----------------------
+
+AlertImportantBuildingsMissingInput.Self
 Definition type: Function
 Return type: [unregistered]
 
@@ -34915,77 +35998,6 @@ Return type: void
 AlertIsAtFortLimit.Self
 Definition type: Function
 Return type: [unregistered]
-
------------------------
-
-AlertItem
-Definition type: Type
-
------------------------
-
-AlertItem.AccessSelf
-Definition type: Function
-Return type: [unregistered]
-
------------------------
-
-AlertItem.GetHintText
-Definition type: Function
-Return type: CString
-
------------------------
-
-AlertItem.GetHintTitle
-Definition type: Function
-Return type: CString
-
------------------------
-
-AlertItem.GetTooltip
-Definition type: Function
-Return type: CString
-
------------------------
-
-AlertItem.Hide
-Definition type: Function
-Return type: void
-
------------------------
-
-AlertItem.IsNew
-Definition type: Function
-Return type: bool
-
------------------------
-
-AlertItem.IsShown
-Definition type: Function
-Return type: bool
-
------------------------
-
-AlertItem.Self
-Definition type: Function
-Return type: [unregistered]
-
------------------------
-
-AlertItem.SetAsOld
-Definition type: Function
-Return type: void
-
------------------------
-
-AlertItem.Show
-Definition type: Function
-Return type: void
-
------------------------
-
-AlertItem.ShowHint
-Definition type: Function
-Return type: bool
 
 -----------------------
 
@@ -35064,7 +36076,13 @@ Return type: [unregistered]
 
 -----------------------
 
-AlertManager.GetHeir
+AlertManager.GetDiscarded
+Definition type: Function
+Return type: [unregistered]
+
+-----------------------
+
+AlertManager.GetHidden
 Definition type: Function
 Return type: [unregistered]
 
@@ -35076,13 +36094,13 @@ Return type: [unregistered]
 
 -----------------------
 
-AlertManager.GetRuler
+AlertManager.OnHideSettings
 Definition type: Function
-Return type: [unregistered]
+Return type: bool
 
 -----------------------
 
-AlertManager.OpenMarriageFinder( Arg0 )
+AlertManager.OnShowSettings
 Definition type: Function
 Return type: void
 
@@ -35107,6 +36125,12 @@ Return type: void
 -----------------------
 
 AlertManager.ShowRuler
+Definition type: Function
+Return type: void
+
+-----------------------
+
+AlertManager.ToggleSettings
 Definition type: Function
 Return type: void
 
@@ -35250,6 +36274,35 @@ Return type: [unregistered]
 
 -----------------------
 
+AlertPirates
+Definition type: Type
+
+-----------------------
+
+AlertPirates.AccessSelf
+Definition type: Function
+Return type: [unregistered]
+
+-----------------------
+
+AlertPirates.GetLocationsWithPiratesOrPrivateers
+Definition type: Function
+Return type: [unregistered]
+
+-----------------------
+
+AlertPirates.Next
+Definition type: Function
+Return type: void
+
+-----------------------
+
+AlertPirates.Self
+Definition type: Function
+Return type: [unregistered]
+
+-----------------------
+
 AlertPopNeeds
 Definition type: Type
 
@@ -35342,6 +36395,77 @@ Return type: [unregistered]
 
 -----------------------
 
+AlertSettings
+Definition type: Type
+
+-----------------------
+
+AlertSettings.GetManager
+Definition type: Promote
+Return type: AlertManager
+
+-----------------------
+
+AlertSettings.AccessSelf
+Definition type: Function
+Return type: [unregistered]
+
+-----------------------
+
+AlertSettings.GetManager
+Definition type: Function
+Return type: [unregistered]
+
+-----------------------
+
+AlertSettings.OnClose
+Definition type: Function
+Return type: void
+
+-----------------------
+
+AlertSettings.Self
+Definition type: Function
+Return type: [unregistered]
+
+-----------------------
+
+AlertSettings.ShowDiscarded
+Definition type: Function
+Return type: bool
+
+-----------------------
+
+AlertSettings.ShowHidden
+Definition type: Function
+Return type: bool
+
+-----------------------
+
+AlertSettings.ShowInactive
+Definition type: Function
+Return type: bool
+
+-----------------------
+
+AlertSettings.ToggleDiscarded
+Definition type: Function
+Return type: void
+
+-----------------------
+
+AlertSettings.ToggleHidden
+Definition type: Function
+Return type: void
+
+-----------------------
+
+AlertSettings.ToggleInactive
+Definition type: Function
+Return type: void
+
+-----------------------
+
 AlertStarvingProvinces
 Definition type: Type
 
@@ -35360,6 +36484,23 @@ Return type: void
 -----------------------
 
 AlertStarvingProvinces.Self
+Definition type: Function
+Return type: [unregistered]
+
+-----------------------
+
+AlertStaticModifierActive
+Definition type: Type
+
+-----------------------
+
+AlertStaticModifierActive.AccessSelf
+Definition type: Function
+Return type: [unregistered]
+
+-----------------------
+
+AlertStaticModifierActive.Self
 Definition type: Function
 Return type: [unregistered]
 
@@ -35452,6 +36593,29 @@ Return type: void
 -----------------------
 
 AlertUnusedCB.Self
+Definition type: Function
+Return type: [unregistered]
+
+-----------------------
+
+AlertUpgradeableBuildings
+Definition type: Type
+
+-----------------------
+
+AlertUpgradeableBuildings.AccessSelf
+Definition type: Function
+Return type: [unregistered]
+
+-----------------------
+
+AlertUpgradeableBuildings.Next
+Definition type: Function
+Return type: void
+
+-----------------------
+
+AlertUpgradeableBuildings.Self
 Definition type: Function
 Return type: [unregistered]
 
@@ -36171,6 +37335,18 @@ Return type: CString
 
 -----------------------
 
+Area.GetCulturePercentage( Arg0, Arg1 )
+Definition type: Function
+Return type: CFixedPoint
+
+-----------------------
+
+Area.GetCulturePercentageInfo( Arg0, Arg1 )
+Definition type: Function
+Return type: CString
+
+-----------------------
+
 Area.GetExplorationTime( Arg0 )
 Definition type: Function
 Return type: CFixedPoint
@@ -36286,6 +37462,12 @@ Return type: CString
 -----------------------
 
 Area.HasCoastalSea
+Definition type: Function
+Return type: bool
+
+-----------------------
+
+Area.IsInScriptedGeography( Arg0 )
 Definition type: Function
 Return type: bool
 
@@ -36416,6 +37598,12 @@ Return type: [unregistered]
 
 -----------------------
 
+ArmyBuilderLateralView.GetUnitTemplates
+Definition type: Function
+Return type: [unregistered]
+
+-----------------------
+
 ArmyBuilderLateralView.GetUnitToMergeWith
 Definition type: Function
 Return type: [unregistered]
@@ -36483,6 +37671,18 @@ Return type: void
 -----------------------
 
 ArmyBuilderLateralView.SetNavy
+Definition type: Function
+Return type: void
+
+-----------------------
+
+ArmyBuilderLateralView.ShowOnlyCurrentAge
+Definition type: Function
+Return type: bool
+
+-----------------------
+
+ArmyBuilderLateralView.ToggleShowOnlyCurrentAge
 Definition type: Function
 Return type: void
 
@@ -38425,6 +39625,12 @@ Return type: CString
 
 -----------------------
 
+Building.GetBuildingRGOBonus( Arg0 )
+Definition type: Function
+Return type: CFixedPoint
+
+-----------------------
+
 Building.GetCountryModifiers
 Definition type: Function
 Return type: CString
@@ -38521,6 +39727,12 @@ Return type: CFixedPoint
 
 -----------------------
 
+Building.GetIncomeToOwnerPerLevel
+Definition type: Function
+Return type: CFixedPoint
+
+-----------------------
+
 Building.GetInputGoodsAccess
 Definition type: Function
 Return type: CFixedPoint
@@ -38611,18 +39823,6 @@ Return type: CString
 
 -----------------------
 
-Building.GetNetProfitValue
-Definition type: Function
-Return type: CFixedPoint
-
------------------------
-
-Building.GetNetProfitValuePerLevel
-Definition type: Function
-Return type: CFixedPoint
-
------------------------
-
 Building.GetOwner
 Definition type: Function
 Return type: [unregistered]
@@ -38653,9 +39853,27 @@ Return type: CString
 
 -----------------------
 
+Building.GetProfitPerLevel
+Definition type: Function
+Return type: CFixedPoint
+
+-----------------------
+
 Building.GetSubsidizeInfo
 Definition type: Function
 Return type: CString
+
+-----------------------
+
+Building.GetTaxBaseValue
+Definition type: Function
+Return type: CFixedPoint
+
+-----------------------
+
+Building.GetTaxBaseValuePerLevel
+Definition type: Function
+Return type: CFixedPoint
 
 -----------------------
 
@@ -38689,6 +39907,12 @@ Return type: CString
 
 -----------------------
 
+Building.GetUpkeepPerLevel
+Definition type: Function
+Return type: CFixedPoint
+
+-----------------------
+
 Building.GetVacantPercentForPiechart
 Definition type: Function
 Return type: float
@@ -38710,6 +39934,12 @@ Return type: CString
 Building.GetWorkersRequired
 Definition type: Function
 Return type: CString
+
+-----------------------
+
+Building.HasBuildingRGOBonus( Arg0 )
+Definition type: Function
+Return type: bool
 
 -----------------------
 
@@ -38756,6 +39986,12 @@ Return type: bool
 -----------------------
 
 Building.IsProducing
+Definition type: Function
+Return type: bool
+
+-----------------------
+
+Building.IsProductionMethodsLocked
 Definition type: Function
 Return type: bool
 
@@ -39177,6 +40413,18 @@ Return type: [unregistered]
 
 -----------------------
 
+BuildingItem.GetIncomeBreakdownMaxPossible
+Definition type: Function
+Return type: CString
+
+-----------------------
+
+BuildingItem.GetIncomeBreakdownMin
+Definition type: Function
+Return type: CString
+
+-----------------------
+
 BuildingItem.GetLocationFilter
 Definition type: Function
 Return type: [unregistered]
@@ -39189,13 +40437,37 @@ Return type: [unregistered]
 
 -----------------------
 
+BuildingItem.GetMaxIncome
+Definition type: Function
+Return type: CFixedPoint
+
+-----------------------
+
 BuildingItem.GetMaxProfit
 Definition type: Function
 Return type: CFixedPoint
 
 -----------------------
 
+BuildingItem.GetMaxWealth
+Definition type: Function
+Return type: CFixedPoint
+
+-----------------------
+
+BuildingItem.GetMinIncome
+Definition type: Function
+Return type: CFixedPoint
+
+-----------------------
+
 BuildingItem.GetMinProfit
+Definition type: Function
+Return type: CFixedPoint
+
+-----------------------
+
+BuildingItem.GetMinWealth
 Definition type: Function
 Return type: CFixedPoint
 
@@ -39309,7 +40581,19 @@ Return type: bool
 
 -----------------------
 
+BuildingItem.HasMinIncome
+Definition type: Function
+Return type: bool
+
+-----------------------
+
 BuildingItem.HasMinProfit
+Definition type: Function
+Return type: bool
+
+-----------------------
+
+BuildingItem.HasMinWealth
 Definition type: Function
 Return type: bool
 
@@ -39564,6 +40848,12 @@ Return type: bool
 
 -----------------------
 
+BuildingType.CalcHighestPossibleProductionEfficiency( Arg0, Arg1 )
+Definition type: Function
+Return type: CFixedPoint
+
+-----------------------
+
 BuildingType.CanBuild
 Definition type: Function
 Return type: bool
@@ -39571,6 +40861,12 @@ Return type: bool
 -----------------------
 
 BuildingType.CanBuildInLocationRank( Arg0 )
+Definition type: Function
+Return type: bool
+
+-----------------------
+
+BuildingType.CanShowTags
 Definition type: Function
 Return type: bool
 
@@ -39648,6 +40944,12 @@ Return type: CString
 
 -----------------------
 
+BuildingType.GetIcon
+Definition type: Function
+Return type: CString
+
+-----------------------
+
 BuildingType.GetMakesObsoleteChain
 Definition type: Function
 Return type: [unregistered]
@@ -39711,6 +41013,12 @@ Return type: CString
 BuildingType.GetPopType
 Definition type: Function
 Return type: [unregistered]
+
+-----------------------
+
+BuildingType.GetPossibleHighestRGOBOnus( Arg0, Arg1 )
+Definition type: Function
+Return type: CFixedPoint
 
 -----------------------
 
@@ -39786,6 +41094,12 @@ Return type: bool
 
 -----------------------
 
+BuildingType.HasPossibleRGOBonus( Arg0, Arg1 )
+Definition type: Function
+Return type: bool
+
+-----------------------
+
 BuildingType.HasRemoveIf
 Definition type: Function
 Return type: bool
@@ -39840,6 +41154,12 @@ Return type: bool
 
 -----------------------
 
+BuildingType.IsSpecialBuilding
+Definition type: Function
+Return type: bool
+
+-----------------------
+
 BuildingType.IsUpgradeable
 Definition type: Function
 Return type: bool
@@ -39864,9 +41184,21 @@ Return type: bool
 
 -----------------------
 
+BuildingType.ProductionEfficiencyInfo( Arg0, Arg1 )
+Definition type: Function
+Return type: CString
+
+-----------------------
+
 BuildingType.Self
 Definition type: Function
 Return type: [unregistered]
+
+-----------------------
+
+BuildingType.ShowTags
+Definition type: Function
+Return type: CString
 
 -----------------------
 
@@ -40062,6 +41394,23 @@ Return type: bool
 -----------------------
 
 BuildingView.Self
+Definition type: Function
+Return type: [unregistered]
+
+-----------------------
+
+ButtonClickAction
+Definition type: Type
+
+-----------------------
+
+ButtonClickAction.AccessSelf
+Definition type: Function
+Return type: [unregistered]
+
+-----------------------
+
+ButtonClickAction.Self
 Definition type: Function
 Return type: [unregistered]
 
@@ -40613,6 +41962,12 @@ Return type: CString
 
 -----------------------
 
+Cabinet.GetDaysUntilFullyImplementedInDays
+Definition type: Function
+Return type: CString
+
+-----------------------
+
 Cabinet.GetDescriptionForAssigningCabinetMemberToSlot
 Definition type: Function
 Return type: CString
@@ -40644,6 +41999,12 @@ Return type: CString
 -----------------------
 
 Cabinet.GetEffectiveSkillTooltip
+Definition type: Function
+Return type: CString
+
+-----------------------
+
+Cabinet.GetFullyImplementedDateString
 Definition type: Function
 Return type: CString
 
@@ -41300,6 +42661,12 @@ Return type: [unregistered]
 
 -----------------------
 
+CasusBelli.CanShowTags
+Definition type: Function
+Return type: bool
+
+-----------------------
+
 CasusBelli.GetDescription
 Definition type: Function
 Return type: CString
@@ -41339,6 +42706,12 @@ Return type: bool
 CasusBelli.Self
 Definition type: Function
 Return type: [unregistered]
+
+-----------------------
+
+CasusBelli.ShowTags
+Definition type: Function
+Return type: CString
 
 -----------------------
 
@@ -41402,6 +42775,12 @@ Return type: CFixedPoint
 -----------------------
 
 CategoryBuildingTypesItem.GetTotalNetProfit
+Definition type: Function
+Return type: CFixedPoint
+
+-----------------------
+
+CategoryBuildingTypesItem.GetTotalWealth
 Definition type: Function
 Return type: CFixedPoint
 
@@ -41782,6 +43161,24 @@ Return type: CString
 
 -----------------------
 
+Character.GetAdmiralCareerEndDate
+Definition type: Function
+Return type: CString
+
+-----------------------
+
+Character.GetAdmiralCareerStartDate
+Definition type: Function
+Return type: CString
+
+-----------------------
+
+Character.GetAdmiralYearsOfService
+Definition type: Function
+Return type: int32
+
+-----------------------
+
 Character.GetAdultNicknameWithNoTooltip
 Definition type: Function
 Return type: CString
@@ -41842,12 +43239,6 @@ Return type: CFixedPoint
 
 -----------------------
 
-Character.GetArtProgressForUI
-Definition type: Function
-Return type: float
-
------------------------
-
 Character.GetArtProgressInfo
 Definition type: Function
 Return type: CString
@@ -41893,6 +43284,24 @@ Return type: CString
 Character.GetBirthLocation
 Definition type: Function
 Return type: [unregistered]
+
+-----------------------
+
+Character.GetCabinetCareerEndDate
+Definition type: Function
+Return type: CString
+
+-----------------------
+
+Character.GetCabinetCareerStartDate
+Definition type: Function
+Return type: CString
+
+-----------------------
+
+Character.GetCabinetYearsOfService
+Definition type: Function
+Return type: int32
 
 -----------------------
 
@@ -42088,6 +43497,24 @@ Return type: CString
 
 -----------------------
 
+Character.GetGeneralCareerEndDate
+Definition type: Function
+Return type: CString
+
+-----------------------
+
+Character.GetGeneralCareerStartDate
+Definition type: Function
+Return type: CString
+
+-----------------------
+
+Character.GetGeneralYearsOfService
+Definition type: Function
+Return type: int32
+
+-----------------------
+
 Character.GetHeShe
 Definition type: Function
 Return type: CString
@@ -42226,15 +43653,39 @@ Return type: int32
 
 -----------------------
 
+Character.GetMaxHiringSubunitsForLeaderAndPopulation
+Definition type: Function
+Return type: int32
+
+-----------------------
+
 Character.GetMercenaryAvailableTotalSubunitsCount
 Definition type: Function
-Return type: CFixedPoint
+Return type: int32
 
 -----------------------
 
 Character.GetMercenaryTotalSubunitUITooltip
 Definition type: Function
 Return type: CString
+
+-----------------------
+
+Character.GetMilitaryCareerEndDate
+Definition type: Function
+Return type: CString
+
+-----------------------
+
+Character.GetMilitaryCareerStartDate
+Definition type: Function
+Return type: CString
+
+-----------------------
+
+Character.GetMilitaryYearsOfService
+Definition type: Function
+Return type: int32
 
 -----------------------
 
@@ -42707,6 +44158,12 @@ Return type: bool
 -----------------------
 
 Character.IsRuler
+Definition type: Function
+Return type: bool
+
+-----------------------
+
+Character.IsRulerOrRegentOfCourtCountry
 Definition type: Function
 Return type: bool
 
@@ -44584,6 +46041,18 @@ Return type: [unregistered]
 
 -----------------------
 
+CombatSide.GetCombinedArmsBonus
+Definition type: Function
+Return type: CFixedPoint
+
+-----------------------
+
+CombatSide.GetCombinedArmsInfo
+Definition type: Function
+Return type: CString
+
+-----------------------
+
 CombatSide.GetCommander
 Definition type: Function
 Return type: [unregistered]
@@ -44737,6 +46206,12 @@ Return type: CString
 CombatSide.GetVisualStrengthTooltip
 Definition type: Function
 Return type: CString
+
+-----------------------
+
+CombatSide.HasCombinedArmsInfo
+Definition type: Function
+Return type: bool
 
 -----------------------
 
@@ -46433,6 +47908,12 @@ Return type: CString
 
 -----------------------
 
+Continent.IsInScriptedGeography( Arg0 )
+Definition type: Function
+Return type: bool
+
+-----------------------
+
 Continent.Self
 Definition type: Function
 Return type: [unregistered]
@@ -46777,12 +48258,6 @@ Return type: TimedModifierOwner
 
 -----------------------
 
-Country.GetWarLosses
-Definition type: Promote
-Return type: WarLosses
-
------------------------
-
 Country.MakeScope
 Definition type: Promote
 Return type: Scope
@@ -46832,6 +48307,12 @@ Return type: bool
 -----------------------
 
 Country.CanTakeLand
+Definition type: Function
+Return type: bool
+
+-----------------------
+
+Country.CanUpgradeBuildingType( Arg0 )
 Definition type: Function
 Return type: bool
 
@@ -47494,6 +48975,12 @@ Return type: [unregistered]
 Country.GetEconomicalBase
 Definition type: Function
 Return type: CFixedPoint
+
+-----------------------
+
+Country.GetEconomicalBaseInfo
+Definition type: Function
+Return type: CString
 
 -----------------------
 
@@ -48169,6 +49656,24 @@ Return type: [unregistered]
 
 -----------------------
 
+Country.GetPRURobberBaronsAffectedProvinces
+Definition type: Function
+Return type: [unregistered]
+
+-----------------------
+
+Country.GetPRURobberBaronsEligibleProvinces
+Definition type: Function
+Return type: [unregistered]
+
+-----------------------
+
+Country.GetPRURobberBaronsRemovedProvinces
+Definition type: Function
+Return type: [unregistered]
+
+-----------------------
+
 Country.GetPercentSpeakersOfLiturgicalLanguage
 Definition type: Function
 Return type: CFixedPoint
@@ -48307,6 +49812,18 @@ Return type: CString
 
 -----------------------
 
+Country.GetRaisedRegularArmySize
+Definition type: Function
+Return type: CString
+
+-----------------------
+
+Country.GetRaisedRegularArmySizeTooltip
+Definition type: Function
+Return type: CString
+
+-----------------------
+
 Country.GetRank
 Definition type: Function
 Return type: [unregistered]
@@ -48326,12 +49843,6 @@ Return type: CFixedPoint
 -----------------------
 
 Country.GetRegularArmySize
-Definition type: Function
-Return type: CString
-
------------------------
-
-Country.GetRegularArmySizeTooltip
 Definition type: Function
 Return type: CString
 
@@ -48519,6 +50030,12 @@ Return type: CString
 
 -----------------------
 
+Country.GetTotalBuildingLevelsIncudingUnderConstruction( Arg0 )
+Definition type: Function
+Return type: int32
+
+-----------------------
+
 Country.GetTotalCoastalPopulation
 Definition type: Function
 Return type: CFixedPoint
@@ -48633,12 +50150,6 @@ Return type: [unregistered]
 
 -----------------------
 
-Country.GetWarLosses
-Definition type: Function
-Return type: [unregistered]
-
------------------------
-
 Country.GetWinterAffectedLocations
 Definition type: Function
 Return type: CString
@@ -48675,6 +50186,12 @@ Return type: bool
 
 -----------------------
 
+Country.HasCapital
+Definition type: Function
+Return type: bool
+
+-----------------------
+
 Country.HasCardinals
 Definition type: Function
 Return type: bool
@@ -48694,6 +50211,12 @@ Return type: bool
 -----------------------
 
 Country.HasDifficultyLevel
+Definition type: Function
+Return type: bool
+
+-----------------------
+
+Country.HasDoom
 Definition type: Function
 Return type: bool
 
@@ -48928,6 +50451,12 @@ Return type: bool
 -----------------------
 
 Country.IsRevolutionaryTarget
+Definition type: Function
+Return type: bool
+
+-----------------------
+
+Country.IsTargetOfInternationalOrganization( Arg0 )
 Definition type: Function
 Return type: bool
 
@@ -49339,6 +50868,12 @@ Return type: Country
 
 -----------------------
 
+CountryMessage.GetWarInfo
+Definition type: Promote
+Return type: FinishedWarInfo
+
+-----------------------
+
 CountryMessage.AccessSelf
 Definition type: Function
 Return type: [unregistered]
@@ -49352,6 +50887,12 @@ Return type: [unregistered]
 -----------------------
 
 CountryMessage.GetSecondCountry
+Definition type: Function
+Return type: [unregistered]
+
+-----------------------
+
+CountryMessage.GetWarInfo
 Definition type: Function
 Return type: [unregistered]
 
@@ -50112,6 +51653,35 @@ Return type: int32
 -----------------------
 
 CountryRulerData.Self
+Definition type: Function
+Return type: [unregistered]
+
+-----------------------
+
+CountryUpgradeableBuildings
+Definition type: Type
+
+-----------------------
+
+CountryUpgradeableBuildings.AccessSelf
+Definition type: Function
+Return type: [unregistered]
+
+-----------------------
+
+CountryUpgradeableBuildings.GetMarketUpgradeableBuildings
+Definition type: Function
+Return type: [unregistered]
+
+-----------------------
+
+CountryUpgradeableBuildings.GetMarketUpgradeableBuildingsCount
+Definition type: Function
+Return type: int32
+
+-----------------------
+
+CountryUpgradeableBuildings.Self
 Definition type: Function
 Return type: [unregistered]
 
@@ -51313,6 +52883,12 @@ Return type: bool
 
 -----------------------
 
+DeclareWarLateralView.CanUnmarkAsCobelligerent( Arg0 )
+Definition type: Function
+Return type: bool
+
+-----------------------
+
 DeclareWarLateralView.CreateCasusBelli
 Definition type: Function
 Return type: void
@@ -51481,6 +53057,12 @@ Return type: bool
 
 -----------------------
 
+DeclareWarLateralView.IsOriginalEnemyLeader( Arg0 )
+Definition type: Function
+Return type: bool
+
+-----------------------
+
 DeclareWarLateralView.IsRightPanel
 Definition type: Function
 Return type: bool
@@ -51494,6 +53076,12 @@ Return type: [unregistered]
 -----------------------
 
 DeclareWarLateralView.ShowSelectCasusBelli
+Definition type: Function
+Return type: void
+
+-----------------------
+
+DeclareWarLateralView.UnmarkAsCobelligerent( Arg0 )
 Definition type: Function
 Return type: void
 
@@ -52281,12 +53869,6 @@ Return type: [unregistered]
 
 -----------------------
 
-Diplomacy.GetRivals
-Definition type: Function
-Return type: [unregistered]
-
------------------------
-
 Diplomacy.GetRoyalMarriages
 Definition type: Function
 Return type: [unregistered]
@@ -52320,6 +53902,24 @@ Return type: [unregistered]
 Diplomacy.GetSubjects
 Definition type: Function
 Return type: [unregistered]
+
+-----------------------
+
+Diplomacy.GetThreatLevel( Arg0 )
+Definition type: Function
+Return type: CFixedPoint
+
+-----------------------
+
+Diplomacy.GetThreatLevelInfo( Arg0 )
+Definition type: Function
+Return type: CString
+
+-----------------------
+
+Diplomacy.GetThreatLevelTitle( Arg0 )
+Definition type: Function
+Return type: CString
 
 -----------------------
 
@@ -52444,6 +54044,12 @@ Return type: bool
 -----------------------
 
 Diplomacy.IsSubjectOf( Arg0 )
+Definition type: Function
+Return type: bool
+
+-----------------------
+
+Diplomacy.IsThreat( Arg0 )
 Definition type: Function
 Return type: bool
 
@@ -53282,7 +54888,7 @@ Return type: void
 
 -----------------------
 
-DiplomaticActionItem.RequireAcceptance
+DiplomaticActionItem.RequiresAcceptance
 Definition type: Function
 Return type: bool
 
@@ -53459,6 +55065,18 @@ Return type: [unregistered]
 
 -----------------------
 
+DisasterType.GetModifier
+Definition type: Function
+Return type: CString
+
+-----------------------
+
+DisasterType.GetModifiersSize
+Definition type: Function
+Return type: CFixedPoint
+
+-----------------------
+
 DisasterType.GetName
 Definition type: Function
 Return type: CString
@@ -53573,6 +55191,35 @@ Return type: bool
 -----------------------
 
 DisasterView.Self
+Definition type: Function
+Return type: [unregistered]
+
+-----------------------
+
+DiscardStash
+Definition type: Type
+
+-----------------------
+
+DiscardStash.GetManager
+Definition type: Promote
+Return type: AlertManager
+
+-----------------------
+
+DiscardStash.AccessSelf
+Definition type: Function
+Return type: [unregistered]
+
+-----------------------
+
+DiscardStash.GetManager
+Definition type: Function
+Return type: [unregistered]
+
+-----------------------
+
+DiscardStash.Self
 Definition type: Function
 Return type: [unregistered]
 
@@ -55026,6 +56673,12 @@ Return type: CFixedPoint
 
 -----------------------
 
+EconomyView.GetDataPointValue( Arg0 )
+Definition type: Function
+Return type: CString
+
+-----------------------
+
 EconomyView.GetDefaultCoinMinting
 Definition type: Function
 Return type: float
@@ -55840,6 +57493,24 @@ Return type: CString
 
 -----------------------
 
+Estate.GetEconomyInfo
+Definition type: Function
+Return type: CString
+
+-----------------------
+
+Estate.GetEnfranchismentIncome
+Definition type: Function
+Return type: CFixedPoint
+
+-----------------------
+
+Estate.GetEnfranchismentIncomeInfo
+Definition type: Function
+Return type: CString
+
+-----------------------
+
 Estate.GetEstatePowerInfo
 Definition type: Function
 Return type: CString
@@ -55858,21 +57529,9 @@ Return type: CString
 
 -----------------------
 
-Estate.GetFoodIncome
-Definition type: Function
-Return type: CFixedPoint
-
------------------------
-
 Estate.GetGold
 Definition type: Function
 Return type: CFixedPoint
-
------------------------
-
-Estate.GetLastMonthIncomeCount
-Definition type: Function
-Return type: uint32
 
 -----------------------
 
@@ -56098,6 +57757,12 @@ Return type: CString
 
 -----------------------
 
+Estate.GetTargetSatisfaction
+Definition type: Function
+Return type: CFixedPoint
+
+-----------------------
+
 Estate.GetTargetSatisfactionInfo
 Definition type: Function
 Return type: CString
@@ -56129,12 +57794,6 @@ Return type: CString
 -----------------------
 
 Estate.GetTotalPopulationNoFormat
-Definition type: Function
-Return type: CFixedPoint
-
------------------------
-
-Estate.GetTradeIncome
 Definition type: Function
 Return type: CFixedPoint
 
@@ -57678,6 +59337,238 @@ Return type: [unregistered]
 
 -----------------------
 
+FinishedWarInfo
+Definition type: Type
+
+-----------------------
+
+FinishedWarInfo.AccessSelf
+Definition type: Function
+Return type: [unregistered]
+
+-----------------------
+
+FinishedWarInfo.GetAttackerArmyDestroyedDisplay
+Definition type: Function
+Return type: CString
+
+-----------------------
+
+FinishedWarInfo.GetAttackerArmyDestroyedStrength
+Definition type: Function
+Return type: CFixedPoint
+
+-----------------------
+
+FinishedWarInfo.GetAttackerArmyTotalStrength
+Definition type: Function
+Return type: CFixedPoint
+
+-----------------------
+
+FinishedWarInfo.GetAttackerList
+Definition type: Function
+Return type: [unregistered]
+
+-----------------------
+
+FinishedWarInfo.GetAttackerNavalUnitStats
+Definition type: Function
+Return type: [unregistered]
+
+-----------------------
+
+FinishedWarInfo.GetAttackerNavyDestroyedDisplay
+Definition type: Function
+Return type: CString
+
+-----------------------
+
+FinishedWarInfo.GetAttackerNavyDestroyedStrength
+Definition type: Function
+Return type: CFixedPoint
+
+-----------------------
+
+FinishedWarInfo.GetAttackerNavyTotalStrength
+Definition type: Function
+Return type: CFixedPoint
+
+-----------------------
+
+FinishedWarInfo.GetAttackerPopulationLosses
+Definition type: Function
+Return type: CFixedPoint
+
+-----------------------
+
+FinishedWarInfo.GetAttackerPopulationLossesDisplay
+Definition type: Function
+Return type: CString
+
+-----------------------
+
+FinishedWarInfo.GetAttackerTotalPopulation
+Definition type: Function
+Return type: CFixedPoint
+
+-----------------------
+
+FinishedWarInfo.GetAttackerUnitStats
+Definition type: Function
+Return type: [unregistered]
+
+-----------------------
+
+FinishedWarInfo.GetDefenderArmyDestroyedDisplay
+Definition type: Function
+Return type: CString
+
+-----------------------
+
+FinishedWarInfo.GetDefenderArmyDestroyedStrength
+Definition type: Function
+Return type: CFixedPoint
+
+-----------------------
+
+FinishedWarInfo.GetDefenderArmyTotalStrength
+Definition type: Function
+Return type: CFixedPoint
+
+-----------------------
+
+FinishedWarInfo.GetDefenderList
+Definition type: Function
+Return type: [unregistered]
+
+-----------------------
+
+FinishedWarInfo.GetDefenderNavalUnitStats
+Definition type: Function
+Return type: [unregistered]
+
+-----------------------
+
+FinishedWarInfo.GetDefenderNavyDestroyedDisplay
+Definition type: Function
+Return type: CString
+
+-----------------------
+
+FinishedWarInfo.GetDefenderNavyDestroyedStrength
+Definition type: Function
+Return type: CFixedPoint
+
+-----------------------
+
+FinishedWarInfo.GetDefenderNavyTotalStrength
+Definition type: Function
+Return type: CFixedPoint
+
+-----------------------
+
+FinishedWarInfo.GetDefenderPopulationLosses
+Definition type: Function
+Return type: CFixedPoint
+
+-----------------------
+
+FinishedWarInfo.GetDefenderPopulationLossesDisplay
+Definition type: Function
+Return type: CString
+
+-----------------------
+
+FinishedWarInfo.GetDefenderTotalPopulation
+Definition type: Function
+Return type: CFixedPoint
+
+-----------------------
+
+FinishedWarInfo.GetDefenderUnitStats
+Definition type: Function
+Return type: [unregistered]
+
+-----------------------
+
+FinishedWarInfo.IsWinningCountry( Arg0 )
+Definition type: Function
+Return type: bool
+
+-----------------------
+
+FinishedWarInfo.Self
+Definition type: Function
+Return type: [unregistered]
+
+-----------------------
+
+FinishedWarUnitStats
+Definition type: Type
+
+-----------------------
+
+FinishedWarUnitStats.GetCategory
+Definition type: Promote
+Return type: SubUnitCategory
+
+-----------------------
+
+FinishedWarUnitStats.AccessSelf
+Definition type: Function
+Return type: [unregistered]
+
+-----------------------
+
+FinishedWarUnitStats.GetCategory
+Definition type: Function
+Return type: [unregistered]
+
+-----------------------
+
+FinishedWarUnitStats.GetDestroyed
+Definition type: Function
+Return type: CFixedPoint
+
+-----------------------
+
+FinishedWarUnitStats.GetImprisoned
+Definition type: Function
+Return type: CFixedPoint
+
+-----------------------
+
+FinishedWarUnitStats.GetLosses
+Definition type: Function
+Return type: CString
+
+-----------------------
+
+FinishedWarUnitStats.GetRemaining
+Definition type: Function
+Return type: CFixedPoint
+
+-----------------------
+
+FinishedWarUnitStats.GetSize
+Definition type: Function
+Return type: CFixedPoint
+
+-----------------------
+
+FinishedWarUnitStats.GetVisualSize
+Definition type: Function
+Return type: CString
+
+-----------------------
+
+FinishedWarUnitStats.Self
+Definition type: Function
+Return type: [unregistered]
+
+-----------------------
+
 FoodLocationItem
 Definition type: Type
 
@@ -58449,6 +60340,12 @@ Return type: CString
 
 -----------------------
 
+ForeignCountryView.GetOngoingRelationCountries
+Definition type: Function
+Return type: [unregistered]
+
+-----------------------
+
 ForeignCountryView.GetPercentageLandCombatStrength
 Definition type: Function
 Return type: CFixedPoint
@@ -58533,6 +60430,12 @@ Return type: [unregistered]
 
 -----------------------
 
+ForeignCountryView.HasOngoingRelations
+Definition type: Function
+Return type: bool
+
+-----------------------
+
 ForeignCountryView.HasRulingHistory
 Definition type: Function
 Return type: bool
@@ -58576,6 +60479,12 @@ Return type: bool
 -----------------------
 
 ForeignCountryView.IsRightPanel
+Definition type: Function
+Return type: bool
+
+-----------------------
+
+ForeignCountryView.IsViewingPlayerCountry
 Definition type: Function
 Return type: bool
 
@@ -59411,12 +61320,6 @@ Return type: CString
 
 -----------------------
 
-GameConceptTooltip.GetTexture
-Definition type: Function
-Return type: [unregistered]
-
------------------------
-
 GameConceptTooltip.HasFamily
 Definition type: Function
 Return type: bool
@@ -59495,6 +61398,12 @@ Return type: bool
 -----------------------
 
 GameDLC.IsInstalled
+Definition type: Function
+Return type: bool
+
+-----------------------
+
+GameDLC.IsMounted
 Definition type: Function
 Return type: bool
 
@@ -60442,7 +62351,19 @@ Return type: [unregistered]
 
 -----------------------
 
-GoodItem.GetMaxBuildingProfit
+GoodItem.GetMaxBuildingIncome
+Definition type: Function
+Return type: CFixedPoint
+
+-----------------------
+
+GoodItem.GetMaxBuildingTaxBase
+Definition type: Function
+Return type: CFixedPoint
+
+-----------------------
+
+GoodItem.GetMaxRGOIncome
 Definition type: Function
 Return type: CFixedPoint
 
@@ -60492,6 +62413,12 @@ Return type: Scope
 Goods.AccessSelf
 Definition type: Function
 Return type: [unregistered]
+
+-----------------------
+
+Goods.CanShowTags
+Definition type: Function
+Return type: bool
 
 -----------------------
 
@@ -60702,6 +62629,12 @@ Return type: bool
 Goods.Self
 Definition type: Function
 Return type: [unregistered]
+
+-----------------------
+
+Goods.ShowTags
+Definition type: Function
+Return type: CString
 
 -----------------------
 
@@ -61167,6 +63100,12 @@ Return type: [unregistered]
 
 -----------------------
 
+GoodsMarketEntry.GetDataPointValue( Arg0 )
+Definition type: Function
+Return type: CString
+
+-----------------------
+
 GoodsMarketEntry.GetDemand
 Definition type: Function
 Return type: CFixedPoint
@@ -61209,7 +63148,25 @@ Return type: float
 
 -----------------------
 
+GoodsMarketEntry.GetMaxPriceForPlot
+Definition type: Function
+Return type: float
+
+-----------------------
+
+GoodsMarketEntry.GetMaxPriceVariationForHistory
+Definition type: Function
+Return type: float
+
+-----------------------
+
 GoodsMarketEntry.GetMinPrice
+Definition type: Function
+Return type: float
+
+-----------------------
+
+GoodsMarketEntry.GetMinPriceForPlot
 Definition type: Function
 Return type: float
 
@@ -63453,6 +65410,12 @@ Return type: [unregistered]
 
 -----------------------
 
+HeirSelection.CanShowTags
+Definition type: Function
+Return type: bool
+
+-----------------------
+
 HeirSelection.GetBestCandidateDesc
 Definition type: Function
 Return type: CString
@@ -63522,6 +65485,12 @@ Return type: [unregistered]
 HeirSelection.ShouldShowCandidates
 Definition type: Function
 Return type: bool
+
+-----------------------
+
+HeirSelection.ShowTags
+Definition type: Function
+Return type: CString
 
 -----------------------
 
@@ -64127,6 +66096,101 @@ Return type: [unregistered]
 
 -----------------------
 
+IOLawOutlinerEntry
+Definition type: Type
+
+-----------------------
+
+IOLawOutlinerEntry.GetInternationalOrganization
+Definition type: Promote
+Return type: InternationalOrganization
+
+-----------------------
+
+IOLawOutlinerEntry.GetResolution
+Definition type: Promote
+Return type: Resolution
+
+-----------------------
+
+IOLawOutlinerEntry.AccessSelf
+Definition type: Function
+Return type: [unregistered]
+
+-----------------------
+
+IOLawOutlinerEntry.GetDaysLeft
+Definition type: Function
+Return type: CFixedPoint
+
+-----------------------
+
+IOLawOutlinerEntry.GetDesc
+Definition type: Function
+Return type: CString
+
+-----------------------
+
+IOLawOutlinerEntry.GetHighestVotedDesc
+Definition type: Function
+Return type: CString
+
+-----------------------
+
+IOLawOutlinerEntry.GetIcon
+Definition type: Function
+Return type: [unregistered]
+
+-----------------------
+
+IOLawOutlinerEntry.GetInternationalOrganization
+Definition type: Function
+Return type: [unregistered]
+
+-----------------------
+
+IOLawOutlinerEntry.GetNotVoted
+Definition type: Function
+Return type: [unregistered]
+
+-----------------------
+
+IOLawOutlinerEntry.GetProgressToDeadline
+Definition type: Function
+Return type: CFixedPoint
+
+-----------------------
+
+IOLawOutlinerEntry.GetResolution
+Definition type: Function
+Return type: [unregistered]
+
+-----------------------
+
+IOLawOutlinerEntry.GetVoteItems
+Definition type: Function
+Return type: [unregistered]
+
+-----------------------
+
+IOLawOutlinerEntry.GetVotesForCountry( Arg0 )
+Definition type: Function
+Return type: CFixedPoint
+
+-----------------------
+
+IOLawOutlinerEntry.OnClick
+Definition type: Function
+Return type: void
+
+-----------------------
+
+IOLawOutlinerEntry.Self
+Definition type: Function
+Return type: [unregistered]
+
+-----------------------
+
 IconWrap
 Definition type: Type
 
@@ -64457,6 +66521,35 @@ Return type: [unregistered]
 -----------------------
 
 ImportExportMarker.Self
+Definition type: Function
+Return type: [unregistered]
+
+-----------------------
+
+ImportantBuildingsCountryNeeds
+Definition type: Type
+
+-----------------------
+
+ImportantBuildingsCountryNeeds.AccessSelf
+Definition type: Function
+Return type: [unregistered]
+
+-----------------------
+
+ImportantBuildingsCountryNeeds.GetMarketBuildingsMissingGoodsCount
+Definition type: Function
+Return type: int32
+
+-----------------------
+
+ImportantBuildingsCountryNeeds.GetMarketNeeds
+Definition type: Function
+Return type: [unregistered]
+
+-----------------------
+
+ImportantBuildingsCountryNeeds.Self
 Definition type: Function
 Return type: [unregistered]
 
@@ -65847,6 +67940,12 @@ Return type: ScriptableHintDefinition
 
 -----------------------
 
+InteractionTarget.GetScriptedGeography
+Definition type: Promote
+Return type: ScriptedGeography
+
+-----------------------
+
 InteractionTarget.GetScriptedPeaceTreatyType
 Definition type: Promote
 Return type: ScriptedPeaceTreatyType
@@ -65934,6 +68033,12 @@ Return type: Unit
 InteractionTarget.GetUnitAbility
 Definition type: Promote
 Return type: UnitAbility
+
+-----------------------
+
+InteractionTarget.GetUnitFormationPreference
+Definition type: Promote
+Return type: UnitFormationPreference
 
 -----------------------
 
@@ -66579,6 +68684,12 @@ Return type: [unregistered]
 
 -----------------------
 
+InteractionTarget.GetScriptedGeography
+Definition type: Function
+Return type: [unregistered]
+
+-----------------------
+
 InteractionTarget.GetScriptedPeaceTreatyType
 Definition type: Function
 Return type: [unregistered]
@@ -66664,6 +68775,12 @@ Return type: [unregistered]
 -----------------------
 
 InteractionTarget.GetUnitAbility
+Definition type: Function
+Return type: [unregistered]
+
+-----------------------
+
+InteractionTarget.GetUnitFormationPreference
 Definition type: Function
 Return type: [unregistered]
 
@@ -67263,6 +69380,12 @@ Return type: bool
 
 -----------------------
 
+InteractionTarget.IsScriptedGeography
+Definition type: Function
+Return type: bool
+
+-----------------------
+
 InteractionTarget.IsScriptedPeaceTreatyType
 Definition type: Function
 Return type: bool
@@ -67354,6 +69477,12 @@ Return type: bool
 -----------------------
 
 InteractionTarget.IsUnitAbility
+Definition type: Function
+Return type: bool
+
+-----------------------
+
+InteractionTarget.IsUnitFormationPreference
 Definition type: Function
 Return type: bool
 
@@ -67997,6 +70126,12 @@ Return type: [unregistered]
 InternationalOrganization.GetTarget
 Definition type: Function
 Return type: [unregistered]
+
+-----------------------
+
+InternationalOrganization.GetTargetEffects
+Definition type: Function
+Return type: CString
 
 -----------------------
 
@@ -69108,6 +71243,30 @@ Return type: CFixedPoint
 
 -----------------------
 
+InternationalOrganizationsView.GetWithdraw
+Definition type: Function
+Return type: float
+
+-----------------------
+
+InternationalOrganizationsView.GetWithdrawMax
+Definition type: Function
+Return type: float
+
+-----------------------
+
+InternationalOrganizationsView.GetWithdrawMin
+Definition type: Function
+Return type: float
+
+-----------------------
+
+InternationalOrganizationsView.GetWithdrawStep
+Definition type: Function
+Return type: float
+
+-----------------------
+
 InternationalOrganizationsView.HasActions
 Definition type: Function
 Return type: bool
@@ -69181,6 +71340,18 @@ Return type: void
 -----------------------
 
 InternationalOrganizationsView.OnPriceChanged
+Definition type: Function
+Return type: void
+
+-----------------------
+
+InternationalOrganizationsView.OnWithdrawAccept
+Definition type: Function
+Return type: void
+
+-----------------------
+
+InternationalOrganizationsView.OnWithdrawChanged
 Definition type: Function
 Return type: void
 
@@ -69845,6 +72016,12 @@ Return type: bool
 
 -----------------------
 
+LateralView.IsFullscreen
+Definition type: Function
+Return type: bool
+
+-----------------------
+
 LateralView.IsHistoryEntryCurrent( Arg0 )
 Definition type: Function
 Return type: bool
@@ -69900,6 +72077,18 @@ Return type: bool
 -----------------------
 
 LateralView.IsShown
+Definition type: Function
+Return type: bool
+
+-----------------------
+
+LateralView.IsSideAttached
+Definition type: Function
+Return type: bool
+
+-----------------------
+
+LateralView.IsUnattached
 Definition type: Function
 Return type: bool
 
@@ -70076,6 +72265,12 @@ Definition type: Type
 
 -----------------------
 
+Law.GetTagObject
+Definition type: Promote
+Return type: TagObject
+
+-----------------------
+
 Law.MakeScope
 Definition type: Promote
 Return type: Scope
@@ -70085,6 +72280,12 @@ Return type: Scope
 Law.AccessSelf
 Definition type: Function
 Return type: [unregistered]
+
+-----------------------
+
+Law.CanShowTags
+Definition type: Function
+Return type: bool
 
 -----------------------
 
@@ -70124,6 +72325,12 @@ Return type: CString
 
 -----------------------
 
+Law.GetNameWithCategoryNameForSorting
+Definition type: Function
+Return type: CString
+
+-----------------------
+
 Law.GetNameWithContext( Arg0 )
 Definition type: Function
 Return type: CString
@@ -70137,6 +72344,12 @@ Return type: CString
 -----------------------
 
 Law.GetPolicies
+Definition type: Function
+Return type: [unregistered]
+
+-----------------------
+
+Law.GetTagObject
 Definition type: Function
 Return type: [unregistered]
 
@@ -70160,6 +72373,12 @@ Return type: CString
 
 -----------------------
 
+Law.HasLevels
+Definition type: Function
+Return type: bool
+
+-----------------------
+
 Law.IsUnique
 Definition type: Function
 Return type: bool
@@ -70175,6 +72394,12 @@ Return type: bool
 Law.Self
 Definition type: Function
 Return type: [unregistered]
+
+-----------------------
+
+Law.ShowTags
+Definition type: Function
+Return type: CString
 
 -----------------------
 
@@ -70740,6 +72965,12 @@ Return type: Country
 
 -----------------------
 
+Location.GetOwnerPtr
+Definition type: Promote
+Return type: Country
+
+-----------------------
+
 Location.GetPopulation
 Definition type: Promote
 Return type: Population
@@ -71022,13 +73253,13 @@ Return type: int32
 
 -----------------------
 
-Location.GetAttritionDescription
+Location.GetAttritionAndFoodConsumptionPenaltyTooltip
 Definition type: Function
 Return type: CString
 
 -----------------------
 
-Location.GetAttritionTooltip
+Location.GetAttritionDescription
 Definition type: Function
 Return type: CString
 
@@ -71394,6 +73625,12 @@ Return type: CString
 
 -----------------------
 
+Location.GetEmploymentValue( Arg0 )
+Definition type: Function
+Return type: CString
+
+-----------------------
+
 Location.GetEstateTaxBase( Arg0 )
 Definition type: Function
 Return type: CFixedPoint
@@ -71455,6 +73692,12 @@ Return type: CFixedPoint
 -----------------------
 
 Location.GetFoodConsumptionInfo( Arg0 )
+Definition type: Function
+Return type: CString
+
+-----------------------
+
+Location.GetFoodDecayInfo
 Definition type: Function
 Return type: CString
 
@@ -71565,6 +73808,18 @@ Return type: CString
 Location.GetHolySitesTooltip
 Definition type: Function
 Return type: CString
+
+-----------------------
+
+Location.GetHostilePiratesPower( Arg0 )
+Definition type: Function
+Return type: CFixedPoint
+
+-----------------------
+
+Location.GetHostilePrivateersPower( Arg0 )
+Definition type: Function
+Return type: CFixedPoint
 
 -----------------------
 
@@ -72018,6 +74273,12 @@ Return type: CString
 
 -----------------------
 
+Location.GetNetBalance
+Definition type: Function
+Return type: CFixedPoint
+
+-----------------------
+
 Location.GetNumBuildingLevels
 Definition type: Function
 Return type: int32
@@ -72087,6 +74348,24 @@ Return type: [unregistered]
 Location.GetOwnerForMap
 Definition type: Function
 Return type: [unregistered]
+
+-----------------------
+
+Location.GetOwnerPtr
+Definition type: Function
+Return type: [unregistered]
+
+-----------------------
+
+Location.GetPeasantEnfranchisment
+Definition type: Function
+Return type: CFixedPoint
+
+-----------------------
+
+Location.GetPeasantEnfranchismentInfo
+Definition type: Function
+Return type: CString
 
 -----------------------
 
@@ -72381,6 +74660,18 @@ Return type: [unregistered]
 Location.GetReligiousUnity
 Definition type: Function
 Return type: CFixedPoint
+
+-----------------------
+
+Location.GetRiverCrossingLocations
+Definition type: Function
+Return type: [unregistered]
+
+-----------------------
+
+Location.GetRiverProximityLocations
+Definition type: Function
+Return type: [unregistered]
 
 -----------------------
 
@@ -73039,6 +75330,12 @@ Return type: bool
 
 -----------------------
 
+Location.IsInScriptedGeography( Arg0 )
+Definition type: Function
+Return type: bool
+
+-----------------------
+
 Location.IsIntegrated
 Definition type: Function
 Return type: bool
@@ -73525,6 +75822,41 @@ Return type: [unregistered]
 
 -----------------------
 
+LocationLevels
+Definition type: Type
+
+-----------------------
+
+LocationLevels.GetLocation
+Definition type: Promote
+Return type: Location
+
+-----------------------
+
+LocationLevels.AccessSelf
+Definition type: Function
+Return type: [unregistered]
+
+-----------------------
+
+LocationLevels.GetLevels
+Definition type: Function
+Return type: int32
+
+-----------------------
+
+LocationLevels.GetLocation
+Definition type: Function
+Return type: [unregistered]
+
+-----------------------
+
+LocationLevels.Self
+Definition type: Function
+Return type: [unregistered]
+
+-----------------------
+
 LocationMigrationWrap
 Definition type: Type
 
@@ -73879,6 +76211,226 @@ Return type: [unregistered]
 
 -----------------------
 
+LocationProductionSelectLocation
+Definition type: Type
+
+-----------------------
+
+LocationProductionSelectLocation.Parent
+Definition type: Promote
+Return type: LocationProductionView
+
+-----------------------
+
+LocationProductionSelectLocation.AccessSelf
+Definition type: Function
+Return type: [unregistered]
+
+-----------------------
+
+LocationProductionSelectLocation.OnClose
+Definition type: Function
+Return type: void
+
+-----------------------
+
+LocationProductionSelectLocation.Parent
+Definition type: Function
+Return type: [unregistered]
+
+-----------------------
+
+LocationProductionSelectLocation.Self
+Definition type: Function
+Return type: [unregistered]
+
+-----------------------
+
+LocationProductionView
+Definition type: Type
+
+-----------------------
+
+LocationProductionView.GetBestBuildLocation
+Definition type: Promote
+Return type: Location
+
+-----------------------
+
+LocationProductionView.GetBuildRankingItems
+Definition type: Promote
+Return type: ConstructScoreRanking
+
+-----------------------
+
+LocationProductionView.GetBuildingsSortSearch
+Definition type: Promote
+Return type: FilteredSortedList
+
+-----------------------
+
+LocationProductionView.GetPlayer
+Definition type: Promote
+Return type: Country
+
+-----------------------
+
+LocationProductionView.GetSelectedLocation
+Definition type: Promote
+Return type: Location
+
+-----------------------
+
+LocationProductionView.GetSelectedMarket
+Definition type: Promote
+Return type: Market
+
+-----------------------
+
+LocationProductionView.Manager
+Definition type: Promote
+Return type: LateralView
+
+-----------------------
+
+LocationProductionView.Vars
+Definition type: Promote
+Return type: Context
+
+-----------------------
+
+LocationProductionView.AccessSelf
+Definition type: Function
+Return type: [unregistered]
+
+-----------------------
+
+LocationProductionView.FilterByMarket( Arg0 )
+Definition type: Function
+Return type: void
+
+-----------------------
+
+LocationProductionView.GetBestBuildLocation
+Definition type: Function
+Return type: [unregistered]
+
+-----------------------
+
+LocationProductionView.GetBuildRankingItems
+Definition type: Function
+Return type: [unregistered]
+
+-----------------------
+
+LocationProductionView.GetBuildingItems
+Definition type: Function
+Return type: [unregistered]
+
+-----------------------
+
+LocationProductionView.GetBuildingTypeCategories
+Definition type: Function
+Return type: [unregistered]
+
+-----------------------
+
+LocationProductionView.GetBuildingsSortSearch
+Definition type: Function
+Return type: [unregistered]
+
+-----------------------
+
+LocationProductionView.GetPlayer
+Definition type: Function
+Return type: [unregistered]
+
+-----------------------
+
+LocationProductionView.GetSelectedLocation
+Definition type: Function
+Return type: [unregistered]
+
+-----------------------
+
+LocationProductionView.GetSelectedMarket
+Definition type: Function
+Return type: [unregistered]
+
+-----------------------
+
+LocationProductionView.GetTitle
+Definition type: Function
+Return type: CString
+
+-----------------------
+
+LocationProductionView.GetTotalBuildingsUI
+Definition type: Function
+Return type: CString
+
+-----------------------
+
+LocationProductionView.HasBestBuildLocation
+Definition type: Function
+Return type: bool
+
+-----------------------
+
+LocationProductionView.IsLeftPanel
+Definition type: Function
+Return type: bool
+
+-----------------------
+
+LocationProductionView.IsLocationFilterEnabled
+Definition type: Function
+Return type: bool
+
+-----------------------
+
+LocationProductionView.IsLocationProductionSelectLocationOpened( Arg0 )
+Definition type: Function
+Return type: bool
+
+-----------------------
+
+LocationProductionView.IsMarketFilterEnabled
+Definition type: Function
+Return type: bool
+
+-----------------------
+
+LocationProductionView.IsRightPanel
+Definition type: Function
+Return type: bool
+
+-----------------------
+
+LocationProductionView.RebuildBuildRankingItems( Arg0 )
+Definition type: Function
+Return type: void
+
+-----------------------
+
+LocationProductionView.RemoveMarketFilter
+Definition type: Function
+Return type: void
+
+-----------------------
+
+LocationProductionView.Self
+Definition type: Function
+Return type: [unregistered]
+
+-----------------------
+
+LocationProductionView.ToggleLocationProductionSelectLocation( Arg0 )
+Definition type: Function
+Return type: void
+
+-----------------------
+
 LocationRank
 Definition type: Type
 
@@ -74032,6 +76584,12 @@ Return type: Location
 
 -----------------------
 
+LocationToBuildItem.GetOwner
+Definition type: Promote
+Return type: Country
+
+-----------------------
+
 LocationToBuildItem.AccessSelf
 Definition type: Function
 Return type: [unregistered]
@@ -74182,6 +76740,12 @@ Return type: CFixedPoint
 
 -----------------------
 
+LocationToBuildItem.GetOwner
+Definition type: Function
+Return type: [unregistered]
+
+-----------------------
+
 LocationToBuildItem.GetProductionMethods
 Definition type: Function
 Return type: [unregistered]
@@ -74325,6 +76889,12 @@ Return type: CString
 
 -----------------------
 
+LocationToRecruitItem.GetGoldCostValue
+Definition type: Function
+Return type: CFixedPoint
+
+-----------------------
+
 LocationToRecruitItem.GetLocation
 Definition type: Function
 Return type: [unregistered]
@@ -74364,6 +76934,12 @@ Return type: CString
 LocationToRecruitItem.GetSailorsCost
 Definition type: Function
 Return type: CString
+
+-----------------------
+
+LocationToRecruitItem.GetTemplateAssignments
+Definition type: Function
+Return type: [unregistered]
 
 -----------------------
 
@@ -76442,6 +79018,12 @@ Return type: GoodsMarketEntry
 
 -----------------------
 
+Market.GetMerchant( Arg0 )
+Definition type: Promote
+Return type: Merchant
+
+-----------------------
+
 Market.GetOwner
 Definition type: Promote
 Return type: Country
@@ -76481,6 +79063,12 @@ Return type: CFixedPoint
 Market.GetAllTrades
 Definition type: Function
 Return type: [unregistered]
+
+-----------------------
+
+Market.GetAllowedForExport( Arg0 )
+Definition type: Function
+Return type: CFixedPoint
 
 -----------------------
 
@@ -76526,6 +79114,12 @@ Return type: CFixedPoint
 
 -----------------------
 
+Market.GetCountryPopulationForUI( Arg0 )
+Definition type: Function
+Return type: CString
+
+-----------------------
+
 Market.GetDebugText
 Definition type: Function
 Return type: CString
@@ -76535,6 +79129,12 @@ Return type: CString
 Market.GetDemand( Arg0 )
 Definition type: Function
 Return type: CFixedPoint
+
+-----------------------
+
+Market.GetDemandFromTradesInfo( Arg0 )
+Definition type: Function
+Return type: CString
 
 -----------------------
 
@@ -76559,6 +79159,12 @@ Return type: CString
 Market.GetExports
 Definition type: Function
 Return type: [unregistered]
+
+-----------------------
+
+Market.GetExtraTradeSupplyFromStockpile( Arg0 )
+Definition type: Function
+Return type: CFixedPoint
 
 -----------------------
 
@@ -76667,6 +79273,12 @@ Return type: [unregistered]
 Market.GetMaxFoodStockpile
 Definition type: Function
 Return type: CFixedPoint
+
+-----------------------
+
+Market.GetMerchant( Arg0 )
+Definition type: Function
+Return type: [unregistered]
 
 -----------------------
 
@@ -76859,6 +79471,12 @@ Return type: CFixedPoint
 Market.GetSupply( Arg0 )
 Definition type: Function
 Return type: CFixedPoint
+
+-----------------------
+
+Market.GetSupplyFromTradesInfo( Arg0 )
+Definition type: Function
+Return type: CString
 
 -----------------------
 
@@ -77165,6 +79783,71 @@ Return type: [unregistered]
 
 -----------------------
 
+MarketUpgradeableBuildings
+Definition type: Type
+
+-----------------------
+
+MarketUpgradeableBuildings.GetMarket
+Definition type: Promote
+Return type: Market
+
+-----------------------
+
+MarketUpgradeableBuildings.AccessSelf
+Definition type: Function
+Return type: [unregistered]
+
+-----------------------
+
+MarketUpgradeableBuildings.GetBuildingTypeLevels
+Definition type: Function
+Return type: [unregistered]
+
+-----------------------
+
+MarketUpgradeableBuildings.GetMarket
+Definition type: Function
+Return type: [unregistered]
+
+-----------------------
+
+MarketUpgradeableBuildings.GetUpgradeableBuildingLevelsCount
+Definition type: Function
+Return type: int32
+
+-----------------------
+
+MarketUpgradeableBuildings.GetUpgradeableBuildingTypesInfo
+Definition type: Function
+Return type: CString
+
+-----------------------
+
+MarketUpgradeableBuildings.GetUpgradeableBuildingsCount
+Definition type: Function
+Return type: int32
+
+-----------------------
+
+MarketUpgradeableBuildings.GetUpgradeableBuildingsInfo
+Definition type: Function
+Return type: CString
+
+-----------------------
+
+MarketUpgradeableBuildings.HasUpgradeableBuildings
+Definition type: Function
+Return type: bool
+
+-----------------------
+
+MarketUpgradeableBuildings.Self
+Definition type: Function
+Return type: [unregistered]
+
+-----------------------
+
 MarketViewSelectMarket
 Definition type: Type
 
@@ -77457,6 +80140,12 @@ Return type: CFixedPoint
 Mercenary.GetMonthlyMaintenanceCost( Arg0 )
 Definition type: Function
 Return type: CFixedPoint
+
+-----------------------
+
+Mercenary.GetMonthlyMaintenanceCostInfo( Arg0 )
+Definition type: Function
+Return type: CString
 
 -----------------------
 
@@ -81145,6 +83834,12 @@ Definition type: Type
 
 -----------------------
 
+MultiUnitWindow.AccessFirstUnitItem
+Definition type: Promote
+Return type: UnitItem
+
+-----------------------
+
 MultiUnitWindow.GetFirstUnit
 Definition type: Promote
 Return type: Unit
@@ -81181,6 +83876,12 @@ Return type: [unregistered]
 
 -----------------------
 
+MultiUnitWindow.AccessFirstUnitItem
+Definition type: Function
+Return type: [unregistered]
+
+-----------------------
+
 MultiUnitWindow.AccessSelf
 Definition type: Function
 Return type: [unregistered]
@@ -81212,6 +83913,12 @@ Return type: CString
 -----------------------
 
 MultiUnitWindow.CanMerge
+Definition type: Function
+Return type: bool
+
+-----------------------
+
+MultiUnitWindow.CanRenameUnit
 Definition type: Function
 Return type: bool
 
@@ -81289,7 +83996,19 @@ Return type: [unregistered]
 
 -----------------------
 
+MultiUnitWindow.HasOneUnitItem
+Definition type: Function
+Return type: bool
+
+-----------------------
+
 MultiUnitWindow.IsArmy
+Definition type: Function
+Return type: bool
+
+-----------------------
+
+MultiUnitWindow.IsCompactViewEnabled
 Definition type: Function
 Return type: bool
 
@@ -81331,9 +84050,27 @@ Return type: void
 
 -----------------------
 
+MultiUnitWindow.OnUnitNameEdited
+Definition type: Function
+Return type: void
+
+-----------------------
+
+MultiUnitWindow.RenameUnit
+Definition type: Function
+Return type: void
+
+-----------------------
+
 MultiUnitWindow.Self
 Definition type: Function
 Return type: [unregistered]
+
+-----------------------
+
+MultiUnitWindow.ToggleCompactView
+Definition type: Function
+Return type: void
 
 -----------------------
 
@@ -81444,6 +84181,142 @@ Return type: void
 
 -----------------------
 
+MusicPlayerLateralView
+Definition type: Type
+
+-----------------------
+
+MusicPlayerLateralView.GetPlayer
+Definition type: Promote
+Return type: Country
+
+-----------------------
+
+MusicPlayerLateralView.GetSortSearch
+Definition type: Promote
+Return type: FilteredSortedList
+
+-----------------------
+
+MusicPlayerLateralView.Manager
+Definition type: Promote
+Return type: LateralView
+
+-----------------------
+
+MusicPlayerLateralView.Vars
+Definition type: Promote
+Return type: Context
+
+-----------------------
+
+MusicPlayerLateralView.AccessSelf
+Definition type: Function
+Return type: [unregistered]
+
+-----------------------
+
+MusicPlayerLateralView.GetCurrentTrackName
+Definition type: Function
+Return type: CString
+
+-----------------------
+
+MusicPlayerLateralView.GetPlayer
+Definition type: Function
+Return type: [unregistered]
+
+-----------------------
+
+MusicPlayerLateralView.GetSortSearch
+Definition type: Function
+Return type: [unregistered]
+
+-----------------------
+
+MusicPlayerLateralView.GetTrackObjects
+Definition type: Function
+Return type: [unregistered]
+
+-----------------------
+
+MusicPlayerLateralView.IsLeftPanel
+Definition type: Function
+Return type: bool
+
+-----------------------
+
+MusicPlayerLateralView.IsRightPanel
+Definition type: Function
+Return type: bool
+
+-----------------------
+
+MusicPlayerLateralView.Self
+Definition type: Function
+Return type: [unregistered]
+
+-----------------------
+
+MusicPlayerTrack
+Definition type: Type
+
+-----------------------
+
+MusicPlayerTrack.AccessSelf
+Definition type: Function
+Return type: [unregistered]
+
+-----------------------
+
+MusicPlayerTrack.GetComposer
+Definition type: Function
+Return type: CString
+
+-----------------------
+
+MusicPlayerTrack.GetItemKey
+Definition type: Function
+Return type: CString
+
+-----------------------
+
+MusicPlayerTrack.GetPerformer
+Definition type: Function
+Return type: CString
+
+-----------------------
+
+MusicPlayerTrack.GetSoloist
+Definition type: Function
+Return type: CString
+
+-----------------------
+
+MusicPlayerTrack.GetTrackFlavour
+Definition type: Function
+Return type: CString
+
+-----------------------
+
+MusicPlayerTrack.GetTrackName
+Definition type: Function
+Return type: CString
+
+-----------------------
+
+MusicPlayerTrack.Play
+Definition type: Function
+Return type: void
+
+-----------------------
+
+MusicPlayerTrack.Self
+Definition type: Function
+Return type: [unregistered]
+
+-----------------------
+
 NavyConstructionMarker
 Definition type: Type
 
@@ -81473,6 +84346,35 @@ Return type: [unregistered]
 
 -----------------------
 
+NavyLevyPopBreakdownWrapper
+Definition type: Type
+
+-----------------------
+
+NavyLevyPopBreakdownWrapper.AccessSelf
+Definition type: Function
+Return type: [unregistered]
+
+-----------------------
+
+NavyLevyPopBreakdownWrapper.GetBreakdown
+Definition type: Function
+Return type: CString
+
+-----------------------
+
+NavyLevyPopBreakdownWrapper.GetTitle
+Definition type: Function
+Return type: CString
+
+-----------------------
+
+NavyLevyPopBreakdownWrapper.Self
+Definition type: Function
+Return type: [unregistered]
+
+-----------------------
+
 NavyStrength
 Definition type: Type
 
@@ -81485,6 +84387,12 @@ Return type: [unregistered]
 -----------------------
 
 NavyStrength.GetCombatPower
+Definition type: Function
+Return type: CString
+
+-----------------------
+
+NavyStrength.GetEscorts
 Definition type: Function
 Return type: CString
 
@@ -82137,7 +85045,7 @@ Return type: void
 
 Outliner.OnHideSettings
 Definition type: Function
-Return type: void
+Return type: bool
 
 -----------------------
 
@@ -84723,6 +87631,12 @@ Return type: bool
 
 -----------------------
 
+PeaceTreaty.IsActuallySelected
+Definition type: Function
+Return type: bool
+
+-----------------------
+
 PeaceTreaty.IsCountryRelevant( Arg0 )
 Definition type: Function
 Return type: bool
@@ -85577,6 +88491,12 @@ Return type: Law
 
 -----------------------
 
+Policy.GetTagObject
+Definition type: Promote
+Return type: TagObject
+
+-----------------------
+
 Policy.MakeScope
 Definition type: Promote
 Return type: Scope
@@ -85586,6 +88506,12 @@ Return type: Scope
 Policy.AccessSelf
 Definition type: Function
 Return type: [unregistered]
+
+-----------------------
+
+Policy.CanShowTags
+Definition type: Function
+Return type: bool
 
 -----------------------
 
@@ -85667,6 +88593,12 @@ Return type: CString
 
 -----------------------
 
+Policy.GetPolicyLevel
+Definition type: Function
+Return type: int32
+
+-----------------------
+
 Policy.GetPolicyPartOfDescription
 Definition type: Function
 Return type: CString
@@ -85682,6 +88614,12 @@ Return type: CString
 Policy.GetRuleChanges
 Definition type: Function
 Return type: CString
+
+-----------------------
+
+Policy.GetTagObject
+Definition type: Function
+Return type: [unregistered]
 
 -----------------------
 
@@ -85718,6 +88656,12 @@ Return type: bool
 Policy.Self
 Definition type: Function
 Return type: [unregistered]
+
+-----------------------
+
+Policy.ShowTags
+Definition type: Function
+Return type: CString
 
 -----------------------
 
@@ -85770,6 +88714,12 @@ Return type: [unregistered]
 
 Pop
 Definition type: Type
+
+-----------------------
+
+Pop.GetBuilding
+Definition type: Promote
+Return type: Building
 
 -----------------------
 
@@ -85842,6 +88792,12 @@ Return type: [unregistered]
 Pop.CalcCharacterChance( Arg0 )
 Definition type: Function
 Return type: CFixedPoint
+
+-----------------------
+
+Pop.GetBuilding
+Definition type: Function
+Return type: [unregistered]
 
 -----------------------
 
@@ -86038,6 +88994,12 @@ Return type: bool
 -----------------------
 
 Pop.HasRebel
+Definition type: Function
+Return type: bool
+
+-----------------------
+
+Pop.IsLinkedToBuilding
 Definition type: Function
 Return type: bool
 
@@ -87116,6 +90078,12 @@ Return type: Location
 
 -----------------------
 
+PortMarker.GetPortSeaZone
+Definition type: Promote
+Return type: Location
+
+-----------------------
+
 PortMarker.AccessSelf
 Definition type: Function
 Return type: [unregistered]
@@ -87141,6 +90109,12 @@ Return type: CString
 -----------------------
 
 PortMarker.GetLocation
+Definition type: Function
+Return type: [unregistered]
+
+-----------------------
+
+PortMarker.GetPortSeaZone
 Definition type: Function
 Return type: [unregistered]
 
@@ -87646,15 +90620,105 @@ Return type: [unregistered]
 
 -----------------------
 
+PossibleLeaderItem.CanAccept
+Definition type: Function
+Return type: bool
+
+-----------------------
+
+PossibleLeaderItem.GetCanAcceptTooltip
+Definition type: Function
+Return type: CString
+
+-----------------------
+
+PossibleLeaderItem.GetCategoryAmount( Arg0 )
+Definition type: Function
+Return type: int32
+
+-----------------------
+
 PossibleLeaderItem.GetCharacter
 Definition type: Function
 Return type: [unregistered]
 
 -----------------------
 
+PossibleLeaderItem.GetDuration
+Definition type: Function
+Return type: int32
+
+-----------------------
+
+PossibleLeaderItem.GetHirePrice
+Definition type: Function
+Return type: CFixedPoint
+
+-----------------------
+
+PossibleLeaderItem.GetHirePriceTooltip
+Definition type: Function
+Return type: CString
+
+-----------------------
+
 PossibleLeaderItem.GetMercenaryTypes
 Definition type: Function
 Return type: [unregistered]
+
+-----------------------
+
+PossibleLeaderItem.GetMonthlyCost
+Definition type: Function
+Return type: CFixedPoint
+
+-----------------------
+
+PossibleLeaderItem.GetMonthlyCostTooltip
+Definition type: Function
+Return type: CString
+
+-----------------------
+
+PossibleLeaderItem.GetPossibleSubUnitDefinitions
+Definition type: Function
+Return type: [unregistered]
+
+-----------------------
+
+PossibleLeaderItem.GetRequestingAmount
+Definition type: Function
+Return type: int32
+
+-----------------------
+
+PossibleLeaderItem.GetSubUnitAmount( Arg0 )
+Definition type: Function
+Return type: int32
+
+-----------------------
+
+PossibleLeaderItem.GetVisualStrength
+Definition type: Function
+Return type: CString
+
+-----------------------
+
+PossibleLeaderItem.GetVisualSubUnitStrength( Arg0 )
+Definition type: Function
+Return type: CString
+
+-----------------------
+
+PossibleLeaderItem.IsArmy
+Definition type: Function
+Return type: bool
+
+-----------------------
+
+PossibleLeaderItem.OnAccept
+Definition type: Function
+Return type: void
 
 -----------------------
 
@@ -88380,6 +91444,18 @@ Return type: CString
 
 -----------------------
 
+Privateer.GetIncome
+Definition type: Function
+Return type: CFixedPoint
+
+-----------------------
+
+Privateer.GetIncomeInfo
+Definition type: Function
+Return type: CString
+
+-----------------------
+
 Privateer.GetInfo
 Definition type: Function
 Return type: CString
@@ -88848,6 +91924,12 @@ Return type: ConstructScoreRanking
 
 -----------------------
 
+ProductionView.GetBuildingCategoriesSortSearch
+Definition type: Promote
+Return type: FilteredSortedList
+
+-----------------------
+
 ProductionView.GetBuildingsSortSearch
 Definition type: Promote
 Return type: FilteredSortedList
@@ -88915,6 +91997,12 @@ Return type: [unregistered]
 -----------------------
 
 ProductionView.GetBuildRankingItems
+Definition type: Function
+Return type: [unregistered]
+
+-----------------------
+
+ProductionView.GetBuildingCategoriesSortSearch
 Definition type: Function
 Return type: [unregistered]
 
@@ -89537,6 +92625,12 @@ Return type: CFixedPoint
 
 -----------------------
 
+Province.GetProvinceReleaseInfo
+Definition type: Function
+Return type: CString
+
+-----------------------
+
 Province.GetRegion
 Definition type: Function
 Return type: [unregistered]
@@ -89598,6 +92692,12 @@ Return type: CString
 -----------------------
 
 Province.GetTotalNavyLevySizeInfo
+Definition type: Function
+Return type: CString
+
+-----------------------
+
+Province.GetTotalOwnerPopulation
 Definition type: Function
 Return type: CString
 
@@ -89743,6 +92843,12 @@ Return type: CString
 ProvinceDefinition.GetUITooltip
 Definition type: Function
 Return type: CString
+
+-----------------------
+
+ProvinceDefinition.IsInScriptedGeography( Arg0 )
+Definition type: Function
+Return type: bool
 
 -----------------------
 
@@ -90236,7 +93342,7 @@ Return type: CString
 
 -----------------------
 
-RawGoodLocationItem.GetProfit
+RawGoodLocationItem.GetIncomePerLevel
 Definition type: Function
 Return type: CFixedPoint
 
@@ -90245,6 +93351,12 @@ Return type: CFixedPoint
 RawGoodLocationItem.GetProfitInfo
 Definition type: Function
 Return type: CString
+
+-----------------------
+
+RawGoodLocationItem.GetProfitPerLevel
+Definition type: Function
+Return type: CFixedPoint
 
 -----------------------
 
@@ -90629,6 +93741,12 @@ Return type: bool
 
 -----------------------
 
+Rebel.IsTiny( Arg0 )
+Definition type: Function
+Return type: bool
+
+-----------------------
+
 Rebel.Self
 Definition type: Function
 Return type: [unregistered]
@@ -90765,6 +93883,12 @@ Return type: FilteredSortedList
 
 -----------------------
 
+RecruitInLocationLateralView.GetUnitTemplate
+Definition type: Promote
+Return type: UnitTemplate
+
+-----------------------
+
 RecruitInLocationLateralView.GetUnitType
 Definition type: Promote
 Return type: SubUnitType
@@ -90822,6 +93946,12 @@ Return type: bool
 RecruitInLocationLateralView.CanRecruitTT( Arg0 )
 Definition type: Function
 Return type: CString
+
+-----------------------
+
+RecruitInLocationLateralView.CanSelectAnotherUnitTemplate
+Definition type: Function
+Return type: bool
 
 -----------------------
 
@@ -90903,6 +94033,12 @@ Return type: [unregistered]
 
 -----------------------
 
+RecruitInLocationLateralView.GetUnitTemplate
+Definition type: Function
+Return type: [unregistered]
+
+-----------------------
+
 RecruitInLocationLateralView.GetUnitType
 Definition type: Function
 Return type: [unregistered]
@@ -90957,6 +94093,12 @@ Return type: bool
 
 -----------------------
 
+RecruitInLocationLateralView.IsUnitTemplate
+Definition type: Function
+Return type: bool
+
+-----------------------
+
 RecruitInLocationLateralView.RaiseAllLevies
 Definition type: Function
 Return type: void
@@ -90970,6 +94112,18 @@ Return type: void
 -----------------------
 
 RecruitInLocationLateralView.SelectMethod( Arg0 )
+Definition type: Function
+Return type: void
+
+-----------------------
+
+RecruitInLocationLateralView.SelectNextUnitTemplate
+Definition type: Function
+Return type: void
+
+-----------------------
+
+RecruitInLocationLateralView.SelectPrevUnitTemplate
 Definition type: Function
 Return type: void
 
@@ -91270,6 +94424,12 @@ Return type: int32
 
 -----------------------
 
+Region.GetRegionReleaseInfo
+Definition type: Function
+Return type: CString
+
+-----------------------
+
 Region.GetSubContinent
 Definition type: Function
 Return type: [unregistered]
@@ -91309,6 +94469,12 @@ Return type: CString
 Region.GetUITooltip
 Definition type: Function
 Return type: CString
+
+-----------------------
+
+Region.IsInScriptedGeography( Arg0 )
+Definition type: Function
+Return type: bool
 
 -----------------------
 
@@ -91950,12 +95116,6 @@ Return type: bool
 
 -----------------------
 
-Religion.HasDoom
-Definition type: Function
-Return type: bool
-
------------------------
-
 Religion.HasGods
 Definition type: Function
 Return type: bool
@@ -92087,6 +95247,12 @@ Return type: [unregistered]
 
 -----------------------
 
+ReligionDefinition.CanShowTags
+Definition type: Function
+Return type: bool
+
+-----------------------
+
 ReligionDefinition.GetName
 Definition type: Function
 Return type: CString
@@ -92096,6 +95262,12 @@ Return type: CString
 ReligionDefinition.Self
 Definition type: Function
 Return type: [unregistered]
+
+-----------------------
+
+ReligionDefinition.ShowTags
+Definition type: Function
+Return type: CString
 
 -----------------------
 
@@ -93477,6 +96649,12 @@ Return type: [unregistered]
 
 -----------------------
 
+ResolutionGlue.CanResolutionBeVoted
+Definition type: Function
+Return type: bool
+
+-----------------------
+
 ResolutionGlue.CanVote
 Definition type: Function
 Return type: bool
@@ -93687,6 +96865,12 @@ Return type: bool
 
 -----------------------
 
+ResolutionGlue.HasCountryVotedFromPointer( Arg0 )
+Definition type: Function
+Return type: bool
+
+-----------------------
+
 ResolutionGlue.HasHighestVote
 Definition type: Function
 Return type: bool
@@ -93700,6 +96884,12 @@ Return type: bool
 -----------------------
 
 ResolutionGlue.IsProposerForCountry( Arg0 )
+Definition type: Function
+Return type: bool
+
+-----------------------
+
+ResolutionGlue.IsUndecisiveVote
 Definition type: Function
 Return type: bool
 
@@ -96143,6 +99333,89 @@ Return type: [unregistered]
 
 -----------------------
 
+ScriptedGeography
+Definition type: Type
+
+-----------------------
+
+ScriptedGeography.MakeScope
+Definition type: Promote
+Return type: Scope
+
+-----------------------
+
+ScriptedGeography.AccessSelf
+Definition type: Function
+Return type: [unregistered]
+
+-----------------------
+
+ScriptedGeography.GetAreasFromScriptedGeography
+Definition type: Function
+Return type: [unregistered]
+
+-----------------------
+
+ScriptedGeography.GetContinentsFromScriptedGeography
+Definition type: Function
+Return type: [unregistered]
+
+-----------------------
+
+ScriptedGeography.GetLocationsFromScriptedGeography
+Definition type: Function
+Return type: [unregistered]
+
+-----------------------
+
+ScriptedGeography.GetMembersInfoForScriptedGeography
+Definition type: Function
+Return type: CString
+
+-----------------------
+
+ScriptedGeography.GetName
+Definition type: Function
+Return type: CString
+
+-----------------------
+
+ScriptedGeography.GetNameWithNoTooltip
+Definition type: Function
+Return type: CString
+
+-----------------------
+
+ScriptedGeography.GetNumberOfLocationsForScriptedGeography
+Definition type: Function
+Return type: int32
+
+-----------------------
+
+ScriptedGeography.GetProvinceDefinitionsFromScriptedGeography
+Definition type: Function
+Return type: [unregistered]
+
+-----------------------
+
+ScriptedGeography.GetRegionsFromScriptedGeography
+Definition type: Function
+Return type: [unregistered]
+
+-----------------------
+
+ScriptedGeography.GetSubContinentsFromScriptedGeography
+Definition type: Function
+Return type: [unregistered]
+
+-----------------------
+
+ScriptedGeography.Self
+Definition type: Function
+Return type: [unregistered]
+
+-----------------------
+
 ScriptedHintItem
 Definition type: Type
 
@@ -96219,6 +99492,12 @@ Return type: [unregistered]
 
 -----------------------
 
+ScriptedPeaceTreatyType.CanShowTags
+Definition type: Function
+Return type: bool
+
+-----------------------
+
 ScriptedPeaceTreatyType.GetDesc
 Definition type: Function
 Return type: CString
@@ -96252,6 +99531,12 @@ Return type: CString
 ScriptedPeaceTreatyType.Self
 Definition type: Function
 Return type: [unregistered]
+
+-----------------------
+
+ScriptedPeaceTreatyType.ShowTags
+Definition type: Function
+Return type: CString
 
 -----------------------
 
@@ -96520,6 +99805,12 @@ Definition type: Type
 
 -----------------------
 
+SearchBar.GetPin
+Definition type: Promote
+Return type: PinCollection
+
+-----------------------
+
 SearchBar.Manager
 Definition type: Promote
 Return type: LateralView
@@ -96580,6 +99871,12 @@ Return type: [unregistered]
 
 -----------------------
 
+SearchBar.GetPin
+Definition type: Function
+Return type: [unregistered]
+
+-----------------------
+
 SearchBar.GetSearchFilterCategories
 Definition type: Function
 Return type: [unregistered]
@@ -96610,6 +99907,12 @@ Return type: bool
 
 -----------------------
 
+SearchBar.HasPin
+Definition type: Function
+Return type: bool
+
+-----------------------
+
 SearchBar.HasSearchFilterCategories
 Definition type: Function
 Return type: bool
@@ -96617,6 +99920,12 @@ Return type: bool
 -----------------------
 
 SearchBar.HasTextSearchFilters
+Definition type: Function
+Return type: bool
+
+-----------------------
+
+SearchBar.IsFilterPinned( Arg0 )
 Definition type: Function
 Return type: bool
 
@@ -96676,9 +99985,27 @@ Return type: void
 
 -----------------------
 
+SearchBar.ResetPin
+Definition type: Function
+Return type: void
+
+-----------------------
+
 SearchBar.Self
 Definition type: Function
 Return type: [unregistered]
+
+-----------------------
+
+SearchBar.ToggleCategoryFilterPin( Arg0, Arg1 )
+Definition type: Function
+Return type: void
+
+-----------------------
+
+SearchBar.ToggleFilterPin( Arg0 )
+Definition type: Function
+Return type: void
 
 -----------------------
 
@@ -97385,7 +100712,7 @@ Return type: bool
 
 -----------------------
 
-SelectCountryDiplomacyLateralView.RequireAcceptance
+SelectCountryDiplomacyLateralView.RequiresAcceptance
 Definition type: Function
 Return type: bool
 
@@ -97567,6 +100894,12 @@ Return type: SelectInteractionTargetView
 
 -----------------------
 
+SelectInteractionTargetGlue.GetValueUIAction
+Definition type: Promote
+Return type: UIActionProvider
+
+-----------------------
+
 SelectInteractionTargetGlue.AccessSelf
 Definition type: Function
 Return type: [unregistered]
@@ -97591,18 +100924,6 @@ Return type: void
 
 -----------------------
 
-SelectInteractionTargetGlue.GetAcceptance
-Definition type: Function
-Return type: CString
-
------------------------
-
-SelectInteractionTargetGlue.GetConditions
-Definition type: Function
-Return type: CString
-
------------------------
-
 SelectInteractionTargetGlue.GetDecreaseValueInfo
 Definition type: Function
 Return type: CString
@@ -97612,18 +100933,6 @@ Return type: CString
 SelectInteractionTargetGlue.GetDefault
 Definition type: Function
 Return type: CFixedPoint
-
------------------------
-
-SelectInteractionTargetGlue.GetDescription
-Definition type: Function
-Return type: CString
-
------------------------
-
-SelectInteractionTargetGlue.GetEffects
-Definition type: Function
-Return type: CString
 
 -----------------------
 
@@ -97801,21 +101110,75 @@ Return type: CString
 
 -----------------------
 
+SelectInteractionTargetGlue.GetSelectTitle
+Definition type: Function
+Return type: CString
+
+-----------------------
+
 SelectInteractionTargetGlue.GetStep
 Definition type: Function
 Return type: CFixedPoint
 
 -----------------------
 
-SelectInteractionTargetGlue.GetTitle
+SelectInteractionTargetGlue.GetUIActionAcceptance
 Definition type: Function
 Return type: CString
+
+-----------------------
+
+SelectInteractionTargetGlue.GetUIActionAcceptanceFrame
+Definition type: Function
+Return type: int32
+
+-----------------------
+
+SelectInteractionTargetGlue.GetUIActionConditions
+Definition type: Function
+Return type: CString
+
+-----------------------
+
+SelectInteractionTargetGlue.GetUIActionDescription
+Definition type: Function
+Return type: CString
+
+-----------------------
+
+SelectInteractionTargetGlue.GetUIActionEffects
+Definition type: Function
+Return type: CString
+
+-----------------------
+
+SelectInteractionTargetGlue.GetUIActionTitle
+Definition type: Function
+Return type: CString
+
+-----------------------
+
+SelectInteractionTargetGlue.GetUIActionWillAIAccept
+Definition type: Function
+Return type: bool
 
 -----------------------
 
 SelectInteractionTargetGlue.GetValue
 Definition type: Function
 Return type: CFixedPoint
+
+-----------------------
+
+SelectInteractionTargetGlue.GetValueAcceptance
+Definition type: Function
+Return type: CString
+
+-----------------------
+
+SelectInteractionTargetGlue.GetValueAcceptanceFrame
+Definition type: Function
+Return type: int32
 
 -----------------------
 
@@ -97837,9 +101200,27 @@ Return type: CString
 
 -----------------------
 
+SelectInteractionTargetGlue.GetValueUIAction
+Definition type: Function
+Return type: [unregistered]
+
+-----------------------
+
 SelectInteractionTargetGlue.IncreaseValue
 Definition type: Function
 Return type: void
+
+-----------------------
+
+SelectInteractionTargetGlue.IsAlreadySelected
+Definition type: Function
+Return type: bool
+
+-----------------------
+
+SelectInteractionTargetGlue.IsCurrentlySelected
+Definition type: Function
+Return type: bool
 
 -----------------------
 
@@ -97850,6 +101231,12 @@ Return type: bool
 -----------------------
 
 SelectInteractionTargetGlue.IsEnabled
+Definition type: Function
+Return type: bool
+
+-----------------------
+
+SelectInteractionTargetGlue.IsFinalTarget
 Definition type: Function
 Return type: bool
 
@@ -97904,12 +101291,6 @@ Return type: bool
 -----------------------
 
 SelectInteractionTargetGlue.IsRightClickVisible
-Definition type: Function
-Return type: bool
-
------------------------
-
-SelectInteractionTargetGlue.IsSelected
 Definition type: Function
 Return type: bool
 
@@ -97999,6 +101380,18 @@ Return type: [unregistered]
 
 -----------------------
 
+SelectInteractionTargetGlue.WillAIAcceptValue
+Definition type: Function
+Return type: bool
+
+-----------------------
+
+SelectInteractionTargetGlue.WillAllTargetsBeSelected
+Definition type: Function
+Return type: bool
+
+-----------------------
+
 SelectInteractionTargetView
 Definition type: Type
 
@@ -98010,9 +101403,9 @@ Return type: TargettedActionParameters
 
 -----------------------
 
-SelectInteractionTargetView.GetCurrentValueUIAction
+SelectInteractionTargetView.GetCurrentValueGlue
 Definition type: Promote
-Return type: UIActionProvider
+Return type: SelectInteractionTargetGlue
 
 -----------------------
 
@@ -98049,6 +101442,12 @@ Return type: Context
 SelectInteractionTargetView.AccessSelf
 Definition type: Function
 Return type: [unregistered]
+
+-----------------------
+
+SelectInteractionTargetView.AreAllTargetsSelected
+Definition type: Function
+Return type: bool
 
 -----------------------
 
@@ -98136,15 +101535,15 @@ Return type: CString
 
 -----------------------
 
-SelectInteractionTargetView.GetCurrentValueInteractionTarget
+SelectInteractionTargetView.GetCurrentValueGlue
 Definition type: Function
-Return type: InteractionTarget
+Return type: [unregistered]
 
 -----------------------
 
-SelectInteractionTargetView.GetCurrentValueUIAction
+SelectInteractionTargetView.GetCurrentValueInteractionTarget
 Definition type: Function
-Return type: [unregistered]
+Return type: InteractionTarget
 
 -----------------------
 
@@ -98766,6 +102165,12 @@ Return type: bool
 
 -----------------------
 
+SelectInteractionTargetView.IsUnitFormationPreference
+Definition type: Function
+Return type: bool
+
+-----------------------
+
 SelectInteractionTargetView.IsUnitType
 Definition type: Function
 Return type: bool
@@ -98817,6 +102222,12 @@ Return type: void
 SelectInteractionTargetView.OnValueChanged( Arg0 )
 Definition type: Function
 Return type: void
+
+-----------------------
+
+SelectInteractionTargetView.RequiresAcceptance
+Definition type: Function
+Return type: bool
 
 -----------------------
 
@@ -99577,6 +102988,179 @@ Return type: void
 
 -----------------------
 
+SellLocationActionView
+Definition type: Type
+
+-----------------------
+
+SellLocationActionView.GetBuyer
+Definition type: Promote
+Return type: Country
+
+-----------------------
+
+SellLocationActionView.GetLocationsSortSearch
+Definition type: Promote
+Return type: FilteredSortedList
+
+-----------------------
+
+SellLocationActionView.GetPlayer
+Definition type: Promote
+Return type: Country
+
+-----------------------
+
+SellLocationActionView.GetSeller
+Definition type: Promote
+Return type: Country
+
+-----------------------
+
+SellLocationActionView.Manager
+Definition type: Promote
+Return type: LateralView
+
+-----------------------
+
+SellLocationActionView.Vars
+Definition type: Promote
+Return type: Context
+
+-----------------------
+
+SellLocationActionView.AccessSelf
+Definition type: Function
+Return type: [unregistered]
+
+-----------------------
+
+SellLocationActionView.CanSend
+Definition type: Function
+Return type: bool
+
+-----------------------
+
+SellLocationActionView.GetAcceptanceTooltip
+Definition type: Function
+Return type: CString
+
+-----------------------
+
+SellLocationActionView.GetBuyer
+Definition type: Function
+Return type: [unregistered]
+
+-----------------------
+
+SellLocationActionView.GetConfirmMessage
+Definition type: Function
+Return type: CString
+
+-----------------------
+
+SellLocationActionView.GetLocationsSortSearch
+Definition type: Function
+Return type: [unregistered]
+
+-----------------------
+
+SellLocationActionView.GetMaxPrice
+Definition type: Function
+Return type: CFixedPoint
+
+-----------------------
+
+SellLocationActionView.GetMinPrice
+Definition type: Function
+Return type: CFixedPoint
+
+-----------------------
+
+SellLocationActionView.GetPlayer
+Definition type: Function
+Return type: [unregistered]
+
+-----------------------
+
+SellLocationActionView.GetPossibleLocations
+Definition type: Function
+Return type: [unregistered]
+
+-----------------------
+
+SellLocationActionView.GetSelectedLocations
+Definition type: Function
+Return type: [unregistered]
+
+-----------------------
+
+SellLocationActionView.GetSeller
+Definition type: Function
+Return type: [unregistered]
+
+-----------------------
+
+SellLocationActionView.GetTotalPrice
+Definition type: Function
+Return type: CFixedPoint
+
+-----------------------
+
+SellLocationActionView.IsBuying
+Definition type: Function
+Return type: bool
+
+-----------------------
+
+SellLocationActionView.IsLeftPanel
+Definition type: Function
+Return type: bool
+
+-----------------------
+
+SellLocationActionView.IsRightPanel
+Definition type: Function
+Return type: bool
+
+-----------------------
+
+SellLocationActionView.IsSelected( Arg0 )
+Definition type: Function
+Return type: bool
+
+-----------------------
+
+SellLocationActionView.OnSend
+Definition type: Function
+Return type: void
+
+-----------------------
+
+SellLocationActionView.Self
+Definition type: Function
+Return type: [unregistered]
+
+-----------------------
+
+SellLocationActionView.SetTotalPrice
+Definition type: Function
+Return type: void
+
+-----------------------
+
+SellLocationActionView.ToggleLocation( Arg0 )
+Definition type: Function
+Return type: void
+
+-----------------------
+
+SellLocationActionView.WillAIAccept
+Definition type: Function
+Return type: bool
+
+-----------------------
+
 SendGiftWindow
 Definition type: Type
 
@@ -99836,12 +103420,6 @@ Return type: [unregistered]
 
 -----------------------
 
-SetupMercenaryRequirementsView.CanAccept
-Definition type: Function
-Return type: bool
-
------------------------
-
 SetupMercenaryRequirementsView.GetAmountLeadersAfterSelected
 Definition type: Function
 Return type: int32
@@ -99851,12 +103429,6 @@ Return type: int32
 SetupMercenaryRequirementsView.GetAmountLeadersBeforeSelected
 Definition type: Function
 Return type: int32
-
------------------------
-
-SetupMercenaryRequirementsView.GetCanAcceptTooltip
-Definition type: Function
-Return type: CString
 
 -----------------------
 
@@ -99872,33 +103444,9 @@ Return type: float
 
 -----------------------
 
-SetupMercenaryRequirementsView.GetHirePrice
-Definition type: Function
-Return type: CFixedPoint
-
------------------------
-
-SetupMercenaryRequirementsView.GetHirePriceTooltip
-Definition type: Function
-Return type: CString
-
------------------------
-
 SetupMercenaryRequirementsView.GetMaxDuration
 Definition type: Function
 Return type: float
-
------------------------
-
-SetupMercenaryRequirementsView.GetMonthlyCost
-Definition type: Function
-Return type: CFixedPoint
-
------------------------
-
-SetupMercenaryRequirementsView.GetMonthlyCostTooltip
-Definition type: Function
-Return type: CString
 
 -----------------------
 
@@ -99932,15 +103480,15 @@ Return type: bool
 
 -----------------------
 
-SetupMercenaryRequirementsView.IsSelectedLeader( Arg0 )
+SetupMercenaryRequirementsView.IsArmy
 Definition type: Function
 Return type: bool
 
 -----------------------
 
-SetupMercenaryRequirementsView.OnAccept
+SetupMercenaryRequirementsView.IsSelectedLeader( Arg0 )
 Definition type: Function
-Return type: void
+Return type: bool
 
 -----------------------
 
@@ -100006,6 +103554,18 @@ Return type: Scope
 Siege.AccessSelf
 Definition type: Function
 Return type: [unregistered]
+
+-----------------------
+
+Siege.CalcArtilleryBonusInfo
+Definition type: Function
+Return type: CString
+
+-----------------------
+
+Siege.GetArtilleryBonus
+Definition type: Function
+Return type: CFixedPoint
 
 -----------------------
 
@@ -100420,6 +103980,179 @@ Return type: [unregistered]
 
 -----------------------
 
+SingleUnitFormationWindow
+Definition type: Type
+
+-----------------------
+
+SingleUnitFormationWindow.AccessSelectedUnit
+Definition type: Promote
+Return type: Unit
+
+-----------------------
+
+SingleUnitFormationWindow.GetBalanceAction
+Definition type: Promote
+Return type: UnitActionItem
+
+-----------------------
+
+SingleUnitFormationWindow.GetCreateUnitAction
+Definition type: Promote
+Return type: UnitActionItem
+
+-----------------------
+
+SingleUnitFormationWindow.GetPlayer
+Definition type: Promote
+Return type: Country
+
+-----------------------
+
+SingleUnitFormationWindow.GetSelectedUnit
+Definition type: Promote
+Return type: Unit
+
+-----------------------
+
+SingleUnitFormationWindow.GetSubUnitsSortSearch
+Definition type: Promote
+Return type: FilteredSortedList
+
+-----------------------
+
+SingleUnitFormationWindow.Manager
+Definition type: Promote
+Return type: LateralView
+
+-----------------------
+
+SingleUnitFormationWindow.Vars
+Definition type: Promote
+Return type: Context
+
+-----------------------
+
+SingleUnitFormationWindow.AccessSelectedUnit
+Definition type: Function
+Return type: [unregistered]
+
+-----------------------
+
+SingleUnitFormationWindow.AccessSelf
+Definition type: Function
+Return type: [unregistered]
+
+-----------------------
+
+SingleUnitFormationWindow.CanChangeUnitBox( Arg0, Arg1 )
+Definition type: Function
+Return type: bool
+
+-----------------------
+
+SingleUnitFormationWindow.ChangeAllUnitsOfCategoryBox( Arg0, Arg1 )
+Definition type: Function
+Return type: void
+
+-----------------------
+
+SingleUnitFormationWindow.ChangeAllUnitsOfTypeBox( Arg0, Arg1 )
+Definition type: Function
+Return type: void
+
+-----------------------
+
+SingleUnitFormationWindow.ChangeUnitBox( Arg0, Arg1 )
+Definition type: Function
+Return type: void
+
+-----------------------
+
+SingleUnitFormationWindow.GetBalanceAction
+Definition type: Function
+Return type: [unregistered]
+
+-----------------------
+
+SingleUnitFormationWindow.GetCreateUnitAction
+Definition type: Function
+Return type: [unregistered]
+
+-----------------------
+
+SingleUnitFormationWindow.GetMaintenanceCost
+Definition type: Function
+Return type: CFixedPoint
+
+-----------------------
+
+SingleUnitFormationWindow.GetPlayer
+Definition type: Function
+Return type: [unregistered]
+
+-----------------------
+
+SingleUnitFormationWindow.GetSelectedUnit
+Definition type: Function
+Return type: [unregistered]
+
+-----------------------
+
+SingleUnitFormationWindow.GetSubUnits
+Definition type: Function
+Return type: [unregistered]
+
+-----------------------
+
+SingleUnitFormationWindow.GetSubUnitsSortSearch
+Definition type: Function
+Return type: [unregistered]
+
+-----------------------
+
+SingleUnitFormationWindow.HideCreateNewUnit
+Definition type: Function
+Return type: void
+
+-----------------------
+
+SingleUnitFormationWindow.IsAddToCreatingUnitVisible
+Definition type: Function
+Return type: bool
+
+-----------------------
+
+SingleUnitFormationWindow.IsLeftPanel
+Definition type: Function
+Return type: bool
+
+-----------------------
+
+SingleUnitFormationWindow.IsRightPanel
+Definition type: Function
+Return type: bool
+
+-----------------------
+
+SingleUnitFormationWindow.IsSingleUnitSelectUnitOpened( Arg0 )
+Definition type: Function
+Return type: bool
+
+-----------------------
+
+SingleUnitFormationWindow.Self
+Definition type: Function
+Return type: [unregistered]
+
+-----------------------
+
+SingleUnitFormationWindow.ToggleSingleUnitSelectUnit( Arg0 )
+Definition type: Function
+Return type: void
+
+-----------------------
+
 SingleUnitSelectUnit
 Definition type: Type
 
@@ -100682,6 +104415,18 @@ Return type: CString
 
 -----------------------
 
+SingleUnitWindow.GetMaintenanceManpowerTooltip
+Definition type: Function
+Return type: CString
+
+-----------------------
+
+SingleUnitWindow.GetMaintenanceSailorsTooltip
+Definition type: Function
+Return type: CString
+
+-----------------------
+
 SingleUnitWindow.GetMercenaries
 Definition type: Function
 Return type: [unregistered]
@@ -100796,6 +104541,12 @@ Return type: bool
 
 -----------------------
 
+SingleUnitWindow.IsCompactViewEnabled
+Definition type: Function
+Return type: bool
+
+-----------------------
+
 SingleUnitWindow.IsDetailsOpened( Arg0 )
 Definition type: Function
 Return type: bool
@@ -100871,6 +104622,12 @@ Return type: void
 SingleUnitWindow.Self
 Definition type: Function
 Return type: [unregistered]
+
+-----------------------
+
+SingleUnitWindow.ToggleCompactView
+Definition type: Function
+Return type: void
 
 -----------------------
 
@@ -102351,6 +106108,12 @@ Return type: CString
 
 -----------------------
 
+SubContinent.IsInScriptedGeography( Arg0 )
+Definition type: Function
+Return type: bool
+
+-----------------------
+
 SubContinent.Self
 Definition type: Function
 Return type: [unregistered]
@@ -103423,12 +107186,6 @@ Return type: CString
 
 -----------------------
 
-SubUnitType.GetLevyCombatPower
-Definition type: Function
-Return type: CFixedPoint
-
------------------------
-
 SubUnitType.GetLevyCombatPowerInfo
 Definition type: Function
 Return type: CString
@@ -103562,6 +107319,12 @@ Return type: bool
 -----------------------
 
 SubUnitType.IsShip
+Definition type: Function
+Return type: bool
+
+-----------------------
+
+SubUnitType.IsSpecialRegiment
 Definition type: Function
 Return type: bool
 
@@ -105323,6 +109086,184 @@ Return type: [unregistered]
 
 -----------------------
 
+TemplateAssignment
+Definition type: Type
+
+-----------------------
+
+TemplateAssignment.GetLocation
+Definition type: Promote
+Return type: Location
+
+-----------------------
+
+TemplateAssignment.GetUnitType
+Definition type: Promote
+Return type: SubUnitType
+
+-----------------------
+
+TemplateAssignment.AccessSelf
+Definition type: Function
+Return type: [unregistered]
+
+-----------------------
+
+TemplateAssignment.GetCount
+Definition type: Function
+Return type: int32
+
+-----------------------
+
+TemplateAssignment.GetGoldCost
+Definition type: Function
+Return type: CFixedPoint
+
+-----------------------
+
+TemplateAssignment.GetLocation
+Definition type: Function
+Return type: [unregistered]
+
+-----------------------
+
+TemplateAssignment.GetUnitGoldCost
+Definition type: Function
+Return type: CString
+
+-----------------------
+
+TemplateAssignment.GetUnitType
+Definition type: Function
+Return type: [unregistered]
+
+-----------------------
+
+TemplateAssignment.Self
+Definition type: Function
+Return type: [unregistered]
+
+-----------------------
+
+TemplateSubUnitDefinition
+Definition type: Type
+
+-----------------------
+
+TemplateSubUnitDefinition.GetSubUnitDefinition
+Definition type: Promote
+Return type: SubUnitType
+
+-----------------------
+
+TemplateSubUnitDefinition.AccessSelf
+Definition type: Function
+Return type: [unregistered]
+
+-----------------------
+
+TemplateSubUnitDefinition.CanDec
+Definition type: Function
+Return type: bool
+
+-----------------------
+
+TemplateSubUnitDefinition.CanInc
+Definition type: Function
+Return type: bool
+
+-----------------------
+
+TemplateSubUnitDefinition.GetCanDecTooltip
+Definition type: Function
+Return type: CString
+
+-----------------------
+
+TemplateSubUnitDefinition.GetCanIncTooltip
+Definition type: Function
+Return type: CString
+
+-----------------------
+
+TemplateSubUnitDefinition.GetCulture
+Definition type: Function
+Return type: [unregistered]
+
+-----------------------
+
+TemplateSubUnitDefinition.GetEstimatedConstructionTime
+Definition type: Function
+Return type: CString
+
+-----------------------
+
+TemplateSubUnitDefinition.GetMax
+Definition type: Function
+Return type: float
+
+-----------------------
+
+TemplateSubUnitDefinition.GetPlayer
+Definition type: Function
+Return type: [unregistered]
+
+-----------------------
+
+TemplateSubUnitDefinition.GetSelection
+Definition type: Function
+Return type: float
+
+-----------------------
+
+TemplateSubUnitDefinition.GetSubUnitDefinition
+Definition type: Function
+Return type: [unregistered]
+
+-----------------------
+
+TemplateSubUnitDefinition.GetSubUnitName
+Definition type: Function
+Return type: CString
+
+-----------------------
+
+TemplateSubUnitDefinition.GetTotalCost
+Definition type: Function
+Return type: CString
+
+-----------------------
+
+TemplateSubUnitDefinition.GetTotalMaintenanceCost
+Definition type: Function
+Return type: CString
+
+-----------------------
+
+TemplateSubUnitDefinition.GetTotalManpower
+Definition type: Function
+Return type: CString
+
+-----------------------
+
+TemplateSubUnitDefinition.GetTotalSailors
+Definition type: Function
+Return type: CString
+
+-----------------------
+
+TemplateSubUnitDefinition.OnChanged( Arg0 )
+Definition type: Function
+Return type: void
+
+-----------------------
+
+TemplateSubUnitDefinition.Self
+Definition type: Function
+Return type: [unregistered]
+
+-----------------------
+
 TemporaryDemand
 Definition type: Type
 
@@ -106264,6 +110205,12 @@ Return type: CFixedPoint
 
 -----------------------
 
+Trade.GetAssignedMerchantCapacityModifiedPlayer
+Definition type: Function
+Return type: CString
+
+-----------------------
+
 Trade.GetAssignedMerchantValueInfo
 Definition type: Function
 Return type: CString
@@ -106282,9 +110229,21 @@ Return type: CString
 
 -----------------------
 
+Trade.GetCachedProfitPerMerchantCapacity
+Definition type: Function
+Return type: CFixedPoint
+
+-----------------------
+
 Trade.GetCapacityMarket
 Definition type: Function
 Return type: [unregistered]
+
+-----------------------
+
+Trade.GetDesiredGoodsShipped
+Definition type: Function
+Return type: CFixedPoint
 
 -----------------------
 
@@ -106883,6 +110842,12 @@ Return type: [unregistered]
 
 -----------------------
 
+Trait.GetAITooltip
+Definition type: Function
+Return type: CString
+
+-----------------------
+
 Trait.GetCategoryTag
 Definition type: Function
 Return type: CString
@@ -107007,6 +110972,149 @@ Return type: [unregistered]
 
 -----------------------
 
+TransferOccupationActionView
+Definition type: Type
+
+-----------------------
+
+TransferOccupationActionView.GetActor
+Definition type: Promote
+Return type: Country
+
+-----------------------
+
+TransferOccupationActionView.GetLocationsSortSearch
+Definition type: Promote
+Return type: FilteredSortedList
+
+-----------------------
+
+TransferOccupationActionView.GetPlayer
+Definition type: Promote
+Return type: Country
+
+-----------------------
+
+TransferOccupationActionView.GetRecipient
+Definition type: Promote
+Return type: Country
+
+-----------------------
+
+TransferOccupationActionView.Manager
+Definition type: Promote
+Return type: LateralView
+
+-----------------------
+
+TransferOccupationActionView.Vars
+Definition type: Promote
+Return type: Context
+
+-----------------------
+
+TransferOccupationActionView.AccessSelf
+Definition type: Function
+Return type: [unregistered]
+
+-----------------------
+
+TransferOccupationActionView.CanSend
+Definition type: Function
+Return type: bool
+
+-----------------------
+
+TransferOccupationActionView.GetActor
+Definition type: Function
+Return type: [unregistered]
+
+-----------------------
+
+TransferOccupationActionView.GetConfirmMessage
+Definition type: Function
+Return type: CString
+
+-----------------------
+
+TransferOccupationActionView.GetHeaderTitle
+Definition type: Function
+Return type: CString
+
+-----------------------
+
+TransferOccupationActionView.GetLocationsSortSearch
+Definition type: Function
+Return type: [unregistered]
+
+-----------------------
+
+TransferOccupationActionView.GetPlayer
+Definition type: Function
+Return type: [unregistered]
+
+-----------------------
+
+TransferOccupationActionView.GetPossibleLocations
+Definition type: Function
+Return type: [unregistered]
+
+-----------------------
+
+TransferOccupationActionView.GetRecipient
+Definition type: Function
+Return type: [unregistered]
+
+-----------------------
+
+TransferOccupationActionView.GetSelectedLocations
+Definition type: Function
+Return type: [unregistered]
+
+-----------------------
+
+TransferOccupationActionView.IsLeftPanel
+Definition type: Function
+Return type: bool
+
+-----------------------
+
+TransferOccupationActionView.IsRightPanel
+Definition type: Function
+Return type: bool
+
+-----------------------
+
+TransferOccupationActionView.IsSelected( Arg0 )
+Definition type: Function
+Return type: bool
+
+-----------------------
+
+TransferOccupationActionView.OnSend
+Definition type: Function
+Return type: void
+
+-----------------------
+
+TransferOccupationActionView.Self
+Definition type: Function
+Return type: [unregistered]
+
+-----------------------
+
+TransferOccupationActionView.ToggleAllLocations
+Definition type: Function
+Return type: void
+
+-----------------------
+
+TransferOccupationActionView.ToggleLocation( Arg0 )
+Definition type: Function
+Return type: void
+
+-----------------------
+
 TransferUnit
 Definition type: Type
 
@@ -107101,12 +111209,6 @@ Definition type: Type
 
 -----------------------
 
-TransferUnitType.GetCountsCache
-Definition type: Promote
-Return type: SubUnitCounts
-
------------------------
-
 TransferUnitType.GetTarget
 Definition type: Promote
 Return type: Unit
@@ -107128,12 +111230,6 @@ Return type: int32
 TransferUnitType.GetAmountTooltip
 Definition type: Function
 Return type: CString
-
------------------------
-
-TransferUnitType.GetCountsCache
-Definition type: Function
-Return type: [unregistered]
 
 -----------------------
 
@@ -107428,7 +111524,43 @@ Return type: CString
 
 -----------------------
 
+UIAction.GetLeftClickAcceptance
+Definition type: Function
+Return type: CString
+
+-----------------------
+
+UIAction.GetLeftClickAndConfirmAcceptance
+Definition type: Function
+Return type: CString
+
+-----------------------
+
+UIAction.GetLeftClickAndConfirmConditions
+Definition type: Function
+Return type: CString
+
+-----------------------
+
+UIAction.GetLeftClickAndConfirmConfirmation
+Definition type: Function
+Return type: CString
+
+-----------------------
+
 UIAction.GetLeftClickAndConfirmCost
+Definition type: Function
+Return type: CString
+
+-----------------------
+
+UIAction.GetLeftClickAndConfirmDescription
+Definition type: Function
+Return type: CString
+
+-----------------------
+
+UIAction.GetLeftClickAndConfirmEffects
 Definition type: Function
 Return type: CString
 
@@ -107446,7 +111578,31 @@ Return type: CString
 
 -----------------------
 
+UIAction.GetLeftClickConditions
+Definition type: Function
+Return type: CString
+
+-----------------------
+
+UIAction.GetLeftClickConfirmation
+Definition type: Function
+Return type: CString
+
+-----------------------
+
 UIAction.GetLeftClickCost
+Definition type: Function
+Return type: CString
+
+-----------------------
+
+UIAction.GetLeftClickDescription
+Definition type: Function
+Return type: CString
+
+-----------------------
+
+UIAction.GetLeftClickEffects
 Definition type: Function
 Return type: CString
 
@@ -107476,7 +111632,43 @@ Return type: float
 
 -----------------------
 
+UIAction.GetMiddleClickAcceptance
+Definition type: Function
+Return type: CString
+
+-----------------------
+
+UIAction.GetMiddleClickAndConfirmAcceptance
+Definition type: Function
+Return type: CString
+
+-----------------------
+
+UIAction.GetMiddleClickAndConfirmConditions
+Definition type: Function
+Return type: CString
+
+-----------------------
+
+UIAction.GetMiddleClickAndConfirmConfirmation
+Definition type: Function
+Return type: CString
+
+-----------------------
+
 UIAction.GetMiddleClickAndConfirmCost
+Definition type: Function
+Return type: CString
+
+-----------------------
+
+UIAction.GetMiddleClickAndConfirmDescription
+Definition type: Function
+Return type: CString
+
+-----------------------
+
+UIAction.GetMiddleClickAndConfirmEffects
 Definition type: Function
 Return type: CString
 
@@ -107494,7 +111686,31 @@ Return type: CString
 
 -----------------------
 
+UIAction.GetMiddleClickConditions
+Definition type: Function
+Return type: CString
+
+-----------------------
+
+UIAction.GetMiddleClickConfirmation
+Definition type: Function
+Return type: CString
+
+-----------------------
+
 UIAction.GetMiddleClickCost
+Definition type: Function
+Return type: CString
+
+-----------------------
+
+UIAction.GetMiddleClickDescription
+Definition type: Function
+Return type: CString
+
+-----------------------
+
+UIAction.GetMiddleClickEffects
 Definition type: Function
 Return type: CString
 
@@ -107524,7 +111740,43 @@ Return type: float
 
 -----------------------
 
+UIAction.GetRightClickAcceptance
+Definition type: Function
+Return type: CString
+
+-----------------------
+
+UIAction.GetRightClickAndConfirmAcceptance
+Definition type: Function
+Return type: CString
+
+-----------------------
+
+UIAction.GetRightClickAndConfirmConditions
+Definition type: Function
+Return type: CString
+
+-----------------------
+
+UIAction.GetRightClickAndConfirmConfirmation
+Definition type: Function
+Return type: CString
+
+-----------------------
+
 UIAction.GetRightClickAndConfirmCost
+Definition type: Function
+Return type: CString
+
+-----------------------
+
+UIAction.GetRightClickAndConfirmDescription
+Definition type: Function
+Return type: CString
+
+-----------------------
+
+UIAction.GetRightClickAndConfirmEffects
 Definition type: Function
 Return type: CString
 
@@ -107542,7 +111794,31 @@ Return type: CString
 
 -----------------------
 
+UIAction.GetRightClickConditions
+Definition type: Function
+Return type: CString
+
+-----------------------
+
+UIAction.GetRightClickConfirmation
+Definition type: Function
+Return type: CString
+
+-----------------------
+
 UIAction.GetRightClickCost
+Definition type: Function
+Return type: CString
+
+-----------------------
+
+UIAction.GetRightClickDescription
+Definition type: Function
+Return type: CString
+
+-----------------------
+
+UIAction.GetRightClickEffects
 Definition type: Function
 Return type: CString
 
@@ -109191,6 +113467,12 @@ Return type: SubUnitArray
 
 -----------------------
 
+Unit.GetUnitFormationPreference
+Definition type: Promote
+Return type: UnitFormationPreference
+
+-----------------------
+
 Unit.GetVisualSubunit
 Definition type: Promote
 Return type: SubUnit
@@ -109276,6 +113558,12 @@ Return type: CString
 -----------------------
 
 Unit.ContainsMercenaries
+Definition type: Function
+Return type: bool
+
+-----------------------
+
+Unit.ContainsPlayerMercenaries
 Definition type: Function
 Return type: bool
 
@@ -109386,6 +113674,18 @@ Return type: CString
 Unit.GetCombat
 Definition type: Function
 Return type: [unregistered]
+
+-----------------------
+
+Unit.GetCombinedArmsBonus
+Definition type: Function
+Return type: CFixedPoint
+
+-----------------------
+
+Unit.GetCombinedArmsInfo
+Definition type: Function
+Return type: CString
 
 -----------------------
 
@@ -109560,6 +113860,12 @@ Return type: CString
 Unit.GetLocation
 Definition type: Function
 Return type: [unregistered]
+
+-----------------------
+
+Unit.GetMaintenanceCost
+Definition type: Function
+Return type: CFixedPoint
 
 -----------------------
 
@@ -109899,6 +114205,12 @@ Return type: [unregistered]
 
 -----------------------
 
+Unit.GetUnitFormationPreference
+Definition type: Function
+Return type: [unregistered]
+
+-----------------------
+
 Unit.GetUnitReinforceDetails
 Definition type: Function
 Return type: CString
@@ -109944,6 +114256,12 @@ Return type: CString
 Unit.GetVisualSubunit
 Definition type: Function
 Return type: [unregistered]
+
+-----------------------
+
+Unit.HasCombinedArmsInfo
+Definition type: Function
+Return type: bool
 
 -----------------------
 
@@ -110020,6 +114338,12 @@ Return type: bool
 -----------------------
 
 Unit.IsArmy
+Definition type: Function
+Return type: bool
+
+-----------------------
+
+Unit.IsAutobalanced
 Definition type: Function
 Return type: bool
 
@@ -110178,6 +114502,12 @@ Return type: void
 Unit.ShowReinforceDetails
 Definition type: Function
 Return type: bool
+
+-----------------------
+
+Unit.ToggleAutobalance
+Definition type: Function
+Return type: void
 
 -----------------------
 
@@ -110508,6 +114838,53 @@ Return type: void
 -----------------------
 
 UnitDetailsView.Self
+Definition type: Function
+Return type: [unregistered]
+
+-----------------------
+
+UnitFormationPreference
+Definition type: Type
+
+-----------------------
+
+UnitFormationPreference.AccessSelf
+Definition type: Function
+Return type: [unregistered]
+
+-----------------------
+
+UnitFormationPreference.GetCondensedTooltip
+Definition type: Function
+Return type: CString
+
+-----------------------
+
+UnitFormationPreference.GetDesc
+Definition type: Function
+Return type: CString
+
+-----------------------
+
+UnitFormationPreference.GetName
+Definition type: Function
+Return type: CString
+
+-----------------------
+
+UnitFormationPreference.GetNameWithNoTooltip
+Definition type: Function
+Return type: CString
+
+-----------------------
+
+UnitFormationPreference.GetTooltip
+Definition type: Function
+Return type: CString
+
+-----------------------
+
+UnitFormationPreference.Self
 Definition type: Function
 Return type: [unregistered]
 
@@ -111730,6 +116107,250 @@ Return type: [unregistered]
 
 -----------------------
 
+UnitTemplate
+Definition type: Type
+
+-----------------------
+
+UnitTemplate.AccessSelf
+Definition type: Function
+Return type: [unregistered]
+
+-----------------------
+
+UnitTemplate.GetDebugTooltip
+Definition type: Function
+Return type: CString
+
+-----------------------
+
+UnitTemplate.GetEstimatedConstructionTime
+Definition type: Function
+Return type: CString
+
+-----------------------
+
+UnitTemplate.GetID
+Definition type: Function
+Return type: int32
+
+-----------------------
+
+UnitTemplate.GetName
+Definition type: Function
+Return type: CString
+
+-----------------------
+
+UnitTemplate.GetNameWithNoTooltip
+Definition type: Function
+Return type: CString
+
+-----------------------
+
+UnitTemplate.GetSubUnitCategoryAmount( Arg0 )
+Definition type: Function
+Return type: int32
+
+-----------------------
+
+UnitTemplate.GetSubUnitCategoryStrength( Arg0 )
+Definition type: Function
+Return type: CString
+
+-----------------------
+
+UnitTemplate.GetTotalCost
+Definition type: Function
+Return type: CString
+
+-----------------------
+
+UnitTemplate.GetTotalMaintenanceCost
+Definition type: Function
+Return type: CString
+
+-----------------------
+
+UnitTemplate.GetTotalManpower
+Definition type: Function
+Return type: CString
+
+-----------------------
+
+UnitTemplate.GetTotalSailors
+Definition type: Function
+Return type: CString
+
+-----------------------
+
+UnitTemplate.IsArmy
+Definition type: Function
+Return type: bool
+
+-----------------------
+
+UnitTemplate.Self
+Definition type: Function
+Return type: [unregistered]
+
+-----------------------
+
+UnitTemplateLateralView
+Definition type: Type
+
+-----------------------
+
+UnitTemplateLateralView.GetPlayer
+Definition type: Promote
+Return type: Country
+
+-----------------------
+
+UnitTemplateLateralView.GetUnitTemplate
+Definition type: Promote
+Return type: UnitTemplate
+
+-----------------------
+
+UnitTemplateLateralView.Manager
+Definition type: Promote
+Return type: LateralView
+
+-----------------------
+
+UnitTemplateLateralView.Vars
+Definition type: Promote
+Return type: Context
+
+-----------------------
+
+UnitTemplateLateralView.AccessSelf
+Definition type: Function
+Return type: [unregistered]
+
+-----------------------
+
+UnitTemplateLateralView.CanCreateTemplate
+Definition type: Function
+Return type: bool
+
+-----------------------
+
+UnitTemplateLateralView.CanCreateTemplateInfo
+Definition type: Function
+Return type: CString
+
+-----------------------
+
+UnitTemplateLateralView.CreateTemplate
+Definition type: Function
+Return type: void
+
+-----------------------
+
+UnitTemplateLateralView.GetEstimatedConstructionTime
+Definition type: Function
+Return type: CString
+
+-----------------------
+
+UnitTemplateLateralView.GetPlayer
+Definition type: Function
+Return type: [unregistered]
+
+-----------------------
+
+UnitTemplateLateralView.GetPossibleSubUnitDefinitions
+Definition type: Function
+Return type: [unregistered]
+
+-----------------------
+
+UnitTemplateLateralView.GetSubUnitCategoryAmount( Arg0 )
+Definition type: Function
+Return type: int32
+
+-----------------------
+
+UnitTemplateLateralView.GetTemplateName
+Definition type: Function
+Return type: CString
+
+-----------------------
+
+UnitTemplateLateralView.GetTotalCost
+Definition type: Function
+Return type: CString
+
+-----------------------
+
+UnitTemplateLateralView.GetTotalMaintenanceCost
+Definition type: Function
+Return type: CString
+
+-----------------------
+
+UnitTemplateLateralView.GetTotalManpower
+Definition type: Function
+Return type: CString
+
+-----------------------
+
+UnitTemplateLateralView.GetTotalSailors
+Definition type: Function
+Return type: CString
+
+-----------------------
+
+UnitTemplateLateralView.IsArmy
+Definition type: Function
+Return type: bool
+
+-----------------------
+
+UnitTemplateLateralView.IsEditingTemplate
+Definition type: Function
+Return type: bool
+
+-----------------------
+
+UnitTemplateLateralView.IsLeftPanel
+Definition type: Function
+Return type: bool
+
+-----------------------
+
+UnitTemplateLateralView.IsRightPanel
+Definition type: Function
+Return type: bool
+
+-----------------------
+
+UnitTemplateLateralView.Self
+Definition type: Function
+Return type: [unregistered]
+
+-----------------------
+
+UnitTemplateLateralView.SetTemplateName
+Definition type: Function
+Return type: void
+
+-----------------------
+
+UnitTemplateLateralView.ShowOnlyCurrentAge
+Definition type: Function
+Return type: bool
+
+-----------------------
+
+UnitTemplateLateralView.ToggleShowOnlyCurrentAge
+Definition type: Function
+Return type: void
+
+-----------------------
+
 UnitTransportStateBag
 Definition type: Type
 
@@ -112095,6 +116716,12 @@ Return type: bool
 -----------------------
 
 UnitTypeItem.IsRightClickAndConfirmVisible
+Definition type: Function
+Return type: bool
+
+-----------------------
+
+UnitTypeItem.IsSpecialRegiment
 Definition type: Function
 Return type: bool
 
@@ -112468,6 +117095,53 @@ Return type: [unregistered]
 
 -----------------------
 
+UpgradeableBuildingTypeLevels
+Definition type: Type
+
+-----------------------
+
+UpgradeableBuildingTypeLevels.GetBuildingType
+Definition type: Promote
+Return type: BuildingType
+
+-----------------------
+
+UpgradeableBuildingTypeLevels.AccessSelf
+Definition type: Function
+Return type: [unregistered]
+
+-----------------------
+
+UpgradeableBuildingTypeLevels.GetBuildingType
+Definition type: Function
+Return type: [unregistered]
+
+-----------------------
+
+UpgradeableBuildingTypeLevels.GetLevels
+Definition type: Function
+Return type: int32
+
+-----------------------
+
+UpgradeableBuildingTypeLevels.GetLocationLevels
+Definition type: Function
+Return type: [unregistered]
+
+-----------------------
+
+UpgradeableBuildingTypeLevels.GetLocationLevelsBreakdownInfo
+Definition type: Function
+Return type: CString
+
+-----------------------
+
+UpgradeableBuildingTypeLevels.Self
+Definition type: Function
+Return type: [unregistered]
+
+-----------------------
+
 VariableInfo
 Definition type: Type
 
@@ -112610,6 +117284,35 @@ Return type: [unregistered]
 -----------------------
 
 VoteGlue.Self
+Definition type: Function
+Return type: [unregistered]
+
+-----------------------
+
+VoteItem
+Definition type: Type
+
+-----------------------
+
+VoteItem.AccessSelf
+Definition type: Function
+Return type: [unregistered]
+
+-----------------------
+
+VoteItem.GetName
+Definition type: Function
+Return type: CString
+
+-----------------------
+
+VoteItem.GetVotes
+Definition type: Function
+Return type: CFixedPoint
+
+-----------------------
+
+VoteItem.Self
 Definition type: Function
 Return type: [unregistered]
 
@@ -113266,6 +117969,30 @@ Definition type: Type
 
 -----------------------
 
+WarLateralView.GetAttackerLeader
+Definition type: Promote
+Return type: Country
+
+-----------------------
+
+WarLateralView.GetAttackerParticipantsSortSearch
+Definition type: Promote
+Return type: FilteredSortedList
+
+-----------------------
+
+WarLateralView.GetDefenderLeader
+Definition type: Promote
+Return type: Country
+
+-----------------------
+
+WarLateralView.GetDefenderParticipantsSortSearch
+Definition type: Promote
+Return type: FilteredSortedList
+
+-----------------------
+
 WarLateralView.GetEnemyLeader
 Definition type: Promote
 Return type: Country
@@ -113350,9 +118077,51 @@ Return type: bool
 
 -----------------------
 
+WarLateralView.AreAttackersLandlocked
+Definition type: Function
+Return type: bool
+
+-----------------------
+
+WarLateralView.AreDefendersLandlocked
+Definition type: Function
+Return type: bool
+
+-----------------------
+
 WarLateralView.AreEnemiesLandlocked
 Definition type: Function
 Return type: bool
+
+-----------------------
+
+WarLateralView.AreFriendlyParticipantsAttacking
+Definition type: Function
+Return type: bool
+
+-----------------------
+
+WarLateralView.AttackerBattlesLossesWarDesc
+Definition type: Function
+Return type: CString
+
+-----------------------
+
+WarLateralView.AttackerMenLossesCountryWarDesc
+Definition type: Function
+Return type: CString
+
+-----------------------
+
+WarLateralView.AttackerNavalBattlesLossesWarDesc
+Definition type: Function
+Return type: CString
+
+-----------------------
+
+WarLateralView.AttackerNavalLossesCountryWarDesc
+Definition type: Function
+Return type: CString
 
 -----------------------
 
@@ -113392,6 +118161,156 @@ Return type: CString
 
 -----------------------
 
+WarLateralView.DefenderBattlesLossesWarDesc
+Definition type: Function
+Return type: CString
+
+-----------------------
+
+WarLateralView.DefenderMenLossesCountryWarDesc
+Definition type: Function
+Return type: CString
+
+-----------------------
+
+WarLateralView.DefenderNavalBattlesLossesWarDesc
+Definition type: Function
+Return type: CString
+
+-----------------------
+
+WarLateralView.DefenderNavalLossesCountryWarDesc
+Definition type: Function
+Return type: CString
+
+-----------------------
+
+WarLateralView.EnemyBattlesLossesWarDesc
+Definition type: Function
+Return type: CString
+
+-----------------------
+
+WarLateralView.EnemyMenLossesCountryWarDesc
+Definition type: Function
+Return type: CString
+
+-----------------------
+
+WarLateralView.EnemyNavalBattlesLossesWarDesc
+Definition type: Function
+Return type: CString
+
+-----------------------
+
+WarLateralView.EnemyNavalLossesCountryWarDesc
+Definition type: Function
+Return type: CString
+
+-----------------------
+
+WarLateralView.EnforcePeaceDesc
+Definition type: Function
+Return type: CString
+
+-----------------------
+
+WarLateralView.FriendlyBattlesLossesWarDesc
+Definition type: Function
+Return type: CString
+
+-----------------------
+
+WarLateralView.FriendlyMenLossesCountryWarDesc
+Definition type: Function
+Return type: CString
+
+-----------------------
+
+WarLateralView.FriendlyNavalBattlesLossesWarDesc
+Definition type: Function
+Return type: CString
+
+-----------------------
+
+WarLateralView.FriendlyNavalLossesCountryWarDesc
+Definition type: Function
+Return type: CString
+
+-----------------------
+
+WarLateralView.GetAttackerBattlesLost
+Definition type: Function
+Return type: [unregistered]
+
+-----------------------
+
+WarLateralView.GetAttackerBattlesWon
+Definition type: Function
+Return type: [unregistered]
+
+-----------------------
+
+WarLateralView.GetAttackerLandArmy
+Definition type: Function
+Return type: CString
+
+-----------------------
+
+WarLateralView.GetAttackerLandArmyDesc
+Definition type: Function
+Return type: CString
+
+-----------------------
+
+WarLateralView.GetAttackerLandLosses
+Definition type: Function
+Return type: CString
+
+-----------------------
+
+WarLateralView.GetAttackerLeader
+Definition type: Function
+Return type: [unregistered]
+
+-----------------------
+
+WarLateralView.GetAttackerNavalArmy
+Definition type: Function
+Return type: CString
+
+-----------------------
+
+WarLateralView.GetAttackerNavalArmyDesc
+Definition type: Function
+Return type: CString
+
+-----------------------
+
+WarLateralView.GetAttackerNavalLosses
+Definition type: Function
+Return type: CString
+
+-----------------------
+
+WarLateralView.GetAttackerNavalLossesDesc
+Definition type: Function
+Return type: CString
+
+-----------------------
+
+WarLateralView.GetAttackerParticipants
+Definition type: Function
+Return type: [unregistered]
+
+-----------------------
+
+WarLateralView.GetAttackerParticipantsSorted
+Definition type: Function
+Return type: [unregistered]
+
+-----------------------
+
 WarLateralView.GetBattlesLost
 Definition type: Function
 Return type: [unregistered]
@@ -113410,6 +118329,66 @@ Return type: [unregistered]
 
 -----------------------
 
+WarLateralView.GetDefenderLandArmy
+Definition type: Function
+Return type: CString
+
+-----------------------
+
+WarLateralView.GetDefenderLandArmyDesc
+Definition type: Function
+Return type: CString
+
+-----------------------
+
+WarLateralView.GetDefenderLandLosses
+Definition type: Function
+Return type: CString
+
+-----------------------
+
+WarLateralView.GetDefenderLeader
+Definition type: Function
+Return type: [unregistered]
+
+-----------------------
+
+WarLateralView.GetDefenderNavalArmy
+Definition type: Function
+Return type: CString
+
+-----------------------
+
+WarLateralView.GetDefenderNavalArmyDesc
+Definition type: Function
+Return type: CString
+
+-----------------------
+
+WarLateralView.GetDefenderNavalLosses
+Definition type: Function
+Return type: CString
+
+-----------------------
+
+WarLateralView.GetDefenderNavalLossesDesc
+Definition type: Function
+Return type: CString
+
+-----------------------
+
+WarLateralView.GetDefenderParticipants
+Definition type: Function
+Return type: [unregistered]
+
+-----------------------
+
+WarLateralView.GetDefenderParticipantsSorted
+Definition type: Function
+Return type: [unregistered]
+
+-----------------------
+
 WarLateralView.GetEnemyLandArmy
 Definition type: Function
 Return type: CString
@@ -113423,12 +118402,6 @@ Return type: CString
 -----------------------
 
 WarLateralView.GetEnemyLandLosses
-Definition type: Function
-Return type: CString
-
------------------------
-
-WarLateralView.GetEnemyLandLossesDesc
 Definition type: Function
 Return type: CString
 
@@ -113506,12 +118479,6 @@ Return type: CString
 
 -----------------------
 
-WarLateralView.GetFriendlyLandLossesDesc
-Definition type: Function
-Return type: CString
-
------------------------
-
 WarLateralView.GetFriendlyLeader
 Definition type: Function
 Return type: [unregistered]
@@ -113566,6 +118533,18 @@ Return type: [unregistered]
 
 -----------------------
 
+WarLateralView.GetLandAttackerBattlesLostInfo
+Definition type: Function
+Return type: CString
+
+-----------------------
+
+WarLateralView.GetLandAttackerBattlesWonInfo
+Definition type: Function
+Return type: CString
+
+-----------------------
+
 WarLateralView.GetLandBattlesLostInfo
 Definition type: Function
 Return type: CString
@@ -113573,6 +118552,18 @@ Return type: CString
 -----------------------
 
 WarLateralView.GetLandBattlesWonInfo
+Definition type: Function
+Return type: CString
+
+-----------------------
+
+WarLateralView.GetNavalAttackerBattlesLostInfo
+Definition type: Function
+Return type: CString
+
+-----------------------
+
+WarLateralView.GetNavalAttackerBattlesWonInfo
 Definition type: Function
 Return type: CString
 
@@ -113590,6 +118581,18 @@ Return type: CString
 
 -----------------------
 
+WarLateralView.GetNumberLandAttackerBattlesLost
+Definition type: Function
+Return type: int32
+
+-----------------------
+
+WarLateralView.GetNumberLandAttackerBattlesWon
+Definition type: Function
+Return type: int32
+
+-----------------------
+
 WarLateralView.GetNumberLandBattlesLost
 Definition type: Function
 Return type: int32
@@ -113597,6 +118600,18 @@ Return type: int32
 -----------------------
 
 WarLateralView.GetNumberLandBattlesWon
+Definition type: Function
+Return type: int32
+
+-----------------------
+
+WarLateralView.GetNumberNavalAttackerBattlesLost
+Definition type: Function
+Return type: int32
+
+-----------------------
+
+WarLateralView.GetNumberNavalAttackerBattlesWon
 Definition type: Function
 Return type: int32
 
@@ -113662,6 +118677,12 @@ Return type: bool
 
 -----------------------
 
+WarLateralView.IsEnforcePeaceVisible
+Definition type: Function
+Return type: bool
+
+-----------------------
+
 WarLateralView.IsGrantIndependenceVisible
 Definition type: Function
 Return type: bool
@@ -113705,6 +118726,12 @@ Return type: bool
 -----------------------
 
 WarLateralView.IsRightPanel
+Definition type: Function
+Return type: bool
+
+-----------------------
+
+WarLateralView.IsWhitePeaceVisible
 Definition type: Function
 Return type: bool
 
@@ -113759,6 +118786,12 @@ Return type: bool
 -----------------------
 
 WarLateralView.TogglePeaceViewTooltip
+Definition type: Function
+Return type: CString
+
+-----------------------
+
+WarLateralView.WhitePeaceDesc
 Definition type: Function
 Return type: CString
 

@@ -1717,6 +1717,36 @@ Return type: [unregistered]
 
 -----------------------
 
+TagObject
+Description: Base class for objects featuring custom tags
+Definition type: Type
+
+-----------------------
+
+TagObject.AccessSelf
+Definition type: Function
+Return type: [unregistered]
+
+-----------------------
+
+TagObject.CanShowTags
+Definition type: Function
+Return type: bool
+
+-----------------------
+
+TagObject.Self
+Definition type: Function
+Return type: [unregistered]
+
+-----------------------
+
+TagObject.ShowTags
+Definition type: Function
+Return type: CString
+
+-----------------------
+
 VariableSystem
 Definition type: Type
 

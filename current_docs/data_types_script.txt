@@ -31,6 +31,12 @@ Return type: Scope
 
 -----------------------
 
+GetVariableFromGlobalVariableMap( Arg0, Arg1 )
+Definition type: Global promote
+Return type: Scope
+
+-----------------------
+
 PREV
 Description: Script Scope
 Definition type: Global promote
@@ -74,6 +80,12 @@ Return type: [unregistered]
 GetVarTimeRemaining( Arg0, Arg1 )
 Definition type: Global function
 Return type: int32
+
+-----------------------
+
+GetVariableFromGlobalVariableMap( Arg0, Arg1 )
+Definition type: Global function
+Return type: [unregistered]
 
 -----------------------
 
@@ -1936,6 +1948,12 @@ Return type: ScriptableHintDefinition
 
 -----------------------
 
+Scope.GetScriptedGeography
+Definition type: Promote
+Return type: ScriptedGeography
+
+-----------------------
+
 Scope.GetScriptedPeaceTreatyType
 Definition type: Promote
 Return type: ScriptedPeaceTreatyType
@@ -2033,6 +2051,12 @@ Return type: SubUnitType
 -----------------------
 
 Scope.GetVariable( Arg0 )
+Definition type: Promote
+Return type: Scope
+
+-----------------------
+
+Scope.GetVariableFromVariableMap( Arg0, Arg1 )
 Definition type: Promote
 Return type: Scope
 
@@ -2415,6 +2439,13 @@ Scope.ScriptableHintDefinition
 Description: Jomini Script System
 Definition type: Promote
 Return type: ScriptableHintDefinition
+
+-----------------------
+
+Scope.ScriptedGeography
+Description: Jomini Script System
+Definition type: Promote
+Return type: ScriptedGeography
 
 -----------------------
 
@@ -2841,6 +2872,12 @@ Return type: [unregistered]
 
 -----------------------
 
+Scope.GetMapKeys( Arg0 )
+Definition type: Function
+Return type: [unregistered]
+
+-----------------------
+
 Scope.GetScriptValueDesc( Arg0 )
 Definition type: Function
 Return type: CString
@@ -3221,6 +3258,13 @@ Return type: [unregistered]
 
 -----------------------
 
+Scope.ScriptedGeography
+Description: Jomini Script System
+Definition type: Function
+Return type: [unregistered]
+
+-----------------------
+
 Scope.ScriptedPeaceTreatyType
 Description: Jomini Script System
 Definition type: Function
@@ -3345,6 +3389,24 @@ Return type: int32
 
 -----------------------
 
+Scope.VariableMapContainsKey( Arg0, Arg1 )
+Definition type: Function
+Return type: bool
+
+-----------------------
+
+Scope.VariableMapContainsValue( Arg0, Arg1 )
+Definition type: Function
+Return type: bool
+
+-----------------------
+
+Scope.VariableMapExists( Arg0 )
+Definition type: Function
+Return type: [unregistered]
+
+-----------------------
+
 Scope.Vegetation
 Description: Jomini Script System
 Definition type: Function
@@ -3386,6 +3448,18 @@ Definition type: Type
 -----------------------
 
 ScriptableHintDefinition.MakeScope
+Description: Jomini Script System
+Definition type: Function
+Return type: Scope
+
+-----------------------
+
+ScriptedGeography
+Definition type: Type
+
+-----------------------
+
+ScriptedGeography.MakeScope
 Description: Jomini Script System
 Definition type: Function
 Return type: Scope
@@ -4176,6 +4250,12 @@ Return type: ScriptableHintDefinition
 
 -----------------------
 
+TopScope.sScriptedGeography( Arg0 )
+Definition type: Promote
+Return type: ScriptedGeography
+
+-----------------------
+
 TopScope.sScriptedPeaceTreatyType( Arg0 )
 Definition type: Promote
 Return type: ScriptedPeaceTreatyType
@@ -4263,6 +4343,18 @@ Return type: Unit
 TopScope.sUnitAbility( Arg0 )
 Definition type: Promote
 Return type: UnitAbility
+
+-----------------------
+
+TopScope.sUnitFormationPreference( Arg0 )
+Definition type: Promote
+Return type: UnitFormationPreference
+
+-----------------------
+
+TopScope.sUnitTemplate( Arg0 )
+Definition type: Promote
+Return type: UnitTemplate
 
 -----------------------
 
@@ -4902,6 +4994,12 @@ Return type: [unregistered]
 
 -----------------------
 
+TopScope.sScriptedGeography( Arg0 )
+Definition type: Function
+Return type: [unregistered]
+
+-----------------------
+
 TopScope.sScriptedPeaceTreatyType( Arg0 )
 Definition type: Function
 Return type: [unregistered]
@@ -4987,6 +5085,18 @@ Return type: [unregistered]
 -----------------------
 
 TopScope.sUnitAbility( Arg0 )
+Definition type: Function
+Return type: [unregistered]
+
+-----------------------
+
+TopScope.sUnitFormationPreference( Arg0 )
+Definition type: Function
+Return type: [unregistered]
+
+-----------------------
+
+TopScope.sUnitTemplate( Arg0 )
 Definition type: Function
 Return type: [unregistered]
 

@@ -67,6 +67,10 @@ desc replaces the description of how long the modifier lasts
 Add a colonial claim to the target province_definition. Usage from country scope: add_colonial_claim = { province_definition = <province definition> reason = <reason loc> [category = <exclusive/same_religion>] }
 **Supported Scopes**: country  
 
+## add_complacency
+Adds complacency
+**Supported Scopes**: country, international_organization  
+
 ## add_cooldown
 adds a cooldown for a country or international organization. Usage: add_cooldown = { type = <token> days/weeks/months/years = <integer> }
 **Supported Scopes**: country, international_organization  
@@ -438,6 +442,14 @@ Where Y is an event target
 An optional days where Z is the number of days or script value
 **Supported Scopes**: none  
 
+## add_to_global_variable_map
+Adds the event target to a variable map for the given duration  
+add_to_variable_map = { name = X key = Y value = Z days/weeks/months/years = T }  
+Where X is the name of the variable  
+Where Y and Z are event targets  
+An optional days where T is the number of days or script value
+**Supported Scopes**: none  
+
 ## add_to_list
 Adds the current scope to an arbitrarily-named list (or creates the list if not already present) to be referenced later in the (unbroken) event chain  
 add_to_list = <name_of_list>  
@@ -453,6 +465,14 @@ Where Y is an event target
 An optional days where Z is the number of days or script value
 **Supported Scopes**: none  
 
+## add_to_local_variable_map
+Adds the event target to a variable map for the given duration  
+add_to_variable_map = { name = X key = Y value = Z days/weeks/months/years = T }  
+Where X is the name of the variable  
+Where Y and Z are event targets  
+An optional days where T is the number of days or script value
+**Supported Scopes**: none  
+
 ## add_to_temporary_list
 Adds the current scope to an arbitrarily-named list (or creates the list if not already present) to be referenced later in the same effect  
 add_to_temporary_list = <name_of_list>  
@@ -466,6 +486,14 @@ add_to_variable_list = { name = X target = Y days/weeks/months/years = Z }
 Where X is the name of the variable  
 Where Y is an event target  
 An optional days where Z is the number of days or script value
+**Supported Scopes**: none  
+
+## add_to_variable_map
+Adds the event target to a variable map for the given duration  
+add_to_variable_map = { name = X key = Y value = Z days/weeks/months/years = T }  
+Where X is the name of the variable  
+Where Y and Z are event targets  
+An optional days where T is the number of days or script value
 **Supported Scopes**: none  
 
 ## add_tolerated_culture
@@ -637,6 +665,11 @@ changes character's estate
 **Supported Scopes**: character  
 **Supported Targets**: estate_type  
 
+## change_character_modifier_size
+Change the strength of a modifier applied to the scope character  
+change_character_modifier_size = { modifier = <modifier> value = <script math> [recalculate_immediately = yes] }
+**Supported Scopes**: character  
+
 ## change_character_religion
 Changes religion for a character
 **Supported Scopes**: character  
@@ -667,12 +700,13 @@ Changes the name, adjective, and flag of a country to the dynasty of the ruler
 changes the flag of a country
 **Supported Scopes**: country  
 
-## change_country_name
-changes the name of a country
+## change_country_modifier_size
+Change the strength of a modifier applied to the scope country  
+change_country_modifier_size = { modifier = <modifier> value = <script math> [recalculate_immediately = yes] }
 **Supported Scopes**: country  
 
-## change_country_tag
-changes the historical tag of a country
+## change_country_name
+changes the name of a country
 **Supported Scopes**: country  
 
 ## change_country_type
@@ -700,6 +734,11 @@ Adds a value to the presence of a disease in a location or subunit. Disease must
 changes dynasty to target dynasty
 **Supported Scopes**: character  
 **Supported Targets**: dynasty  
+
+## change_dynasty_modifier_size
+Change the strength of a modifier applied to the scope dynasty  
+change_dynasty_modifier_size = { modifier = <modifier> value = <script math> [recalculate_immediately = yes] }
+**Supported Scopes**: dynasty  
 
 ## change_exploration_progress
 change the progress of an exploration
@@ -748,6 +787,11 @@ changes the name of a location
 changes the current integration progress
 **Supported Scopes**: location  
 
+## change_international_organization_modifier_size
+Change the strength of a modifier applied to the scope international organization  
+change_international_organization_modifier_size = { modifier = <modifier> value = <script math> [recalculate_immediately = yes] }
+**Supported Scopes**: international_organization  
+
 ## change_language
 changes the language of a culture
 **Supported Scopes**: culture  
@@ -784,6 +828,11 @@ change controller of Location to target country
 **Supported Scopes**: location  
 **Supported Targets**: country  
 
+## change_location_modifier_size
+Change the strength of a modifier applied to the scope location  
+change_location_modifier_size = { modifier = <modifier> value = <script math> [recalculate_immediately = yes] }
+**Supported Scopes**: location  
+
 ## change_location_owner
 change owner of Location to target country
 **Supported Scopes**: location  
@@ -806,6 +855,11 @@ Add or remove maritime presence power for the specified country in the current l
 ## change_max_raw_material_workers
 increases rgo size
 **Supported Scopes**: location  
+
+## change_mercenary_modifier_size
+Change the strength of a modifier applied to the scope mercenary  
+change_mercenary_modifier_size = { modifier = <modifier> value = <script math> [recalculate_immediately = yes] }
+**Supported Scopes**: mercenary  
 
 ## change_mother
 changes mother to target character
@@ -871,6 +925,11 @@ changes the province food stockpile by a percentage of the max
 Changes integration_level of a province
 **Supported Scopes**: province  
 
+## change_province_modifier_size
+Change the strength of a modifier applied to the scope province  
+change_province_modifier_size = { modifier = <modifier> value = <script math> [recalculate_immediately = yes] }
+**Supported Scopes**: province  
+
 ## change_province_owner
 change owner of Province to target country
 **Supported Scopes**: province  
@@ -881,14 +940,28 @@ changes the raw-material produced in a location
 **Supported Scopes**: location  
 **Supported Targets**: goods  
 
+## change_rebel_modifier_size
+Change the strength of a modifier applied to the scope rebel  
+change_rebel_modifier_size = { modifier = <modifier> value = <script math> [recalculate_immediately = yes] }
+**Supported Scopes**: rebels  
+
 ## change_religion
 Changes religion for a country
 **Supported Scopes**: country  
 **Supported Targets**: religion  
 
+## change_religion_modifier_size
+Change the strength of a modifier applied to the scope religion  
+change_religion_modifier_size = { modifier = <modifier> value = <script math> [recalculate_immediately = yes] }
+**Supported Scopes**: religion  
+
 ## change_religion_view
 Changes the religion view of target.. { target = x change = relation_change }
 **Supported Scopes**: religion  
+
+## change_siege_progress
+Advances the siege by the given script value
+**Supported Scopes**: location  
 
 ## change_societal_value
 Changes societal value
@@ -903,6 +976,11 @@ Change the subject type for the current country scope to the specified subject t
 changes the sub unit type to a new type. Usage: change_subunit_type = <sub unit definition tag>
 **Supported Scopes**: sub_unit  
 **Supported Targets**: unit_type  
+
+## change_unit_modifier_size
+Change the strength of a modifier applied to the scope unit  
+change_unit_modifier_size = { modifier = <modifier> value = <script math> [recalculate_immediately = yes] }
+**Supported Scopes**: unit  
 
 ## change_unit_owner
 change owner of unit to target country
@@ -943,9 +1021,19 @@ Empties the list
 clear_variable_list = variable_name
 **Supported Scopes**: none  
 
+## clear_global_variable_map
+Empties the map  
+clear_variable_map = variable_name
+**Supported Scopes**: none  
+
 ## clear_local_variable_list
 Empties the list  
 clear_variable_list = variable_name
+**Supported Scopes**: none  
+
+## clear_local_variable_map
+Empties the map  
+clear_variable_map = variable_name
 **Supported Scopes**: none  
 
 ## clear_saved_scope
@@ -956,6 +1044,11 @@ save_scope_as = cool_scope -> clear_saved_scope = cool_scope
 ## clear_variable_list
 Empties the list  
 clear_variable_list = variable_name
+**Supported Scopes**: none  
+
+## clear_variable_map
+Empties the map  
+clear_variable_map = variable_name
 **Supported Scopes**: none  
 
 ## close_all_views
@@ -1213,12 +1306,16 @@ debug_log_scopes = no  # log only current scope
 **Supported Scopes**: none  
 
 ## declare_war
-declares a war with the target country
+declares a war with the target country. The country scope will leave all wars they fight together with the target country.
 **Supported Scopes**: country  
 **Supported Targets**: country  
 
 ## declare_war_with_cb
-declares a war with a specific cb  { target = <country> type = <cb_type> [target_province = ; target_country =, character =]
+declares a war with a specific cb  { target = <country> type = <cb_type> [target_province = ; target_country =, character =] } The country scope will leave all wars they fight together with the target country.
+**Supported Scopes**: country  
+
+## define_unique_country_tag
+defines a unique country tag for a dynamic country
 **Supported Scopes**: country  
 
 ## destroy_all_buildings_of_type
@@ -1386,6 +1483,12 @@ every_adjacent_ports_to_area = { limit = { <triggers> } <effects> }
 **Supported Scopes**: area  
 **Supported Targets**: location  
 
+## every_advance_definition
+Iterate through all advance definitions  
+every_advance_definition = { limit = { <triggers> } <effects> }
+**Supported Scopes**: none  
+**Supported Targets**: advance_type  
+
 ## every_allowed_estate_in_heir_selection
 Iterate through all allowed estates a HeirSelection has  
 every_allowed_estate_in_heir_selection = { limit = { <triggers> } <effects> }
@@ -1408,6 +1511,12 @@ every_area = { limit = { <triggers> } <effects> }
 Iterate through all areas in a region  
 every_area_in_region = { limit = { <triggers> } <effects> }
 **Supported Scopes**: region  
+**Supported Targets**: area  
+
+## every_area_in_scripted_geography
+Iterate through all areas in a scripted geography  
+every_area_in_scripted_geography = { limit = { <triggers> } <effects> }
+**Supported Scopes**: scripted_geography  
 **Supported Targets**: area  
 
 ## every_area_with_core
@@ -1608,6 +1717,12 @@ every_continent = { limit = { <triggers> } <effects> }
 **Supported Scopes**: none  
 **Supported Targets**: continent  
 
+## every_continent_in_scripted_geography
+Iterate through all continents in a scripted geography  
+every_continent_in_scripted_geography = { limit = { <triggers> } <effects> }
+**Supported Scopes**: scripted_geography  
+**Supported Targets**: continent  
+
 ## every_controlled_location
 Iterate through all controlled location in a country  
 every_controlled_location = { limit = { <triggers> } <effects> }
@@ -1743,7 +1858,7 @@ every_country_we_are_annexing = { limit = { <triggers> } <effects> }
 ## every_country_with_capital_in_geography
 Iterate through all countries which have their capital in the specified geography  
 every_country_with_capital_in_geography = { limit = { <triggers> } <effects> }
-**Supported Scopes**: location, province_definition, area, region, sub_continent, continent  
+**Supported Scopes**: location, province_definition, area, region, sub_continent, continent, scripted_geography  
 **Supported Targets**: country  
 
 ## every_country_with_cardinals
@@ -1755,6 +1870,12 @@ every_country_with_cardinals = { limit = { <triggers> } <effects> }
 ## every_country_with_coalition_grade_antagonism_against_us
 Iterate through all countries who have coalition grade antagonism against us  
 every_country_with_coalition_grade_antagonism_against_us = { limit = { <triggers> } <effects> }
+**Supported Scopes**: country  
+**Supported Targets**: country  
+
+## every_country_with_relation_that_can_be_annulled
+Iterate through all countries which have an annullable relation with the scope country.  
+every_country_with_relation_that_can_be_annulled = { limit = { <triggers> } <effects> }
 **Supported Scopes**: country  
 **Supported Targets**: country  
 
@@ -1785,12 +1906,6 @@ every_culture_group = { limit = { <triggers> } <effects> }
 ## every_culture_in_culture_group
 Iterate through all cultures in a culture group.  
 every_culture_in_culture_group = { limit = { <triggers> } <effects> }
-**Supported Scopes**: culture_group  
-**Supported Targets**: culture  
-
-## every_culture_in_group
-Iterate through all cultures in a culture group  
-every_culture_in_group = { limit = { <triggers> } <effects> }
 **Supported Scopes**: culture_group  
 **Supported Targets**: culture  
 
@@ -1925,6 +2040,12 @@ Iterate through all exports from location
 every_export_from_location = { limit = { <triggers> } <effects> }
 **Supported Scopes**: location  
 **Supported Targets**: location  
+
+## every_food_goods
+Iterate through all food-goods  
+every_food_goods = { limit = { <triggers> } <effects> }
+**Supported Scopes**: none  
+**Supported Targets**: goods  
 
 ## every_foreign_building_countries_in_location
 Iterate through all foreign building countries in a location  
@@ -2169,11 +2290,44 @@ every_invited_religious_figure = { limit = { <triggers> } <effects> }
 **Supported Scopes**: country  
 **Supported Targets**: character  
 
+## every_key_in_global_variable_map
+Iterate through all keys in a global variable map.  
+key_in_global_variable_map = {  
+	variable = name  
+	<...>  
+}  
+every_key_in_global_variable_map = { limit = { <triggers> } <effects> }
+**Supported Scopes**: none  
+
+## every_key_in_local_variable_map
+Iterate through all keys in a local variable map.  
+key_in_local_variable_map = {  
+	variable = name  
+	<...>  
+}  
+every_key_in_local_variable_map = { limit = { <triggers> } <effects> }
+**Supported Scopes**: none  
+
+## every_key_in_variable_map
+Iterate through all keys in a variable map.  
+key_in_variable_map = {  
+	variable = name  
+	<...>  
+}  
+every_key_in_variable_map = { limit = { <triggers> } <effects> }
+**Supported Scopes**: none  
+
 ## every_known_country
 Iterate through all known countries  
 every_known_country = { limit = { <triggers> } <effects> }
 **Supported Scopes**: country  
 **Supported Targets**: country  
+
+## every_known_institution
+Iterate through all institutions a country knows of  
+every_known_institution = { limit = { <triggers> } <effects> }
+**Supported Scopes**: country  
+**Supported Targets**: institution  
 
 ## every_left_flank
 Iterate through all subunits on the left-flank of a combat-side  
@@ -2233,6 +2387,12 @@ every_location_in_province_definition = { limit = { <triggers> } <effects> }
 Iterate through all Locations in a region  
 every_location_in_region = { limit = { <triggers> } <effects> }
 **Supported Scopes**: region  
+**Supported Targets**: location  
+
+## every_location_in_scripted_geography
+Iterate through all locations in a scripted geography  
+every_location_in_scripted_geography = { limit = { <triggers> } <effects> }
+**Supported Scopes**: scripted_geography  
 **Supported Targets**: location  
 
 ## every_location_in_sub_continent
@@ -2331,6 +2491,12 @@ every_neighbor_province_definition = { limit = { <triggers> } <effects> }
 **Supported Scopes**: province_definition  
 **Supported Targets**: province_definition  
 
+## every_new_world_goods
+Iterate through all newworld-goods  
+every_new_world_goods = { limit = { <triggers> } <effects> }
+**Supported Scopes**: none  
+**Supported Targets**: goods  
+
 ## every_nomad_countries_in_location
 Iterate through all nomad pop countries in a location  
 every_nomad_countries_in_location = { limit = { <triggers> } <effects> }
@@ -2342,6 +2508,12 @@ Iterate through all NonStateReligion locations in a country
 every_non_state_religion_location = { limit = { <triggers> } <effects> }
 **Supported Scopes**: country  
 **Supported Targets**: location  
+
+## every_old_world_goods
+Iterate through all oldworld-goods  
+every_old_world_goods = { limit = { <triggers> } <effects> }
+**Supported Scopes**: none  
+**Supported Targets**: goods  
 
 ## every_other_core_country
 Iterate through all other countries which have a core on the current country  
@@ -2407,6 +2579,12 @@ every_ownable_location_in_province_definition = { limit = { <triggers> } <effect
 Iterate through all ownable Locations in a region  
 every_ownable_location_in_region = { limit = { <triggers> } <effects> }
 **Supported Scopes**: region  
+**Supported Targets**: location  
+
+## every_ownable_location_in_scripted_geography
+Iterate through all ownable Locations in a scripted geography  
+every_ownable_location_in_scripted_geography = { limit = { <triggers> } <effects> }
+**Supported Scopes**: scripted_geography  
 **Supported Targets**: location  
 
 ## every_ownable_location_in_sub_continent
@@ -2556,7 +2734,7 @@ every_possible_recruit_location = { limit = { <triggers> } <effects> }
 ## every_present_country
 Iterate through all countries in the specified geography  
 every_present_country = { limit = { <triggers> } <effects> }
-**Supported Scopes**: location, province_definition, area, region, sub_continent, continent  
+**Supported Scopes**: location, province_definition, area, region, sub_continent, continent, scripted_geography  
 **Supported Targets**: country  
 
 ## every_present_culture_in_country
@@ -2574,7 +2752,7 @@ every_present_culture_in_location = { limit = { <triggers> } <effects> }
 ## every_present_overlord
 Iterate through all countries which have a subject in the specified geography  
 every_present_overlord = { limit = { <triggers> } <effects> }
-**Supported Scopes**: location, province_definition, area, region, sub_continent, continent  
+**Supported Scopes**: location, province_definition, area, region, sub_continent, continent, scripted_geography  
 **Supported Targets**: country  
 
 ## every_present_religion_in_country
@@ -2649,6 +2827,12 @@ every_province_definition_in_area = { limit = { <triggers> } <effects> }
 **Supported Scopes**: area  
 **Supported Targets**: province_definition  
 
+## every_province_definition_in_scripted_geography
+Iterate through all province_definitions in a scripted geography  
+every_province_definition_in_scripted_geography = { limit = { <triggers> } <effects> }
+**Supported Scopes**: scripted_geography  
+**Supported Targets**: province_definition  
+
 ## every_province_in_area
 Iterate through all provinces in an area  
 every_province_in_area = { limit = { <triggers> } <effects> }
@@ -2677,6 +2861,12 @@ every_region = { limit = { <triggers> } <effects> }
 Iterate through all regions in a sub-continent  
 every_region_in_continent = { limit = { <triggers> } <effects> }
 **Supported Scopes**: sub_continent  
+**Supported Targets**: region  
+
+## every_region_in_scripted_geography
+Iterate through all regions in a scripted geography  
+every_region_in_scripted_geography = { limit = { <triggers> } <effects> }
+**Supported Scopes**: scripted_geography  
 **Supported Targets**: region  
 
 ## every_related_country
@@ -2720,6 +2910,12 @@ Iterate through all completed religious focuses of a Country
 every_religious_focus = { limit = { <triggers> } <effects> }
 **Supported Scopes**: country  
 **Supported Targets**: religious_focus  
+
+## every_religious_school_in_religion
+Iterate through all Religious Schools in a Religion  
+every_religious_school_in_religion = { limit = { <triggers> } <effects> }
+**Supported Scopes**: religion  
+**Supported Targets**: religious_school  
 
 ## every_rented_out_mercenary
 Iterate through mercenaries a country has rented out to the market  
@@ -2787,6 +2983,12 @@ every_ruling_countries = { limit = { <triggers> } <effects> }
 **Supported Scopes**: character  
 **Supported Targets**: country  
 
+## every_sound_toll_in_country
+Iterate through all Sound Tolls in a country  
+every_sound_toll_in_country = { limit = { <triggers> } <effects> }
+**Supported Scopes**: country  
+**Supported Targets**: location  
+
 ## every_spouse
 Iterate through all spouses of a character  
 every_spouse = { limit = { <triggers> } <effects> }
@@ -2809,6 +3011,12 @@ every_sub_continent = { limit = { <triggers> } <effects> }
 Iterate through all sub-continents in a continent  
 every_sub_continent_in_continent = { limit = { <triggers> } <effects> }
 **Supported Scopes**: continent  
+**Supported Targets**: sub_continent  
+
+## every_sub_continent_in_scripted_geography
+Iterate through all subcontinents in a scripted geography  
+every_sub_continent_in_scripted_geography = { limit = { <triggers> } <effects> }
+**Supported Scopes**: scripted_geography  
 **Supported Targets**: sub_continent  
 
 ## every_sub_unit
@@ -3058,19 +3266,19 @@ international organization removes special status from a country
 **Supported Scopes**: international_organization  
 
 ## join_war_against
-joins the target war as an enemy of the target country. Usage: join_war_against = { war = war scope target = country scope call_in_subjects = yes/no }
+joins the target war as an enemy of the target country. Usage: join_war_against = { war = war scope target = country scope call_in_subjects = yes/no ignore_rules = yes/no }
 **Supported Scopes**: country  
 
 ## join_war_as_attacker
-joins the target war as an attacker. Usage: join_war_as_attacker = { war = war scope call_in_subjects = yes/no }
+joins the target war as an attacker. Usage: join_war_as_attacker = { war = war scope call_in_subjects = yes/no ignore_rules = yes/no }
 **Supported Scopes**: country  
 
 ## join_war_as_defender
-joins the target war as a defender. Usage: join_war_as_defender = { war = war scope call_in_subjects = yes/no }
+joins the target war as a defender. Usage: join_war_as_defender = { war = war scope call_in_subjects = yes/no ignore_rules = yes/no }
 **Supported Scopes**: country  
 
 ## join_war_with
-joins the target war as an ally of the target country. Usage: join_war_with = { war = war scope target = country scope call_in_subjects = yes/no }
+joins the target war as an ally of the target country. Usage: join_war_with = { war = war scope target = country scope call_in_subjects = yes/no ignore_rules = yes/no }
 **Supported Scopes**: country  
 
 ## kill_character
@@ -3082,6 +3290,11 @@ Kills the target character. Usage: kill_character = <character> or kill_characte
 Kills the target character without message popups. Usage: kill_character = <character> or kill_character = { target = <character> [location = <location>] [disease = <disease>] [killer = <character>] [reason = <reason>] }
 **Supported Scopes**: none  
 **Supported Targets**: character  
+
+## leave_all_wars_with
+The current country scope will leave every war with or against the target country.
+**Supported Scopes**: country  
+**Supported Targets**: country  
 
 ## leave_war
 leaves a war, forced by another country. Usage: leave_war = { war = <war> actor = <country forcing them to do it> }
@@ -3213,6 +3426,19 @@ check_range_bounds = no # If you don't want an error logged if the list is small
 **Supported Scopes**: area  
 **Supported Targets**: location  
 
+## ordered_advance_definition
+Iterate through all advance definitions  
+ordered_advance_definition = {  
+limit = { <triggers> }  
+order_by = script_value  
+position = int  
+min = int  
+max = script_value  
+check_range_bounds = no # If you don't want an error logged if the list is smaller than the min/max  
+<effects> }
+**Supported Scopes**: none  
+**Supported Targets**: advance_type  
+
 ## ordered_allowed_estate_in_heir_selection
 Iterate through all allowed estates a HeirSelection has  
 ordered_allowed_estate_in_heir_selection = {  
@@ -3263,6 +3489,19 @@ max = script_value
 check_range_bounds = no # If you don't want an error logged if the list is smaller than the min/max  
 <effects> }
 **Supported Scopes**: region  
+**Supported Targets**: area  
+
+## ordered_area_in_scripted_geography
+Iterate through all areas in a scripted geography  
+ordered_area_in_scripted_geography = {  
+limit = { <triggers> }  
+order_by = script_value  
+position = int  
+min = int  
+max = script_value  
+check_range_bounds = no # If you don't want an error logged if the list is smaller than the min/max  
+<effects> }
+**Supported Scopes**: scripted_geography  
 **Supported Targets**: area  
 
 ## ordered_area_with_core
@@ -3694,6 +3933,19 @@ check_range_bounds = no # If you don't want an error logged if the list is small
 **Supported Scopes**: none  
 **Supported Targets**: continent  
 
+## ordered_continent_in_scripted_geography
+Iterate through all continents in a scripted geography  
+ordered_continent_in_scripted_geography = {  
+limit = { <triggers> }  
+order_by = script_value  
+position = int  
+min = int  
+max = script_value  
+check_range_bounds = no # If you don't want an error logged if the list is smaller than the min/max  
+<effects> }
+**Supported Scopes**: scripted_geography  
+**Supported Targets**: continent  
+
 ## ordered_controlled_location
 Iterate through all controlled location in a country  
 ordered_controlled_location = {  
@@ -3990,7 +4242,7 @@ min = int
 max = script_value  
 check_range_bounds = no # If you don't want an error logged if the list is smaller than the min/max  
 <effects> }
-**Supported Scopes**: location, province_definition, area, region, sub_continent, continent  
+**Supported Scopes**: location, province_definition, area, region, sub_continent, continent, scripted_geography  
 **Supported Targets**: country  
 
 ## ordered_country_with_cardinals
@@ -4009,6 +4261,19 @@ check_range_bounds = no # If you don't want an error logged if the list is small
 ## ordered_country_with_coalition_grade_antagonism_against_us
 Iterate through all countries who have coalition grade antagonism against us  
 ordered_country_with_coalition_grade_antagonism_against_us = {  
+limit = { <triggers> }  
+order_by = script_value  
+position = int  
+min = int  
+max = script_value  
+check_range_bounds = no # If you don't want an error logged if the list is smaller than the min/max  
+<effects> }
+**Supported Scopes**: country  
+**Supported Targets**: country  
+
+## ordered_country_with_relation_that_can_be_annulled
+Iterate through all countries which have an annullable relation with the scope country.  
+ordered_country_with_relation_that_can_be_annulled = {  
 limit = { <triggers> }  
 order_by = script_value  
 position = int  
@@ -4074,19 +4339,6 @@ check_range_bounds = no # If you don't want an error logged if the list is small
 ## ordered_culture_in_culture_group
 Iterate through all cultures in a culture group.  
 ordered_culture_in_culture_group = {  
-limit = { <triggers> }  
-order_by = script_value  
-position = int  
-min = int  
-max = script_value  
-check_range_bounds = no # If you don't want an error logged if the list is smaller than the min/max  
-<effects> }
-**Supported Scopes**: culture_group  
-**Supported Targets**: culture  
-
-## ordered_culture_in_group
-Iterate through all cultures in a culture group  
-ordered_culture_in_group = {  
 limit = { <triggers> }  
 order_by = script_value  
 position = int  
@@ -4382,6 +4634,19 @@ check_range_bounds = no # If you don't want an error logged if the list is small
 <effects> }
 **Supported Scopes**: location  
 **Supported Targets**: location  
+
+## ordered_food_goods
+Iterate through all food-goods  
+ordered_food_goods = {  
+limit = { <triggers> }  
+order_by = script_value  
+position = int  
+min = int  
+max = script_value  
+check_range_bounds = no # If you don't want an error logged if the list is smaller than the min/max  
+<effects> }
+**Supported Scopes**: none  
+**Supported Targets**: goods  
 
 ## ordered_foreign_building_countries_in_location
 Iterate through all foreign building countries in a location  
@@ -4913,6 +5178,54 @@ check_range_bounds = no # If you don't want an error logged if the list is small
 **Supported Scopes**: country  
 **Supported Targets**: character  
 
+## ordered_key_in_global_variable_map
+Iterate through all keys in a global variable map.  
+key_in_global_variable_map = {  
+	variable = name  
+	<...>  
+}  
+ordered_key_in_global_variable_map = {  
+limit = { <triggers> }  
+order_by = script_value  
+position = int  
+min = int  
+max = script_value  
+check_range_bounds = no # If you don't want an error logged if the list is smaller than the min/max  
+<effects> }
+**Supported Scopes**: none  
+
+## ordered_key_in_local_variable_map
+Iterate through all keys in a local variable map.  
+key_in_local_variable_map = {  
+	variable = name  
+	<...>  
+}  
+ordered_key_in_local_variable_map = {  
+limit = { <triggers> }  
+order_by = script_value  
+position = int  
+min = int  
+max = script_value  
+check_range_bounds = no # If you don't want an error logged if the list is smaller than the min/max  
+<effects> }
+**Supported Scopes**: none  
+
+## ordered_key_in_variable_map
+Iterate through all keys in a variable map.  
+key_in_variable_map = {  
+	variable = name  
+	<...>  
+}  
+ordered_key_in_variable_map = {  
+limit = { <triggers> }  
+order_by = script_value  
+position = int  
+min = int  
+max = script_value  
+check_range_bounds = no # If you don't want an error logged if the list is smaller than the min/max  
+<effects> }
+**Supported Scopes**: none  
+
 ## ordered_known_country
 Iterate through all known countries  
 ordered_known_country = {  
@@ -4925,6 +5238,19 @@ check_range_bounds = no # If you don't want an error logged if the list is small
 <effects> }
 **Supported Scopes**: country  
 **Supported Targets**: country  
+
+## ordered_known_institution
+Iterate through all institutions a country knows of  
+ordered_known_institution = {  
+limit = { <triggers> }  
+order_by = script_value  
+position = int  
+min = int  
+max = script_value  
+check_range_bounds = no # If you don't want an error logged if the list is smaller than the min/max  
+<effects> }
+**Supported Scopes**: country  
+**Supported Targets**: institution  
 
 ## ordered_left_flank
 Iterate through all subunits on the left-flank of a combat-side  
@@ -5054,6 +5380,19 @@ max = script_value
 check_range_bounds = no # If you don't want an error logged if the list is smaller than the min/max  
 <effects> }
 **Supported Scopes**: region  
+**Supported Targets**: location  
+
+## ordered_location_in_scripted_geography
+Iterate through all locations in a scripted geography  
+ordered_location_in_scripted_geography = {  
+limit = { <triggers> }  
+order_by = script_value  
+position = int  
+min = int  
+max = script_value  
+check_range_bounds = no # If you don't want an error logged if the list is smaller than the min/max  
+<effects> }
+**Supported Scopes**: scripted_geography  
 **Supported Targets**: location  
 
 ## ordered_location_in_sub_continent
@@ -5264,6 +5603,19 @@ check_range_bounds = no # If you don't want an error logged if the list is small
 **Supported Scopes**: province_definition  
 **Supported Targets**: province_definition  
 
+## ordered_new_world_goods
+Iterate through all newworld-goods  
+ordered_new_world_goods = {  
+limit = { <triggers> }  
+order_by = script_value  
+position = int  
+min = int  
+max = script_value  
+check_range_bounds = no # If you don't want an error logged if the list is smaller than the min/max  
+<effects> }
+**Supported Scopes**: none  
+**Supported Targets**: goods  
+
 ## ordered_nomad_countries_in_location
 Iterate through all nomad pop countries in a location  
 ordered_nomad_countries_in_location = {  
@@ -5289,6 +5641,19 @@ check_range_bounds = no # If you don't want an error logged if the list is small
 <effects> }
 **Supported Scopes**: country  
 **Supported Targets**: location  
+
+## ordered_old_world_goods
+Iterate through all oldworld-goods  
+ordered_old_world_goods = {  
+limit = { <triggers> }  
+order_by = script_value  
+position = int  
+min = int  
+max = script_value  
+check_range_bounds = no # If you don't want an error logged if the list is smaller than the min/max  
+<effects> }
+**Supported Scopes**: none  
+**Supported Targets**: goods  
 
 ## ordered_other_core_country
 Iterate through all other countries which have a core on the current country  
@@ -5431,6 +5796,19 @@ max = script_value
 check_range_bounds = no # If you don't want an error logged if the list is smaller than the min/max  
 <effects> }
 **Supported Scopes**: region  
+**Supported Targets**: location  
+
+## ordered_ownable_location_in_scripted_geography
+Iterate through all ownable Locations in a scripted geography  
+ordered_ownable_location_in_scripted_geography = {  
+limit = { <triggers> }  
+order_by = script_value  
+position = int  
+min = int  
+max = script_value  
+check_range_bounds = no # If you don't want an error logged if the list is smaller than the min/max  
+<effects> }
+**Supported Scopes**: scripted_geography  
 **Supported Targets**: location  
 
 ## ordered_ownable_location_in_sub_continent
@@ -5755,7 +6133,7 @@ min = int
 max = script_value  
 check_range_bounds = no # If you don't want an error logged if the list is smaller than the min/max  
 <effects> }
-**Supported Scopes**: location, province_definition, area, region, sub_continent, continent  
+**Supported Scopes**: location, province_definition, area, region, sub_continent, continent, scripted_geography  
 **Supported Targets**: country  
 
 ## ordered_present_culture_in_country
@@ -5794,7 +6172,7 @@ min = int
 max = script_value  
 check_range_bounds = no # If you don't want an error logged if the list is smaller than the min/max  
 <effects> }
-**Supported Scopes**: location, province_definition, area, region, sub_continent, continent  
+**Supported Scopes**: location, province_definition, area, region, sub_continent, continent, scripted_geography  
 **Supported Targets**: country  
 
 ## ordered_present_religion_in_country
@@ -5953,6 +6331,19 @@ check_range_bounds = no # If you don't want an error logged if the list is small
 **Supported Scopes**: area  
 **Supported Targets**: province_definition  
 
+## ordered_province_definition_in_scripted_geography
+Iterate through all province_definitions in a scripted geography  
+ordered_province_definition_in_scripted_geography = {  
+limit = { <triggers> }  
+order_by = script_value  
+position = int  
+min = int  
+max = script_value  
+check_range_bounds = no # If you don't want an error logged if the list is smaller than the min/max  
+<effects> }
+**Supported Scopes**: scripted_geography  
+**Supported Targets**: province_definition  
+
 ## ordered_province_in_area
 Iterate through all provinces in an area  
 ordered_province_in_area = {  
@@ -6016,6 +6407,19 @@ max = script_value
 check_range_bounds = no # If you don't want an error logged if the list is smaller than the min/max  
 <effects> }
 **Supported Scopes**: sub_continent  
+**Supported Targets**: region  
+
+## ordered_region_in_scripted_geography
+Iterate through all regions in a scripted geography  
+ordered_region_in_scripted_geography = {  
+limit = { <triggers> }  
+order_by = script_value  
+position = int  
+min = int  
+max = script_value  
+check_range_bounds = no # If you don't want an error logged if the list is smaller than the min/max  
+<effects> }
+**Supported Scopes**: scripted_geography  
 **Supported Targets**: region  
 
 ## ordered_related_country
@@ -6108,6 +6512,19 @@ check_range_bounds = no # If you don't want an error logged if the list is small
 <effects> }
 **Supported Scopes**: country  
 **Supported Targets**: religious_focus  
+
+## ordered_religious_school_in_religion
+Iterate through all Religious Schools in a Religion  
+ordered_religious_school_in_religion = {  
+limit = { <triggers> }  
+order_by = script_value  
+position = int  
+min = int  
+max = script_value  
+check_range_bounds = no # If you don't want an error logged if the list is smaller than the min/max  
+<effects> }
+**Supported Scopes**: religion  
+**Supported Targets**: religious_school  
 
 ## ordered_rented_out_mercenary
 Iterate through mercenaries a country has rented out to the market  
@@ -6252,6 +6669,19 @@ check_range_bounds = no # If you don't want an error logged if the list is small
 **Supported Scopes**: character  
 **Supported Targets**: country  
 
+## ordered_sound_toll_in_country
+Iterate through all Sound Tolls in a country  
+ordered_sound_toll_in_country = {  
+limit = { <triggers> }  
+order_by = script_value  
+position = int  
+min = int  
+max = script_value  
+check_range_bounds = no # If you don't want an error logged if the list is smaller than the min/max  
+<effects> }
+**Supported Scopes**: country  
+**Supported Targets**: location  
+
 ## ordered_spouse
 Iterate through all spouses of a character  
 ordered_spouse = {  
@@ -6302,6 +6732,19 @@ max = script_value
 check_range_bounds = no # If you don't want an error logged if the list is smaller than the min/max  
 <effects> }
 **Supported Scopes**: continent  
+**Supported Targets**: sub_continent  
+
+## ordered_sub_continent_in_scripted_geography
+Iterate through all subcontinents in a scripted geography  
+ordered_sub_continent_in_scripted_geography = {  
+limit = { <triggers> }  
+order_by = script_value  
+position = int  
+min = int  
+max = script_value  
+check_range_bounds = no # If you don't want an error logged if the list is smaller than the min/max  
+<effects> }
+**Supported Scopes**: scripted_geography  
 **Supported Targets**: sub_continent  
 
 ## ordered_sub_unit
@@ -6553,7 +6996,7 @@ Pays a Price from a country
 **Supported Targets**: price  
 
 ## perform_diplomatic_action
-perform_diplomatic_action (type = <diploaction or country interaction type> actor/receipent/target/target_1... = country/province/location/character/whatever } 
+perform_diplomatic_action (type = <diploaction or country interaction type> actor/receipent/target/target_1... = country/province/location/character/whatever [mode = propose/accept/decline #determines if the action is a proposal (default), a forced acceptance or a forced decline] [hidden = yes #it will be hidden if the diplo action is a proposal / will be accepted / rejcted] } 
 **Supported Scopes**: country  
 
 ## post_audio_event
@@ -6622,6 +7065,12 @@ random_adjacent_ports_to_area = { limit = { <triggers> } (optional) weight = { m
 **Supported Scopes**: area  
 **Supported Targets**: location  
 
+## random_advance_definition
+Iterate through all advance definitions  
+random_advance_definition = { limit = { <triggers> } (optional) weight = { mtth } <effects> }
+**Supported Scopes**: none  
+**Supported Targets**: advance_type  
+
 ## random_allowed_estate_in_heir_selection
 Iterate through all allowed estates a HeirSelection has  
 random_allowed_estate_in_heir_selection = { limit = { <triggers> } (optional) weight = { mtth } <effects> }
@@ -6644,6 +7093,12 @@ random_area = { limit = { <triggers> } (optional) weight = { mtth } <effects> }
 Iterate through all areas in a region  
 random_area_in_region = { limit = { <triggers> } (optional) weight = { mtth } <effects> }
 **Supported Scopes**: region  
+**Supported Targets**: area  
+
+## random_area_in_scripted_geography
+Iterate through all areas in a scripted geography  
+random_area_in_scripted_geography = { limit = { <triggers> } (optional) weight = { mtth } <effects> }
+**Supported Scopes**: scripted_geography  
 **Supported Targets**: area  
 
 ## random_area_with_core
@@ -6844,6 +7299,12 @@ random_continent = { limit = { <triggers> } (optional) weight = { mtth } <effect
 **Supported Scopes**: none  
 **Supported Targets**: continent  
 
+## random_continent_in_scripted_geography
+Iterate through all continents in a scripted geography  
+random_continent_in_scripted_geography = { limit = { <triggers> } (optional) weight = { mtth } <effects> }
+**Supported Scopes**: scripted_geography  
+**Supported Targets**: continent  
+
 ## random_controlled_location
 Iterate through all controlled location in a country  
 random_controlled_location = { limit = { <triggers> } (optional) weight = { mtth } <effects> }
@@ -6979,7 +7440,7 @@ random_country_we_are_annexing = { limit = { <triggers> } (optional) weight = { 
 ## random_country_with_capital_in_geography
 Iterate through all countries which have their capital in the specified geography  
 random_country_with_capital_in_geography = { limit = { <triggers> } (optional) weight = { mtth } <effects> }
-**Supported Scopes**: location, province_definition, area, region, sub_continent, continent  
+**Supported Scopes**: location, province_definition, area, region, sub_continent, continent, scripted_geography  
 **Supported Targets**: country  
 
 ## random_country_with_cardinals
@@ -6991,6 +7452,12 @@ random_country_with_cardinals = { limit = { <triggers> } (optional) weight = { m
 ## random_country_with_coalition_grade_antagonism_against_us
 Iterate through all countries who have coalition grade antagonism against us  
 random_country_with_coalition_grade_antagonism_against_us = { limit = { <triggers> } (optional) weight = { mtth } <effects> }
+**Supported Scopes**: country  
+**Supported Targets**: country  
+
+## random_country_with_relation_that_can_be_annulled
+Iterate through all countries which have an annullable relation with the scope country.  
+random_country_with_relation_that_can_be_annulled = { limit = { <triggers> } (optional) weight = { mtth } <effects> }
 **Supported Scopes**: country  
 **Supported Targets**: country  
 
@@ -7021,12 +7488,6 @@ random_culture_group = { limit = { <triggers> } (optional) weight = { mtth } <ef
 ## random_culture_in_culture_group
 Iterate through all cultures in a culture group.  
 random_culture_in_culture_group = { limit = { <triggers> } (optional) weight = { mtth } <effects> }
-**Supported Scopes**: culture_group  
-**Supported Targets**: culture  
-
-## random_culture_in_group
-Iterate through all cultures in a culture group  
-random_culture_in_group = { limit = { <triggers> } (optional) weight = { mtth } <effects> }
 **Supported Scopes**: culture_group  
 **Supported Targets**: culture  
 
@@ -7161,6 +7622,12 @@ Iterate through all exports from location
 random_export_from_location = { limit = { <triggers> } (optional) weight = { mtth } <effects> }
 **Supported Scopes**: location  
 **Supported Targets**: location  
+
+## random_food_goods
+Iterate through all food-goods  
+random_food_goods = { limit = { <triggers> } (optional) weight = { mtth } <effects> }
+**Supported Scopes**: none  
+**Supported Targets**: goods  
 
 ## random_foreign_building_countries_in_location
 Iterate through all foreign building countries in a location  
@@ -7405,11 +7872,44 @@ random_invited_religious_figure = { limit = { <triggers> } (optional) weight = {
 **Supported Scopes**: country  
 **Supported Targets**: character  
 
+## random_key_in_global_variable_map
+Iterate through all keys in a global variable map.  
+key_in_global_variable_map = {  
+	variable = name  
+	<...>  
+}  
+random_key_in_global_variable_map = { limit = { <triggers> } (optional) weight = { mtth } <effects> }
+**Supported Scopes**: none  
+
+## random_key_in_local_variable_map
+Iterate through all keys in a local variable map.  
+key_in_local_variable_map = {  
+	variable = name  
+	<...>  
+}  
+random_key_in_local_variable_map = { limit = { <triggers> } (optional) weight = { mtth } <effects> }
+**Supported Scopes**: none  
+
+## random_key_in_variable_map
+Iterate through all keys in a variable map.  
+key_in_variable_map = {  
+	variable = name  
+	<...>  
+}  
+random_key_in_variable_map = { limit = { <triggers> } (optional) weight = { mtth } <effects> }
+**Supported Scopes**: none  
+
 ## random_known_country
 Iterate through all known countries  
 random_known_country = { limit = { <triggers> } (optional) weight = { mtth } <effects> }
 **Supported Scopes**: country  
 **Supported Targets**: country  
+
+## random_known_institution
+Iterate through all institutions a country knows of  
+random_known_institution = { limit = { <triggers> } (optional) weight = { mtth } <effects> }
+**Supported Scopes**: country  
+**Supported Targets**: institution  
 
 ## random_left_flank
 Iterate through all subunits on the left-flank of a combat-side  
@@ -7493,6 +7993,12 @@ random_location_in_province_definition = { limit = { <triggers> } (optional) wei
 Iterate through all Locations in a region  
 random_location_in_region = { limit = { <triggers> } (optional) weight = { mtth } <effects> }
 **Supported Scopes**: region  
+**Supported Targets**: location  
+
+## random_location_in_scripted_geography
+Iterate through all locations in a scripted geography  
+random_location_in_scripted_geography = { limit = { <triggers> } (optional) weight = { mtth } <effects> }
+**Supported Scopes**: scripted_geography  
 **Supported Targets**: location  
 
 ## random_location_in_sub_continent
@@ -7598,6 +8104,12 @@ random_neighbor_province_definition = { limit = { <triggers> } (optional) weight
 **Supported Scopes**: province_definition  
 **Supported Targets**: province_definition  
 
+## random_new_world_goods
+Iterate through all newworld-goods  
+random_new_world_goods = { limit = { <triggers> } (optional) weight = { mtth } <effects> }
+**Supported Scopes**: none  
+**Supported Targets**: goods  
+
 ## random_nomad_countries_in_location
 Iterate through all nomad pop countries in a location  
 random_nomad_countries_in_location = { limit = { <triggers> } (optional) weight = { mtth } <effects> }
@@ -7609,6 +8121,12 @@ Iterate through all NonStateReligion locations in a country
 random_non_state_religion_location = { limit = { <triggers> } (optional) weight = { mtth } <effects> }
 **Supported Scopes**: country  
 **Supported Targets**: location  
+
+## random_old_world_goods
+Iterate through all oldworld-goods  
+random_old_world_goods = { limit = { <triggers> } (optional) weight = { mtth } <effects> }
+**Supported Scopes**: none  
+**Supported Targets**: goods  
 
 ## random_other_core_country
 Iterate through all other countries which have a core on the current country  
@@ -7674,6 +8192,12 @@ random_ownable_location_in_province_definition = { limit = { <triggers> } (optio
 Iterate through all ownable Locations in a region  
 random_ownable_location_in_region = { limit = { <triggers> } (optional) weight = { mtth } <effects> }
 **Supported Scopes**: region  
+**Supported Targets**: location  
+
+## random_ownable_location_in_scripted_geography
+Iterate through all ownable Locations in a scripted geography  
+random_ownable_location_in_scripted_geography = { limit = { <triggers> } (optional) weight = { mtth } <effects> }
+**Supported Scopes**: scripted_geography  
 **Supported Targets**: location  
 
 ## random_ownable_location_in_sub_continent
@@ -7823,7 +8347,7 @@ random_possible_recruit_location = { limit = { <triggers> } (optional) weight = 
 ## random_present_country
 Iterate through all countries in the specified geography  
 random_present_country = { limit = { <triggers> } (optional) weight = { mtth } <effects> }
-**Supported Scopes**: location, province_definition, area, region, sub_continent, continent  
+**Supported Scopes**: location, province_definition, area, region, sub_continent, continent, scripted_geography  
 **Supported Targets**: country  
 
 ## random_present_culture_in_country
@@ -7841,7 +8365,7 @@ random_present_culture_in_location = { limit = { <triggers> } (optional) weight 
 ## random_present_overlord
 Iterate through all countries which have a subject in the specified geography  
 random_present_overlord = { limit = { <triggers> } (optional) weight = { mtth } <effects> }
-**Supported Scopes**: location, province_definition, area, region, sub_continent, continent  
+**Supported Scopes**: location, province_definition, area, region, sub_continent, continent, scripted_geography  
 **Supported Targets**: country  
 
 ## random_present_religion_in_country
@@ -7916,6 +8440,12 @@ random_province_definition_in_area = { limit = { <triggers> } (optional) weight 
 **Supported Scopes**: area  
 **Supported Targets**: province_definition  
 
+## random_province_definition_in_scripted_geography
+Iterate through all province_definitions in a scripted geography  
+random_province_definition_in_scripted_geography = { limit = { <triggers> } (optional) weight = { mtth } <effects> }
+**Supported Scopes**: scripted_geography  
+**Supported Targets**: province_definition  
+
 ## random_province_in_area
 Iterate through all provinces in an area  
 random_province_in_area = { limit = { <triggers> } (optional) weight = { mtth } <effects> }
@@ -7944,6 +8474,12 @@ random_region = { limit = { <triggers> } (optional) weight = { mtth } <effects> 
 Iterate through all regions in a sub-continent  
 random_region_in_continent = { limit = { <triggers> } (optional) weight = { mtth } <effects> }
 **Supported Scopes**: sub_continent  
+**Supported Targets**: region  
+
+## random_region_in_scripted_geography
+Iterate through all regions in a scripted geography  
+random_region_in_scripted_geography = { limit = { <triggers> } (optional) weight = { mtth } <effects> }
+**Supported Scopes**: scripted_geography  
 **Supported Targets**: region  
 
 ## random_related_country
@@ -7987,6 +8523,12 @@ Iterate through all completed religious focuses of a Country
 random_religious_focus = { limit = { <triggers> } (optional) weight = { mtth } <effects> }
 **Supported Scopes**: country  
 **Supported Targets**: religious_focus  
+
+## random_religious_school_in_religion
+Iterate through all Religious Schools in a Religion  
+random_religious_school_in_religion = { limit = { <triggers> } (optional) weight = { mtth } <effects> }
+**Supported Scopes**: religion  
+**Supported Targets**: religious_school  
 
 ## random_rented_out_mercenary
 Iterate through mercenaries a country has rented out to the market  
@@ -8054,6 +8596,12 @@ random_ruling_countries = { limit = { <triggers> } (optional) weight = { mtth } 
 **Supported Scopes**: character  
 **Supported Targets**: country  
 
+## random_sound_toll_in_country
+Iterate through all Sound Tolls in a country  
+random_sound_toll_in_country = { limit = { <triggers> } (optional) weight = { mtth } <effects> }
+**Supported Scopes**: country  
+**Supported Targets**: location  
+
 ## random_spouse
 Iterate through all spouses of a character  
 random_spouse = { limit = { <triggers> } (optional) weight = { mtth } <effects> }
@@ -8076,6 +8624,12 @@ random_sub_continent = { limit = { <triggers> } (optional) weight = { mtth } <ef
 Iterate through all sub-continents in a continent  
 random_sub_continent_in_continent = { limit = { <triggers> } (optional) weight = { mtth } <effects> }
 **Supported Scopes**: continent  
+**Supported Targets**: sub_continent  
+
+## random_sub_continent_in_scripted_geography
+Iterate through all subcontinents in a scripted geography  
+random_sub_continent_in_scripted_geography = { limit = { <triggers> } (optional) weight = { mtth } <effects> }
+**Supported Scopes**: scripted_geography  
 **Supported Targets**: sub_continent  
 
 ## random_sub_unit
@@ -8303,6 +8857,13 @@ Removes the character from the cabinet
 **Supported Scopes**: country  
 **Supported Targets**: character  
 
+## remove_from_global_variable_map
+Removes the target from a variable map  
+remove_from_variable_map = { name = X key = Y }  
+Where X is the name of the variable  
+Where Y is an event target
+**Supported Scopes**: none  
+
 ## remove_from_international_organization
 remove a location from an international organization
 **Supported Scopes**: location  
@@ -8310,6 +8871,20 @@ remove a location from an international organization
 
 ## remove_from_list
 Removes the current scope from a named list remove_from_list = <string>
+**Supported Scopes**: none  
+
+## remove_from_local_variable_map
+Removes the target from a variable map  
+remove_from_variable_map = { name = X key = Y }  
+Where X is the name of the variable  
+Where Y is an event target
+**Supported Scopes**: none  
+
+## remove_from_variable_map
+Removes the target from a variable map  
+remove_from_variable_map = { name = X key = Y }  
+Where X is the name of the variable  
+Where Y is an event target
 **Supported Scopes**: none  
 
 ## remove_global_variable
@@ -8665,6 +9240,10 @@ Set the education type of a child
 Sets collection pin.
 **Supported Scopes**: none  
 
+## set_complacency
+Sets complacency
+**Supported Scopes**: country, international_organization  
+
 ## set_country_employment_system
 Sets the country's employment system
 **Supported Scopes**: country  
@@ -8810,7 +9389,7 @@ Makes the target_character the new ruler without forcing them to move to the cou
 **Supported Targets**: character  
 
 ## set_new_foreign_ruler_no_update
-Makes the target_character the new ruler without forcing them to move to the country, without updating any unions the character has
+Makes the target_character the new ruler without forcing them to move to the country, without updating any unions or fiefdom-like titles the character has
 **Supported Scopes**: country  
 **Supported Targets**: character  
 
@@ -8820,7 +9399,7 @@ Makes the target_character the new ruler
 **Supported Targets**: character  
 
 ## set_new_ruler_no_update
-Makes the target_character the new ruler, without updating any unions the character has
+Makes the target_character the new ruler, without updating any unions or fiefdom-like titles the character has
 **Supported Scopes**: country  
 **Supported Targets**: character  
 
@@ -9092,6 +9671,16 @@ takes over all wars where target country is warleader
 ## test_log
 Log a string to the test log when this effect executes, test_log = message, the message can be a localization string with ROOT, SCOPE and PREV available. Usage: test_log = { name = <test key> text = <custom log message> }
 **Supported Scopes**: none  
+
+## transfer_location_occupation
+Transfers occupation of a Location to the target country
+**Supported Scopes**: location  
+**Supported Targets**: country  
+
+## transfer_subject
+Copy the name and adjective of the target country and apply it to the current country scope
+**Supported Scopes**: country  
+**Supported Targets**: country  
 
 ## transfer_yearly_gold
 Transfers a proportion of your yearly gold to the target country

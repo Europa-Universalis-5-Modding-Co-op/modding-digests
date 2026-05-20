@@ -318,6 +318,13 @@ Return type: bool
 
 -----------------------
 
+ShowExpirationDateInVariableListForTarget( Arg0, Arg1, Arg2 )
+Description: Show the expiration date of a variable from a variable list.
+Definition type: Global function
+Return type: CString
+
+-----------------------
+
 ShowSimpleCustomTooltip( Arg0, Arg1, Arg2, Arg3, Arg4, Arg5, Arg6 )
 Description: Creates a simple custom TagTooltip for the string in the first argument. Other arguments are the loc-key for the title, the icon filename within gfx/interface/icons/, and the loc-keys for concept, body, flavor and list.
 Definition type: Global function
@@ -5679,6 +5686,12 @@ Return type: CString
 PdxGuiWidget.GetRawShortcut
 Definition type: Function
 Return type: CUTF8String
+
+-----------------------
+
+PdxGuiWidget.GetRemainingHeightInParent( Arg0, Arg1 )
+Definition type: Function
+Return type: float
 
 -----------------------
 
