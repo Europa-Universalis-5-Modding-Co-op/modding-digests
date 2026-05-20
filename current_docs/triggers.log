@@ -117,12 +117,6 @@ Traits: <, <=, =, !=, >, >=
 Reads gamestate for all scopes.
 **Supported Scopes**: policy  
 
-## ai_unlock_unit_score
-Returns the score for AI to unlock a unit
-Traits: <, <=, =, !=, >, >=
-Reads gamestate for all scopes.
-**Supported Scopes**: country  
-
 ## ai_wants_convert
 religion is one AI wants
 Traits: yes/no 
@@ -137,6 +131,12 @@ Traits: <, <=, =, !=, >, >=
 ## all_false
 true if all children are false (equivalent to NOR)
 **Supported Scopes**: none  
+
+## allowed_bureaucracies
+Check if the country is allowed bureaucracies
+Traits: yes/no 
+Reads gamestate for all scopes.
+**Supported Scopes**: country  
 
 ## allows_female_rulers
 country allows female rulers
@@ -295,6 +295,13 @@ Reads nothing for all scopes.
 **Supported Scopes**: war  
 **Supported Targets**: country  
 
+## any_available_dynasty_member
+Iterate through adult dynasty members who are not a ruler or heir (cached)  
+any_available_dynasty_member = { <count=num/all> / <percent=fixed_point> <triggers> }
+Reads nothing for all scopes.
+**Supported Scopes**: dynasty  
+**Supported Targets**: character  
+
 ## any_avatar_for_god
 Iterate through all Avatars of a God  
 any_avatar_for_god = { <count=num/all> / <percent=fixed_point> <triggers> }
@@ -322,6 +329,13 @@ any_buildable_building_type = { <count=num/all> / <percent=fixed_point> <trigger
 Reads nothing for all scopes.
 **Supported Scopes**: country  
 **Supported Targets**: building_type  
+
+## any_building_owned_by_estate
+Iterate through all buildings that an estate has  
+any_building_owned_by_estate = { <count=num/all> / <percent=fixed_point> <triggers> }
+Reads nothing for all scopes.
+**Supported Scopes**: estate  
+**Supported Targets**: building  
 
 ## any_building_type
 Iterate through all the building types  
@@ -713,6 +727,20 @@ Reads nothing for all scopes.
 **Supported Scopes**: country  
 **Supported Targets**: avatar  
 
+## any_current_bureaucracy
+Iterate through all Bureaucracies a country has  
+any_current_bureaucracy = { <count=num/all> / <percent=fixed_point> <triggers> }
+Reads nothing for all scopes.
+**Supported Scopes**: country  
+**Supported Targets**: bureaucracy  
+
+## any_current_bureaucracy_type
+Iterate through all Bureaucracy types a country has  
+any_current_bureaucracy_type = { <count=num/all> / <percent=fixed_point> <triggers> }
+Reads nothing for all scopes.
+**Supported Scopes**: country  
+**Supported Targets**: bureaucracy_type  
+
 ## any_current_gods
 Iterate through all Gods a country worships  
 any_current_gods = { <count=num/all> / <percent=fixed_point> <triggers> }
@@ -837,6 +865,20 @@ Iterate through all estate types that a prefer a policy
 any_estate_type_preferring = { <count=num/all> / <percent=fixed_point> <triggers> }
 Reads nothing for all scopes.
 **Supported Scopes**: policy  
+**Supported Targets**: estate_type  
+
+## any_estate_type_that_dislikes_bureaucracy
+Iterate through all estate types that do NOT prefer a bureaucracy  
+any_estate_type_that_dislikes_bureaucracy = { <count=num/all> / <percent=fixed_point> <triggers> }
+Reads nothing for all scopes.
+**Supported Scopes**: bureaucracy_type  
+**Supported Targets**: estate_type  
+
+## any_estate_type_that_likes_bureaucracy
+Iterate through all estate types that a prefer a bureaucracy  
+any_estate_type_that_likes_bureaucracy = { <count=num/all> / <percent=fixed_point> <triggers> }
+Reads nothing for all scopes.
+**Supported Scopes**: bureaucracy_type  
 **Supported Targets**: estate_type  
 
 ## any_exploration_from_country
@@ -1279,6 +1321,20 @@ any_location_in_the_world = { <count=num/all> / <percent=fixed_point> <triggers>
 **Supported Scopes**: none  
 **Supported Targets**: location  
 
+## any_location_with_movement
+Iterate through all locations affected by the scope movement  
+any_location_with_movement = { <count=num/all> / <percent=fixed_point> <triggers> }
+Reads nothing for all scopes.
+**Supported Scopes**: movement  
+**Supported Targets**: location  
+
+## any_locations_with_town_rights_in_country
+Iterate through all locations with Town Rights in a country  
+any_locations_with_town_rights_in_country = { <count=num/all> / <percent=fixed_point> <triggers> }
+Reads nothing for all scopes.
+**Supported Scopes**: country  
+**Supported Targets**: location  
+
 ## any_loyal_subject
 Iterate through all loyal subject countries  
 any_loyal_subject = { <count=num/all> / <percent=fixed_point> <triggers> }
@@ -1340,6 +1396,33 @@ Reads nothing for all scopes.
 **Supported Scopes**: market  
 **Supported Targets**: country  
 
+## any_movement
+Iterate through all movements  
+any_movement = { <count=num/all> / <percent=fixed_point> <triggers> }
+**Supported Scopes**: none  
+**Supported Targets**: movement  
+
+## any_movement_in_country
+Iterate through all movements in a country  
+any_movement_in_country = { <count=num/all> / <percent=fixed_point> <triggers> }
+Reads nothing for all scopes.
+**Supported Scopes**: country  
+**Supported Targets**: movement  
+
+## any_movement_in_culture
+Iterate through all movements in a culture  
+any_movement_in_culture = { <count=num/all> / <percent=fixed_point> <triggers> }
+Reads nothing for all scopes.
+**Supported Scopes**: culture  
+**Supported Targets**: movement  
+
+## any_movement_in_religion
+Iterate through all movements in a religion  
+any_movement_in_religion = { <count=num/all> / <percent=fixed_point> <triggers> }
+Reads nothing for all scopes.
+**Supported Scopes**: religion  
+**Supported Targets**: movement  
+
 ## any_navy
 Iterate through all navies in a country  
 any_navy = { <count=num/all> / <percent=fixed_point> <triggers> }
@@ -1400,6 +1483,27 @@ Iterate through all oldworld-goods
 any_old_world_goods = { <count=num/all> / <percent=fixed_point> <triggers> }
 **Supported Scopes**: none  
 **Supported Targets**: goods  
+
+## any_omen_in_country
+Iterate through all Omens active in a country  
+any_omen_in_country = { <count=num/all> / <percent=fixed_point> <triggers> }
+Reads nothing for all scopes.
+**Supported Scopes**: country  
+**Supported Targets**: omen  
+
+## any_omen_in_god
+Iterate through all Omens associated with a God  
+any_omen_in_god = { <count=num/all> / <percent=fixed_point> <triggers> }
+Reads nothing for all scopes.
+**Supported Scopes**: god  
+**Supported Targets**: omen  
+
+## any_omen_in_religion
+Iterate through all Omens in a Religion  
+any_omen_in_religion = { <count=num/all> / <percent=fixed_point> <triggers> }
+Reads nothing for all scopes.
+**Supported Scopes**: religion  
+**Supported Targets**: omen  
 
 ## any_other_core_country
 Iterate through all other countries which have a core on the current country  
@@ -1925,6 +2029,13 @@ Reads nothing for all scopes.
 **Supported Scopes**: country  
 **Supported Targets**: country  
 
+## any_ruled_international_organization
+Iterate through IOs a character rules  
+any_ruled_international_organization = { <count=num/all> / <percent=fixed_point> <triggers> }
+Reads nothing for all scopes.
+**Supported Scopes**: character  
+**Supported Targets**: international_organization  
+
 ## any_ruler
 Iterate through all characters that have ever been rulers in a country, including the dead  
 any_ruler = { <count=num/all> / <percent=fixed_point> <triggers> }
@@ -1933,7 +2044,7 @@ Reads nothing for all scopes.
 **Supported Targets**: character  
 
 ## any_ruling_countries
-Iterate through countries a character rulers  
+Iterate through countries a character rules  
 any_ruling_countries = { <count=num/all> / <percent=fixed_point> <triggers> }
 Reads nothing for all scopes.
 **Supported Scopes**: character  
@@ -2008,12 +2119,33 @@ Reads nothing for all scopes.
 **Supported Scopes**: country  
 **Supported Targets**: culture  
 
+## any_town_rights_in_country
+Iterate through all Town Rights in a country  
+any_town_rights_in_country = { <count=num/all> / <percent=fixed_point> <triggers> }
+Reads nothing for all scopes.
+**Supported Scopes**: country  
+**Supported Targets**: town_rights  
+
+## any_town_rights_in_location
+Iterate through all Town Rights in a Location  
+any_town_rights_in_Location = { <count=num/all> / <percent=fixed_point> <triggers> }
+Reads nothing for all scopes.
+**Supported Scopes**: location  
+**Supported Targets**: town_rights  
+
 ## any_trade
 Iterate through all trades in a Country  
 any_trade = { <count=num/all> / <percent=fixed_point> <triggers> }
 Reads nothing for all scopes.
 **Supported Scopes**: country  
 **Supported Targets**: trade  
+
+## any_trait
+Iterate through all traits of a character.  
+any_trait = { <count=num/all> / <percent=fixed_point> <triggers> }
+Reads nothing for all scopes.
+**Supported Scopes**: character  
+**Supported Targets**: trait  
 
 ## any_union_partner
 Iterate through all countries which are in a personal union with the current country scope.  
@@ -2380,6 +2512,82 @@ Traits: <, <=, =, !=, >, >=
 Reads gamestate for all scopes.
 **Supported Scopes**: location  
 
+## bureaucracy_disliked_by_estate
+is this bureaucracy disliked by this estate?
+Traits: estate scope
+Reads gamestate for all scopes.
+**Supported Scopes**: bureaucracy  
+**Supported Targets**: estate  
+
+## bureaucracy_disliked_by_estate_type
+is this bureaucracy disliked by this estate type?
+Traits: estate_type scope
+Reads gamestate for all scopes.
+**Supported Scopes**: bureaucracy  
+**Supported Targets**: estate_type  
+
+## bureaucracy_liked_by_estate
+is this bureaucracy liked by this estate?
+Traits: estate scope
+Reads gamestate for all scopes.
+**Supported Scopes**: bureaucracy  
+**Supported Targets**: estate  
+
+## bureaucracy_liked_by_estate_type
+is this bureaucracy liked by this estate type?
+Traits: estate_type scope
+Reads gamestate for all scopes.
+**Supported Scopes**: bureaucracy  
+**Supported Targets**: estate_type  
+
+## bureaucracy_maintenance
+current maintenance of the bureaucracy 0-1
+Traits: <, <=, =, !=, >, >=
+Reads gamestate for all scopes.
+**Supported Scopes**: bureaucracy  
+
+## bureaucracy_type_disliked_by_estate
+is this bureaucracy type disliked by this estate?
+Traits: estate scope
+Reads gamestate for all scopes.
+**Supported Scopes**: bureaucracy_type  
+**Supported Targets**: estate  
+
+## bureaucracy_type_disliked_by_estate_type
+is this bureaucracy type disliked by this estate type?
+Traits: estate_type scope
+Reads gamestate for all scopes.
+**Supported Scopes**: bureaucracy_type  
+**Supported Targets**: estate_type  
+
+## bureaucracy_type_is_enabled
+Can we use a bureaucracy for a country?
+Traits: bureaucracy_type scope
+Reads gamestate for all scopes.
+**Supported Scopes**: country  
+**Supported Targets**: bureaucracy_type  
+
+## bureaucracy_type_is_visible
+Can we see a bureaucracy for a country?
+Traits: bureaucracy_type scope
+Reads gamestate for all scopes.
+**Supported Scopes**: country  
+**Supported Targets**: bureaucracy_type  
+
+## bureaucracy_type_liked_by_estate
+is this bureaucracy type liked by this estate?
+Traits: estate scope
+Reads gamestate for all scopes.
+**Supported Scopes**: bureaucracy_type  
+**Supported Targets**: estate  
+
+## bureaucracy_type_liked_by_estate_type
+is this bureaucracy type liked by this estate type?
+Traits: estate_type scope
+Reads gamestate for all scopes.
+**Supported Scopes**: bureaucracy_type  
+**Supported Targets**: estate_type  
+
 ## cabinet_action_type
 Checks the type of cabinet action (ADM/DIP/MIL)
 Reads gamestate for all scopes.
@@ -2551,6 +2759,13 @@ Usage - can_make_subject_of = { target = <country> type = <subject_type> [ignore
 Reads gamestate for all scopes.
 **Supported Scopes**: country  
 
+## can_marry_character
+Check if the current character scope can marry the target character
+Traits: character scope
+Reads gamestate for all scopes.
+**Supported Scopes**: character  
+**Supported Targets**: character  
+
 ## can_pay_price
 Can the country pay the specified price?
 Traits: price scope
@@ -2663,6 +2878,12 @@ Traits: <, <=, =, !=, >, >=
 Reads gamestate for all scopes.
 **Supported Scopes**: country  
 
+## capital_wealth
+Checks the total capital wealth of a country
+Traits: <, <=, =, !=, >, >=
+Reads gamestate for all scopes.
+**Supported Scopes**: country  
+
 ## cb_creation_progress_against
 Checks the progress of the casus belli creation against the target country in percentage. Usage: cb_creation_progress_against = { target = <country scope> value <operator> <value> } or cb_creation_progress_against(<country scope>)
 Traits: <, <=, =, !=, >, >=
@@ -2700,6 +2921,12 @@ Reads gamestate for all scopes.
 
 ## climate_percent
 Returns the percentage of owned locations with the specified climate. Usage: climate_percent = { type = <climate scope> value <operator> <value> } or climate_percent(<climate scope>)
+Traits: <, <=, =, !=, >, >=
+Reads gamestate for all scopes.
+**Supported Scopes**: country  
+
+## colonial_charter_distance
+Straight-line distance from country capital to a province's first passable location. Cheap sort proxy for colonial_charter_utility. Usage: colonial_charter_distance(<province definition>)
 Traits: <, <=, =, !=, >, >=
 Reads gamestate for all scopes.
 **Supported Scopes**: country  
@@ -2769,6 +2996,12 @@ How high the percentage of the current complacency compared to the maximum does 
 Traits: <, <=, =, !=, >, >=
 Reads gamestate for all scopes.
 **Supported Scopes**: country, international_organization  
+
+## conquer_area_preference
+Gets the AI conquer preference for the supplied area - usage: conquer_area_preference(<target>) or conquer_desire = { target = <area> value <operator> <amount> }
+Traits: <, <=, =, !=, >, >=
+Reads gamestate for all scopes.
+**Supported Scopes**: country  
 
 ## conquer_desire
 Gets how much the AI wants to conquer the supplied country - usage: conquer_desire(<target>) or conquer_desire = { target = <country link> value <operator> <amount> }
@@ -2998,7 +3231,7 @@ Reads gamestate for all scopes.
 **Supported Scopes**: location, province, province_definition, area, region, sub_continent, continent, scripted_geography  
 
 ## culture_group_population_in_country
-The number of pops of a specific culture group in the current country
+The number of population of a specific culture group in the current country
 Traits: <, <=, =, !=, >, >=
 Reads gamestate for all scopes.
 **Supported Scopes**: country  
@@ -3034,7 +3267,7 @@ Reads gamestate for all scopes.
 **Supported Scopes**: location, province, province_definition, area, region, sub_continent, continent, scripted_geography  
 
 ## culture_population_in_country
-The number of pops of a specific culture in the current country
+The number of population of a specific culture in the current country
 Traits: <, <=, =, !=, >, >=
 Reads gamestate for all scopes.
 **Supported Scopes**: country  
@@ -3446,6 +3679,12 @@ Traits: <, <=, =, !=, >, >=
 Reads gamestate for all scopes.
 **Supported Scopes**: country  
 
+## entrenchment
+current entrenchment of the bureaucracy 0-100
+Traits: <, <=, =, !=, >, >=
+Reads gamestate for all scopes.
+**Supported Scopes**: bureaucracy  
+
 ## estate_gold
 The gold of an estate
 Traits: <, <=, =, !=, >, >=
@@ -3670,8 +3909,8 @@ Traits: <, <=, =, !=, >, >=
 Reads gamestate for all scopes.
 **Supported Scopes**: country  
 
-## get_trust
-how much of a trust type does the country have towards another country?
+## get_trust_equilibrium
+how much of a trust equilibrium type does the country have towards another country?
 Traits: <, <=, =, !=, >, >=
 Reads gamestate for all scopes.
 **Supported Scopes**: country  
@@ -3680,6 +3919,13 @@ Reads gamestate for all scopes.
 Checks if a culture gfx applies to the scope object
 Reads gamestate for all scopes.
 **Supported Scopes**: location, country, character, dynasty, pop, culture, religion, graphical_culture  
+
+## gives_defensive_support_to
+Does the scope country give defensive support to specified country?
+Traits: country tag/country scope
+Reads gamestate for all scopes.
+**Supported Scopes**: country  
+**Supported Targets**: country  
 
 ## gives_fleet_basing_rights
 Check if a subject type gives fleet basing rights
@@ -3716,6 +3962,13 @@ Reads gamestate for all scopes.
 
 ## gives_military_access_to
 Does the scope country give military access to the specified country?
+Traits: country tag/country scope
+Reads gamestate for all scopes.
+**Supported Scopes**: country  
+**Supported Targets**: country  
+
+## gives_offensive_support_to
+Does the scope country give offensive support to specified country?
 Traits: country tag/country scope
 Reads gamestate for all scopes.
 **Supported Scopes**: country  
@@ -3818,11 +4071,22 @@ Traits: <, <=, =, !=, >, >=
 Reads gamestate for all scopes.
 **Supported Scopes**: country  
 
+## had_country_rank_level
+Checks if a country has been or is currently in that level of the country rank
+Reads gamestate for all scopes.
+**Supported Scopes**: country  
+
 ## had_disaster_for_years
 Check if the country scope had the specified disaster type for a specific amount of years. Usage: had_disaster_for_years = { disaster_type = <disaster type> years = <years> } or had_disaster_for_years(<disaster type>)
 Traits: <, <=, =, !=, >, >=
 Reads gamestate for all scopes.
 **Supported Scopes**: country  
+
+## harbor_capacity_in_area
+gets the sum of harbor capacity (harbor suitability) at the country's ports in an area
+Traits: <, <=, =, !=, >, >=
+Reads gamestate for all scopes.
+**Supported Scopes**: area  
 
 ## harmony
 How much harmony does the country/IO have?
@@ -3879,6 +4143,18 @@ Reads gamestate for all scopes.
 **Supported Scopes**: country  
 **Supported Targets**: heir_selection  
 
+## has_ai_disposition_toward_player
+Does the country view the player with the given AI disposition? (alarmed/wary/planning_war/covets/rivals/indifferent)
+Traits: alarmed, wary, planning_war, covets, rivals, indifferent
+Reads gamestate for all scopes.
+**Supported Scopes**: country  
+
+## has_ai_preferred_parliament_law_change
+Checks if the AI has a preferred parliament law change stored
+Traits: yes/no 
+Reads gamestate for all scopes.
+**Supported Scopes**: country  
+
 ## has_antagonism
 does the country have an antagonism type towards another country?
 Reads gamestate for all scopes.
@@ -3917,6 +4193,22 @@ Reads gamestate for all scopes.
 ## has_any_possible_disaster
 Country has at least one possible disaster about to strike
 Traits: yes/no 
+Reads gamestate for all scopes.
+**Supported Scopes**: country  
+
+## has_any_rgo_of_goods_method
+True if the country owns at least one location whose raw material uses the specified goods method. Usage: has_any_rgo_of_goods_method = hunting
+Reads gamestate for all scopes.
+**Supported Scopes**: country  
+
+## has_any_town_rights
+Check if a location has town rights
+Traits: yes/no 
+Reads gamestate for all scopes.
+**Supported Scopes**: location  
+
+## has_area_preference
+Checks if a country has a specific area preference active
 Reads gamestate for all scopes.
 **Supported Scopes**: country  
 
@@ -3999,6 +4291,13 @@ Reads gamestate for all scopes.
 Checks if a location has a building with the specified graphical tags and at least one level
 Reads gamestate for all scopes.
 **Supported Scopes**: location  
+
+## has_bureaucracy_of_type
+checks if the scope country has a bureaucracy of the supplied type
+Traits: bureaucracy_type scope
+Reads gamestate for all scopes.
+**Supported Scopes**: country  
+**Supported Targets**: bureaucracy_type  
 
 ## has_cabinet_action
 is doing something in the cabinet
@@ -4178,6 +4477,13 @@ Traits: yes/no
 Reads gamestate for all scopes.
 **Supported Scopes**: mercenary  
 
+## has_different_town_rights_than
+Checks if a location shares no town right types with another location
+Traits: province id/location scope
+Reads gamestate for all scopes.
+**Supported Scopes**: location  
+**Supported Targets**: location  
+
 ## has_diplomacy_with
 Does the country have a certain type of diplomatic relation with another. Usage: has_diplomacy_with = { country = <country> type = <type> }
 Reads gamestate for all scopes.
@@ -4198,7 +4504,7 @@ Reads gamestate for all scopes.
 **Supported Targets**: area  
 
 ## has_dlc
-Does the host have this DLC
+Does the host have this DLC enabled? used for synched content
 **Supported Scopes**: none  
 
 ## has_doom
@@ -4457,7 +4763,7 @@ Reads gamestate for all scopes.
 **Supported Scopes**: loan  
 
 ## has_local_dlc
-Does the host have this DLC
+Does the local player have this DLC enabled? used for unsynched content like new graphics
 **Supported Scopes**: none  
 
 ## has_local_variable
@@ -4499,6 +4805,12 @@ country has market centers
 Traits: yes/no 
 Reads gamestate for all scopes.
 **Supported Scopes**: country  
+
+## has_max_town_rights
+Check if a location has reached its maximum number of town rights
+Traits: yes/no 
+Reads gamestate for all scopes.
+**Supported Scopes**: location  
 
 ## has_member
 Checks if an international organization has a certain member
@@ -4578,11 +4890,29 @@ Traits: yes/no
 Reads gamestate for all scopes.
 **Supported Scopes**: character  
 
+## has_old_world_goods_in_market
+Checks if a market has a supply of any old world goods
+Traits: yes/no 
+Reads gamestate for all scopes.
+**Supported Scopes**: market  
+
+## has_omens
+religion has omens
+Traits: yes/no 
+Reads gamestate for all scopes.
+**Supported Scopes**: religion  
+
 ## has_ongoing_parliament_debate
 Country / international organization has an active parliament debate
 Traits: yes/no 
 Reads gamestate for all scopes.
 **Supported Scopes**: country, international_organization  
+
+## has_only_prisoners
+returns true if the unit contains ONLY prisoners
+Traits: yes/no 
+Reads gamestate for all scopes.
+**Supported Scopes**: unit  
 
 ## has_opinion
 does the country have an opinion type towards another country?
@@ -4656,6 +4986,11 @@ Traits: yes/no
 Reads gamestate for all scopes.
 **Supported Scopes**: work_of_art  
 
+## has_personality
+Does the country have the specified AI personality?
+Reads gamestate for all scopes.
+**Supported Scopes**: country  
+
 ## has_policy
 Checks if a country has a certain policy for a then policy's law
 Reads gamestate for all scopes.
@@ -4694,6 +5029,11 @@ Reads gamestate for all scopes.
 **Supported Scopes**: country  
 **Supported Targets**: country  
 
+## has_preference_tag
+if a country has specific preference tag
+Reads gamestate for all scopes.
+**Supported Scopes**: country  
+
 ## has_presence_in
 country has a presence in the geography supplied?
 Reads gamestate for all scopes.
@@ -4714,7 +5054,7 @@ Reads gamestate for all scopes.
 **Supported Targets**: culture  
 
 ## has_prisoners
-returns trus if the unit contains prisoners
+returns true if the unit contains prisoners
 Traits: yes/no 
 Reads gamestate for all scopes.
 **Supported Scopes**: unit  
@@ -4925,6 +5265,7 @@ Reads gamestate for all scopes.
 
 ## has_spawned
 Has the institution spawned anywhere?
+Traits: yes/no 
 Reads gamestate for all scopes.
 **Supported Scopes**: institution  
 
@@ -4950,7 +5291,7 @@ Reads gamestate for all scopes.
 ## has_tag
 Check if that object has the specified tag.
 Reads gamestate for all scopes.
-**Supported Scopes**: religion, goods, building, law, policy, building_type, casus_belli, peace_treaty, heir_selection  
+**Supported Scopes**: religion, goods, building, law, policy, building_type, casus_belli, peace_treaty, heir_selection, trait  
 
 ## has_target_casus_belli_on_us
 Does the target have a cb on the country?
@@ -4978,6 +5319,13 @@ Traits: culture scope
 Reads gamestate for all scopes.
 **Supported Scopes**: country  
 **Supported Targets**: culture  
+
+## has_town_rights
+Checks if a location has a specific town_rights
+Traits: town_rights_type scope
+Reads gamestate for all scopes.
+**Supported Scopes**: location  
+**Supported Targets**: town_rights_type  
 
 ## has_trade_treaty_with
 Does the country have a trade agreement with a specified country?
@@ -5161,7 +5509,13 @@ Reads gamestate for all scopes.
 Checks if the current government reform/avatar/estate privilege/god/policy/law/cabinet action scope has been implemented in percentage. 
 Traits: <, <=, =, !=, >, >=
 Reads gamestate for all scopes.
-**Supported Scopes**: law, policy, estate_privilege, cabinet_action, government_reform, god, avatar  
+**Supported Scopes**: law, policy, estate_privilege, cabinet_action, government_reform, god, omen, avatar  
+
+## importance
+Checks if a Holy Site has this Importance
+Traits: <, <=, =, !=, >, >=
+Reads gamestate for all scopes.
+**Supported Scopes**: holy_site  
 
 ## in_assault
 siege is in assault
@@ -5274,6 +5628,12 @@ Traits: international_organization scope
 **Supported Scopes**: none  
 **Supported Targets**: international_organization  
 
+## international_organization_economical_base
+Checks if an international organization has a certain economical base based on their members
+Traits: <, <=, =, !=, >, >=
+Reads gamestate for all scopes.
+**Supported Scopes**: international_organization  
+
 ## international_organization_has_internal_peace
 Checks if no member country is in a direct war with another member country
 Traits: yes/no 
@@ -5368,6 +5728,24 @@ Traits: <, <=, =, !=, >, >=
 Reads gamestate for all scopes.
 **Supported Scopes**: location  
 
+## io_exists
+Does the international organization exist?
+Traits: international_organization scope
+**Supported Scopes**: none  
+**Supported Targets**: international_organization  
+
+## io_total_great_power_score
+returns the cached sum of great power scores of all members of an international organization (updated monthly)
+Traits: <, <=, =, !=, >, >=
+Reads gamestate for all scopes.
+**Supported Scopes**: international_organization  
+
+## io_total_military_strength
+returns the cached sum of army strengths of all members of an international organization (updated monthly)
+Traits: <, <=, =, !=, >, >=
+Reads gamestate for all scopes.
+**Supported Scopes**: international_organization  
+
 ## io_within_diplomatic_range
 Is the target international organization within diplomatic range?
 Traits: country tag/country scope
@@ -5400,6 +5778,12 @@ Traits: country tag/country scope
 Reads gamestate for all scopes.
 **Supported Scopes**: culture  
 **Supported Targets**: country  
+
+## is_active
+If a culture is active.
+Traits: yes/no 
+Reads gamestate for all scopes.
+**Supported Scopes**: culture  
 
 ## is_active_parliament
 country has an active parliament called
@@ -5444,6 +5828,20 @@ Traits: yes/no
 Reads gamestate for all scopes.
 **Supported Scopes**: country  
 
+## is_ai_preferred_parliament_change_law
+Checks if this law is the AI's preferred parliament law change target (pass actor country as argument)
+Traits: country tag/country scope
+Reads gamestate for all scopes.
+**Supported Scopes**: law  
+**Supported Targets**: country  
+
+## is_ai_preferred_parliament_change_policy
+Checks if this policy is the AI's preferred parliament policy change target (pass actor country as argument)
+Traits: country tag/country scope
+Reads gamestate for all scopes.
+**Supported Scopes**: policy  
+**Supported Targets**: country  
+
 ## is_alert_shown
 Is the alert with the specified name shown?
 **Supported Scopes**: none  
@@ -5462,7 +5860,7 @@ Reads gamestate for all scopes.
 Returns true if the current database object is allowed (but not necessarily visible) for the target country. 
 Traits: country tag/country scope
 Reads gamestate for all scopes.
-**Supported Scopes**: law, policy, building_type, religious_aspect, estate_privilege, cabinet_action, government_reform, production_method, parliament_issue, parliament_type, god, avatar, unit_type, levy_setup, parliament_agenda, artist_type, mission, mission_task, regency_type, unit_ability, road_type, heir_selection, formable_country  
+**Supported Scopes**: law, policy, building_type, religious_aspect, estate_privilege, cabinet_action, government_reform, production_method, parliament_issue, parliament_type, god, omen, avatar, unit_type, levy_setup, parliament_agenda, artist_type, mission, mission_task, regency_type, unit_ability, road_type, heir_selection, formable_country  
 **Supported Targets**: country  
 
 ## is_allowed_for_international_organization
@@ -5571,7 +5969,7 @@ Reads gamestate for all scopes.
 Returns true if the current database object is available to the target country. 
 Traits: country tag/country scope
 Reads gamestate for all scopes.
-**Supported Scopes**: law, policy, building_type, religious_aspect, estate_privilege, cabinet_action, government_reform, production_method, parliament_issue, parliament_type, god, avatar, unit_type, levy_setup, parliament_agenda, artist_type, mission, mission_task, regency_type, unit_ability, road_type, heir_selection, formable_country  
+**Supported Scopes**: law, policy, building_type, religious_aspect, estate_privilege, cabinet_action, government_reform, production_method, parliament_issue, parliament_type, god, omen, avatar, unit_type, levy_setup, parliament_agenda, artist_type, mission, mission_task, regency_type, unit_ability, road_type, heir_selection, formable_country  
 **Supported Targets**: country  
 
 ## is_available_for_international_organization
@@ -5871,8 +6269,14 @@ Reads gamestate for all scopes.
 **Supported Scopes**: country  
 **Supported Targets**: international_organization  
 
+## is_eligible_for_marriage
+Check if the current character scope can marry
+Traits: yes/no 
+Reads gamestate for all scopes.
+**Supported Scopes**: character  
+
 ## is_eligible_for_royal_marriage
-if character is eligible for royal marriage
+if character is eligible for royal marriage. Is more restrictive and focused on rulers / heirs than the can_marry trigger
 Traits: yes/no 
 Reads gamestate for all scopes.
 **Supported Scopes**: character  
@@ -6013,7 +6417,7 @@ Reads gamestate for all scopes.
 Checks if the current government reform/avatar/estate privilege/god/policy/law/cabinet action scope has been fully implemented in the specified country 
 Traits: country tag/country scope
 Reads gamestate for all scopes.
-**Supported Scopes**: law, policy, estate_privilege, cabinet_action, government_reform, god, avatar  
+**Supported Scopes**: law, policy, estate_privilege, cabinet_action, government_reform, god, omen, avatar  
 **Supported Targets**: country  
 
 ## is_gamestate_tutorial_active
@@ -6033,6 +6437,12 @@ Traits: country tag/country scope
 Reads gamestate for all scopes.
 **Supported Scopes**: character  
 **Supported Targets**: country  
+
+## is_god_female
+is the god female?
+Traits: yes/no 
+Reads gamestate for all scopes.
+**Supported Scopes**: god  
 
 ## is_great_power
 country is a great power
@@ -6103,7 +6513,7 @@ Reads gamestate for all scopes.
 Checks if the current government reform/avatar/estate privilege/god/policy/law/cabinet action scope can be implemented in the specified country. Does not check if it has already been implemented or not though. 
 Traits: country tag/country scope
 Reads gamestate for all scopes.
-**Supported Scopes**: law, policy, estate_privilege, cabinet_action, government_reform, god, avatar  
+**Supported Scopes**: law, policy, estate_privilege, cabinet_action, government_reform, god, omen, avatar  
 **Supported Targets**: country  
 
 ## is_import_banned
@@ -6179,6 +6589,12 @@ Is the international organization unique?
 Traits: yes/no 
 Reads gamestate for all scopes.
 **Supported Scopes**: international_organization  
+
+## is_invoking_omen
+country is invoking omen
+Traits: yes/no 
+Reads gamestate for all scopes.
+**Supported Scopes**: country  
 
 ## is_key_in_global_variable_map
 Checks if a target is a key in a variable list  
@@ -6272,6 +6688,13 @@ Traits: religion scope
 Reads gamestate for all scopes.
 **Supported Scopes**: location  
 **Supported Targets**: religion  
+
+## is_location_holy_site_type
+Is the location a holy site of the specified type?
+Traits: holy_site_type scope
+Reads gamestate for all scopes.
+**Supported Scopes**: location  
+**Supported Targets**: holy_site_type  
 
 ## is_locked
 Check if a trade is locked
@@ -6645,7 +7068,7 @@ Reads gamestate for all scopes.
 **Supported Scopes**: location  
 
 ## is_real_country
-Checks if a country is a real country as opposed to rebels, mercenaries, pirates
+Checks if a country is a real country as opposed to mercenaries or pirates
 Traits: yes/no 
 Reads gamestate for all scopes.
 **Supported Scopes**: country  
@@ -6787,6 +7210,13 @@ Reads gamestate for all scopes.
 Check if the parliament issue scope is selectable by country in the target international organization. Usage: is_selectable_issue_for = { actor = <country scope> international_organization = <international organization scope> }
 Reads gamestate for all scopes.
 **Supported Scopes**: parliament_issue  
+
+## is_selected_omen_god
+If a god is the one asked for guidance for selecting an omen in the target country
+Traits: country tag/country scope
+Reads gamestate for all scopes.
+**Supported Scopes**: god  
+**Supported Targets**: country  
 
 ## is_set
 Checks whether the specified scope target has been set (includes being the null object)  
@@ -7049,7 +7479,7 @@ Where Y is an event target
 Returns true if the current database object is visible (but not necessarily allowed) to the target country. 
 Traits: country tag/country scope
 Reads gamestate for all scopes.
-**Supported Scopes**: law, policy, building_type, religious_aspect, estate_privilege, cabinet_action, government_reform, production_method, parliament_issue, parliament_type, god, avatar, unit_type, levy_setup, parliament_agenda, artist_type, mission, mission_task, regency_type, unit_ability, road_type, heir_selection, formable_country  
+**Supported Scopes**: law, policy, building_type, religious_aspect, estate_privilege, cabinet_action, government_reform, production_method, parliament_issue, parliament_type, god, omen, avatar, unit_type, levy_setup, parliament_agenda, artist_type, mission, mission_task, regency_type, unit_ability, road_type, heir_selection, formable_country  
 **Supported Targets**: country  
 
 ## is_visible_for_international_organization
@@ -7110,6 +7540,12 @@ Reads gamestate for all scopes.
 
 ## language_percentage_in_country
 The percentage of speakers of a specific language in the current country
+Traits: <, <=, =, !=, >, >=
+Reads gamestate for all scopes.
+**Supported Scopes**: country  
+
+## language_population_in_country
+The number of speakers of a specific language in the current country
 Traits: <, <=, =, !=, >, >=
 Reads gamestate for all scopes.
 **Supported Scopes**: country  
@@ -7498,6 +7934,12 @@ Traits: <, <=, =, !=, >, >=
 Reads gamestate for all scopes.
 **Supported Scopes**: market  
 
+## max_bureaucracy_slots
+Checks if a country has a certain amount of maximum bureaucracy slots
+Traits: <, <=, =, !=, >, >=
+Reads gamestate for all scopes.
+**Supported Scopes**: country  
+
 ## max_control
 Checks the max control in a location
 Traits: <, <=, =, !=, >, >=
@@ -7581,6 +8023,13 @@ Traits: <, <=, =, !=, >, >=
 Reads gamestate for all scopes.
 **Supported Scopes**: market  
 
+## merged_culture_group_contains_culture
+True if this merged culture was formed from a culture group that contained the target culture.
+Traits: culture scope
+Reads gamestate for all scopes.
+**Supported Scopes**: culture  
+**Supported Targets**: culture  
+
 ## migration_attraction
 Checks if a location has a certain migration_attraction
 Traits: <, <=, =, !=, >, >=
@@ -7630,13 +8079,19 @@ Reads gamestate for all scopes.
 Checks the AI utility of a modifier 
 Traits: <, <=, =, !=, >, >=
 Reads gamestate for all scopes.
-**Supported Scopes**: location, country, unit, character, religion, province, religious_school, international_organization, policy, religious_aspect, government_reform, god, avatar  
+**Supported Scopes**: location, country, unit, character, religion, province, religious_school, international_organization, policy, religious_aspect, government_reform, god, omen, avatar  
 
 ## modifier_utility_include_locations
 Checks the AI utility of a modifier with location checks 
 Traits: <, <=, =, !=, >, >=
 Reads gamestate for all scopes.
-**Supported Scopes**: location, country, unit, character, religion, province, religious_school, international_organization, policy, religious_aspect, government_reform, god, avatar  
+**Supported Scopes**: location, country, unit, character, religion, province, religious_school, international_organization, policy, religious_aspect, government_reform, god, omen, avatar  
+
+## monarch_power_percentage_in_country
+The percentage of a specific monarch power in the current country
+Traits: <, <=, =, !=, >, >=
+Reads gamestate for all scopes.
+**Supported Scopes**: country  
 
 ## monthly_balance
 Checks the monthly balance of a country
@@ -7674,11 +8129,23 @@ Traits: <, <=, =, !=, >, >=
 Reads gamestate for all scopes.
 **Supported Scopes**: country  
 
+## monthly_population_change
+Check how much the population changes on a monthly base based on the previous month's data
+Traits: <, <=, =, !=, >, >=
+Reads gamestate for all scopes.
+**Supported Scopes**: country  
+
 ## monthly_sailors
 Checks if a country has a certain monthly Sailors
 Traits: <, <=, =, !=, >, >=
 Reads gamestate for all scopes.
 **Supported Scopes**: country  
+
+## monthly_satisfaction_change
+The monthly satisfaction change of an estate
+Traits: <, <=, =, !=, >, >=
+Reads gamestate for all scopes.
+**Supported Scopes**: estate  
 
 ## monthly_trade_income
 Checks if a country has a certain income from trade
@@ -7721,6 +8188,12 @@ How many percent morale does this unit have???
 Traits: <, <=, =, !=, >, >=
 Reads gamestate for all scopes.
 **Supported Scopes**: unit  
+
+## movement_presence
+Checks the number of pops affected by a movement in a location or subunit. usage: movement_presence(<movement>) or movement_presence = { movement = <movement> value <comparator> <real> }
+Traits: <, <=, =, !=, >, >=
+Reads gamestate for all scopes.
+**Supported Scopes**: location, sub_unit  
 
 ## nand
 a negated AND trigger
@@ -7782,6 +8255,12 @@ a negated OR trigger
 negates content of trigger
 **Supported Scopes**: none  
 
+## num_adult_available_dynasty_members
+Return the number of living adult dynasty members who are neither rulers nor heirs
+Traits: <, <=, =, !=, >, >=
+Reads gamestate for all scopes.
+**Supported Scopes**: dynasty  
+
 ## num_adult_capable_characters
 Checks if a country has a certain amount of adult characters who can do cabinet or military stuff
 Traits: <, <=, =, !=, >, >=
@@ -7817,6 +8296,18 @@ Checks if a location has a certain amount of  buildings
 Traits: <, <=, =, !=, >, >=
 Reads gamestate for all scopes.
 **Supported Scopes**: location  
+
+## num_buildings_owned_by_estate
+Checks how many buildings an estate has
+Traits: <, <=, =, !=, >, >=
+Reads gamestate for all scopes.
+**Supported Scopes**: estate  
+
+## num_bureaucracies
+Checks if a country has a certain amount of bureaucracies active
+Traits: <, <=, =, !=, >, >=
+Reads gamestate for all scopes.
+**Supported Scopes**: country  
 
 ## num_cabinet_capable_characters
 Checks if a country has a certain amount of characters who can do cabinet
@@ -7859,6 +8350,12 @@ gets the number of countries with a particular special status in an internationa
 Traits: <, <=, =, !=, >, >=
 Reads gamestate for all scopes.
 **Supported Scopes**: international_organization  
+
+## num_country_that_can_be_called_offensively
+Checks the number of countries that can be called into an offensive war by this country
+Traits: <, <=, =, !=, >, >=
+Reads gamestate for all scopes.
+**Supported Scopes**: country  
 
 ## num_embraced_institutions
 Checks if a country has a certain number of institutions embraced
@@ -7908,6 +8405,12 @@ Traits: <, <=, =, !=, >, >=
 Reads gamestate for all scopes.
 **Supported Scopes**: country  
 
+## num_locations_affected
+calculates the number of locations affected by the movement. num_locations_affected = { *value >/</>=/<= Y* or *value = { min max }*  }
+Traits: <, <=, =, !=, >, >=
+Reads gamestate for all scopes.
+**Supported Scopes**: movement  
+
 ## num_locations_owned_or_owned_by_subjects
 Checks if a country or its direct subjects has a certain amount of owned locations
 Traits: <, <=, =, !=, >, >=
@@ -7943,6 +8446,18 @@ The number of children of the character
 Traits: <, <=, =, !=, >, >=
 Reads gamestate for all scopes.
 **Supported Scopes**: character  
+
+## num_of_common_rivals
+calculates the amount of common rivals between two countries. num_of_common_rivals = { target = X [*value >/</>=/<= Y* or *value = { min max }*  }
+Traits: <, <=, =, !=, >, >=
+Reads gamestate for all scopes.
+**Supported Scopes**: country  
+
+## num_of_common_rivals_and_enemies
+calculates the amount of common rivals and enemies between two countries. num_of_common_rivals_and_enemies = { target = X [*value >/</>=/<= Y* or *value = { min max }*  }
+Traits: <, <=, =, !=, >, >=
+Reads gamestate for all scopes.
+**Supported Scopes**: country  
 
 ## num_of_diplomats
 Checks if a country has an amount of diplomats
@@ -8027,6 +8542,18 @@ The number of traits of a specified category the character has. usage: num_of_tr
 Traits: <, <=, =, !=, >, >=
 Reads gamestate for all scopes.
 **Supported Scopes**: character  
+
+## num_omens
+Checks if a country has a certain amount of omens
+Traits: <, <=, =, !=, >, >=
+Reads gamestate for all scopes.
+**Supported Scopes**: country  
+
+## num_open_bureaucracy_slots
+Checks if a country has a certain amount of open bureaucracy slots
+Traits: <, <=, =, !=, >, >=
+Reads gamestate for all scopes.
+**Supported Scopes**: country  
 
 ## num_open_reform_slots
 Checks if a country has a certain amount of open government reform slots
@@ -8189,6 +8716,18 @@ Traits: <, <=, =, !=, >, >=
 Reads gamestate for all scopes.
 **Supported Scopes**: international_organization  
 
+## original_location_rank
+Check if a location's rank at campaign start matches the supplied location rank
+Traits: location_rank scope
+Reads gamestate for all scopes.
+**Supported Scopes**: location  
+**Supported Targets**: location_rank  
+
+## original_tag
+if a country is a specific historical tag or was it.
+Reads gamestate for all scopes.
+**Supported Scopes**: country  
+
 ## overlord_can_build_markets
 Check if a subject type allows the overlord to build markets
 Traits: yes/no 
@@ -8250,7 +8789,7 @@ Reads gamestate for all scopes.
 **Supported Targets**: location  
 
 ## owns_or_has_subject_in
-country has a presence in the geography supplied?
+country directly owns or has a subject in the geography supplied?
 Reads gamestate for all scopes.
 **Supported Scopes**: country  
 
@@ -8260,6 +8799,13 @@ Traits: province id/location scope
 Reads gamestate for all scopes.
 **Supported Scopes**: country  
 **Supported Targets**: location  
+
+## owns_or_non_sovereign_subject_owns_entire_province
+Does the country or non-sovereign subjects own all locations in province?
+Traits: province_definition scope
+Reads gamestate for all scopes.
+**Supported Scopes**: country  
+**Supported Targets**: province_definition  
 
 ## parliament_issue_chance
 The chance an issue will be selected
@@ -8426,6 +8972,19 @@ Traits: <, <=, =, !=, >, >=
 Reads gamestate for all scopes.
 **Supported Scopes**: policy  
 
+## policy_possible_for_country
+Check the is a policy is possible for target counntry
+Traits: country tag/country scope
+Reads gamestate for all scopes.
+**Supported Scopes**: policy  
+**Supported Targets**: country  
+
+## policy_utility
+Utility of a policy that can subtract the utility of current policy - usage: policy_utility(<law>|<policy>|<bool>) or policy_utility = { law = <law> policy = <policy> subtract_current = <bool> value <operator><threshold> }
+Traits: <, <=, =, !=, >, >=
+Reads gamestate for all scopes.
+**Supported Scopes**: country  
+
 ## policy_visible_to_international_organization
 Can we see a policy in the scope international organization?
 Traits: policy scope
@@ -8465,13 +9024,13 @@ Reads gamestate for all scopes.
 **Supported Scopes**: pop  
 
 ## pop_type_percentage_in_country
-The percentage of the specific pop type in the current country
+The percentage of population with the specific pop type in the current country
 Traits: <, <=, =, !=, >, >=
 Reads gamestate for all scopes.
 **Supported Scopes**: country  
 
 ## pop_type_population_in_country
-The number of the specific pop type in the current country
+The number of population with the specific pop type in the current country
 Traits: <, <=, =, !=, >, >=
 Reads gamestate for all scopes.
 **Supported Scopes**: country  
@@ -8531,8 +9090,26 @@ Traits: <, <=, =, !=, >, >=
 Reads gamestate for all scopes.
 **Supported Scopes**: country  
 
+## prev_favors_with_this
+Gets the previous scope country's favors with the current scope country
+Traits: <, <=, =, !=, >, >=
+Reads gamestate for all scopes.
+**Supported Scopes**: country  
+
 ## prev_opinion_of_this
 Gets the previous scope country's opinion of the current scope country
+Traits: <, <=, =, !=, >, >=
+Reads gamestate for all scopes.
+**Supported Scopes**: country  
+
+## prev_spy_network_in_this
+Gets the previous scope country's spy network in the current scope country
+Traits: <, <=, =, !=, >, >=
+Reads gamestate for all scopes.
+**Supported Scopes**: country  
+
+## prev_trust_equilibrium_of_this
+Gets the previous scope country's trust equilibrium of the current scope country
 Traits: <, <=, =, !=, >, >=
 Reads gamestate for all scopes.
 **Supported Scopes**: country  
@@ -8636,6 +9213,12 @@ Traits: <, <=, =, !=, >, >=
 Reads gamestate for all scopes.
 **Supported Scopes**: province  
 
+## province_location_wealth
+Checks if a Province has a certain total location wealth (possible tax base)
+Traits: <, <=, =, !=, >, >=
+Reads gamestate for all scopes.
+**Supported Scopes**: province  
+
 ## province_max_food
 Checks the maximum amount of food the province can have
 Traits: <, <=, =, !=, >, >=
@@ -8663,7 +9246,7 @@ Reads gamestate for all scopes.
 **Supported Scopes**: province  
 
 ## province_pop_type_population
-Check how much goods the scope location produces. 
+Checks how much of a pop type lives in the scope location.
 Traits: <, <=, =, !=, >, >=
 Reads gamestate for all scopes.
 **Supported Scopes**: province  
@@ -8806,6 +9389,13 @@ Traits: <, <=, =, !=, >, >=
 Reads gamestate for all scopes.
 **Supported Scopes**: rebels  
 
+## receives_defensive_support_from
+Does the scope country receive defensive support from the specified country?
+Traits: country tag/country scope
+Reads gamestate for all scopes.
+**Supported Scopes**: country  
+**Supported Targets**: country  
+
 ## receives_fleet_basing_rights_from
 Does the scope country receive fleet basing rights from the specified country?
 Traits: country tag/country scope
@@ -8829,6 +9419,13 @@ Reads gamestate for all scopes.
 
 ## receives_military_access_from
 Does the scope country receive military access from the specified country?
+Traits: country tag/country scope
+Reads gamestate for all scopes.
+**Supported Scopes**: country  
+**Supported Targets**: country  
+
+## receives_offensive_support_from
+Does the scope country receive offensive support from the specified country?
 Traits: country tag/country scope
 Reads gamestate for all scopes.
 **Supported Scopes**: country  
@@ -8918,6 +9515,12 @@ Traits: <, <=, =, !=, >, >=
 Reads gamestate for all scopes.
 **Supported Scopes**: location, province, province_definition, area, region, sub_continent, continent, scripted_geography  
 
+## religion_group_population_in_country
+The number of population a specific religion group in the current country
+Traits: <, <=, =, !=, >, >=
+Reads gamestate for all scopes.
+**Supported Scopes**: country  
+
 ## religion_modifier_strength
 Does the scoped religion have a given modifier with the compared strength. Default modifiers without any scale changes have a strength value of 1  
 religion_modifier_strength = { modifier = <modifier> value <comparator> <script math> }  
@@ -8945,7 +9548,7 @@ Reads gamestate for all scopes.
 **Supported Scopes**: location, province, province_definition, area, region, sub_continent, continent, scripted_geography  
 
 ## religion_population_in_country
-The number of pops with a specific religion in the current country
+The number of population with a specific religion in the current country
 Traits: <, <=, =, !=, >, >=
 Reads gamestate for all scopes.
 **Supported Scopes**: country  
@@ -9104,6 +9707,12 @@ does the target have the specified opinion of the school?
 Reads gamestate for all scopes.
 **Supported Scopes**: religious_school  
 
+## rgo_level
+Checks if a location has a certain rgo level
+Traits: <, <=, =, !=, >, >=
+Reads gamestate for all scopes.
+**Supported Scopes**: location  
+
 ## rgo_workers
 Checks if a location has a certain number of RGO workers
 Traits: <, <=, =, !=, >, >=
@@ -9135,7 +9744,7 @@ Reads gamestate for all scopes.
 **Supported Scopes**: country, international_organization  
 
 ## ruled_country_on_or_after
-can the country find a trade route from market a to market b { from = <market> to = <market> }?
+Check if the character has ruled the target country on or after the specified date. Usage: ruled_country_on_or_after = { country = <country scope> date = <date> }
 Reads gamestate for all scopes.
 **Supported Scopes**: character  
 
@@ -9401,8 +10010,26 @@ Traits: <, <=, =, !=, >, >=
 Reads gamestate for all scopes.
 **Supported Scopes**: country  
 
+## this_favors_with_prev
+Gets the current scope country's favors with the previous scope country
+Traits: <, <=, =, !=, >, >=
+Reads gamestate for all scopes.
+**Supported Scopes**: country  
+
 ## this_opinion_of_prev
 Gets the current scope country's opinion of the previous scope country
+Traits: <, <=, =, !=, >, >=
+Reads gamestate for all scopes.
+**Supported Scopes**: country  
+
+## this_spy_network_in_prev
+Gets the current scope country's spy network in the previous scope country
+Traits: <, <=, =, !=, >, >=
+Reads gamestate for all scopes.
+**Supported Scopes**: country  
+
+## this_trust_equilibrium_of_prev
+Gets the current scope country's trust equilibrium of the previous scope country
 Traits: <, <=, =, !=, >, >=
 Reads gamestate for all scopes.
 **Supported Scopes**: country  
@@ -9691,10 +10318,28 @@ trigger_if = { limit = { <display_triggers> } <triggers> }
 **Supported Scopes**: none  
 
 ## trust
-is the country's trust towards the target greater or equal than the value? trust = { target = X [*value >/</>=/<= Y* or *value = { min max }*  }
+How much trust does the country have in the target? trust = { target = X [*value >/</>=/<= Y* or *value = { min max }*  }
 Traits: <, <=, =, !=, >, >=
 Reads gamestate for all scopes.
 **Supported Scopes**: country  
+
+## trust_equilibrium
+is the country's trust equilibrium towards the target greater or equal than the value? trust_equilibrium = { target = X [*value >/</>=/<= Y* or *value = { min max }*  }
+Traits: <, <=, =, !=, >, >=
+Reads gamestate for all scopes.
+**Supported Scopes**: country  
+
+## unemployed_pops_of_pop_type_in_location
+gets the number of unemployed pops of the pop type in the location
+Traits: <, <=, =, !=, >, >=
+Reads gamestate for all scopes.
+**Supported Scopes**: location  
+
+## unemployed_pops_of_pop_type_in_province
+gets the number of unemployed pops of the pop type in the province
+Traits: <, <=, =, !=, >, >=
+Reads gamestate for all scopes.
+**Supported Scopes**: province  
 
 ## unfilled_jobs_in_province
 gets the number of unfilled jobs in the province
@@ -9783,6 +10428,13 @@ Reads gamestate for all scopes.
 
 ## valid_estate_for_heir_selection
 Checks if the character's estate is allowed for the target heir selection
+Traits: heir_selection scope
+Reads gamestate for all scopes.
+**Supported Scopes**: character  
+**Supported Targets**: heir_selection  
+
+## valid_gender_for_heir_selection
+Checks if the character's gender is allowed for the target heir selection
 Traits: heir_selection scope
 Reads gamestate for all scopes.
 **Supported Scopes**: character  

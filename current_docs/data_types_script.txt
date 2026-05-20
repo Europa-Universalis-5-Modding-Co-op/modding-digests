@@ -203,6 +203,30 @@ Return type: Scope
 
 -----------------------
 
+Bureaucracy
+Definition type: Type
+
+-----------------------
+
+Bureaucracy.MakeScope
+Description: Jomini Script System
+Definition type: Function
+Return type: Scope
+
+-----------------------
+
+BureaucracyType
+Definition type: Type
+
+-----------------------
+
+BureaucracyType.MakeScope
+Description: Jomini Script System
+Definition type: Function
+Return type: Scope
+
+-----------------------
+
 Cabinet
 Definition type: Type
 
@@ -857,6 +881,42 @@ Return type: Scope
 
 -----------------------
 
+Movement
+Definition type: Type
+
+-----------------------
+
+Movement.MakeScope
+Description: Jomini Script System
+Definition type: Function
+Return type: Scope
+
+-----------------------
+
+MovementDefinition
+Definition type: Type
+
+-----------------------
+
+MovementDefinition.MakeScope
+Description: Jomini Script System
+Definition type: Function
+Return type: Scope
+
+-----------------------
+
+Omen
+Definition type: Type
+
+-----------------------
+
+Omen.MakeScope
+Description: Jomini Script System
+Definition type: Function
+Return type: Scope
+
+-----------------------
+
 ParliamentAgenda
 Definition type: Type
 
@@ -1218,6 +1278,20 @@ Return type: BuildingType
 
 -----------------------
 
+Scope.Bureaucracy
+Description: Jomini Script System
+Definition type: Promote
+Return type: Bureaucracy
+
+-----------------------
+
+Scope.BureaucracyType
+Description: Jomini Script System
+Definition type: Promote
+Return type: BureaucracyType
+
+-----------------------
+
 Scope.Cabinet
 Description: Jomini Script System
 Definition type: Promote
@@ -1459,6 +1533,18 @@ Return type: Building
 Scope.GetBuildingType
 Definition type: Promote
 Return type: BuildingType
+
+-----------------------
+
+Scope.GetBureaucracy
+Definition type: Promote
+Return type: Bureaucracy
+
+-----------------------
+
+Scope.GetBureaucracyType
+Definition type: Promote
+Return type: BureaucracyType
 
 -----------------------
 
@@ -1786,6 +1872,24 @@ Return type: MissionTaskDefinition
 
 -----------------------
 
+Scope.GetMovement
+Definition type: Promote
+Return type: Movement
+
+-----------------------
+
+Scope.GetMovementDefinition
+Definition type: Promote
+Return type: MovementDefinition
+
+-----------------------
+
+Scope.GetOmen
+Definition type: Promote
+Return type: Omen
+
+-----------------------
+
 Scope.GetParliamentAgenda
 Definition type: Promote
 Return type: ParliamentAgenda
@@ -2017,6 +2121,18 @@ Return type: SubjectType
 Scope.GetTopography
 Definition type: Promote
 Return type: Topography
+
+-----------------------
+
+Scope.GetTownRights
+Definition type: Promote
+Return type: TownRightsType
+
+-----------------------
+
+Scope.GetTownRightsType
+Definition type: Promote
+Return type: TownRightsType
 
 -----------------------
 
@@ -2257,6 +2373,27 @@ Scope.MissionTaskDefinition
 Description: Jomini Script System
 Definition type: Promote
 Return type: MissionTaskDefinition
+
+-----------------------
+
+Scope.Movement
+Description: Jomini Script System
+Definition type: Promote
+Return type: MovementDefinition
+
+-----------------------
+
+Scope.MovementOutbreak
+Description: Jomini Script System
+Definition type: Promote
+Return type: Movement
+
+-----------------------
+
+Scope.Omen
+Description: Jomini Script System
+Definition type: Promote
+Return type: Omen
 
 -----------------------
 
@@ -2526,6 +2663,20 @@ Return type: Topography
 
 -----------------------
 
+Scope.TownRights
+Description: Jomini Script System
+Definition type: Promote
+Return type: TownRights
+
+-----------------------
+
+Scope.TownRightsType
+Description: Jomini Script System
+Definition type: Promote
+Return type: TownRightsType
+
+-----------------------
+
 Scope.Trade
 Description: Jomini Script System
 Definition type: Promote
@@ -2551,6 +2702,13 @@ Scope.UnitAbility
 Description: Jomini Script System
 Definition type: Promote
 Return type: UnitAbility
+
+-----------------------
+
+Scope.UnitFormationPreference
+Description: Jomini Script System
+Definition type: Promote
+Return type: UnitFormationPreference
 
 -----------------------
 
@@ -2658,6 +2816,20 @@ Return type: [unregistered]
 -----------------------
 
 Scope.BuildingType
+Description: Jomini Script System
+Definition type: Function
+Return type: [unregistered]
+
+-----------------------
+
+Scope.Bureaucracy
+Description: Jomini Script System
+Definition type: Function
+Return type: [unregistered]
+
+-----------------------
+
+Scope.BureaucracyType
 Description: Jomini Script System
 Definition type: Function
 Return type: [unregistered]
@@ -3070,6 +3242,27 @@ Return type: [unregistered]
 
 -----------------------
 
+Scope.Movement
+Description: Jomini Script System
+Definition type: Function
+Return type: [unregistered]
+
+-----------------------
+
+Scope.MovementOutbreak
+Description: Jomini Script System
+Definition type: Function
+Return type: [unregistered]
+
+-----------------------
+
+Scope.Omen
+Description: Jomini Script System
+Definition type: Function
+Return type: [unregistered]
+
+-----------------------
+
 Scope.ParliamenType
 Description: Jomini Script System
 Definition type: Function
@@ -3348,6 +3541,20 @@ Return type: [unregistered]
 
 -----------------------
 
+Scope.TownRights
+Description: Jomini Script System
+Definition type: Function
+Return type: [unregistered]
+
+-----------------------
+
+Scope.TownRightsType
+Description: Jomini Script System
+Definition type: Function
+Return type: [unregistered]
+
+-----------------------
+
 Scope.Trade
 Description: Jomini Script System
 Definition type: Function
@@ -3370,6 +3577,13 @@ Return type: [unregistered]
 -----------------------
 
 Scope.UnitAbility
+Description: Jomini Script System
+Definition type: Function
+Return type: [unregistered]
+
+-----------------------
+
+Scope.UnitFormationPreference
 Description: Jomini Script System
 Definition type: Function
 Return type: [unregistered]
@@ -3752,6 +3966,18 @@ Return type: BuildingType
 
 -----------------------
 
+TopScope.sBureaucracy( Arg0 )
+Definition type: Promote
+Return type: Bureaucracy
+
+-----------------------
+
+TopScope.sBureaucracyType( Arg0 )
+Definition type: Promote
+Return type: BureaucracyType
+
+-----------------------
+
 TopScope.sCabinet( Arg0 )
 Definition type: Promote
 Return type: Cabinet
@@ -4088,6 +4314,24 @@ Return type: MissionTaskDefinition
 
 -----------------------
 
+TopScope.sMovement( Arg0 )
+Definition type: Promote
+Return type: Movement
+
+-----------------------
+
+TopScope.sMovementDefinition( Arg0 )
+Definition type: Promote
+Return type: MovementDefinition
+
+-----------------------
+
+TopScope.sOmen( Arg0 )
+Definition type: Promote
+Return type: Omen
+
+-----------------------
+
 TopScope.sParliamentAgenda( Arg0 )
 Definition type: Promote
 Return type: ParliamentAgenda
@@ -4322,6 +4566,18 @@ Return type: Topography
 
 -----------------------
 
+TopScope.sTownRights( Arg0 )
+Definition type: Promote
+Return type: TownRights
+
+-----------------------
+
+TopScope.sTownRightsType( Arg0 )
+Definition type: Promote
+Return type: TownRightsType
+
+-----------------------
+
 TopScope.sTrade( Arg0 )
 Definition type: Promote
 Return type: Trade
@@ -4491,6 +4747,18 @@ Return type: [unregistered]
 -----------------------
 
 TopScope.sBuildingType( Arg0 )
+Definition type: Function
+Return type: [unregistered]
+
+-----------------------
+
+TopScope.sBureaucracy( Arg0 )
+Definition type: Function
+Return type: [unregistered]
+
+-----------------------
+
+TopScope.sBureaucracyType( Arg0 )
 Definition type: Function
 Return type: [unregistered]
 
@@ -4832,6 +5100,24 @@ Return type: [unregistered]
 
 -----------------------
 
+TopScope.sMovement( Arg0 )
+Definition type: Function
+Return type: [unregistered]
+
+-----------------------
+
+TopScope.sMovementDefinition( Arg0 )
+Definition type: Function
+Return type: [unregistered]
+
+-----------------------
+
+TopScope.sOmen( Arg0 )
+Definition type: Function
+Return type: [unregistered]
+
+-----------------------
+
 TopScope.sParliamentAgenda( Arg0 )
 Definition type: Function
 Return type: [unregistered]
@@ -5066,6 +5352,18 @@ Return type: [unregistered]
 
 -----------------------
 
+TopScope.sTownRights( Arg0 )
+Definition type: Function
+Return type: [unregistered]
+
+-----------------------
+
+TopScope.sTownRightsType( Arg0 )
+Definition type: Function
+Return type: [unregistered]
+
+-----------------------
+
 TopScope.sTrade( Arg0 )
 Definition type: Function
 Return type: [unregistered]
@@ -5150,6 +5448,30 @@ Return type: Scope
 
 -----------------------
 
+TownRights
+Definition type: Type
+
+-----------------------
+
+TownRights.MakeScope
+Description: Jomini Script System
+Definition type: Function
+Return type: Scope
+
+-----------------------
+
+TownRightsType
+Definition type: Type
+
+-----------------------
+
+TownRightsType.MakeScope
+Description: Jomini Script System
+Definition type: Function
+Return type: Scope
+
+-----------------------
+
 Trade
 Definition type: Type
 
@@ -5192,6 +5514,18 @@ Definition type: Type
 -----------------------
 
 UnitAbility.MakeScope
+Description: Jomini Script System
+Definition type: Function
+Return type: Scope
+
+-----------------------
+
+UnitFormationPreference
+Definition type: Type
+
+-----------------------
+
+UnitFormationPreference.MakeScope
 Description: Jomini Script System
 Definition type: Function
 Return type: Scope

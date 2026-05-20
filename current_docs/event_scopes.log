@@ -1,0 +1,926 @@
+Scope Types:
+
+none:
+Evaluate Triggers: yes
+Execute Effects: yes
+Change Scopes: yes
+Save Token: none
+Stores Variables: no
+
+invalid:
+Evaluate Triggers: no
+Execute Effects: no
+Change Scopes: no
+Save Token: invalid
+Stores Variables: no
+
+value:
+Evaluate Triggers: yes
+Execute Effects: yes
+Change Scopes: yes
+Save Token: value
+Stores Variables: no
+
+boolean:
+Evaluate Triggers: yes
+Execute Effects: yes
+Change Scopes: yes
+Save Token: boolean
+Stores Variables: no
+
+flag:
+Evaluate Triggers: no
+Execute Effects: no
+Change Scopes: no
+Save Token: flag
+Stores Variables: no
+
+color:
+Evaluate Triggers: yes
+Execute Effects: yes
+Change Scopes: yes
+Save Token: color
+Stores Variables: no
+
+date:
+Evaluate Triggers: yes
+Execute Effects: no
+Change Scopes: no
+Save Token: date
+Stores Variables: no
+
+location:
+Evaluate Triggers: yes
+Execute Effects: yes
+Change Scopes: yes
+Save Token: loc
+Stores Variables: yes
+
+country:
+Evaluate Triggers: yes
+Execute Effects: yes
+Change Scopes: yes
+Save Token: ctry
+Stores Variables: yes
+
+unit:
+Evaluate Triggers: yes
+Execute Effects: yes
+Change Scopes: yes
+Save Token: unit
+Stores Variables: yes
+
+sub_unit:
+Evaluate Triggers: yes
+Execute Effects: yes
+Change Scopes: yes
+Save Token: sub
+Stores Variables: no
+
+character:
+Evaluate Triggers: yes
+Execute Effects: yes
+Change Scopes: yes
+Save Token: char
+Stores Variables: yes
+
+dynasty:
+Evaluate Triggers: yes
+Execute Effects: yes
+Change Scopes: yes
+Save Token: dyna
+Stores Variables: no
+
+pop:
+Evaluate Triggers: yes
+Execute Effects: yes
+Change Scopes: yes
+Save Token: pop
+Stores Variables: no
+
+war:
+Evaluate Triggers: yes
+Execute Effects: yes
+Change Scopes: yes
+Save Token: war
+Stores Variables: yes
+
+combat:
+Evaluate Triggers: yes
+Execute Effects: yes
+Change Scopes: yes
+Save Token: comb
+Stores Variables: no
+
+combat_side:
+Evaluate Triggers: yes
+Execute Effects: yes
+Change Scopes: yes
+Save Token: cosi
+Stores Variables: no
+
+siege:
+Evaluate Triggers: yes
+Execute Effects: yes
+Change Scopes: yes
+Save Token: sieg
+Stores Variables: no
+
+culture:
+Evaluate Triggers: yes
+Execute Effects: yes
+Change Scopes: yes
+Save Token: cult
+Stores Variables: yes
+
+religion:
+Evaluate Triggers: yes
+Execute Effects: yes
+Change Scopes: yes
+Save Token: reli
+Stores Variables: yes
+
+colonial_charter:
+Evaluate Triggers: yes
+Execute Effects: yes
+Change Scopes: yes
+Save Token: colo
+Stores Variables: yes
+
+market:
+Evaluate Triggers: yes
+Execute Effects: yes
+Change Scopes: yes
+Save Token: mark
+Stores Variables: no
+
+province:
+Evaluate Triggers: yes
+Execute Effects: yes
+Change Scopes: yes
+Save Token: prov
+Stores Variables: yes
+
+province_definition:
+Evaluate Triggers: yes
+Execute Effects: yes
+Change Scopes: yes
+Save Token: prdf
+Stores Variables: no
+
+area:
+Evaluate Triggers: yes
+Execute Effects: yes
+Change Scopes: yes
+Save Token: area
+Stores Variables: no
+
+region:
+Evaluate Triggers: yes
+Execute Effects: yes
+Change Scopes: yes
+Save Token: regn
+Stores Variables: no
+
+sub_continent:
+Evaluate Triggers: yes
+Execute Effects: yes
+Change Scopes: yes
+Save Token: subc
+Stores Variables: no
+
+continent:
+Evaluate Triggers: yes
+Execute Effects: yes
+Change Scopes: yes
+Save Token: continent
+Stores Variables: no
+
+group:
+Evaluate Triggers: yes
+Execute Effects: yes
+Change Scopes: yes
+Save Token: relg
+Stores Variables: no
+
+language:
+Evaluate Triggers: yes
+Execute Effects: yes
+Change Scopes: yes
+Save Token: language
+Stores Variables: no
+
+rebels:
+Evaluate Triggers: yes
+Execute Effects: yes
+Change Scopes: yes
+Save Token: rebl
+Stores Variables: no
+
+trade:
+Evaluate Triggers: yes
+Execute Effects: yes
+Change Scopes: yes
+Save Token: trad
+Stores Variables: no
+
+religious_school:
+Evaluate Triggers: yes
+Execute Effects: yes
+Change Scopes: yes
+Save Token: scho
+Stores Variables: no
+
+goods:
+Evaluate Triggers: yes
+Execute Effects: yes
+Change Scopes: yes
+Save Token: trgo
+Stores Variables: no
+
+demand:
+Evaluate Triggers: yes
+Execute Effects: yes
+Change Scopes: yes
+Save Token: demand
+Stores Variables: no
+
+privateer:
+Evaluate Triggers: yes
+Execute Effects: yes
+Change Scopes: yes
+Save Token: priv
+Stores Variables: no
+
+exploration:
+Evaluate Triggers: yes
+Execute Effects: yes
+Change Scopes: yes
+Save Token: expl
+Stores Variables: no
+
+mercenary:
+Evaluate Triggers: yes
+Execute Effects: yes
+Change Scopes: yes
+Save Token: merc
+Stores Variables: no
+
+work_of_art:
+Evaluate Triggers: yes
+Execute Effects: yes
+Change Scopes: yes
+Save Token: wart
+Stores Variables: no
+
+government:
+Evaluate Triggers: yes
+Execute Effects: yes
+Change Scopes: yes
+Save Token: govt
+Stores Variables: no
+
+international_organization:
+Evaluate Triggers: yes
+Execute Effects: yes
+Change Scopes: yes
+Save Token: international_organization
+Stores Variables: yes
+
+holy_site:
+Evaluate Triggers: yes
+Execute Effects: yes
+Change Scopes: yes
+Save Token: holy_site
+Stores Variables: no
+
+institution:
+Evaluate Triggers: yes
+Execute Effects: yes
+Change Scopes: yes
+Save Token: institution
+Stores Variables: no
+
+loan:
+Evaluate Triggers: yes
+Execute Effects: yes
+Change Scopes: yes
+Save Token: loan
+Stores Variables: no
+
+building:
+Evaluate Triggers: yes
+Execute Effects: yes
+Change Scopes: yes
+Save Token: building
+Stores Variables: no
+
+law:
+Evaluate Triggers: yes
+Execute Effects: yes
+Change Scopes: yes
+Save Token: law
+Stores Variables: no
+
+policy:
+Evaluate Triggers: yes
+Execute Effects: yes
+Change Scopes: yes
+Save Token: policy
+Stores Variables: no
+
+price:
+Evaluate Triggers: yes
+Execute Effects: yes
+Change Scopes: yes
+Save Token: price
+Stores Variables: no
+
+situation:
+Evaluate Triggers: yes
+Execute Effects: yes
+Change Scopes: yes
+Save Token: situation
+Stores Variables: yes
+
+building_type:
+Evaluate Triggers: yes
+Execute Effects: yes
+Change Scopes: yes
+Save Token: building_type
+Stores Variables: no
+
+disaster:
+Evaluate Triggers: yes
+Execute Effects: yes
+Change Scopes: yes
+Save Token: disaster
+Stores Variables: yes
+
+religious_aspect:
+Evaluate Triggers: yes
+Execute Effects: yes
+Change Scopes: yes
+Save Token: religious_aspect
+Stores Variables: no
+
+estate_privilege:
+Evaluate Triggers: yes
+Execute Effects: yes
+Change Scopes: yes
+Save Token: esta
+Stores Variables: no
+
+cabinet_action:
+Evaluate Triggers: yes
+Execute Effects: yes
+Change Scopes: yes
+Save Token: caac
+Stores Variables: no
+
+government_reform:
+Evaluate Triggers: yes
+Execute Effects: yes
+Change Scopes: yes
+Save Token: gore
+Stores Variables: no
+
+cabinet:
+Evaluate Triggers: yes
+Execute Effects: yes
+Change Scopes: yes
+Save Token: cab
+Stores Variables: yes
+
+production_method:
+Evaluate Triggers: yes
+Execute Effects: yes
+Change Scopes: yes
+Save Token: production_method
+Stores Variables: no
+
+graphical_culture:
+Evaluate Triggers: yes
+Execute Effects: yes
+Change Scopes: yes
+Save Token: graphical_culture
+Stores Variables: no
+
+disease_outbreak:
+Evaluate Triggers: yes
+Execute Effects: yes
+Change Scopes: yes
+Save Token: disease_outbreak
+Stores Variables: no
+
+disease:
+Evaluate Triggers: yes
+Execute Effects: yes
+Change Scopes: yes
+Save Token: disease
+Stores Variables: no
+
+parliament_issue:
+Evaluate Triggers: yes
+Execute Effects: yes
+Change Scopes: yes
+Save Token: parliament_issue
+Stores Variables: no
+
+parliament_type:
+Evaluate Triggers: yes
+Execute Effects: yes
+Change Scopes: yes
+Save Token: parliament_type
+Stores Variables: no
+
+resolution:
+Evaluate Triggers: yes
+Execute Effects: yes
+Change Scopes: yes
+Save Token: resolution
+Stores Variables: no
+
+god:
+Evaluate Triggers: yes
+Execute Effects: yes
+Change Scopes: yes
+Save Token: god
+Stores Variables: no
+
+omen:
+Evaluate Triggers: yes
+Execute Effects: yes
+Change Scopes: yes
+Save Token: omen
+Stores Variables: no
+
+avatar:
+Evaluate Triggers: yes
+Execute Effects: yes
+Change Scopes: yes
+Save Token: avatar
+Stores Variables: no
+
+religious_faction:
+Evaluate Triggers: yes
+Execute Effects: yes
+Change Scopes: yes
+Save Token: faction
+Stores Variables: no
+
+subject_type:
+Evaluate Triggers: yes
+Execute Effects: yes
+Change Scopes: yes
+Save Token: subject_type
+Stores Variables: no
+
+cardinal:
+Evaluate Triggers: yes
+Execute Effects: yes
+Change Scopes: yes
+Save Token: cardinal
+Stores Variables: no
+
+active_resolution:
+Evaluate Triggers: yes
+Execute Effects: yes
+Change Scopes: yes
+Save Token: active_resolution
+Stores Variables: no
+
+estate:
+Evaluate Triggers: yes
+Execute Effects: yes
+Change Scopes: yes
+Save Token: estate
+Stores Variables: no
+
+audio_culture:
+Evaluate Triggers: yes
+Execute Effects: yes
+Change Scopes: yes
+Save Token: audio_culture
+Stores Variables: no
+
+advance_type:
+Evaluate Triggers: yes
+Execute Effects: yes
+Change Scopes: yes
+Save Token: advance_type
+Stores Variables: no
+
+character_interaction:
+Evaluate Triggers: yes
+Execute Effects: yes
+Change Scopes: yes
+Save Token: character_interaction
+Stores Variables: no
+
+country_interaction:
+Evaluate Triggers: yes
+Execute Effects: yes
+Change Scopes: yes
+Save Token: country_interaction
+Stores Variables: no
+
+generic_action:
+Evaluate Triggers: yes
+Execute Effects: yes
+Change Scopes: yes
+Save Token: generic_action
+Stores Variables: no
+
+unit_type:
+Evaluate Triggers: yes
+Execute Effects: yes
+Change Scopes: yes
+Save Token: unit_type
+Stores Variables: no
+
+levy_setup:
+Evaluate Triggers: yes
+Execute Effects: yes
+Change Scopes: yes
+Save Token: levy_setup
+Stores Variables: no
+
+parliament_agenda:
+Evaluate Triggers: yes
+Execute Effects: yes
+Change Scopes: yes
+Save Token: parliament_agenda
+Stores Variables: no
+
+casus_belli:
+Evaluate Triggers: yes
+Execute Effects: yes
+Change Scopes: yes
+Save Token: casus_belli
+Stores Variables: no
+
+relation_type:
+Evaluate Triggers: yes
+Execute Effects: yes
+Change Scopes: yes
+Save Token: relation_type
+Stores Variables: no
+
+disaster_type:
+Evaluate Triggers: yes
+Execute Effects: yes
+Change Scopes: yes
+Save Token: disaster_type
+Stores Variables: no
+
+sub_unit_category:
+Evaluate Triggers: yes
+Execute Effects: yes
+Change Scopes: yes
+Save Token: sub_unit_category
+Stores Variables: no
+
+peace_treaty:
+Evaluate Triggers: yes
+Execute Effects: yes
+Change Scopes: yes
+Save Token: peace_treaty
+Stores Variables: no
+
+artist_type:
+Evaluate Triggers: yes
+Execute Effects: yes
+Change Scopes: yes
+Save Token: artist_type
+Stores Variables: no
+
+work_of_art_type:
+Evaluate Triggers: yes
+Execute Effects: yes
+Change Scopes: yes
+Save Token: work_of_art_type
+Stores Variables: no
+
+child_education:
+Evaluate Triggers: yes
+Execute Effects: yes
+Change Scopes: yes
+Save Token: child_education
+Stores Variables: no
+
+mission:
+Evaluate Triggers: yes
+Execute Effects: yes
+Change Scopes: yes
+Save Token: mission
+Stores Variables: no
+
+mission_task:
+Evaluate Triggers: yes
+Execute Effects: yes
+Change Scopes: yes
+Save Token: mission_task
+Stores Variables: no
+
+recruitment_method:
+Evaluate Triggers: yes
+Execute Effects: yes
+Change Scopes: yes
+Save Token: recruitment_method
+Stores Variables: no
+
+regency_type:
+Evaluate Triggers: yes
+Execute Effects: yes
+Change Scopes: yes
+Save Token: regency_type
+Stores Variables: no
+
+unit_ability:
+Evaluate Triggers: yes
+Execute Effects: yes
+Change Scopes: yes
+Save Token: unit_ability
+Stores Variables: no
+
+societal_value_type:
+Evaluate Triggers: yes
+Execute Effects: yes
+Change Scopes: yes
+Save Token: societal_value_type
+Stores Variables: no
+
+road_type:
+Evaluate Triggers: yes
+Execute Effects: yes
+Change Scopes: yes
+Save Token: road_type
+Stores Variables: no
+
+language_family:
+Evaluate Triggers: yes
+Execute Effects: yes
+Change Scopes: yes
+Save Token: lfam
+Stores Variables: no
+
+culture_group:
+Evaluate Triggers: yes
+Execute Effects: yes
+Change Scopes: yes
+Save Token: culg
+Stores Variables: no
+
+heir_selection:
+Evaluate Triggers: yes
+Execute Effects: yes
+Change Scopes: yes
+Save Token: heir_selection
+Stores Variables: no
+
+estate_type:
+Evaluate Triggers: yes
+Execute Effects: yes
+Change Scopes: yes
+Save Token: esty
+Stores Variables: no
+
+dialect:
+Evaluate Triggers: yes
+Execute Effects: yes
+Change Scopes: yes
+Save Token: dlct
+Stores Variables: no
+
+ethnicity:
+Evaluate Triggers: yes
+Execute Effects: yes
+Change Scopes: yes
+Save Token: ethnicity
+Stores Variables: no
+
+international_organization_type:
+Evaluate Triggers: yes
+Execute Effects: yes
+Change Scopes: yes
+Save Token: international_organization_type
+Stores Variables: no
+
+payment:
+Evaluate Triggers: yes
+Execute Effects: yes
+Change Scopes: yes
+Save Token: payment
+Stores Variables: no
+
+special_status:
+Evaluate Triggers: yes
+Execute Effects: yes
+Change Scopes: yes
+Save Token: special_status
+Stores Variables: no
+
+land_ownership_rule:
+Evaluate Triggers: yes
+Execute Effects: yes
+Change Scopes: yes
+Save Token: land_ownership_rule
+Stores Variables: no
+
+weather_system:
+Evaluate Triggers: yes
+Execute Effects: yes
+Change Scopes: yes
+Save Token: weather_system
+Stores Variables: no
+
+formable_country:
+Evaluate Triggers: yes
+Execute Effects: yes
+Change Scopes: yes
+Save Token: formable_country
+Stores Variables: no
+
+hegemony:
+Evaluate Triggers: yes
+Execute Effects: yes
+Change Scopes: yes
+Save Token: hegemony
+Stores Variables: no
+
+holy_site_definition:
+Evaluate Triggers: yes
+Execute Effects: yes
+Change Scopes: yes
+Save Token: holy_site_definition
+Stores Variables: no
+
+holy_site_type:
+Evaluate Triggers: yes
+Execute Effects: yes
+Change Scopes: yes
+Save Token: holy_site_type
+Stores Variables: no
+
+country_rank:
+Evaluate Triggers: yes
+Execute Effects: yes
+Change Scopes: yes
+Save Token: country_rank
+Stores Variables: no
+
+location_rank:
+Evaluate Triggers: yes
+Execute Effects: yes
+Change Scopes: yes
+Save Token: location_rank
+Stores Variables: no
+
+pop_type:
+Evaluate Triggers: yes
+Execute Effects: yes
+Change Scopes: yes
+Save Token: pop_type
+Stores Variables: no
+
+trait:
+Evaluate Triggers: yes
+Execute Effects: yes
+Change Scopes: yes
+Save Token: trait
+Stores Variables: no
+
+religious_focus:
+Evaluate Triggers: yes
+Execute Effects: yes
+Change Scopes: yes
+Save Token: religious_focus
+Stores Variables: no
+
+religious_figure:
+Evaluate Triggers: yes
+Execute Effects: yes
+Change Scopes: yes
+Save Token: religious_figure
+Stores Variables: no
+
+climate:
+Evaluate Triggers: yes
+Execute Effects: yes
+Change Scopes: yes
+Save Token: climate
+Stores Variables: no
+
+vegetation:
+Evaluate Triggers: yes
+Execute Effects: yes
+Change Scopes: yes
+Save Token: vegetation
+Stores Variables: no
+
+topography:
+Evaluate Triggers: yes
+Execute Effects: yes
+Change Scopes: yes
+Save Token: topography
+Stores Variables: no
+
+age:
+Evaluate Triggers: yes
+Execute Effects: yes
+Change Scopes: yes
+Save Token: age
+Stores Variables: no
+
+employment_system:
+Evaluate Triggers: yes
+Execute Effects: yes
+Change Scopes: yes
+Save Token: employment_system
+Stores Variables: no
+
+military_stance:
+Evaluate Triggers: yes
+Execute Effects: yes
+Change Scopes: yes
+Save Token: military_stance
+Stores Variables: no
+
+unit_template:
+Evaluate Triggers: yes
+Execute Effects: yes
+Change Scopes: yes
+Save Token: unte
+Stores Variables: no
+
+unit_formation_preference:
+Evaluate Triggers: yes
+Execute Effects: yes
+Change Scopes: yes
+Save Token: unit_formation_preference
+Stores Variables: no
+
+scriptable_hint_definition:
+Evaluate Triggers: yes
+Execute Effects: yes
+Change Scopes: yes
+Save Token: shd
+Stores Variables: no
+
+scripted_geography:
+Evaluate Triggers: yes
+Execute Effects: yes
+Change Scopes: yes
+Save Token: scripted_geography
+Stores Variables: no
+
+bureaucracy_type:
+Evaluate Triggers: yes
+Execute Effects: yes
+Change Scopes: yes
+Save Token: bureaucracy_type
+Stores Variables: no
+
+bureaucracy:
+Evaluate Triggers: yes
+Execute Effects: yes
+Change Scopes: yes
+Save Token: bureaucracy
+Stores Variables: no
+
+movement:
+Evaluate Triggers: yes
+Execute Effects: yes
+Change Scopes: yes
+Save Token: movement
+Stores Variables: no
+
+movement_definition:
+Evaluate Triggers: yes
+Execute Effects: yes
+Change Scopes: yes
+Save Token: movement_definition
+Stores Variables: no
+
+town_rights:
+Evaluate Triggers: yes
+Execute Effects: yes
+Change Scopes: yes
+Save Token: town_rights
+Stores Variables: no
+
+town_rights_type:
+Evaluate Triggers: yes
+Execute Effects: yes
+Change Scopes: yes
+Save Token: town_rights_type
+Stores Variables: no
+
+ai_personality:
+Evaluate Triggers: yes
+Execute Effects: yes
+Change Scopes: yes
+Save Token: ai_personality
+Stores Variables: no
+

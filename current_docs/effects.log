@@ -32,6 +32,10 @@ Adds an antagonism modifier, add_antagonism = { modifier = X  target = Z scale =
 X is a scripted modifier name. 
 **Supported Scopes**: country  
 
+## add_area_preference
+Adds an area preference to the AI of a country
+**Supported Scopes**: country  
+
 ## add_army_tradition
 Adds army tradition
 **Supported Scopes**: country, international_organization  
@@ -52,6 +56,11 @@ adds some bonus war score to the supplied country. Usage: add_bonus_warscore = {
 ## add_breach
 adds a breach to the current siege
 **Supported Scopes**: siege  
+
+## add_bureaucracy
+Adds a new bureaucracy of the supplied type to the country's government.
+**Supported Scopes**: country  
+**Supported Targets**: bureaucracy_type  
 
 ## add_casus_belli
 Adds a casus belli for the current country scope against the target country. Usage: casus_belli = { target = <country scope> type = <casus belli type> [province = <province>] [country = <country>] [character = <character>] [days/weeks/months/years = <script value> (-1 means permanently)] }
@@ -267,9 +276,25 @@ Adds mil ability
 gives (or takes) morale to a unit
 **Supported Scopes**: unit  
 
+## add_movement_modifier
+add a modifier to a movement  
+add_movement_modifier = { name = name days/months/years=x mode = add/extend/replace/add_and_extend <size = x> <desc = string>}  
+desc replaces the description of how long the modifier lasts
+**Supported Scopes**: movement  
+
 ## add_navy_tradition
 Adds navy tradition
 **Supported Scopes**: country, international_organization  
+
+## add_omen
+adds an omen to a country
+**Supported Scopes**: country  
+**Supported Targets**: omen  
+
+## add_omen_god
+adds god to a country to ask for guidance on selecting an omen
+**Supported Scopes**: country  
+**Supported Targets**: god  
 
 ## add_opinion
 Adds an opinion modifier, add_opinion = { modifier = X  target = Z scale = {script value} }  
@@ -396,6 +421,10 @@ Adds sailors
 Adds Self Control
 **Supported Scopes**: country, international_organization  
 
+## add_spreader
+Adds a character who is spreading the movement. usage: add_spreader = { character = <character> location = <location> }
+**Supported Scopes**: movement  
+
 ## add_spy_network
 Adds spy_network (target = x value = y}
 **Supported Scopes**: country  
@@ -515,7 +544,11 @@ Adds a truce with the target country. Usage: add_truce_with = { target = <target
 **Supported Scopes**: country  
 
 ## add_trust
-Adds a trust modifier, add_trust = { modifier = X  target = Z scale = {script value} }  
+Adds trust (target = x value = y}
+**Supported Scopes**: country  
+
+## add_trust_equilibrium
+Adds a trust equilibrium modifier, add_trust_equilibrium = { modifier = X  target = Z scale = {script value} }  
 X is a scripted modifier name. 
 **Supported Scopes**: country  
 
@@ -740,6 +773,10 @@ Change the strength of a modifier applied to the scope dynasty
 change_dynasty_modifier_size = { modifier = <modifier> value = <script math> [recalculate_immediately = yes] }
 **Supported Scopes**: dynasty  
 
+## change_entrenchment
+Modifies the entrenchment of a bureaucracy by however much
+**Supported Scopes**: bureaucracy  
+
 ## change_exploration_progress
 change the progress of an exploration
 **Supported Scopes**: exploration  
@@ -958,6 +995,10 @@ change_religion_modifier_size = { modifier = <modifier> value = <script math> [r
 ## change_religion_view
 Changes the religion view of target.. { target = x change = relation_change }
 **Supported Scopes**: religion  
+
+## change_score
+gives (or takes) score a country
+**Supported Scopes**: country  
 
 ## change_siege_progress
 Advances the siege by the given script value
@@ -1318,6 +1359,11 @@ declares a war with a specific cb  { target = <country> type = <cb_type> [target
 defines a unique country tag for a dynamic country
 **Supported Scopes**: country  
 
+## demote_accepted_culture
+Removes an accepted culture and adds it as tolerated, with a single pop status update
+**Supported Scopes**: country  
+**Supported Targets**: culture  
+
 ## destroy_all_buildings_of_type
 destroys the specified building in the location
 **Supported Scopes**: location  
@@ -1332,6 +1378,11 @@ destroys the target art
 Destroys the specified building in the location. Does nothing and is not shown in the tooltip if the target building is indestructible.
 **Supported Scopes**: location  
 **Supported Targets**: building  
+
+## destroy_building_country
+destroys building based country removing all their buildings and releasing subjects. Usage: kill_building_country = <country>
+**Supported Scopes**: none  
+**Supported Targets**: country  
 
 ## destroy_building_forcefully
 destroys the specified building in the location
@@ -1402,6 +1453,10 @@ dismisses a mercenary for the target country
 dismisses a privateer for the target country
 **Supported Scopes**: area  
 **Supported Targets**: country  
+
+## distribute_gold_to_banking_estates
+Distributes gold proportionally to all banking estates in a country
+**Supported Scopes**: country  
 
 ## divorce_character
 Marries character to target character
@@ -1549,6 +1604,12 @@ every_attacker = { limit = { <triggers> } <effects> }
 **Supported Scopes**: war  
 **Supported Targets**: country  
 
+## every_available_dynasty_member
+Iterate through adult dynasty members who are not a ruler or heir (cached)  
+every_available_dynasty_member = { limit = { <triggers> } <effects> }
+**Supported Scopes**: dynasty  
+**Supported Targets**: character  
+
 ## every_avatar_for_god
 Iterate through all Avatars of a God  
 every_avatar_for_god = { limit = { <triggers> } <effects> }
@@ -1572,6 +1633,12 @@ Iterate through all the building types a country can build
 every_buildable_building_type = { limit = { <triggers> } <effects> }
 **Supported Scopes**: country  
 **Supported Targets**: building_type  
+
+## every_building_owned_by_estate
+Iterate through all buildings that an estate has  
+every_building_owned_by_estate = { limit = { <triggers> } <effects> }
+**Supported Scopes**: estate  
+**Supported Targets**: building  
 
 ## every_building_type
 Iterate through all the building types  
@@ -1915,6 +1982,18 @@ every_current_avatars = { limit = { <triggers> } <effects> }
 **Supported Scopes**: country  
 **Supported Targets**: avatar  
 
+## every_current_bureaucracy
+Iterate through all Bureaucracies a country has  
+every_current_bureaucracy = { limit = { <triggers> } <effects> }
+**Supported Scopes**: country  
+**Supported Targets**: bureaucracy  
+
+## every_current_bureaucracy_type
+Iterate through all Bureaucracy types a country has  
+every_current_bureaucracy_type = { limit = { <triggers> } <effects> }
+**Supported Scopes**: country  
+**Supported Targets**: bureaucracy_type  
+
 ## every_current_gods
 Iterate through all Gods a country worships  
 every_current_gods = { limit = { <triggers> } <effects> }
@@ -2021,6 +2100,18 @@ every_estate_privilege = { limit = { <triggers> } <effects> }
 Iterate through all estate types that a prefer a policy  
 every_estate_type_preferring = { limit = { <triggers> } <effects> }
 **Supported Scopes**: policy  
+**Supported Targets**: estate_type  
+
+## every_estate_type_that_dislikes_bureaucracy
+Iterate through all estate types that do NOT prefer a bureaucracy  
+every_estate_type_that_dislikes_bureaucracy = { limit = { <triggers> } <effects> }
+**Supported Scopes**: bureaucracy_type  
+**Supported Targets**: estate_type  
+
+## every_estate_type_that_likes_bureaucracy
+Iterate through all estate types that a prefer a bureaucracy  
+every_estate_type_that_likes_bureaucracy = { limit = { <triggers> } <effects> }
+**Supported Scopes**: bureaucracy_type  
 **Supported Targets**: estate_type  
 
 ## every_exploration_from_country
@@ -2407,6 +2498,18 @@ every_location_in_the_world = { limit = { <triggers> } <effects> }
 **Supported Scopes**: none  
 **Supported Targets**: location  
 
+## every_location_with_movement
+Iterate through all locations affected by the scope movement  
+every_location_with_movement = { limit = { <triggers> } <effects> }
+**Supported Scopes**: movement  
+**Supported Targets**: location  
+
+## every_locations_with_town_rights_in_country
+Iterate through all locations with Town Rights in a country  
+every_locations_with_town_rights_in_country = { limit = { <triggers> } <effects> }
+**Supported Scopes**: country  
+**Supported Targets**: location  
+
 ## every_loyal_subject
 Iterate through all loyal subject countries  
 every_loyal_subject = { limit = { <triggers> } <effects> }
@@ -2461,6 +2564,30 @@ every_merchant_in_market = { limit = { <triggers> } <effects> }
 **Supported Scopes**: market  
 **Supported Targets**: country  
 
+## every_movement
+Iterate through all movements  
+every_movement = { limit = { <triggers> } <effects> }
+**Supported Scopes**: none  
+**Supported Targets**: movement  
+
+## every_movement_in_country
+Iterate through all movements in a country  
+every_movement_in_country = { limit = { <triggers> } <effects> }
+**Supported Scopes**: country  
+**Supported Targets**: movement  
+
+## every_movement_in_culture
+Iterate through all movements in a culture  
+every_movement_in_culture = { limit = { <triggers> } <effects> }
+**Supported Scopes**: culture  
+**Supported Targets**: movement  
+
+## every_movement_in_religion
+Iterate through all movements in a religion  
+every_movement_in_religion = { limit = { <triggers> } <effects> }
+**Supported Scopes**: religion  
+**Supported Targets**: movement  
+
 ## every_navy
 Iterate through all navies in a country  
 every_navy = { limit = { <triggers> } <effects> }
@@ -2514,6 +2641,24 @@ Iterate through all oldworld-goods
 every_old_world_goods = { limit = { <triggers> } <effects> }
 **Supported Scopes**: none  
 **Supported Targets**: goods  
+
+## every_omen_in_country
+Iterate through all Omens active in a country  
+every_omen_in_country = { limit = { <triggers> } <effects> }
+**Supported Scopes**: country  
+**Supported Targets**: omen  
+
+## every_omen_in_god
+Iterate through all Omens associated with a God  
+every_omen_in_god = { limit = { <triggers> } <effects> }
+**Supported Scopes**: god  
+**Supported Targets**: omen  
+
+## every_omen_in_religion
+Iterate through all Omens in a Religion  
+every_omen_in_religion = { limit = { <triggers> } <effects> }
+**Supported Scopes**: religion  
+**Supported Targets**: omen  
 
 ## every_other_core_country
 Iterate through all other countries which have a core on the current country  
@@ -2971,6 +3116,12 @@ every_royal_marriage = { limit = { <triggers> } <effects> }
 **Supported Scopes**: country  
 **Supported Targets**: country  
 
+## every_ruled_international_organization
+Iterate through IOs a character rules  
+every_ruled_international_organization = { limit = { <triggers> } <effects> }
+**Supported Scopes**: character  
+**Supported Targets**: international_organization  
+
 ## every_ruler
 Iterate through all characters that have ever been rulers in a country, including the dead  
 every_ruler = { limit = { <triggers> } <effects> }
@@ -2978,7 +3129,7 @@ every_ruler = { limit = { <triggers> } <effects> }
 **Supported Targets**: character  
 
 ## every_ruling_countries
-Iterate through countries a character rulers  
+Iterate through countries a character rules  
 every_ruling_countries = { limit = { <triggers> } <effects> }
 **Supported Scopes**: character  
 **Supported Targets**: country  
@@ -3043,11 +3194,29 @@ every_tolerated_culture = { limit = { <triggers> } <effects> }
 **Supported Scopes**: country  
 **Supported Targets**: culture  
 
+## every_town_rights_in_country
+Iterate through all Town Rights in a country  
+every_town_rights_in_country = { limit = { <triggers> } <effects> }
+**Supported Scopes**: country  
+**Supported Targets**: town_rights  
+
+## every_town_rights_in_location
+Iterate through all Town Rights in a Location  
+every_town_rights_in_Location = { limit = { <triggers> } <effects> }
+**Supported Scopes**: location  
+**Supported Targets**: town_rights  
+
 ## every_trade
 Iterate through all trades in a Country  
 every_trade = { limit = { <triggers> } <effects> }
 **Supported Scopes**: country  
 **Supported Targets**: trade  
+
+## every_trait
+Iterate through all traits of a character.  
+every_trait = { limit = { <triggers> } <effects> }
+**Supported Scopes**: character  
+**Supported Targets**: trait  
 
 ## every_union_partner
 Iterate through all countries which are in a personal union with the current country scope.  
@@ -3223,6 +3392,11 @@ Accept the parliament agenda of the target special status type.
 **Supported Scopes**: international_organization  
 **Supported Targets**: special_status  
 
+## grant_town_rights
+grant town-rights to a location
+**Supported Scopes**: location  
+**Supported Targets**: town_rights_type  
+
 ## hidden_effect
 Enclosed effects are not shown in tooltips  
 hidden_effect = { <more effects> }
@@ -3265,8 +3439,13 @@ international organization chooses a new leader
 international organization removes special status from a country
 **Supported Scopes**: international_organization  
 
+## io_recalculate_leader
+force an international organization to recalculate its character leader from the current ruler of the leader country
+**Supported Scopes**: none  
+**Supported Targets**: international_organization  
+
 ## join_war_against
-joins the target war as an enemy of the target country. Usage: join_war_against = { war = war scope target = country scope call_in_subjects = yes/no ignore_rules = yes/no }
+joins the target war as an enemy of the target country. Usage: join_war_against = { war = war scope target = country scope call_in_subjects = yes/no ignore_rules = yes/no notify_opposing_side = yes/no }
 **Supported Scopes**: country  
 
 ## join_war_as_attacker
@@ -3278,7 +3457,7 @@ joins the target war as a defender. Usage: join_war_as_defender = { war = war sc
 **Supported Scopes**: country  
 
 ## join_war_with
-joins the target war as an ally of the target country. Usage: join_war_with = { war = war scope target = country scope call_in_subjects = yes/no ignore_rules = yes/no }
+joins the target war as an ally of the target country. Usage: join_war_with = { war = war scope target = country scope call_in_subjects = yes/no ignore_rules = yes/no notify_opposing_side = yes/no }
 **Supported Scopes**: country  
 
 ## kill_character
@@ -3304,6 +3483,10 @@ leaves a war, forced by another country. Usage: leave_war = { war = <war> actor 
 lifts fog of war for a year on the target country
 **Supported Scopes**: country  
 **Supported Targets**: country  
+
+## lock_maintenance
+Sets the maintenance of a bureaucracy to be locked or not
+**Supported Scopes**: bureaucracy  
 
 ## lock_unit
 Locks a Unit for the specified number of days
@@ -3335,6 +3518,11 @@ make the usit available for hire as a mercenary. Usage: make_unit_available_for_
 
 ## marry_character
 Marries character to target character
+**Supported Scopes**: character  
+**Supported Targets**: character  
+
+## marry_character_ignore_blocks
+Marries character to target character, ignoring social restrictions such as estate, modifiers and same-sex ban
 **Supported Scopes**: character  
 **Supported Targets**: character  
 
@@ -3569,6 +3757,19 @@ check_range_bounds = no # If you don't want an error logged if the list is small
 **Supported Scopes**: war  
 **Supported Targets**: country  
 
+## ordered_available_dynasty_member
+Iterate through adult dynasty members who are not a ruler or heir (cached)  
+ordered_available_dynasty_member = {  
+limit = { <triggers> }  
+order_by = script_value  
+position = int  
+min = int  
+max = script_value  
+check_range_bounds = no # If you don't want an error logged if the list is smaller than the min/max  
+<effects> }
+**Supported Scopes**: dynasty  
+**Supported Targets**: character  
+
 ## ordered_avatar_for_god
 Iterate through all Avatars of a God  
 ordered_avatar_for_god = {  
@@ -3620,6 +3821,19 @@ check_range_bounds = no # If you don't want an error logged if the list is small
 <effects> }
 **Supported Scopes**: country  
 **Supported Targets**: building_type  
+
+## ordered_building_owned_by_estate
+Iterate through all buildings that an estate has  
+ordered_building_owned_by_estate = {  
+limit = { <triggers> }  
+order_by = script_value  
+position = int  
+min = int  
+max = script_value  
+check_range_bounds = no # If you don't want an error logged if the list is smaller than the min/max  
+<effects> }
+**Supported Scopes**: estate  
+**Supported Targets**: building  
 
 ## ordered_building_type
 Iterate through all the building types  
@@ -4362,6 +4576,32 @@ check_range_bounds = no # If you don't want an error logged if the list is small
 **Supported Scopes**: country  
 **Supported Targets**: avatar  
 
+## ordered_current_bureaucracy
+Iterate through all Bureaucracies a country has  
+ordered_current_bureaucracy = {  
+limit = { <triggers> }  
+order_by = script_value  
+position = int  
+min = int  
+max = script_value  
+check_range_bounds = no # If you don't want an error logged if the list is smaller than the min/max  
+<effects> }
+**Supported Scopes**: country  
+**Supported Targets**: bureaucracy  
+
+## ordered_current_bureaucracy_type
+Iterate through all Bureaucracy types a country has  
+ordered_current_bureaucracy_type = {  
+limit = { <triggers> }  
+order_by = script_value  
+position = int  
+min = int  
+max = script_value  
+check_range_bounds = no # If you don't want an error logged if the list is smaller than the min/max  
+<effects> }
+**Supported Scopes**: country  
+**Supported Targets**: bureaucracy_type  
+
 ## ordered_current_gods
 Iterate through all Gods a country worships  
 ordered_current_gods = {  
@@ -4594,6 +4834,32 @@ max = script_value
 check_range_bounds = no # If you don't want an error logged if the list is smaller than the min/max  
 <effects> }
 **Supported Scopes**: policy  
+**Supported Targets**: estate_type  
+
+## ordered_estate_type_that_dislikes_bureaucracy
+Iterate through all estate types that do NOT prefer a bureaucracy  
+ordered_estate_type_that_dislikes_bureaucracy = {  
+limit = { <triggers> }  
+order_by = script_value  
+position = int  
+min = int  
+max = script_value  
+check_range_bounds = no # If you don't want an error logged if the list is smaller than the min/max  
+<effects> }
+**Supported Scopes**: bureaucracy_type  
+**Supported Targets**: estate_type  
+
+## ordered_estate_type_that_likes_bureaucracy
+Iterate through all estate types that a prefer a bureaucracy  
+ordered_estate_type_that_likes_bureaucracy = {  
+limit = { <triggers> }  
+order_by = script_value  
+position = int  
+min = int  
+max = script_value  
+check_range_bounds = no # If you don't want an error logged if the list is smaller than the min/max  
+<effects> }
+**Supported Scopes**: bureaucracy_type  
 **Supported Targets**: estate_type  
 
 ## ordered_exploration_from_country
@@ -5421,6 +5687,32 @@ check_range_bounds = no # If you don't want an error logged if the list is small
 **Supported Scopes**: none  
 **Supported Targets**: location  
 
+## ordered_location_with_movement
+Iterate through all locations affected by the scope movement  
+ordered_location_with_movement = {  
+limit = { <triggers> }  
+order_by = script_value  
+position = int  
+min = int  
+max = script_value  
+check_range_bounds = no # If you don't want an error logged if the list is smaller than the min/max  
+<effects> }
+**Supported Scopes**: movement  
+**Supported Targets**: location  
+
+## ordered_locations_with_town_rights_in_country
+Iterate through all locations with Town Rights in a country  
+ordered_locations_with_town_rights_in_country = {  
+limit = { <triggers> }  
+order_by = script_value  
+position = int  
+min = int  
+max = script_value  
+check_range_bounds = no # If you don't want an error logged if the list is smaller than the min/max  
+<effects> }
+**Supported Scopes**: country  
+**Supported Targets**: location  
+
 ## ordered_loyal_subject
 Iterate through all loyal subject countries  
 ordered_loyal_subject = {  
@@ -5538,6 +5830,58 @@ check_range_bounds = no # If you don't want an error logged if the list is small
 **Supported Scopes**: market  
 **Supported Targets**: country  
 
+## ordered_movement
+Iterate through all movements  
+ordered_movement = {  
+limit = { <triggers> }  
+order_by = script_value  
+position = int  
+min = int  
+max = script_value  
+check_range_bounds = no # If you don't want an error logged if the list is smaller than the min/max  
+<effects> }
+**Supported Scopes**: none  
+**Supported Targets**: movement  
+
+## ordered_movement_in_country
+Iterate through all movements in a country  
+ordered_movement_in_country = {  
+limit = { <triggers> }  
+order_by = script_value  
+position = int  
+min = int  
+max = script_value  
+check_range_bounds = no # If you don't want an error logged if the list is smaller than the min/max  
+<effects> }
+**Supported Scopes**: country  
+**Supported Targets**: movement  
+
+## ordered_movement_in_culture
+Iterate through all movements in a culture  
+ordered_movement_in_culture = {  
+limit = { <triggers> }  
+order_by = script_value  
+position = int  
+min = int  
+max = script_value  
+check_range_bounds = no # If you don't want an error logged if the list is smaller than the min/max  
+<effects> }
+**Supported Scopes**: culture  
+**Supported Targets**: movement  
+
+## ordered_movement_in_religion
+Iterate through all movements in a religion  
+ordered_movement_in_religion = {  
+limit = { <triggers> }  
+order_by = script_value  
+position = int  
+min = int  
+max = script_value  
+check_range_bounds = no # If you don't want an error logged if the list is smaller than the min/max  
+<effects> }
+**Supported Scopes**: religion  
+**Supported Targets**: movement  
+
 ## ordered_navy
 Iterate through all navies in a country  
 ordered_navy = {  
@@ -5654,6 +5998,45 @@ check_range_bounds = no # If you don't want an error logged if the list is small
 <effects> }
 **Supported Scopes**: none  
 **Supported Targets**: goods  
+
+## ordered_omen_in_country
+Iterate through all Omens active in a country  
+ordered_omen_in_country = {  
+limit = { <triggers> }  
+order_by = script_value  
+position = int  
+min = int  
+max = script_value  
+check_range_bounds = no # If you don't want an error logged if the list is smaller than the min/max  
+<effects> }
+**Supported Scopes**: country  
+**Supported Targets**: omen  
+
+## ordered_omen_in_god
+Iterate through all Omens associated with a God  
+ordered_omen_in_god = {  
+limit = { <triggers> }  
+order_by = script_value  
+position = int  
+min = int  
+max = script_value  
+check_range_bounds = no # If you don't want an error logged if the list is smaller than the min/max  
+<effects> }
+**Supported Scopes**: god  
+**Supported Targets**: omen  
+
+## ordered_omen_in_religion
+Iterate through all Omens in a Religion  
+ordered_omen_in_religion = {  
+limit = { <triggers> }  
+order_by = script_value  
+position = int  
+min = int  
+max = script_value  
+check_range_bounds = no # If you don't want an error logged if the list is smaller than the min/max  
+<effects> }
+**Supported Scopes**: religion  
+**Supported Targets**: omen  
 
 ## ordered_other_core_country
 Iterate through all other countries which have a core on the current country  
@@ -6643,6 +7026,19 @@ check_range_bounds = no # If you don't want an error logged if the list is small
 **Supported Scopes**: country  
 **Supported Targets**: country  
 
+## ordered_ruled_international_organization
+Iterate through IOs a character rules  
+ordered_ruled_international_organization = {  
+limit = { <triggers> }  
+order_by = script_value  
+position = int  
+min = int  
+max = script_value  
+check_range_bounds = no # If you don't want an error logged if the list is smaller than the min/max  
+<effects> }
+**Supported Scopes**: character  
+**Supported Targets**: international_organization  
+
 ## ordered_ruler
 Iterate through all characters that have ever been rulers in a country, including the dead  
 ordered_ruler = {  
@@ -6657,7 +7053,7 @@ check_range_bounds = no # If you don't want an error logged if the list is small
 **Supported Targets**: character  
 
 ## ordered_ruling_countries
-Iterate through countries a character rulers  
+Iterate through countries a character rules  
 ordered_ruling_countries = {  
 limit = { <triggers> }  
 order_by = script_value  
@@ -6799,6 +7195,32 @@ check_range_bounds = no # If you don't want an error logged if the list is small
 **Supported Scopes**: country  
 **Supported Targets**: culture  
 
+## ordered_town_rights_in_country
+Iterate through all Town Rights in a country  
+ordered_town_rights_in_country = {  
+limit = { <triggers> }  
+order_by = script_value  
+position = int  
+min = int  
+max = script_value  
+check_range_bounds = no # If you don't want an error logged if the list is smaller than the min/max  
+<effects> }
+**Supported Scopes**: country  
+**Supported Targets**: town_rights  
+
+## ordered_town_rights_in_location
+Iterate through all Town Rights in a Location  
+ordered_town_rights_in_Location = {  
+limit = { <triggers> }  
+order_by = script_value  
+position = int  
+min = int  
+max = script_value  
+check_range_bounds = no # If you don't want an error logged if the list is smaller than the min/max  
+<effects> }
+**Supported Scopes**: location  
+**Supported Targets**: town_rights  
+
 ## ordered_trade
 Iterate through all trades in a Country  
 ordered_trade = {  
@@ -6811,6 +7233,19 @@ check_range_bounds = no # If you don't want an error logged if the list is small
 <effects> }
 **Supported Scopes**: country  
 **Supported Targets**: trade  
+
+## ordered_trait
+Iterate through all traits of a character.  
+ordered_trait = {  
+limit = { <triggers> }  
+order_by = script_value  
+position = int  
+min = int  
+max = script_value  
+check_range_bounds = no # If you don't want an error logged if the list is smaller than the min/max  
+<effects> }
+**Supported Scopes**: character  
+**Supported Targets**: trait  
 
 ## ordered_union_partner
 Iterate through all countries which are in a personal union with the current country scope.  
@@ -7131,6 +7566,12 @@ random_attacker = { limit = { <triggers> } (optional) weight = { mtth } <effects
 **Supported Scopes**: war  
 **Supported Targets**: country  
 
+## random_available_dynasty_member
+Iterate through adult dynasty members who are not a ruler or heir (cached)  
+random_available_dynasty_member = { limit = { <triggers> } (optional) weight = { mtth } <effects> }
+**Supported Scopes**: dynasty  
+**Supported Targets**: character  
+
 ## random_avatar_for_god
 Iterate through all Avatars of a God  
 random_avatar_for_god = { limit = { <triggers> } (optional) weight = { mtth } <effects> }
@@ -7154,6 +7595,12 @@ Iterate through all the building types a country can build
 random_buildable_building_type = { limit = { <triggers> } (optional) weight = { mtth } <effects> }
 **Supported Scopes**: country  
 **Supported Targets**: building_type  
+
+## random_building_owned_by_estate
+Iterate through all buildings that an estate has  
+random_building_owned_by_estate = { limit = { <triggers> } (optional) weight = { mtth } <effects> }
+**Supported Scopes**: estate  
+**Supported Targets**: building  
 
 ## random_building_type
 Iterate through all the building types  
@@ -7497,6 +7944,18 @@ random_current_avatars = { limit = { <triggers> } (optional) weight = { mtth } <
 **Supported Scopes**: country  
 **Supported Targets**: avatar  
 
+## random_current_bureaucracy
+Iterate through all Bureaucracies a country has  
+random_current_bureaucracy = { limit = { <triggers> } (optional) weight = { mtth } <effects> }
+**Supported Scopes**: country  
+**Supported Targets**: bureaucracy  
+
+## random_current_bureaucracy_type
+Iterate through all Bureaucracy types a country has  
+random_current_bureaucracy_type = { limit = { <triggers> } (optional) weight = { mtth } <effects> }
+**Supported Scopes**: country  
+**Supported Targets**: bureaucracy_type  
+
 ## random_current_gods
 Iterate through all Gods a country worships  
 random_current_gods = { limit = { <triggers> } (optional) weight = { mtth } <effects> }
@@ -7603,6 +8062,18 @@ random_estate_privilege = { limit = { <triggers> } (optional) weight = { mtth } 
 Iterate through all estate types that a prefer a policy  
 random_estate_type_preferring = { limit = { <triggers> } (optional) weight = { mtth } <effects> }
 **Supported Scopes**: policy  
+**Supported Targets**: estate_type  
+
+## random_estate_type_that_dislikes_bureaucracy
+Iterate through all estate types that do NOT prefer a bureaucracy  
+random_estate_type_that_dislikes_bureaucracy = { limit = { <triggers> } (optional) weight = { mtth } <effects> }
+**Supported Scopes**: bureaucracy_type  
+**Supported Targets**: estate_type  
+
+## random_estate_type_that_likes_bureaucracy
+Iterate through all estate types that a prefer a bureaucracy  
+random_estate_type_that_likes_bureaucracy = { limit = { <triggers> } (optional) weight = { mtth } <effects> }
+**Supported Scopes**: bureaucracy_type  
 **Supported Targets**: estate_type  
 
 ## random_exploration_from_country
@@ -8013,6 +8484,18 @@ random_location_in_the_world = { limit = { <triggers> } (optional) weight = { mt
 **Supported Scopes**: none  
 **Supported Targets**: location  
 
+## random_location_with_movement
+Iterate through all locations affected by the scope movement  
+random_location_with_movement = { limit = { <triggers> } (optional) weight = { mtth } <effects> }
+**Supported Scopes**: movement  
+**Supported Targets**: location  
+
+## random_locations_with_town_rights_in_country
+Iterate through all locations with Town Rights in a country  
+random_locations_with_town_rights_in_country = { limit = { <triggers> } (optional) weight = { mtth } <effects> }
+**Supported Scopes**: country  
+**Supported Targets**: location  
+
 ## random_log_scopes
 Log the current scope to the random log when this effect executes.  
 Only use temprorarily for debugging purposes as it can introduce localized strings into the random log.  
@@ -8074,6 +8557,30 @@ random_merchant_in_market = { limit = { <triggers> } (optional) weight = { mtth 
 **Supported Scopes**: market  
 **Supported Targets**: country  
 
+## random_movement
+Iterate through all movements  
+random_movement = { limit = { <triggers> } (optional) weight = { mtth } <effects> }
+**Supported Scopes**: none  
+**Supported Targets**: movement  
+
+## random_movement_in_country
+Iterate through all movements in a country  
+random_movement_in_country = { limit = { <triggers> } (optional) weight = { mtth } <effects> }
+**Supported Scopes**: country  
+**Supported Targets**: movement  
+
+## random_movement_in_culture
+Iterate through all movements in a culture  
+random_movement_in_culture = { limit = { <triggers> } (optional) weight = { mtth } <effects> }
+**Supported Scopes**: culture  
+**Supported Targets**: movement  
+
+## random_movement_in_religion
+Iterate through all movements in a religion  
+random_movement_in_religion = { limit = { <triggers> } (optional) weight = { mtth } <effects> }
+**Supported Scopes**: religion  
+**Supported Targets**: movement  
+
 ## random_navy
 Iterate through all navies in a country  
 random_navy = { limit = { <triggers> } (optional) weight = { mtth } <effects> }
@@ -8127,6 +8634,24 @@ Iterate through all oldworld-goods
 random_old_world_goods = { limit = { <triggers> } (optional) weight = { mtth } <effects> }
 **Supported Scopes**: none  
 **Supported Targets**: goods  
+
+## random_omen_in_country
+Iterate through all Omens active in a country  
+random_omen_in_country = { limit = { <triggers> } (optional) weight = { mtth } <effects> }
+**Supported Scopes**: country  
+**Supported Targets**: omen  
+
+## random_omen_in_god
+Iterate through all Omens associated with a God  
+random_omen_in_god = { limit = { <triggers> } (optional) weight = { mtth } <effects> }
+**Supported Scopes**: god  
+**Supported Targets**: omen  
+
+## random_omen_in_religion
+Iterate through all Omens in a Religion  
+random_omen_in_religion = { limit = { <triggers> } (optional) weight = { mtth } <effects> }
+**Supported Scopes**: religion  
+**Supported Targets**: omen  
 
 ## random_other_core_country
 Iterate through all other countries which have a core on the current country  
@@ -8584,6 +9109,12 @@ random_royal_marriage = { limit = { <triggers> } (optional) weight = { mtth } <e
 **Supported Scopes**: country  
 **Supported Targets**: country  
 
+## random_ruled_international_organization
+Iterate through IOs a character rules  
+random_ruled_international_organization = { limit = { <triggers> } (optional) weight = { mtth } <effects> }
+**Supported Scopes**: character  
+**Supported Targets**: international_organization  
+
 ## random_ruler
 Iterate through all characters that have ever been rulers in a country, including the dead  
 random_ruler = { limit = { <triggers> } (optional) weight = { mtth } <effects> }
@@ -8591,7 +9122,7 @@ random_ruler = { limit = { <triggers> } (optional) weight = { mtth } <effects> }
 **Supported Targets**: character  
 
 ## random_ruling_countries
-Iterate through countries a character rulers  
+Iterate through countries a character rules  
 random_ruling_countries = { limit = { <triggers> } (optional) weight = { mtth } <effects> }
 **Supported Scopes**: character  
 **Supported Targets**: country  
@@ -8656,11 +9187,29 @@ random_tolerated_culture = { limit = { <triggers> } (optional) weight = { mtth }
 **Supported Scopes**: country  
 **Supported Targets**: culture  
 
+## random_town_rights_in_country
+Iterate through all Town Rights in a country  
+random_town_rights_in_country = { limit = { <triggers> } (optional) weight = { mtth } <effects> }
+**Supported Scopes**: country  
+**Supported Targets**: town_rights  
+
+## random_town_rights_in_location
+Iterate through all Town Rights in a Location  
+random_town_rights_in_Location = { limit = { <triggers> } (optional) weight = { mtth } <effects> }
+**Supported Scopes**: location  
+**Supported Targets**: town_rights  
+
 ## random_trade
 Iterate through all trades in a Country  
 random_trade = { limit = { <triggers> } (optional) weight = { mtth } <effects> }
 **Supported Scopes**: country  
 **Supported Targets**: trade  
+
+## random_trait
+Iterate through all traits of a character.  
+random_trait = { limit = { <triggers> } (optional) weight = { mtth } <effects> }
+**Supported Scopes**: character  
+**Supported Targets**: trait  
 
 ## random_union_partner
 Iterate through all countries which are in a personal union with the current country scope.  
@@ -8771,6 +9320,10 @@ Removes an accepted culture from a country
 adds a new migration source to a colonial charter. usage: remove_additional_migration = <province>
 **Supported Scopes**: colonial_charter  
 
+## remove_all_area_preferences
+Removes all area preferences from the AI of a country
+**Supported Scopes**: country  
+
 ## remove_all_casus_belli
 removes all casus belli on the target country
 **Supported Scopes**: country  
@@ -8786,6 +9339,10 @@ Removes an antagonism modifier, remove_antagonism = { modifier = X  target = Z s
 X is a scripted modifier name. 
 **Supported Scopes**: country  
 
+## remove_area_preference
+Removes an area preference from the AI of a country
+**Supported Scopes**: country  
+
 ## remove_avatar
 removed an avatar from a country
 **Supported Scopes**: country  
@@ -8794,6 +9351,11 @@ removed an avatar from a country
 ## remove_breach
 removes a breach from the current siege
 **Supported Scopes**: siege  
+
+## remove_bureaucracy
+removes the supplied bureaucracy from the country's government.
+**Supported Scopes**: country  
+**Supported Targets**: bureaucracy  
 
 ## remove_casus_belli
 Removes casus_belli (target = x type = y <province = prov>} 
@@ -8806,7 +9368,7 @@ Remove the character scope from the rebel group they are part of.
 ## remove_character_modifier
 Remove a modifier from a character  
 remove_character_modifier = name
-**Supported Scopes**: location, country, unit, character, dynasty, religion, province, rebels, mercenary, international_organization  
+**Supported Scopes**: character  
 
 ## remove_colonial_claim
 Removed the colonial claim in the target province_definition
@@ -8835,12 +9397,12 @@ removes a country from an international organization
 ## remove_country_modifier
 Remove a modifier from a country  
 remove_country_modifier = name
-**Supported Scopes**: location, country, unit, character, dynasty, religion, province, rebels, mercenary, international_organization  
+**Supported Scopes**: country  
 
 ## remove_dynasty_modifier
 Remove a modifier from a dynasty  
 remove_dynasty_modifier = name
-**Supported Scopes**: location, country, unit, character, dynasty, religion, province, rebels, mercenary, international_organization  
+**Supported Scopes**: dynasty  
 
 ## remove_enemy_from_international_organization
 removes a country from an international organization
@@ -8893,7 +9455,7 @@ remove_variable = variable_name
 **Supported Scopes**: none  
 
 ## remove_god
-removed a god from a country
+removes a god from a country
 **Supported Scopes**: country  
 **Supported Targets**: god  
 
@@ -8905,7 +9467,7 @@ removes target country as an historical rival
 ## remove_international_organization_modifier
 Remove a modifier from an international organization  
 remove_international_organization_modifier = name
-**Supported Scopes**: location, country, unit, character, dynasty, religion, province, rebels, mercenary, international_organization  
+**Supported Scopes**: international_organization  
 
 ## remove_law
 Makes a law get no options, which may make it dissapear
@@ -8951,12 +9513,12 @@ remove a location from an international organization
 ## remove_location_modifier
 Remove a modifier from a location  
 remove_location_modifier = name
-**Supported Scopes**: location, country, unit, character, dynasty, religion, province, rebels, mercenary, international_organization  
+**Supported Scopes**: location  
 
 ## remove_mercenary_modifier
 Remove a modifier from a mercenary  
 remove_mercenary_modifier = name
-**Supported Scopes**: location, country, unit, character, dynasty, religion, province, rebels, mercenary, international_organization  
+**Supported Scopes**: mercenary  
 
 ## remove_merchant_power
 Removes temporary power to a merchant (country = <country>  key = localisation} 
@@ -8965,6 +9527,16 @@ Removes temporary power to a merchant (country = <country>  key = localisation}
 ## remove_migration
 removes a migration {  <from = provdef> <from_location = location> <to = provdef> <to_location = location> <culture = x> <religion = y> <type = z>  months = x amount = y.
 **Supported Scopes**: none  
+
+## remove_movement_modifier
+Remove a modifier from a movement  
+remove_movement_modifier = name
+**Supported Scopes**: movement  
+
+## remove_omen
+removes an omen from a country
+**Supported Scopes**: country  
+**Supported Targets**: omen  
 
 ## remove_opinion
 Removes an opinion modifier, remove_opinion = { modifier = X  target = Z scale = {script value} }  
@@ -8988,12 +9560,12 @@ removed allegienace of a pop
 ## remove_province_modifier
 Remove a modifier from a province  
 remove_province_modifier = name
-**Supported Scopes**: location, country, unit, character, dynasty, religion, province, rebels, mercenary, international_organization  
+**Supported Scopes**: province  
 
 ## remove_rebel_modifier
 Remove a modifier from a rebel  
 remove_rebel_modifier = name
-**Supported Scopes**: location, country, unit, character, dynasty, religion, province, rebels, mercenary, international_organization  
+**Supported Scopes**: rebels  
 
 ## remove_reform
 removes the government reform desired.
@@ -9007,7 +9579,7 @@ Removes a relation with the target country. Usage: remove_relation = { type = <s
 ## remove_religion_modifier
 Remove a modifier from a religion  
 remove_religion_modifier = name
-**Supported Scopes**: location, country, unit, character, dynasty, religion, province, rebels, mercenary, international_organization  
+**Supported Scopes**: religion  
 
 ## remove_religious_aspect
 removed a religious_aspect from a country
@@ -9028,6 +9600,11 @@ removes target country as a rival
 Removes the character as ruler from the target country
 **Supported Scopes**: character  
 **Supported Targets**: country  
+
+## remove_spreader
+Stops a character from spreading the movement. usage: remove_spreader = <character>
+**Supported Scopes**: movement  
+**Supported Targets**: character  
 
 ## remove_temporary_demand
 Remove a temporary demand in a market
@@ -9053,15 +9630,15 @@ Removes the truce with the target country
 **Supported Scopes**: country  
 **Supported Targets**: country  
 
-## remove_trust
-Removes a trust modifier, remove_trust = { modifier = X  target = Z scale = {script value} }  
+## remove_trust_equilibrium
+Removes a trust equilibrium modifier, remove_trust = { modifier = X  target = Z scale = {script value} }  
 X is a scripted modifier name. 
 **Supported Scopes**: country  
 
 ## remove_unit_modifier
 Remove a modifier from a unit  
 remove_unit_modifier = name
-**Supported Scopes**: location, country, unit, character, dynasty, religion, province, rebels, mercenary, international_organization  
+**Supported Scopes**: unit  
 
 ## remove_variable
 Removes a variable  
@@ -9094,6 +9671,10 @@ research_advance = name
 performs the start_effect of a regency again
 **Supported Scopes**: country  
 
+## reset_ruler_title
+resets a ruler's title so it gets generated again
+**Supported Scopes**: character  
+
 ## reverse_add_antagonism
 Adds a reverse antagonism modifier, reverse_add_antagonism = { modifier = X target = Z scale = {script value} }  
 X is a scripted modifier name.
@@ -9104,8 +9685,8 @@ Adds an reverse opinion modifier, reverse_add_opinion = { modifier = X target = 
 X is a scripted modifier name.
 **Supported Scopes**: country  
 
-## reverse_add_trust
-Adds a reverse trust modifier, reverse_add_trust = { modifier = X target = Z scale = {script value} }  
+## reverse_add_trust_equilibrium
+Adds a reverse trust equilibrium modifier, reverse_add_trust_equilibrium = { modifier = X target = Z scale = {script value} }  
 X is a scripted modifier name.
 **Supported Scopes**: country  
 
@@ -9133,6 +9714,16 @@ Sets the targets school_opinion of current ReligiousSchool.. { target = x to val
 revokes a special estate priviledge.
 **Supported Scopes**: country  
 **Supported Targets**: estate_privilege  
+
+## revoke_town_rights
+Revoke a specific town rights
+**Supported Scopes**: none  
+**Supported Targets**: town_rights  
+
+## revoke_town_rights_of_type
+revoke town-rights of a type from a location
+**Supported Scopes**: location  
+**Supported Targets**: town_rights_type  
 
 ## round_global_variable
 Rounds a variable to the nearest specified value  
@@ -9284,6 +9875,10 @@ Sets doom
 changes dynasty to have a specific dynasty_name_type (default, location, patronym, descendant)
 **Supported Scopes**: dynasty  
 
+## set_entrenchment
+Sets the entrenchment of a bureaucracy to the supplied value
+**Supported Scopes**: bureaucracy  
+
 ## set_ethnicity
 Set the ethnicity of a character
 **Supported Scopes**: character  
@@ -9371,6 +9966,10 @@ sets the scope trade to be locked or not
 The character gets removed from its current dynasty, making it a lowborn
 **Supported Scopes**: character  
 
+## set_maintenance
+Sets the maintenance of a bureaucracy to the supplied value
+**Supported Scopes**: bureaucracy  
+
 ## set_manpower
 Sets Manpower
 **Supported Scopes**: country, international_organization  
@@ -9433,6 +10032,11 @@ Set the specified parliament type for a country
 ## set_participated_in_parliament
 Mark the country as having participated in the parliament of the target international organization. Usage: set_participated_in_parliament = { international_organization = <international organization> [vote = no (optional, for voting against the parliament issue)] }
 **Supported Scopes**: country  
+
+## set_personality
+Sets the AI personality for a country
+**Supported Scopes**: country  
+**Supported Targets**: ai_personality  
 
 ## set_prestige
 Sets prestige
@@ -9583,6 +10187,11 @@ Spawns a disease in a location or on a subunit. usage: spawn_disease = { disease
 **Supported Scopes**: location  
 **Supported Targets**: disease_outbreak  
 
+## spawn_movement
+Spawns a movement in a location or on a subunit. usage: spawn_movement = { movement_definition = <movement_definition> supporters = <script value> }
+**Supported Scopes**: location  
+**Supported Targets**: movement  
+
 ## spawn_navy_levy_unit
 Spawn a navy levy unit for the target country in the current location scope
 **Supported Scopes**: none  
@@ -9591,6 +10200,10 @@ Spawn a navy levy unit for the target country in the current location scope
 ## split_pop
 Splits a pop and makes changes to it { size = <fixed num> fraction = <percentage of size> religion = x type = poptype culture = y location = z } If both size and fraction are scripted, it will use the largest.
 **Supported Scopes**: pop  
+
+## spread_to_location
+Spreads the movement to a new location. usage: spread_to_location = { location = <location> [supporters_percent = <> or supporters = <>, pick one] }
+**Supported Scopes**: movement  
 
 ## stall_exploration
 enable/disable stall on exploration
@@ -9627,7 +10240,7 @@ Starts the tutorial lesson with the given key. Does nothing if the tutorial is n
 **Supported Scopes**: none  
 
 ## start_weather_system
-Starts off a new weather system. Usage: start_weather_system = { width = <pixels> length = <pixels> strength = [0..1] speed = <pixels per day> type = <front/cyclone/tornado> location = <start location> location = <waypoint> [location = <waypoint>...] }
+Starts off a new weather system. Usage: start_weather_system = { width = <pixels> length = <pixels> strength = [0..1] speed = <pixels per day> type = <front/cyclone/tornado> location = <start location> location = <waypoint> [location = <waypoint>...] weather_front_strength_change_percent = { <topograpgy> = <value> } }
 **Supported Scopes**: none  
 **Supported Targets**: weather_system  
 

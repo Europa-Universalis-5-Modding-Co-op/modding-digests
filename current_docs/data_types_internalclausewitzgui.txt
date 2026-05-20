@@ -619,7 +619,7 @@ Return type: CString
 
 AnimationEditor.StartingStateDisplayName
 Definition type: Function
-Return type: [unregistered]
+Return type: CPdxStringView
 
 -----------------------
 
@@ -3409,7 +3409,7 @@ Return type: uint64
 
 DrawCmdsList.GetTextureName
 Definition type: Function
-Return type: [unregistered]
+Return type: CPdxStringView
 
 -----------------------
 
@@ -3973,7 +3973,7 @@ Return type: double
 
 EntityEditor.GetLastAutoSaveTimestamp
 Definition type: Function
-Return type: [unregistered]
+Return type: CPdxStringView
 
 -----------------------
 
@@ -4225,7 +4225,7 @@ Return type: void
 
 EntityEditorEventLayer.Title
 Definition type: Function
-Return type: [unregistered]
+Return type: CPdxStringView
 
 -----------------------
 
@@ -4333,7 +4333,7 @@ Return type: [unregistered]
 
 EntityEditorTimelineState.Name
 Definition type: Function
-Return type: [unregistered]
+Return type: CPdxStringView
 
 -----------------------
 
@@ -5519,19 +5519,19 @@ Return type: void
 
 GuiAnimationEditorAvailableTrack.GetDescription
 Definition type: Function
-Return type: [unregistered]
+Return type: CPdxStringView
 
 -----------------------
 
 GuiAnimationEditorAvailableTrack.GetDisplayName
 Definition type: Function
-Return type: [unregistered]
+Return type: CPdxStringView
 
 -----------------------
 
 GuiAnimationEditorAvailableTrack.GetExcludedDisplayName
 Definition type: Function
-Return type: [unregistered]
+Return type: CPdxStringView
 
 -----------------------
 
@@ -6413,7 +6413,7 @@ Return type: CString
 
 GuiDataProfilerEntryNode.GetName
 Definition type: Function
-Return type: [unregistered]
+Return type: CPdxStringView
 
 -----------------------
 
@@ -6791,7 +6791,7 @@ Return type: [unregistered]
 
 KeyframeEventEditor.EventDescription
 Definition type: Function
-Return type: [unregistered]
+Return type: CPdxStringView
 
 -----------------------
 
@@ -6821,7 +6821,7 @@ Return type: bool
 
 KeyframeEventEditor.KeyframeEditorId
 Definition type: Function
-Return type: [unregistered]
+Return type: CPdxStringView
 
 -----------------------
 
@@ -7235,7 +7235,7 @@ Return type: int32
 
 LogViewerEntry.GetFilename
 Definition type: Function
-Return type: [unregistered]
+Return type: CPdxStringView
 
 -----------------------
 
@@ -9085,13 +9085,13 @@ Return type: CString
 
 MeshImporterBrowserEntry.GetFileName
 Definition type: Function
-Return type: [unregistered]
+Return type: CPdxStringView
 
 -----------------------
 
 MeshImporterBrowserEntry.GetFullPath
 Definition type: Function
-Return type: [unregistered]
+Return type: CPdxStringView
 
 -----------------------
 
@@ -9421,7 +9421,7 @@ Return type: CVector2f
 
 NodeLine.Tooltip
 Definition type: Function
-Return type: [unregistered]
+Return type: CPdxStringView
 
 -----------------------
 
@@ -14069,7 +14069,7 @@ Return type: int32
 
 TextureListDirectory.GetName
 Definition type: Function
-Return type: [unregistered]
+Return type: CPdxStringView
 
 -----------------------
 
@@ -14129,7 +14129,7 @@ Return type: int32
 
 TextureListTexture.GetName
 Definition type: Function
-Return type: [unregistered]
+Return type: CPdxStringView
 
 -----------------------
 
@@ -18517,7 +18517,7 @@ Return type: [unregistered]
 
 UserDataNode.TypeName
 Definition type: Function
-Return type: [unregistered]
+Return type: CPdxStringView
 
 -----------------------
 
@@ -19024,13 +19024,13 @@ Return type: CVector2f
 
 VfsMountPathBrowserEntryNode.GetFullPath
 Definition type: Function
-Return type: [unregistered]
+Return type: CPdxStringView
 
 -----------------------
 
 VfsMountPathBrowserEntryNode.GetName
 Definition type: Function
-Return type: [unregistered]
+Return type: CPdxStringView
 
 -----------------------
 
@@ -19108,7 +19108,7 @@ Return type: bool
 
 ViewerEntity.Name
 Definition type: Function
-Return type: [unregistered]
+Return type: CPdxStringView
 
 -----------------------
 
@@ -19258,7 +19258,7 @@ Return type: [unregistered]
 
 ViewerEntityState.Name
 Definition type: Function
-Return type: [unregistered]
+Return type: CPdxStringView
 
 -----------------------
 

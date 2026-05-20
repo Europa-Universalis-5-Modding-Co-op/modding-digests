@@ -1490,6 +1490,12 @@ Return type: [unregistered]
 
 -----------------------
 
+CString.IsStringNumberZero
+Definition type: Function
+Return type: bool
+
+-----------------------
+
 CString.Self
 Definition type: Function
 Return type: [unregistered]
