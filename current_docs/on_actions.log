@@ -38,6 +38,12 @@ Expected Scope: none
 
 --------------------
 
+on_colonize_annexed:
+From Code: Yes
+Expected Scope: none
+
+--------------------
+
 on_annexing_subject_monthly_pulse:
 From Code: Yes
 Expected Scope: country
@@ -74,6 +80,18 @@ Expected Scope: none
 
 --------------------
 
+religion_flavor_pulse_muslim:
+From Code: No
+Expected Scope: country
+
+--------------------
+
+on_enforce_peace_declined:
+From Code: Yes
+Expected Scope: none
+
+--------------------
+
 on_royal_marriage:
 From Code: Yes
 Expected Scope: country
@@ -99,6 +117,12 @@ Expected Scope: country
 --------------------
 
 on_bankruptcy:
+From Code: Yes
+Expected Scope: none
+
+--------------------
+
+on_truce_broken:
 From Code: Yes
 Expected Scope: none
 
@@ -170,7 +194,19 @@ Expected Scope: none
 
 --------------------
 
+yearly_flavor_nav_pulse:
+From Code: No
+Expected Scope: country
+
+--------------------
+
 on_milanese_library_occupied:
+From Code: No
+Expected Scope: country
+
+--------------------
+
+religion_flavor_pulse_dharmic:
 From Code: No
 Expected Scope: country
 
@@ -206,6 +242,12 @@ Expected Scope: none
 
 --------------------
 
+religion_flavor_pulse_hellenism:
+From Code: No
+Expected Scope: country
+
+--------------------
+
 religion_flavor_pulse:
 From Code: Yes
 Expected Scope: country
@@ -220,6 +262,18 @@ Expected Scope: none
 
 on_mission_task_bypass:
 From Code: Yes
+Expected Scope: none
+
+--------------------
+
+on_bureaucracy_added:
+From Code: Yes
+Expected Scope: none
+
+--------------------
+
+yearly_infidel_holds_rome_pulse:
+From Code: No
 Expected Scope: none
 
 --------------------
@@ -248,7 +302,19 @@ Expected Scope: country
 
 --------------------
 
+government_flavor_pulse_theocracy:
+From Code: No
+Expected Scope: country
+
+--------------------
+
 on_great_battle_lost:
+From Code: Yes
+Expected Scope: none
+
+--------------------
+
+on_enforce_peace_accepted:
 From Code: Yes
 Expected Scope: none
 
@@ -262,6 +328,12 @@ Expected Scope: none
 
 on_subject_created:
 From Code: Yes
+Expected Scope: none
+
+--------------------
+
+on_ai_personalities_game_start:
+From Code: No
 Expected Scope: none
 
 --------------------
@@ -296,15 +368,45 @@ Expected Scope: none
 
 --------------------
 
+on_parliament_established:
+From Code: Yes
+Expected Scope: none
+
+--------------------
+
 on_international_organization_creation:
 From Code: Yes
 Expected Scope: none
 
 --------------------
 
+on_shattered_country:
+From Code: Yes
+Expected Scope: none
+
+--------------------
+
+yearly_flavor_pol_union_pulse:
+From Code: No
+Expected Scope: country
+
+--------------------
+
 on_raw_material_changed:
 From Code: Yes
 Expected Scope: none
+
+--------------------
+
+yearly_flavor_hab_tir_pulse:
+From Code: No
+Expected Scope: country
+
+--------------------
+
+yearly_flavor_cop_pulse:
+From Code: No
+Expected Scope: country
 
 --------------------
 
@@ -320,6 +422,12 @@ Expected Scope: country
 
 --------------------
 
+chi_expedition_rotation_pulse:
+From Code: No
+Expected Scope: country
+
+--------------------
+
 on_institution_embraced:
 From Code: Yes
 Expected Scope: none
@@ -329,6 +437,12 @@ Expected Scope: none
 on_took_location_in_peace_treaty:
 From Code: Yes
 Expected Scope: none
+
+--------------------
+
+government_flavor_pulse_republic:
+From Code: No
+Expected Scope: country
 
 --------------------
 
@@ -398,6 +512,18 @@ Expected Scope: none
 
 --------------------
 
+government_flavor_pulse_tribe:
+From Code: No
+Expected Scope: country
+
+--------------------
+
+yearly_flavor_sic_pulse:
+From Code: No
+Expected Scope: country
+
+--------------------
+
 on_capital_moved:
 From Code: Yes
 Expected Scope: none
@@ -417,6 +543,18 @@ Expected Scope: none
 --------------------
 
 on_game_start:
+From Code: Yes
+Expected Scope: none
+
+--------------------
+
+on_omen_god_selected:
+From Code: Yes
+Expected Scope: country
+
+--------------------
+
+on_parliament_abolished:
 From Code: Yes
 Expected Scope: none
 
@@ -500,6 +638,12 @@ Expected Scope: none
 
 --------------------
 
+on_albanian_migration:
+From Code: No
+Expected Scope: none
+
+--------------------
+
 on_parliament_started:
 From Code: Yes
 Expected Scope: none
@@ -578,6 +722,18 @@ Expected Scope: none
 
 --------------------
 
+government_flavor_pulse_monarchy:
+From Code: No
+Expected Scope: country
+
+--------------------
+
+earthquake_yearly_pulse:
+From Code: No
+Expected Scope: country
+
+--------------------
+
 on_rejected_call_to_arms:
 From Code: Yes
 Expected Scope: none
@@ -626,6 +782,12 @@ Expected Scope: none
 
 --------------------
 
+yearly_flavor_kni_pulse:
+From Code: No
+Expected Scope: country
+
+--------------------
+
 on_military_annexed:
 From Code: Yes
 Expected Scope: none
@@ -633,6 +795,24 @@ Expected Scope: none
 --------------------
 
 on_government_type_change:
+From Code: Yes
+Expected Scope: none
+
+--------------------
+
+religion_flavor_pulse_buddhist:
+From Code: No
+Expected Scope: country
+
+--------------------
+
+yearly_flavor_ira_pulse:
+From Code: No
+Expected Scope: country
+
+--------------------
+
+on_bureaucracy_change:
 From Code: Yes
 Expected Scope: none
 
@@ -688,6 +868,12 @@ Expected Scope: country
 
 on_new_age:
 From Code: Yes
+Expected Scope: country
+
+--------------------
+
+religion_flavor_pulse_orthodox:
+From Code: No
 Expected Scope: country
 
 --------------------
@@ -764,8 +950,26 @@ Expected Scope: none
 
 --------------------
 
+yearly_flavor_kor_pulse:
+From Code: No
+Expected Scope: country
+
+--------------------
+
+yearly_flavor_nap_pulse:
+From Code: No
+Expected Scope: country
+
+--------------------
+
 on_battle_won:
 From Code: Yes
+Expected Scope: country
+
+--------------------
+
+religion_flavor_pulse_protestant:
+From Code: No
 Expected Scope: country
 
 --------------------
@@ -796,6 +1000,18 @@ Expected Scope: none
 
 france_naples_administration_broken:
 From Code: No
+Expected Scope: none
+
+--------------------
+
+yearly_flavor_ven_pulse:
+From Code: No
+Expected Scope: country
+
+--------------------
+
+on_colonize_annex:
+From Code: Yes
 Expected Scope: none
 
 --------------------
@@ -836,6 +1052,12 @@ Expected Scope: country
 
 --------------------
 
+on_papal_authority_updated:
+From Code: No
+Expected Scope: none
+
+--------------------
+
 on_subject_type_changed:
 From Code: Yes
 Expected Scope: none
@@ -851,6 +1073,12 @@ Expected Scope: none
 on_papal_opinion_removed:
 From Code: No
 Expected Scope: none
+
+--------------------
+
+government_flavor_pulse_steppe_horde:
+From Code: No
+Expected Scope: country
 
 --------------------
 
@@ -896,6 +1124,12 @@ Expected Scope: none
 
 --------------------
 
+religion_flavor_pulse_catholic:
+From Code: No
+Expected Scope: country
+
+--------------------
+
 on_international_organization_disbanding:
 From Code: Yes
 Expected Scope: none
@@ -938,6 +1172,12 @@ Expected Scope: none
 
 --------------------
 
+chi_expedition_war_support_pulse:
+From Code: No
+Expected Scope: country
+
+--------------------
+
 on_settle_the_frontier_monthly_pulse:
 From Code: No
 Expected Scope: country
@@ -945,6 +1185,12 @@ Expected Scope: country
 --------------------
 
 on_losing_war:
+From Code: Yes
+Expected Scope: none
+
+--------------------
+
+on_bureaucracy_removed:
 From Code: Yes
 Expected Scope: none
 
@@ -974,6 +1220,18 @@ Expected Scope: none
 
 --------------------
 
+on_transfer_subject:
+From Code: Yes
+Expected Scope: none
+
+--------------------
+
+religion_flavor_pulse_nahuatl:
+From Code: No
+Expected Scope: country
+
+--------------------
+
 on_civil_war_annexed:
 From Code: Yes
 Expected Scope: none
@@ -982,6 +1240,12 @@ Expected Scope: none
 
 on_religion_changed:
 From Code: Yes
+Expected Scope: country
+
+--------------------
+
+religion_flavor_pulse_shinto:
+From Code: No
 Expected Scope: country
 
 --------------------
