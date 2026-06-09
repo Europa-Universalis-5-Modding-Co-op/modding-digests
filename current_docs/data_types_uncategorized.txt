@@ -7024,6 +7024,12 @@ Return type: CString
 
 -----------------------
 
+ListNotAutomatedMarkets
+Definition type: Global function
+Return type: CString
+
+-----------------------
+
 LocationWithInRange_Format( Arg0, Arg1 )
 Definition type: Global function
 Return type: CString
@@ -41235,12 +41241,6 @@ Return type: CString
 
 -----------------------
 
-AutomatedMultiSystemItem.IsAutomatedByPlayStyle
-Definition type: Function
-Return type: bool
-
------------------------
-
 AutomatedMultiSystemItem.IsEnabled
 Definition type: Function
 Return type: bool
@@ -41343,12 +41343,6 @@ Return type: bool
 -----------------------
 
 AutomatedSystemsItem.IsAllowingSpecialCurrencySpend
-Definition type: Function
-Return type: bool
-
------------------------
-
-AutomatedSystemsItem.IsAutomatedByPlayStyle
 Definition type: Function
 Return type: bool
 
@@ -41515,12 +41509,6 @@ Definition type: Type
 
 -----------------------
 
-AutomationLateralView.GetPlayStyle( Arg0 )
-Definition type: Promote
-Return type: PlayerPlayStyleItem
-
------------------------
-
 AutomationLateralView.GetPlayer
 Definition type: Promote
 Return type: Country
@@ -41551,19 +41539,13 @@ Return type: [unregistered]
 
 -----------------------
 
+AutomationLateralView.GetAutomatedSystems
+Definition type: Function
+Return type: [unregistered]
+
+-----------------------
+
 AutomationLateralView.GetFilteredSystems
-Definition type: Function
-Return type: [unregistered]
-
------------------------
-
-AutomationLateralView.GetPlayStyle( Arg0 )
-Definition type: Function
-Return type: [unregistered]
-
------------------------
-
-AutomationLateralView.GetPlayStyles
 Definition type: Function
 Return type: [unregistered]
 
@@ -48972,6 +48954,12 @@ Return type: [unregistered]
 -----------------------
 
 CircleActionItem.GetCircle
+Definition type: Function
+Return type: [unregistered]
+
+-----------------------
+
+CircleActionItem.GetIconTexture
 Definition type: Function
 Return type: [unregistered]
 
@@ -63242,6 +63230,12 @@ Return type: Culture
 
 -----------------------
 
+Estate.GetDialect
+Definition type: Promote
+Return type: Dialect
+
+-----------------------
+
 Estate.GetRebel
 Definition type: Promote
 Return type: Rebel
@@ -63341,6 +63335,12 @@ Return type: CString
 Estate.GetDebugText
 Definition type: Function
 Return type: CString
+
+-----------------------
+
+Estate.GetDialect
+Definition type: Function
+Return type: [unregistered]
 
 -----------------------
 
@@ -74970,21 +74970,93 @@ Return type: Institution
 
 -----------------------
 
-InstitutionItem.GetUIAction
-Definition type: Promote
-Return type: UIActionProvider
-
------------------------
-
 InstitutionItem.AccessSelf
 Definition type: Function
 Return type: [unregistered]
 
 -----------------------
 
-InstitutionItem.GetUIAction
+InstitutionItem.GetDescription
 Definition type: Function
-Return type: [unregistered]
+Return type: CString
+
+-----------------------
+
+InstitutionItem.GetEmbraceConditions
+Definition type: Function
+Return type: CString
+
+-----------------------
+
+InstitutionItem.GetEmbraceCost
+Definition type: Function
+Return type: CString
+
+-----------------------
+
+InstitutionItem.GetEmbraceDescription
+Definition type: Function
+Return type: CString
+
+-----------------------
+
+InstitutionItem.GetGotoBirthplaceTitle
+Definition type: Function
+Return type: CString
+
+-----------------------
+
+InstitutionItem.GetTitle
+Definition type: Function
+Return type: CString
+
+-----------------------
+
+InstitutionItem.IsEmbraceEnabled
+Definition type: Function
+Return type: bool
+
+-----------------------
+
+InstitutionItem.IsEmbraceVisible
+Definition type: Function
+Return type: bool
+
+-----------------------
+
+InstitutionItem.IsEnabled
+Definition type: Function
+Return type: bool
+
+-----------------------
+
+InstitutionItem.IsGotoBirthplaceEnabled
+Definition type: Function
+Return type: bool
+
+-----------------------
+
+InstitutionItem.IsGotoBirthplaceVisible
+Definition type: Function
+Return type: bool
+
+-----------------------
+
+InstitutionItem.IsVisible
+Definition type: Function
+Return type: bool
+
+-----------------------
+
+InstitutionItem.OnEmbrace
+Definition type: Function
+Return type: void
+
+-----------------------
+
+InstitutionItem.OnGotoBirthplace
+Definition type: Function
+Return type: void
 
 -----------------------
 
@@ -77546,6 +77618,12 @@ Return type: [unregistered]
 -----------------------
 
 InternationalOrganization.GetAllMembersEffects
+Definition type: Function
+Return type: CString
+
+-----------------------
+
+InternationalOrganization.GetAutoDisbandRequirementsText
 Definition type: Function
 Return type: CString
 
@@ -87612,6 +87690,12 @@ Return type: CFixedPoint
 
 -----------------------
 
+MaintenanceSetting.GetExpenseWithCurrency
+Definition type: Function
+Return type: CString
+
+-----------------------
+
 MaintenanceSetting.GetIcon
 Definition type: Function
 Return type: [unregistered]
@@ -93651,6 +93735,12 @@ Return type: CString
 
 -----------------------
 
+ModsPlayset.GetGameOrderedDlcs
+Definition type: Function
+Return type: [unregistered]
+
+-----------------------
+
 ModsPlayset.GetModsAffectingChecksum
 Definition type: Function
 Return type: CString
@@ -99169,83 +99259,6 @@ Return type: bool
 PlayerModifiersLateralView.Self
 Definition type: Function
 Return type: [unregistered]
-
------------------------
-
-PlayerPlayStyleItem
-Definition type: Type
-
------------------------
-
-PlayerPlayStyleItem.AccessSelf
-Definition type: Function
-Return type: [unregistered]
-
------------------------
-
-PlayerPlayStyleItem.AreAllSystemsEnabled
-Definition type: Function
-Return type: bool
-
------------------------
-
-PlayerPlayStyleItem.GetAutomatedSystems
-Definition type: Function
-Return type: [unregistered]
-
------------------------
-
-PlayerPlayStyleItem.GetDescription
-Definition type: Function
-Return type: CString
-
------------------------
-
-PlayerPlayStyleItem.GetKey
-Definition type: Function
-Return type: CString
-
------------------------
-
-PlayerPlayStyleItem.GetName
-Definition type: Function
-Return type: CString
-
------------------------
-
-PlayerPlayStyleItem.GetShortName
-Definition type: Function
-Return type: CString
-
------------------------
-
-PlayerPlayStyleItem.IsEnabled
-Definition type: Function
-Return type: bool
-
------------------------
-
-PlayerPlayStyleItem.IsName( Arg0 )
-Definition type: Function
-Return type: bool
-
------------------------
-
-PlayerPlayStyleItem.Self
-Definition type: Function
-Return type: [unregistered]
-
------------------------
-
-PlayerPlayStyleItem.Toggle
-Definition type: Function
-Return type: void
-
------------------------
-
-PlayerPlayStyleItem.ToggleAllSystems
-Definition type: Function
-Return type: void
 
 -----------------------
 

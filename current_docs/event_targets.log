@@ -1660,6 +1660,11 @@ Unknown, add something in code registration
 Input Scopes: disease_outbreak
 Output Scopes: disease
 
+### dialect
+Unknown, add something in code registration
+Input Scopes: character, dynasty, pop, culture, religion, market, estate
+Output Scopes: dialect
+
 ### bureaucracy_type
 Unknown, add something in code registration
 Input Scopes: bureaucracy
@@ -1679,11 +1684,6 @@ Output Scopes: religion
 Unknown, add something in code registration
 Input Scopes: holy_site, omen, avatar
 Output Scopes: god
-
-### dialect
-Unknown, add something in code registration
-Input Scopes: character, dynasty, pop, culture, religion, market
-Output Scopes: dialect
 
 ### group
 Unknown, add something in code registration
@@ -1897,6 +1897,7 @@ to
 building
 building_type
 vote
+previewed_vote
 cabinet
 subject_type
 old_subject_type

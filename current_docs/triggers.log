@@ -139,6 +139,12 @@ Reads gamestate for all scopes.
 **Supported Scopes**: religion  
 **Supported Targets**: country  
 
+## allow_subject_creation
+Check if a subject type allows subject creation
+Traits: yes/no 
+Reads gamestate for all scopes.
+**Supported Scopes**: subject_type  
+
 ## allowed_bureaucracies
 Check if the country is allowed bureaucracies
 Traits: yes/no 
@@ -6256,6 +6262,12 @@ Check if a location is a capital
 Traits: yes/no 
 Reads gamestate for all scopes.
 **Supported Scopes**: location  
+
+## is_carrying_or_loaded_unit
+Mercenary's underlying unit is embarked on another fleet or has armies embarked on board. Gate destruction/delist actions on this — otherwise the embark link will be torn and the loaded armies will drown.
+Traits: yes/no 
+Reads gamestate for all scopes.
+**Supported Scopes**: mercenary  
 
 ## is_carrying_troops
 unit is carrying troops
