@@ -1,4 +1,4 @@
-# Release 1.3.2 - beta - Game File Changes
+# Release 1.3.6 - beta - Game File Changes
 **Only the following filetypes are included:** txt, gui, yml, asset, shader
  - **M** binaries/checksum.txt
  - **M** game/in_game/common/advances/1_building_unlocks.txt
