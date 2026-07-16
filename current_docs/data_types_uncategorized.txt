@@ -54324,6 +54324,12 @@ Return type: CString
 
 -----------------------
 
+Country.GetMaintenanceEfficiencyRealValue( Arg0 )
+Definition type: Function
+Return type: CString
+
+-----------------------
+
 Country.GetManpowerPerLocationTT
 Definition type: Function
 Return type: CString
