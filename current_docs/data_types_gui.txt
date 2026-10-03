@@ -182,8 +182,22 @@ Return type: void
 
 -----------------------
 
+HasContext( Arg0 )
+Description: Returns true if the widget has a data context of the type of the given name
+Definition type: Global function
+Return type: bool
+
+-----------------------
+
 HasHostError
 Description: Multiplayer - Does the host have an error
+Definition type: Global function
+Return type: bool
+
+-----------------------
+
+HasNonConstContext( Arg0 )
+Description: Returns true if the widget has a non-const data context of the type of the given name
 Definition type: Global function
 Return type: bool
 
@@ -2666,6 +2680,12 @@ Return type: bool
 
 -----------------------
 
+JominiNotification.IsPassword
+Definition type: Function
+Return type: bool
+
+-----------------------
+
 JominiNotification.OnAccept
 Definition type: Function
 Return type: void
@@ -2752,36 +2772,6 @@ Return type: void
 JominiNotificationOverlay.ToggleSidebar
 Definition type: Function
 Return type: void
-
------------------------
-
-JominiPasswordPopup
-Description: Jomini Multiplayer - Password Popup
-Definition type: Type
-
------------------------
-
-JominiPasswordPopup.AccessSelf
-Definition type: Function
-Return type: [unregistered]
-
------------------------
-
-JominiPasswordPopup.OnDecline
-Definition type: Function
-Return type: void
-
------------------------
-
-JominiPasswordPopup.OnSubmit
-Definition type: Function
-Return type: void
-
------------------------
-
-JominiPasswordPopup.Self
-Definition type: Function
-Return type: [unregistered]
 
 -----------------------
 
@@ -3805,7 +3795,19 @@ Return type: CString
 
 -----------------------
 
+LocalMod.GetNonChecksumIssues
+Definition type: Function
+Return type: CString
+
+-----------------------
+
 LocalMod.HasIssues
+Definition type: Function
+Return type: bool
+
+-----------------------
+
+LocalMod.HasNonChecksumIssues
 Definition type: Function
 Return type: bool
 
@@ -3841,6 +3843,12 @@ Return type: bool
 
 -----------------------
 
+LocalMod.MatchesSearch( Arg0 )
+Definition type: Function
+Return type: bool
+
+-----------------------
+
 LocalMod.Name
 Definition type: Function
 Return type: CString
@@ -3862,6 +3870,12 @@ Return type: CString
 LocalMod.Self
 Definition type: Function
 Return type: [unregistered]
+
+-----------------------
+
+LocalMod.SupportedGameVersion
+Definition type: Function
+Return type: CString
 
 -----------------------
 
@@ -4288,7 +4302,7 @@ Return type: int32
 
 -----------------------
 
-MeshImporterMaterialEntry.InjectPropertyList( Arg0, Arg1 )
+MeshImporterMaterialEntry.InjectPropertyList( Arg0, Arg1, Arg2 )
 Definition type: Function
 Return type: void
 
@@ -4437,6 +4451,12 @@ Return type: void
 
 -----------------------
 
+ModsGui.ConfirmDeletePlayset( Arg0 )
+Definition type: Function
+Return type: void
+
+-----------------------
+
 ModsGui.CreateMod( Arg0 )
 Description: Create a new empty mod in the user mod directory.
 Definition type: Function
@@ -4526,6 +4546,12 @@ Return type: bool
 
 -----------------------
 
+ModsGui.HasPendingChanges
+Definition type: Function
+Return type: bool
+
+-----------------------
+
 ModsGui.HasPlaysetError
 Definition type: Function
 Return type: bool
@@ -4571,6 +4597,12 @@ Return type: bool
 ModsGui.IsValid
 Definition type: Function
 Return type: bool
+
+-----------------------
+
+ModsGui.LocalModCount
+Definition type: Function
+Return type: int32
 
 -----------------------
 
@@ -4655,6 +4687,18 @@ Return type: CUTF8String
 
 -----------------------
 
+ModsGui.SelectedPlaysetActiveDlcCount
+Definition type: Function
+Return type: int32
+
+-----------------------
+
+ModsGui.SelectedPlaysetDlcCount
+Definition type: Function
+Return type: int32
+
+-----------------------
+
 ModsGui.SelectedPlaysetHasVersionIssues
 Description: Returns true if the selected playset has a mod inside with a version that doesn't match the current version.
 Definition type: Function
@@ -4663,6 +4707,12 @@ Return type: bool
 -----------------------
 
 ModsGui.SelectedPlaysetId
+Definition type: Function
+Return type: int32
+
+-----------------------
+
+ModsGui.SelectedPlaysetModCount
 Definition type: Function
 Return type: int32
 
@@ -5623,6 +5673,12 @@ Return type: [unregistered]
 
 -----------------------
 
+PdxGuiWidget.ClearHoveredUnits
+Definition type: Function
+Return type: void
+
+-----------------------
+
 PdxGuiWidget.CloseContextMenu
 Definition type: Function
 Return type: void
@@ -5692,6 +5748,12 @@ Return type: CString
 PdxGuiWidget.GetOutlinerEntryDebug
 Definition type: Function
 Return type: CString
+
+-----------------------
+
+PdxGuiWidget.GetPercentPositionFrom( Arg0, Arg1 )
+Definition type: Function
+Return type: CVector2f
 
 -----------------------
 
@@ -5785,7 +5847,19 @@ Return type: void
 
 -----------------------
 
+PdxGuiWidget.InterruptAllChildrenAnimation( Arg0 )
+Definition type: Function
+Return type: void
+
+-----------------------
+
 PdxGuiWidget.InterruptAnimation( Arg0 )
+Definition type: Function
+Return type: void
+
+-----------------------
+
+PdxGuiWidget.InterruptThenTriggerAllChildrenAnimation( Arg0, Arg1 )
 Definition type: Function
 Return type: void
 
@@ -5794,6 +5868,12 @@ Return type: void
 PdxGuiWidget.InterruptThenTriggerAnimation( Arg0, Arg1 )
 Definition type: Function
 Return type: void
+
+-----------------------
+
+PdxGuiWidget.IsEnabled
+Definition type: Function
+Return type: bool
 
 -----------------------
 
@@ -5834,6 +5914,12 @@ Return type: bool
 -----------------------
 
 PdxGuiWidget.IsUberButtonEnabled
+Definition type: Function
+Return type: bool
+
+-----------------------
+
+PdxGuiWidget.IsUberButtonVisible
 Definition type: Function
 Return type: bool
 
@@ -6103,7 +6189,19 @@ Return type: void
 
 -----------------------
 
+PdxGuiWidget.SetHighlightReligiousOrderLocations( Arg0 )
+Definition type: Function
+Return type: void
+
+-----------------------
+
 PdxGuiWidget.SetHighlightTrade( Arg0 )
+Definition type: Function
+Return type: void
+
+-----------------------
+
+PdxGuiWidget.SetHighlightUnitAbility( Arg0 )
 Definition type: Function
 Return type: void
 
@@ -6121,7 +6219,32 @@ Return type: void
 
 -----------------------
 
+PdxGuiWidget.SetHoveredUnit( Arg0 )
+Definition type: Function
+Return type: void
+
+-----------------------
+
+PdxGuiWidget.SetTradeLinesMarket( Arg0 )
+Definition type: Function
+Return type: void
+
+-----------------------
+
+PdxGuiWidget.SetTradeLinesTrade( Arg0 )
+Definition type: Function
+Return type: void
+
+-----------------------
+
+PdxGuiWidget.SetTradeLinesTradeOrder( Arg0 )
+Definition type: Function
+Return type: void
+
+-----------------------
+
 PdxGuiWidget.SetVisible( Arg0 )
+Description: Sets the visibility of the PdxGuiWidget based on a provided condition
 Definition type: Function
 Return type: void
 
@@ -6146,6 +6269,19 @@ Return type: void
 -----------------------
 
 PdxGuiWidget.ToggleContextMenu
+Definition type: Function
+Return type: void
+
+-----------------------
+
+PdxGuiWidget.ToggleVisibility
+Description: Toggles the visibility of the PdxGuiWidget
+Definition type: Function
+Return type: void
+
+-----------------------
+
+PdxGuiWidget.TriggerAllChildrenAnimation( Arg0 )
 Definition type: Function
 Return type: void
 
@@ -6725,6 +6861,48 @@ Return type: void
 -----------------------
 
 StatusWidget.ToggleLoginWindow
+Definition type: Function
+Return type: void
+
+-----------------------
+
+UniversalSplineEditorPropertyCategory
+Description: Universal spline editor - Property category
+Definition type: Type
+
+-----------------------
+
+UniversalSplineEditorPropertyCategory.AccessSelf
+Definition type: Function
+Return type: [unregistered]
+
+-----------------------
+
+UniversalSplineEditorPropertyCategory.GetName
+Definition type: Function
+Return type: CString
+
+-----------------------
+
+UniversalSplineEditorPropertyCategory.IsEmpty
+Definition type: Function
+Return type: bool
+
+-----------------------
+
+UniversalSplineEditorPropertyCategory.IsExpanded
+Definition type: Function
+Return type: bool
+
+-----------------------
+
+UniversalSplineEditorPropertyCategory.Self
+Definition type: Function
+Return type: [unregistered]
+
+-----------------------
+
+UniversalSplineEditorPropertyCategory.ToggleExpanded
 Definition type: Function
 Return type: void
 

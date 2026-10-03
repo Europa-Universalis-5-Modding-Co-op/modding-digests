@@ -77,6 +77,24 @@ Return type: [unregistered]
 
 -----------------------
 
+GetGlobalVariableListTicks( Arg0, Arg1 )
+Definition type: Global function
+Return type: int32
+
+-----------------------
+
+GetGlobalVariableMapTicks( Arg0, Arg1 )
+Definition type: Global function
+Return type: int32
+
+-----------------------
+
+GetGlobalVariableTicks( Arg0 )
+Definition type: Global function
+Return type: int32
+
+-----------------------
+
 GetVarTimeRemaining( Arg0, Arg1 )
 Definition type: Global function
 Return type: int32
@@ -137,6 +155,30 @@ Definition type: Type
 -----------------------
 
 Age.MakeScope
+Description: Jomini Script System
+Definition type: Function
+Return type: Scope
+
+-----------------------
+
+Ambition
+Definition type: Type
+
+-----------------------
+
+Ambition.MakeScope
+Description: Jomini Script System
+Definition type: Function
+Return type: Scope
+
+-----------------------
+
+AmbitionDefinition
+Definition type: Type
+
+-----------------------
+
+AmbitionDefinition.MakeScope
 Description: Jomini Script System
 Definition type: Function
 Return type: Scope
@@ -239,12 +281,12 @@ Return type: Scope
 
 -----------------------
 
-Cardinal
+Calling
 Definition type: Type
 
 -----------------------
 
-Cardinal.MakeScope
+Calling.MakeScope
 Description: Jomini Script System
 Definition type: Function
 Return type: Scope
@@ -722,6 +764,30 @@ Return type: bool
 Implementable.Self
 Definition type: Function
 Return type: [unregistered]
+
+-----------------------
+
+IndustryPromotion
+Definition type: Type
+
+-----------------------
+
+IndustryPromotion.MakeScope
+Description: Jomini Script System
+Definition type: Function
+Return type: Scope
+
+-----------------------
+
+IndustryType
+Definition type: Type
+
+-----------------------
+
+IndustryType.MakeScope
+Description: Jomini Script System
+Definition type: Function
+Return type: Scope
 
 -----------------------
 
@@ -1205,6 +1271,30 @@ Return type: Scope
 
 -----------------------
 
+ReligiousOrder
+Definition type: Type
+
+-----------------------
+
+ReligiousOrder.MakeScope
+Description: Jomini Script System
+Definition type: Function
+Return type: Scope
+
+-----------------------
+
+ReligiousOrderType
+Definition type: Type
+
+-----------------------
+
+ReligiousOrderType.MakeScope
+Description: Jomini Script System
+Definition type: Function
+Return type: Scope
+
+-----------------------
+
 ReligiousSchool
 Definition type: Type
 
@@ -1267,6 +1357,20 @@ Return type: Age
 
 -----------------------
 
+Scope.Ambition
+Description: Jomini Script System
+Definition type: Promote
+Return type: Ambition
+
+-----------------------
+
+Scope.AmbitionDefinition
+Description: Jomini Script System
+Definition type: Promote
+Return type: AmbitionDefinition
+
+-----------------------
+
 Scope.Area
 Description: Jomini Script System
 Definition type: Promote
@@ -1323,10 +1427,10 @@ Return type: Cabinet
 
 -----------------------
 
-Scope.Cardinal
+Scope.Calling
 Description: Jomini Script System
 Definition type: Promote
-Return type: Cardinal
+Return type: Calling
 
 -----------------------
 
@@ -1537,6 +1641,18 @@ Return type: Age
 
 -----------------------
 
+Scope.GetAmbition
+Definition type: Promote
+Return type: Ambition
+
+-----------------------
+
+Scope.GetAmbitionDefinition
+Definition type: Promote
+Return type: AmbitionDefinition
+
+-----------------------
+
 Scope.GetArea
 Definition type: Promote
 Return type: Area
@@ -1591,12 +1707,6 @@ Return type: CabinetAction
 
 -----------------------
 
-Scope.GetCardinal
-Definition type: Promote
-Return type: Cardinal
-
------------------------
-
 Scope.GetCasusBelli
 Definition type: Promote
 Return type: CasusBelli
@@ -1636,6 +1746,12 @@ Return type: Climate
 Scope.GetColonialCharter
 Definition type: Promote
 Return type: ColonialCharter
+
+-----------------------
+
+Scope.GetColonialCharterGoal
+Definition type: Promote
+Return type: ColonialCharterGoalDefinition
 
 -----------------------
 
@@ -1834,6 +1950,18 @@ Return type: HolySiteType
 Scope.GetImperialCircle
 Definition type: Promote
 Return type: ImperialCircle
+
+-----------------------
+
+Scope.GetIndustryPromotion
+Definition type: Promote
+Return type: IndustryPromotion
+
+-----------------------
+
+Scope.GetIndustryType
+Definition type: Promote
+Return type: IndustryType
 
 -----------------------
 
@@ -2327,6 +2455,20 @@ Return type: ImperialCircle
 
 -----------------------
 
+Scope.IndustryPromotion
+Description: Jomini Script System
+Definition type: Promote
+Return type: IndustryPromotion
+
+-----------------------
+
+Scope.IndustryType
+Description: Jomini Script System
+Definition type: Promote
+Return type: IndustryType
+
+-----------------------
+
 Scope.Institution
 Description: Jomini Script System
 Definition type: Promote
@@ -2435,14 +2577,14 @@ Return type: MissionTaskDefinition
 Scope.Movement
 Description: Jomini Script System
 Definition type: Promote
-Return type: MovementDefinition
+Return type: Movement
 
 -----------------------
 
-Scope.MovementOutbreak
+Scope.MovementDefinition
 Description: Jomini Script System
 Definition type: Promote
-Return type: Movement
+Return type: MovementDefinition
 
 -----------------------
 
@@ -2604,6 +2746,20 @@ Scope.ReligiousFocus
 Description: Jomini Script System
 Definition type: Promote
 Return type: ReligiousFocus
+
+-----------------------
+
+Scope.ReligiousOrder
+Description: Jomini Script System
+Definition type: Promote
+Return type: ReligiousOrder
+
+-----------------------
+
+Scope.ReligiousOrderType
+Description: Jomini Script System
+Definition type: Promote
+Return type: ReligiousOrderType
 
 -----------------------
 
@@ -2843,6 +2999,20 @@ Return type: [unregistered]
 
 -----------------------
 
+Scope.Ambition
+Description: Jomini Script System
+Definition type: Function
+Return type: [unregistered]
+
+-----------------------
+
+Scope.AmbitionDefinition
+Description: Jomini Script System
+Definition type: Function
+Return type: [unregistered]
+
+-----------------------
+
 Scope.Area
 Description: Jomini Script System
 Definition type: Function
@@ -2899,7 +3069,7 @@ Return type: [unregistered]
 
 -----------------------
 
-Scope.Cardinal
+Scope.Calling
 Description: Jomini Script System
 Definition type: Function
 Return type: [unregistered]
@@ -3131,6 +3301,24 @@ Return type: CFixedPoint
 
 -----------------------
 
+Scope.GetVariableListTicks( Arg0, Arg1 )
+Definition type: Function
+Return type: int32
+
+-----------------------
+
+Scope.GetVariableMapTicks( Arg0, Arg1 )
+Definition type: Function
+Return type: int32
+
+-----------------------
+
+Scope.GetVariableTicks( Arg0 )
+Definition type: Function
+Return type: int32
+
+-----------------------
+
 Scope.God
 Description: Jomini Script System
 Definition type: Function
@@ -3195,6 +3383,20 @@ Return type: [unregistered]
 -----------------------
 
 Scope.ImperialCircle
+Description: Jomini Script System
+Definition type: Function
+Return type: [unregistered]
+
+-----------------------
+
+Scope.IndustryPromotion
+Description: Jomini Script System
+Definition type: Function
+Return type: [unregistered]
+
+-----------------------
+
+Scope.IndustryType
 Description: Jomini Script System
 Definition type: Function
 Return type: [unregistered]
@@ -3319,7 +3521,7 @@ Return type: [unregistered]
 
 -----------------------
 
-Scope.MovementOutbreak
+Scope.MovementDefinition
 Description: Jomini Script System
 Definition type: Function
 Return type: [unregistered]
@@ -3481,6 +3683,20 @@ Return type: [unregistered]
 -----------------------
 
 Scope.ReligiousFocus
+Description: Jomini Script System
+Definition type: Function
+Return type: [unregistered]
+
+-----------------------
+
+Scope.ReligiousOrder
+Description: Jomini Script System
+Definition type: Function
+Return type: [unregistered]
+
+-----------------------
+
+Scope.ReligiousOrderType
 Description: Jomini Script System
 Definition type: Function
 Return type: [unregistered]
@@ -4006,6 +4222,18 @@ Return type: Age
 
 -----------------------
 
+TopScope.sAmbition( Arg0 )
+Definition type: Promote
+Return type: Ambition
+
+-----------------------
+
+TopScope.sAmbitionDefinition( Arg0 )
+Definition type: Promote
+Return type: AmbitionDefinition
+
+-----------------------
+
 TopScope.sArea( Arg0 )
 Definition type: Promote
 Return type: Area
@@ -4057,12 +4285,6 @@ Return type: Cabinet
 TopScope.sCabinetAction( Arg0 )
 Definition type: Promote
 Return type: CabinetAction
-
------------------------
-
-TopScope.sCardinal( Arg0 )
-Definition type: Promote
-Return type: Cardinal
 
 -----------------------
 
@@ -4216,6 +4438,18 @@ Return type: Ethnicity
 
 -----------------------
 
+TopScope.sExpedition( Arg0 )
+Definition type: Promote
+Return type: Expedition
+
+-----------------------
+
+TopScope.sExpeditionType( Arg0 )
+Definition type: Promote
+Return type: ExpeditionType
+
+-----------------------
+
 TopScope.sExploration( Arg0 )
 Definition type: Promote
 Return type: Exploration
@@ -4303,6 +4537,18 @@ Return type: HolySiteType
 TopScope.sImperialCircle( Arg0 )
 Definition type: Promote
 Return type: ImperialCircle
+
+-----------------------
+
+TopScope.sIndustryPromotion( Arg0 )
+Definition type: Promote
+Return type: IndustryPromotion
+
+-----------------------
+
+TopScope.sIndustryType( Arg0 )
+Definition type: Promote
+Return type: IndustryType
 
 -----------------------
 
@@ -4549,6 +4795,18 @@ Return type: ReligiousFigure
 TopScope.sReligiousFocus( Arg0 )
 Definition type: Promote
 Return type: ReligiousFocus
+
+-----------------------
+
+TopScope.sReligiousOrder( Arg0 )
+Definition type: Promote
+Return type: ReligiousOrder
+
+-----------------------
+
+TopScope.sReligiousOrderType( Arg0 )
+Definition type: Promote
+Return type: ReligiousOrderType
 
 -----------------------
 
@@ -4804,6 +5062,18 @@ Return type: [unregistered]
 
 -----------------------
 
+TopScope.sAmbition( Arg0 )
+Definition type: Function
+Return type: [unregistered]
+
+-----------------------
+
+TopScope.sAmbitionDefinition( Arg0 )
+Definition type: Function
+Return type: [unregistered]
+
+-----------------------
+
 TopScope.sArea( Arg0 )
 Definition type: Function
 Return type: [unregistered]
@@ -4853,12 +5123,6 @@ Return type: [unregistered]
 -----------------------
 
 TopScope.sCabinetAction( Arg0 )
-Definition type: Function
-Return type: [unregistered]
-
------------------------
-
-TopScope.sCardinal( Arg0 )
 Definition type: Function
 Return type: [unregistered]
 
@@ -5014,6 +5278,18 @@ Return type: [unregistered]
 
 -----------------------
 
+TopScope.sExpedition( Arg0 )
+Definition type: Function
+Return type: [unregistered]
+
+-----------------------
+
+TopScope.sExpeditionType( Arg0 )
+Definition type: Function
+Return type: [unregistered]
+
+-----------------------
+
 TopScope.sExploration( Arg0 )
 Definition type: Function
 Return type: [unregistered]
@@ -5099,6 +5375,18 @@ Return type: [unregistered]
 -----------------------
 
 TopScope.sImperialCircle( Arg0 )
+Definition type: Function
+Return type: [unregistered]
+
+-----------------------
+
+TopScope.sIndustryPromotion( Arg0 )
+Definition type: Function
+Return type: [unregistered]
+
+-----------------------
+
+TopScope.sIndustryType( Arg0 )
 Definition type: Function
 Return type: [unregistered]
 
@@ -5345,6 +5633,18 @@ Return type: [unregistered]
 -----------------------
 
 TopScope.sReligiousFocus( Arg0 )
+Definition type: Function
+Return type: [unregistered]
+
+-----------------------
+
+TopScope.sReligiousOrder( Arg0 )
+Definition type: Function
+Return type: [unregistered]
+
+-----------------------
+
+TopScope.sReligiousOrderType( Arg0 )
 Definition type: Function
 Return type: [unregistered]
 

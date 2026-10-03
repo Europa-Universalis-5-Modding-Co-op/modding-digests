@@ -1,0 +1,60 @@
+﻿# Unit Illustrations
+#
+# Selects the 2D illustration shown for a unit type (recruitment lists, unit panels, lobby).
+# Every entry is a candidate texture; the entry with the highest priority whose trigger passes wins.
+# Illustration filenames carry no meaning anymore - all selection logic lives in these scripts.
+#
+# entry_key = {
+#     texture = "gfx/interface/illustrations/units/my_art.dds"    # required
+#     priority = 512300                                           # higher wins; ties break alphabetically by entry key
+#     trigger = { ... }                                           # optional; entry always matches when omitted
+# }
+#
+# Trigger scope is the unit type (root = the unit type definition being displayed).
+# The culture the illustration is requested for (the subunit's culture, or the player's
+# primary culture in recruitment lists) is available as scope:culture.
+#
+# Useful triggers:
+#     unit_category = army_heavy_infantry
+#     has_gfx_tag = camel_tag
+#     min_age = age_3_discovery                     # entry only eligible from this age onward (the fade gate)
+#     max_age = age_2_renaissance                   # rarely needed - see priority tiers below
+#     is_unit_type = a_black_guard
+#     scope:culture ?= { gfx_culture_applicable = maghrebi_gfx }
+#
+# HOW OLD ART FADES (no max_age needed):
+# An age-N entry sets min_age so it is only eligible from age N onward; a higher-age entry of the
+# same culture outranks it, so as newer art appears the older art stops being chosen automatically,
+# and it still shows at earlier ages where nothing newer exists. Set priorities with these tiers:
+#
+#     900000                              is_unit_type (one specific unit type)
+#     800000 + culture_prio*100 + age     IDENTITY tag - the art IS the unit (camel, elephant, crusader,
+#                                         conquistador, greek_fire, cataphract, legionary, archer, crossbow,
+#                                         pike, canoe, ...). Beats culture and age; never fades.
+#     500000 + age*10000 + culture_prio*10 [+1 if fade-tag]   CULTURE art. Age dominates, so newer
+#                                         culture art supersedes older; more specific culture breaks age ties.
+#     100000 + age*10000 [+1 if fade-tag]  GENERIC per-age art (no culture). Age-right generic beats an
+#                                         older fade-tag entry (a musketeer prefers army_infantry_5 to _4_musket_tag).
+#          0                              _default fallback (trigger-less; keep it the only trigger-less entry)
+#
+# FADE tags (weight/gunpowder tiers that step down to age-appropriate art): light_tag, medium_tag,
+# heavy_tag, musket_tag, rifle_tag. Every other tag is IDENTITY and stays on top.
+# culture_prio = the graphical culture's priority in gfx/graphical_culture_types, age = 1-6.
+#
+# Masks are NEVER scripted. The mask for an entry is the file with the same name under
+# gfx/interface/illustrations/units/masks/. If an entry has no mask file, the mask lookup
+# falls through to the next matching entry that has one, ending at masks/_default.dds.
+#
+# Error log (error.log) reports at startup:
+#   - entries whose texture file does not exist
+#   - UNREACHABLE entries: anything below a trigger-less entry in priority order can never be picked
+#   - masks/ files with no same-named illustration (an illustration was renamed, its mask was not)
+#
+# It does NOT report the two opposite cases, so check those by hand:
+#   - an illustration with no mask of its own (only the reverse is reported, see above)
+#   - a texture in units/ that no entry references at all
+# These look identical on disk. Before making a mask for a texture that lacks one, grep the
+# illustration files for its name: a texture nothing references is retired art and needs no mask.
+#
+# DLC gating is automatic: an entry whose texture lives in a DLC mount is skipped when that DLC
+# is not active. DLC entries belong in game/dlc/<id>/in_game/gfx/unit_illustrations/.
