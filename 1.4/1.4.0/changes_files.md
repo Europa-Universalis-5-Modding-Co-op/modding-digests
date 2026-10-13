@@ -1,3 +1,4 @@
+# Release 1.4.0 - Beta - Game File Changes
 **Only the following filetypes are included:** txt, gui, yml, asset, shader
  - **M** binaries/checksum.txt
  - **M** clausewitz/loading_screen/gui/applicationutils/tools_gui_bundle_properties.gui
