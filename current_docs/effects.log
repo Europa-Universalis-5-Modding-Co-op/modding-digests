@@ -1305,6 +1305,7 @@ Creates a character for a country. The effect has the following parameters:
 	max_age = <script value>  
 	birth_date = <date>  
 	no_stats = <yes/no>  
+	show_stats = <yes/no, default yes - when no, the character's abilities are hidden in the UI>  
 	last_name = <string>  
 	artist = <artist scope>  
 	ethnicity = <ethnicity scope>  
@@ -1509,7 +1510,7 @@ declares a war with the target country. The country scope will leave all wars th
 **Supported Targets**: country  
 
 ## declare_war_with_cb
-declares a war with a specific cb  { target = <country> type = <cb_type> [target_province = ; target_country =, character =] } The country scope will leave all wars they fight together with the target country.
+declares a war with a specific cb  { target = <country> type = <cb_type> [target_province = ; target_country =, character =, apply_declaration_costs = yes] } The country scope will leave all wars they fight together with the target country. apply_declaration_costs makes the war cost what a normal declaration costs - stability, war exhaustion, antagonism, trust, truce breaking and one diplomat - and defaults to no, so gate the caller on num_of_diplomats yourself.
 **Supported Scopes**: country  
 **Supported Targets**: war  
 
@@ -10648,6 +10649,10 @@ changes the name of a location
 An offer to ransom the unit's troops is sent to all original owners
 **Supported Scopes**: unit  
 
+## reroll_parliament_agendas
+Re-roll the parliament agenda of every estate currently participating in the parliament. 
+**Supported Scopes**: country, international_organization  
+
 ## rescue_sub_unit
 Rescues a sub unit
 **Supported Scopes**: mercenary  
@@ -11210,6 +11215,10 @@ Sets the school_opinion of target.. { target = x to value = relation_level>
 ## set_self_control
 Sets Self Control
 **Supported Scopes**: country, international_organization  
+
+## set_show_stats
+Shows or hides the character's adm/dip/mil abilities in the UI. Hidden abilities still count for gameplay and AI
+**Supported Scopes**: character  
 
 ## set_societal_value
 Sets societal value

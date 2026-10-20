@@ -1322,6 +1322,12 @@ Expected Scope: none/any
 
 --------------------
 
+on_colonial_charter_finished:
+From Code: Yes
+Expected Scope: country
+
+--------------------
+
 on_lose_revolution_target:
 From Code: Yes
 Expected Scope: none/any

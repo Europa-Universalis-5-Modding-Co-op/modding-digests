@@ -2074,6 +2074,7 @@ bureaucracy_type
 movement
 movement_definition
 new_countries
+dlc_countries
 casus_belli
 amount
 parliament_location

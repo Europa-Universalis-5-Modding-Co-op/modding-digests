@@ -5671,6 +5671,12 @@ Traits: yes/no
 Reads gamestate for all scopes.
 **Supported Scopes**: country, international_organization  
 
+## has_parliament_agendas
+Checks if at least one participant in the parliament is currently pushing an agenda
+Traits: yes/no 
+Reads gamestate for all scopes.
+**Supported Scopes**: country, international_organization  
+
 ## has_participated_in_parliament
 Checks if the country scope has already participated in the target international organization's parliament.
 Traits: international_organization scope
@@ -5787,6 +5793,12 @@ Does the scoped province have a given modifier
 has_province_modifier = name
 Reads gamestate for all scopes.
 **Supported Scopes**: location, country, unit, character, dynasty, religion, province, rebels, mercenary, international_organization  
+
+## has_proximity_source_building
+Check if a location holds a building that grants local_proximity_source
+Traits: yes/no 
+Reads gamestate for all scopes.
+**Supported Scopes**: location  
 
 ## has_purity
 religion has purity
@@ -7421,6 +7433,12 @@ Traits: yes/no
 Reads gamestate for all scopes.
 **Supported Scopes**: character  
 
+## is_historical_capital
+Check if a location is a historical capital of its owner
+Traits: yes/no 
+Reads gamestate for all scopes.
+**Supported Scopes**: location  
+
 ## is_historical_rival_of
 Is the country an historical rival of a specified country?
 Traits: country tag/country scope
@@ -8506,6 +8524,11 @@ Traits: yes/no
 Reads gamestate for all scopes.
 **Supported Scopes**: character  
 
+## is_valid_goal_for_charter
+Whether this colonial charter goal is available for the given colonial charter. The null goal (automatic) is always valid
+Reads gamestate for all scopes.
+**Supported Scopes**: colonial_charter_goal  
+
 ## is_valid_subject_for_goal
 Whether the country is a valid subject for the given colonial charter goal
 Reads gamestate for all scopes.
@@ -9013,7 +9036,7 @@ Reads gamestate for all scopes.
 **Supported Scopes**: country  
 
 ## loyalty_from_subject_bloc_strength
-Checks the loyalty change from subject bloc with same subject types. Usage: loyalty_from_subject_bloc_strength = { type = <subject type> value <operator> <value> } or loyalty_from_subject_bloc_strength(<subject type>)
+Checks the loyalty change all subjects as a bloc would cause for a subject of the given type. Usage: loyalty_from_subject_bloc_strength = { type = <subject type> value <operator> <value> } or loyalty_from_subject_bloc_strength(<subject type>)
 Traits: <, <=, =, !=, >, >=
 Reads gamestate for all scopes.
 **Supported Scopes**: country  
@@ -9808,6 +9831,12 @@ Reads gamestate for all scopes.
 
 ## num_open_bureaucracy_slots
 Checks if a country has a certain amount of open bureaucracy slots
+Traits: <, <=, =, !=, >, >=
+Reads gamestate for all scopes.
+**Supported Scopes**: country  
+
+## num_open_cabinet_positions
+Checks if a country has a certain amount of open cabinet positions
 Traits: <, <=, =, !=, >, >=
 Reads gamestate for all scopes.
 **Supported Scopes**: country  
@@ -11188,6 +11217,12 @@ AI-only cheap precheck: could the country plausibly benefit from changing its co
 Traits: yes/no 
 Reads gamestate for all scopes.
 **Supported Scopes**: country  
+
+## shows_stats
+character's adm/dip/mil abilities are shown in the UI
+Traits: yes/no 
+Reads gamestate for all scopes.
+**Supported Scopes**: character  
 
 ## situation_has_ended
 Check if a situation has ended

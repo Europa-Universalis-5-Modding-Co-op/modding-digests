@@ -5673,6 +5673,12 @@ Return type: [unregistered]
 
 -----------------------
 
+PdxGuiWidget.ClearDLCMapModeOverride
+Definition type: Function
+Return type: void
+
+-----------------------
+
 PdxGuiWidget.ClearHoveredUnits
 Definition type: Function
 Return type: void
@@ -5956,6 +5962,12 @@ Return type: [unregistered]
 -----------------------
 
 PdxGuiWidget.PopMapModeOverride
+Definition type: Function
+Return type: void
+
+-----------------------
+
+PdxGuiWidget.PushDLCMapModeOverride( Arg0 )
 Definition type: Function
 Return type: void
 

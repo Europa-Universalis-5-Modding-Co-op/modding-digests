@@ -8800,6 +8800,12 @@ Return type: void
 
 -----------------------
 
+SetSectionListFromTextContext( Arg0 )
+Definition type: Global function
+Return type: void
+
+-----------------------
+
 SetSelectedInstitution( Arg0 )
 Definition type: Global function
 Return type: void
@@ -9827,6 +9833,12 @@ Return type: CString
 -----------------------
 
 ShowLocationProductionView( Arg0, Arg1 )
+Definition type: Global function
+Return type: void
+
+-----------------------
+
+ShowLocationProductionViewForPopType( Arg0, Arg1 )
 Definition type: Global function
 Return type: void
 
@@ -39566,6 +39578,12 @@ Return type: [unregistered]
 
 -----------------------
 
+AiDiplomaticObjectiveGroup.GetPriority
+Definition type: Function
+Return type: CFixedPoint
+
+-----------------------
+
 AiDiplomaticObjectiveGroup.IsImportant
 Definition type: Function
 Return type: bool
@@ -52992,6 +53010,12 @@ Return type: [unregistered]
 
 -----------------------
 
+Character.ShowsStats
+Definition type: Function
+Return type: bool
+
+-----------------------
+
 Character.WasRuler
 Definition type: Function
 Return type: bool
@@ -53576,6 +53600,12 @@ Return type: [unregistered]
 -----------------------
 
 ChildEducationCandidate.GetOnStartEffectTooltip
+Definition type: Function
+Return type: CString
+
+-----------------------
+
+ChildEducationCandidate.GetProjectedGrowth
 Definition type: Function
 Return type: CString
 
@@ -58949,7 +58979,7 @@ Return type: CFixedPoint
 
 Country.GetFlag
 Definition type: Function
-Return type: [unregistered]
+Return type: CString
 
 -----------------------
 
@@ -60127,7 +60157,7 @@ Return type: CString
 
 Country.GetTag
 Definition type: Function
-Return type: [unregistered]
+Return type: CString
 
 -----------------------
 
@@ -86017,6 +86047,12 @@ Return type: Country
 
 -----------------------
 
+InternationalOrganization.GetCountryWithHighestEconomicalBase
+Definition type: Promote
+Return type: Country
+
+-----------------------
+
 InternationalOrganization.GetCountryWithHighestGreatPower
 Definition type: Promote
 Return type: Country
@@ -86222,6 +86258,12 @@ Return type: [unregistered]
 -----------------------
 
 InternationalOrganization.GetCountryOrderedByGreatPowerScore( Arg0 )
+Definition type: Function
+Return type: [unregistered]
+
+-----------------------
+
+InternationalOrganization.GetCountryWithHighestEconomicalBase
 Definition type: Function
 Return type: [unregistered]
 
@@ -91096,6 +91138,12 @@ Return type: bool
 
 -----------------------
 
+Location.CanRevokeFirstTownRight
+Definition type: Function
+Return type: bool
+
+-----------------------
+
 Location.CanTransferOccupation
 Definition type: Function
 Return type: bool
@@ -92887,6 +92935,12 @@ Return type: [unregistered]
 Location.GetReligiousUnity
 Definition type: Function
 Return type: CFixedPoint
+
+-----------------------
+
+Location.GetRevokeFirstTownRightConditions
+Definition type: Function
+Return type: CString
 
 -----------------------
 
@@ -109100,6 +109154,12 @@ Return type: CString
 
 -----------------------
 
+Policy.GetEffectOnlyTextFor( Arg0 )
+Definition type: Function
+Return type: CString
+
+-----------------------
+
 Policy.GetEffectText
 Definition type: Function
 Return type: CString
@@ -118593,12 +118653,6 @@ Return type: CString
 
 -----------------------
 
-ReligiousOrder.GetPlayerProjectionBreakdown
-Definition type: Function
-Return type: CString
-
------------------------
-
 ReligiousOrder.GetPlayerStanding
 Definition type: Function
 Return type: CFixedPoint
@@ -118606,6 +118660,18 @@ Return type: CFixedPoint
 -----------------------
 
 ReligiousOrder.GetPlayerStandingBreakdown
+Definition type: Function
+Return type: CString
+
+-----------------------
+
+ReligiousOrder.GetPlayerStandingHints
+Definition type: Function
+Return type: CString
+
+-----------------------
+
+ReligiousOrder.GetPlayerZealHints
 Definition type: Function
 Return type: CString
 
@@ -118708,6 +118774,18 @@ Return type: bool
 -----------------------
 
 ReligiousOrder.HasPlayerPresence
+Definition type: Function
+Return type: bool
+
+-----------------------
+
+ReligiousOrder.HasPlayerStandingHints
+Definition type: Function
+Return type: bool
+
+-----------------------
+
+ReligiousOrder.HasPlayerZealHints
 Definition type: Function
 Return type: bool
 
@@ -120842,6 +120920,12 @@ Definition type: Type
 
 -----------------------
 
+RulerTermEntry.GetCharacter
+Definition type: Promote
+Return type: Character
+
+-----------------------
+
 RulerTermEntry.GetRulerTerm
 Definition type: Promote
 Return type: RulerTerm
@@ -120851,6 +120935,36 @@ Return type: RulerTerm
 RulerTermEntry.AccessSelf
 Definition type: Function
 Return type: [unregistered]
+
+-----------------------
+
+RulerTermEntry.GetEnd
+Definition type: Function
+Return type: CString
+
+-----------------------
+
+RulerTermEntry.GetNameInfo
+Definition type: Function
+Return type: CString
+
+-----------------------
+
+RulerTermEntry.GetStart
+Definition type: Function
+Return type: CString
+
+-----------------------
+
+RulerTermEntry.HasCharacter
+Definition type: Function
+Return type: bool
+
+-----------------------
+
+RulerTermEntry.IsActive
+Definition type: Function
+Return type: bool
 
 -----------------------
 
@@ -123820,6 +123934,88 @@ Return type: [unregistered]
 
 -----------------------
 
+SectionList
+Definition type: Type
+
+-----------------------
+
+SectionList.GetTitle
+Definition type: Promote
+Return type: CPdxStringView
+
+-----------------------
+
+SectionList.AccessSelf
+Definition type: Function
+Return type: [unregistered]
+
+-----------------------
+
+SectionList.GetCollapsedText
+Definition type: Function
+Return type: CString
+
+-----------------------
+
+SectionList.GetSections
+Definition type: Function
+Return type: [unregistered]
+
+-----------------------
+
+SectionList.GetTitle
+Definition type: Function
+Return type: [unregistered]
+
+-----------------------
+
+SectionList.Self
+Definition type: Function
+Return type: [unregistered]
+
+-----------------------
+
+SectionListSection
+Definition type: Type
+
+-----------------------
+
+SectionListSection.GetBody
+Definition type: Promote
+Return type: CPdxStringView
+
+-----------------------
+
+SectionListSection.GetTitle
+Definition type: Promote
+Return type: CPdxStringView
+
+-----------------------
+
+SectionListSection.AccessSelf
+Definition type: Function
+Return type: [unregistered]
+
+-----------------------
+
+SectionListSection.GetBody
+Definition type: Function
+Return type: [unregistered]
+
+-----------------------
+
+SectionListSection.GetTitle
+Definition type: Function
+Return type: [unregistered]
+
+-----------------------
+
+SectionListSection.Self
+Definition type: Function
+Return type: [unregistered]
+
+-----------------------
+
 SelectCasusBelli
 Definition type: Type
 
@@ -124333,6 +124529,12 @@ Return type: CFixedPoint
 SelectInteractionTargetGlue.GetMinValue
 Definition type: Function
 Return type: CFixedPoint
+
+-----------------------
+
+SelectInteractionTargetGlue.GetNextStageCharacters
+Definition type: Function
+Return type: [unregistered]
 
 -----------------------
 
@@ -131208,6 +131410,12 @@ Return type: GoodsDemand
 
 -----------------------
 
+SubUnitCategory.GetRepairDemand
+Definition type: Promote
+Return type: GoodsDemand
+
+-----------------------
+
 SubUnitCategory.MakeScope
 Definition type: Promote
 Return type: Scope
@@ -131307,6 +131515,12 @@ Return type: CString
 SubUnitCategory.GetPowerDescription
 Definition type: Function
 Return type: CString
+
+-----------------------
+
+SubUnitCategory.GetRepairDemand
+Definition type: Function
+Return type: [unregistered]
 
 -----------------------
 
@@ -131670,6 +131884,12 @@ Return type: GoodsDemand
 
 -----------------------
 
+SubUnitType.GetRepairDemand
+Definition type: Promote
+Return type: GoodsDemand
+
+-----------------------
+
 SubUnitType.MakeScope
 Definition type: Promote
 Return type: Scope
@@ -131823,6 +132043,18 @@ Return type: CString
 SubUnitType.GetRawCost( Arg0, Arg1 )
 Definition type: Function
 Return type: CFixedPoint
+
+-----------------------
+
+SubUnitType.GetRepairDemand
+Definition type: Function
+Return type: [unregistered]
+
+-----------------------
+
+SubUnitType.GetSailorsUpkeepPrecise
+Definition type: Function
+Return type: CString
 
 -----------------------
 
@@ -134598,6 +134830,12 @@ Return type: CString
 
 -----------------------
 
+TimedModifier.GetIcon
+Definition type: Function
+Return type: [unregistered]
+
+-----------------------
+
 TimedModifier.GetInverseProgress
 Definition type: Function
 Return type: CFixedPoint
@@ -135596,6 +135834,12 @@ Return type: [unregistered]
 
 -----------------------
 
+TownRights.CanRevoke
+Definition type: Function
+Return type: bool
+
+-----------------------
+
 TownRights.CanUpgrade
 Definition type: Function
 Return type: bool
@@ -135639,6 +135883,12 @@ Return type: CString
 -----------------------
 
 TownRights.GetNameWithNoTooltip
+Definition type: Function
+Return type: CString
+
+-----------------------
+
+TownRights.GetRevokeConditions
 Definition type: Function
 Return type: CString
 
@@ -135715,6 +135965,12 @@ Return type: [unregistered]
 
 -----------------------
 
+TownRightsItem.CanRevokeFirst
+Definition type: Function
+Return type: bool
+
+-----------------------
+
 TownRightsItem.CanUpgradeFirst
 Definition type: Function
 Return type: bool
@@ -135736,6 +135992,12 @@ Return type: [unregistered]
 TownRightsItem.GetLocationsAmount
 Definition type: Function
 Return type: int32
+
+-----------------------
+
+TownRightsItem.GetRevokeFirstConditions
+Definition type: Function
+Return type: CString
 
 -----------------------
 
