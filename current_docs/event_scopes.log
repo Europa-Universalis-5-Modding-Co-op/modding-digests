@@ -1,6 +1,6 @@
 Scope Types:
 
-none:
+none/any:
 Evaluate Triggers: yes
 Execute Effects: yes
 Change Scopes: yes
@@ -215,7 +215,7 @@ Evaluate Triggers: yes
 Execute Effects: yes
 Change Scopes: yes
 Save Token: rebl
-Stores Variables: no
+Stores Variables: yes
 
 trade:
 Evaluate Triggers: yes
@@ -357,6 +357,13 @@ Change Scopes: yes
 Save Token: disaster
 Stores Variables: yes
 
+expedition:
+Evaluate Triggers: yes
+Execute Effects: yes
+Change Scopes: yes
+Save Token: expedition
+Stores Variables: yes
+
 religious_aspect:
 Evaluate Triggers: yes
 Execute Effects: yes
@@ -476,13 +483,6 @@ Change Scopes: yes
 Save Token: subject_type
 Stores Variables: no
 
-cardinal:
-Evaluate Triggers: yes
-Execute Effects: yes
-Change Scopes: yes
-Save Token: cardinal
-Stores Variables: no
-
 active_resolution:
 Evaluate Triggers: yes
 Execute Effects: yes
@@ -572,6 +572,13 @@ Evaluate Triggers: yes
 Execute Effects: yes
 Change Scopes: yes
 Save Token: disaster_type
+Stores Variables: no
+
+expedition_type:
+Evaluate Triggers: yes
+Execute Effects: yes
+Change Scopes: yes
+Save Token: expedition_type
 Stores Variables: no
 
 sub_unit_category:
@@ -936,5 +943,61 @@ Evaluate Triggers: yes
 Execute Effects: yes
 Change Scopes: yes
 Save Token: imperial_circle
+Stores Variables: no
+
+colonial_charter_goal:
+Evaluate Triggers: yes
+Execute Effects: yes
+Change Scopes: yes
+Save Token: colonial_charter_goal
+Stores Variables: no
+
+ambition:
+Evaluate Triggers: yes
+Execute Effects: yes
+Change Scopes: yes
+Save Token: ambition
+Stores Variables: yes
+
+ambition_definition:
+Evaluate Triggers: yes
+Execute Effects: yes
+Change Scopes: yes
+Save Token: ambition_definition
+Stores Variables: no
+
+religious_order:
+Evaluate Triggers: yes
+Execute Effects: yes
+Change Scopes: yes
+Save Token: religious_order
+Stores Variables: no
+
+religious_order_type:
+Evaluate Triggers: yes
+Execute Effects: yes
+Change Scopes: yes
+Save Token: religious_order_type
+Stores Variables: no
+
+calling:
+Evaluate Triggers: yes
+Execute Effects: yes
+Change Scopes: yes
+Save Token: calling
+Stores Variables: no
+
+industry_promotion:
+Evaluate Triggers: yes
+Execute Effects: yes
+Change Scopes: yes
+Save Token: industry_promotion
+Stores Variables: no
+
+industry_type:
+Evaluate Triggers: yes
+Execute Effects: yes
+Change Scopes: yes
+Save Token: industry_type
 Stores Variables: no
 

@@ -817,12 +817,6 @@ Return type: CString
 
 -----------------------
 
-LocalizeInputAction( Arg0 )
-Definition type: Global function
-Return type: CString
-
------------------------
-
 Max_CFixedPoint( Arg0, Arg1 )
 Definition type: Global function
 Return type: CFixedPoint
@@ -1270,6 +1264,12 @@ Return type: uint64
 
 -----------------------
 
+ToString_FixedPoint( Arg0, Arg1 )
+Definition type: Global function
+Return type: CString
+
+-----------------------
+
 ToString_int16( Arg0 )
 Definition type: Global function
 Return type: CString
@@ -1487,12 +1487,6 @@ Return type: [unregistered]
 CString.GetString
 Definition type: Function
 Return type: [unregistered]
-
------------------------
-
-CString.IsStringNumberZero
-Definition type: Function
-Return type: bool
 
 -----------------------
 

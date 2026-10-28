@@ -707,13 +707,37 @@ Return type: [unregistered]
 
 -----------------------
 
+AnimationEditorConnectionTab.AddActivateAudioSwitchEvent( Arg0 )
+Definition type: Function
+Return type: void
+
+-----------------------
+
 AnimationEditorConnectionTab.AddCondition( Arg0 )
 Definition type: Function
 Return type: void
 
 -----------------------
 
+AnimationEditorConnectionTab.AddEmitParticleEvent( Arg0 )
+Definition type: Function
+Return type: void
+
+-----------------------
+
 AnimationEditorConnectionTab.AddLane( Arg0 )
+Definition type: Function
+Return type: void
+
+-----------------------
+
+AnimationEditorConnectionTab.AddPlayAudioEvent( Arg0 )
+Definition type: Function
+Return type: void
+
+-----------------------
+
+AnimationEditorConnectionTab.AddSetAudioParameterEvent( Arg0 )
 Definition type: Function
 Return type: void
 
@@ -731,7 +755,31 @@ Return type: bool
 
 -----------------------
 
+AnimationEditorConnectionTab.CanEditEvent( Arg0 )
+Definition type: Function
+Return type: bool
+
+-----------------------
+
 AnimationEditorConnectionTab.ConnectionName
+Definition type: Function
+Return type: CString
+
+-----------------------
+
+AnimationEditorConnectionTab.EditEvent( Arg0, Arg1 )
+Definition type: Function
+Return type: void
+
+-----------------------
+
+AnimationEditorConnectionTab.Events( Arg0 )
+Definition type: Function
+Return type: [unregistered]
+
+-----------------------
+
+AnimationEditorConnectionTab.GetEventName( Arg0 )
 Definition type: Function
 Return type: CString
 
@@ -755,7 +803,37 @@ Return type: CString
 
 -----------------------
 
+AnimationEditorConnectionTab.HasConditions( Arg0 )
+Definition type: Function
+Return type: bool
+
+-----------------------
+
+AnimationEditorConnectionTab.HasEvents( Arg0 )
+Definition type: Function
+Return type: bool
+
+-----------------------
+
+AnimationEditorConnectionTab.IsActivateAudioSwitchEvent( Arg0 )
+Definition type: Function
+Return type: bool
+
+-----------------------
+
 AnimationEditorConnectionTab.IsAllRandomLanesViewerVisible
+Definition type: Function
+Return type: bool
+
+-----------------------
+
+AnimationEditorConnectionTab.IsEmitParticleEvent( Arg0 )
+Definition type: Function
+Return type: bool
+
+-----------------------
+
+AnimationEditorConnectionTab.IsPlayAudioEvent( Arg0 )
 Definition type: Function
 Return type: bool
 
@@ -773,6 +851,12 @@ Return type: bool
 
 -----------------------
 
+AnimationEditorConnectionTab.IsSetAudioParameterEvent( Arg0 )
+Definition type: Function
+Return type: bool
+
+-----------------------
+
 AnimationEditorConnectionTab.OnRhsStringEdited( Arg0, Arg1 )
 Definition type: Function
 Return type: void
@@ -780,6 +864,12 @@ Return type: void
 -----------------------
 
 AnimationEditorConnectionTab.RemoveCondition( Arg0, Arg1 )
+Definition type: Function
+Return type: void
+
+-----------------------
+
+AnimationEditorConnectionTab.RemoveEvent( Arg0, Arg1 )
 Definition type: Function
 Return type: void
 
@@ -818,6 +908,24 @@ Return type: void
 AnimationEditorConnectionTab.ToggleAllRandomLanesViewerVisible
 Definition type: Function
 Return type: void
+
+-----------------------
+
+AnimationEditorEvent
+Description: An event in the Animation Edtior
+Definition type: Type
+
+-----------------------
+
+AnimationEditorEvent.AccessSelf
+Definition type: Function
+Return type: [unregistered]
+
+-----------------------
+
+AnimationEditorEvent.Self
+Definition type: Function
+Return type: [unregistered]
 
 -----------------------
 
@@ -965,9 +1073,75 @@ Return type: void
 
 -----------------------
 
+AnimationEditorStateTab.AddOnEnterActivateAudioSwitchEvent
+Definition type: Function
+Return type: void
+
+-----------------------
+
+AnimationEditorStateTab.AddOnEnterEmitParticleEvent
+Definition type: Function
+Return type: void
+
+-----------------------
+
+AnimationEditorStateTab.AddOnEnterPlayAudioEvent
+Definition type: Function
+Return type: void
+
+-----------------------
+
+AnimationEditorStateTab.AddOnEnterSetAudioParameterEvent
+Definition type: Function
+Return type: void
+
+-----------------------
+
+AnimationEditorStateTab.AddOnExitActivateAudioSwitchEvent
+Definition type: Function
+Return type: void
+
+-----------------------
+
+AnimationEditorStateTab.AddOnExitEmitParticleEvent
+Definition type: Function
+Return type: void
+
+-----------------------
+
+AnimationEditorStateTab.AddOnExitPlayAudioEvent
+Definition type: Function
+Return type: void
+
+-----------------------
+
+AnimationEditorStateTab.AddOnExitSetAudioParameterEvent
+Definition type: Function
+Return type: void
+
+-----------------------
+
 AnimationEditorStateTab.AddRandomClipReference( Arg0 )
 Definition type: Function
 Return type: void
+
+-----------------------
+
+AnimationEditorStateTab.AreOnEnterEventsExpanded
+Definition type: Function
+Return type: bool
+
+-----------------------
+
+AnimationEditorStateTab.AreOnExitEventsExpanded
+Definition type: Function
+Return type: bool
+
+-----------------------
+
+AnimationEditorStateTab.CanEditEvent( Arg0 )
+Definition type: Function
+Return type: bool
 
 -----------------------
 
@@ -995,7 +1169,37 @@ Return type: [unregistered]
 
 -----------------------
 
+AnimationEditorStateTab.EditStateEvent( Arg0 )
+Definition type: Function
+Return type: void
+
+-----------------------
+
+AnimationEditorStateTab.GetEventName( Arg0 )
+Definition type: Function
+Return type: CString
+
+-----------------------
+
 AnimationEditorStateTab.HasClipReferenceWidgets
+Definition type: Function
+Return type: bool
+
+-----------------------
+
+AnimationEditorStateTab.HasOnEnterEvents
+Definition type: Function
+Return type: bool
+
+-----------------------
+
+AnimationEditorStateTab.HasOnExitEvents
+Definition type: Function
+Return type: bool
+
+-----------------------
+
+AnimationEditorStateTab.IsActivateAudioSwitchEvent( Arg0 )
 Definition type: Function
 Return type: bool
 
@@ -1037,7 +1241,25 @@ Return type: bool
 
 -----------------------
 
+AnimationEditorStateTab.IsEmitParticleEvent( Arg0 )
+Definition type: Function
+Return type: bool
+
+-----------------------
+
+AnimationEditorStateTab.IsPlayAudioEvent( Arg0 )
+Definition type: Function
+Return type: bool
+
+-----------------------
+
 AnimationEditorStateTab.IsRandomClipReferenceRemovable( Arg0 )
+Definition type: Function
+Return type: bool
+
+-----------------------
+
+AnimationEditorStateTab.IsSetAudioParameterEvent( Arg0 )
 Definition type: Function
 Return type: bool
 
@@ -1055,6 +1277,18 @@ Return type: bool
 
 -----------------------
 
+AnimationEditorStateTab.OnEnterEvents
+Definition type: Function
+Return type: [unregistered]
+
+-----------------------
+
+AnimationEditorStateTab.OnExitEvents
+Definition type: Function
+Return type: [unregistered]
+
+-----------------------
+
 AnimationEditorStateTab.RemoveComplexClipReference( Arg0, Arg1 )
 Definition type: Function
 Return type: void
@@ -1067,9 +1301,27 @@ Return type: void
 
 -----------------------
 
+AnimationEditorStateTab.RemoveStateEvent( Arg0 )
+Definition type: Function
+Return type: void
+
+-----------------------
+
 AnimationEditorStateTab.Self
 Definition type: Function
 Return type: [unregistered]
+
+-----------------------
+
+AnimationEditorStateTab.ToggleOnEnterEventsExpanded
+Definition type: Function
+Return type: void
+
+-----------------------
+
+AnimationEditorStateTab.ToggleOnExitEventsExpanded
+Definition type: Function
+Return type: void
 
 -----------------------
 
@@ -2213,6 +2465,186 @@ Return type: [unregistered]
 
 -----------------------
 
+CustomizationCommon
+Description: Map Editor - Common Customization
+Definition type: Type
+
+-----------------------
+
+CustomizationCommon.GetMenuButtonsRegistry
+Definition type: Promote
+Return type: InjectedButtonsRegistry
+
+-----------------------
+
+CustomizationCommon.GetOptionsTopbarButtonsRegistry
+Definition type: Promote
+Return type: InjectedButtonsRegistry
+
+-----------------------
+
+CustomizationCommon.GetToolboxButtonsRegistry
+Definition type: Promote
+Return type: InjectedButtonsRegistry
+
+-----------------------
+
+CustomizationCommon.AccessSelf
+Definition type: Function
+Return type: [unregistered]
+
+-----------------------
+
+CustomizationCommon.GetMenuButtonsRegistry
+Definition type: Function
+Return type: [unregistered]
+
+-----------------------
+
+CustomizationCommon.GetOptionsTopbarButtonsRegistry
+Definition type: Function
+Return type: [unregistered]
+
+-----------------------
+
+CustomizationCommon.GetToolboxButtonsRegistry
+Definition type: Function
+Return type: [unregistered]
+
+-----------------------
+
+CustomizationCommon.Self
+Definition type: Function
+Return type: [unregistered]
+
+-----------------------
+
+CustomizationDecalsEditor
+Description: Map Editor - Decals Editor Customization
+Definition type: Type
+
+-----------------------
+
+CustomizationDecalsEditor.GetOutlinerToolbarButtonsRegistry
+Definition type: Promote
+Return type: InjectedButtonsRegistry
+
+-----------------------
+
+CustomizationDecalsEditor.AccessSelf
+Definition type: Function
+Return type: [unregistered]
+
+-----------------------
+
+CustomizationDecalsEditor.GetOutlinerToolbarButtonsRegistry
+Definition type: Function
+Return type: [unregistered]
+
+-----------------------
+
+CustomizationDecalsEditor.Self
+Definition type: Function
+Return type: [unregistered]
+
+-----------------------
+
+CustomizationRegistry
+Description: Map Editor - Customization Registry
+Definition type: Type
+
+-----------------------
+
+CustomizationRegistry.GetCommon
+Definition type: Promote
+Return type: CustomizationCommon
+
+-----------------------
+
+CustomizationRegistry.GetDecalsEditor
+Definition type: Promote
+Return type: CustomizationDecalsEditor
+
+-----------------------
+
+CustomizationRegistry.GetSplineEditor
+Definition type: Promote
+Return type: CustomizationSplineEditor
+
+-----------------------
+
+CustomizationRegistry.AccessSelf
+Definition type: Function
+Return type: [unregistered]
+
+-----------------------
+
+CustomizationRegistry.GetCommon
+Definition type: Function
+Return type: [unregistered]
+
+-----------------------
+
+CustomizationRegistry.GetDecalsEditor
+Definition type: Function
+Return type: [unregistered]
+
+-----------------------
+
+CustomizationRegistry.GetSplineEditor
+Definition type: Function
+Return type: [unregistered]
+
+-----------------------
+
+CustomizationRegistry.Self
+Definition type: Function
+Return type: [unregistered]
+
+-----------------------
+
+CustomizationSplineEditor
+Description: Map Editor - Spline Editor Customization
+Definition type: Type
+
+-----------------------
+
+CustomizationSplineEditor.GetOutlinerToolbarButtonsRegistry
+Definition type: Promote
+Return type: InjectedButtonsRegistry
+
+-----------------------
+
+CustomizationSplineEditor.GetViewportPenToolbarButtonsRegistry
+Definition type: Promote
+Return type: InjectedButtonsRegistry
+
+-----------------------
+
+CustomizationSplineEditor.AccessSelf
+Definition type: Function
+Return type: [unregistered]
+
+-----------------------
+
+CustomizationSplineEditor.GetOutlinerToolbarButtonsRegistry
+Definition type: Function
+Return type: [unregistered]
+
+-----------------------
+
+CustomizationSplineEditor.GetViewportPenToolbarButtonsRegistry
+Definition type: Function
+Return type: [unregistered]
+
+-----------------------
+
+CustomizationSplineEditor.Self
+Definition type: Function
+Return type: [unregistered]
+
+-----------------------
+
 DatatypesExplorer
 Definition type: Type
 
@@ -2321,75 +2753,21 @@ Return type: [unregistered]
 
 -----------------------
 
-DecalsEditor.Bake
-Definition type: Function
-Return type: void
-
------------------------
-
-DecalsEditor.CanBake
-Definition type: Function
-Return type: bool
-
------------------------
-
-DecalsEditor.CanBakeReason
-Definition type: Function
-Return type: CString
-
------------------------
-
-DecalsEditor.CanChangeBakeToUserDir
-Definition type: Function
-Return type: bool
-
------------------------
-
-DecalsEditor.CanChangeBakeToUserDirReason
-Definition type: Function
-Return type: CString
-
------------------------
-
-DecalsEditor.CanSetBakedView( Arg0 )
-Definition type: Function
-Return type: bool
-
------------------------
-
-DecalsEditor.CanSetBakedViewReason( Arg0 )
-Definition type: Function
-Return type: CString
-
------------------------
-
 DecalsEditor.CloneSelectedInstances
 Definition type: Function
 Return type: void
 
 -----------------------
 
-DecalsEditor.DeleteSelectedInstances
+DecalsEditor.CreateNewLayer( Arg0 )
 Definition type: Function
 Return type: void
 
 -----------------------
 
-DecalsEditor.GetBakingChecksumCurrent
+DecalsEditor.DeleteSelection
 Definition type: Function
-Return type: CString
-
------------------------
-
-DecalsEditor.GetBakingChecksumInOutput
-Definition type: Function
-Return type: CString
-
------------------------
-
-DecalsEditor.GetBakingProgressInPercent
-Definition type: Function
-Return type: float
+Return type: void
 
 -----------------------
 
@@ -2399,21 +2777,9 @@ Return type: int32
 
 -----------------------
 
-DecalsEditor.IsAllSelectedInstancesDisabled
+DecalsEditor.GetNumSelectedObjects
 Definition type: Function
-Return type: bool
-
------------------------
-
-DecalsEditor.IsAllSelectedInstancesHidden
-Definition type: Function
-Return type: bool
-
------------------------
-
-DecalsEditor.IsAllSelectedInstancesLocked
-Definition type: Function
-Return type: bool
+Return type: int32
 
 -----------------------
 
@@ -2429,31 +2795,43 @@ Return type: bool
 
 -----------------------
 
-DecalsEditor.IsBakeOnSave
+DecalsEditor.IsAnyLayerSelected
 Definition type: Function
 Return type: bool
 
 -----------------------
 
-DecalsEditor.IsBakeToUserDir
+DecalsEditor.IsAnySelectedObjectDisabled
 Definition type: Function
 Return type: bool
 
 -----------------------
 
-DecalsEditor.IsBakedView
+DecalsEditor.IsAnySelectedObjectHidden
 Definition type: Function
 Return type: bool
 
 -----------------------
 
-DecalsEditor.IsBakingInProgress
+DecalsEditor.IsAnySelectedObjectLocked
+Definition type: Function
+Return type: bool
+
+-----------------------
+
+DecalsEditor.IsAnythingSelected
 Definition type: Function
 Return type: bool
 
 -----------------------
 
 DecalsEditor.IsCreateNewInstanceMode
+Definition type: Function
+Return type: bool
+
+-----------------------
+
+DecalsEditor.IsExportIngameDecalsOnSave
 Definition type: Function
 Return type: bool
 
@@ -2477,6 +2855,12 @@ Return type: bool
 
 -----------------------
 
+DecalsEditor.IsLockedDecalsSelectable
+Definition type: Function
+Return type: bool
+
+-----------------------
+
 DecalsEditor.IsModeSelected
 Definition type: Function
 Return type: bool
@@ -2484,12 +2868,6 @@ Return type: bool
 -----------------------
 
 DecalsEditor.IsMoveMode
-Definition type: Function
-Return type: bool
-
------------------------
-
-DecalsEditor.IsRequireBaking
 Definition type: Function
 Return type: bool
 
@@ -2537,7 +2915,7 @@ Return type: bool
 
 -----------------------
 
-DecalsEditor.ProcessSelectedDecalSetsMaterials
+DecalsEditor.ProcessSelectedDecalSets( Arg0 )
 Definition type: Function
 Return type: void
 
@@ -2552,18 +2930,6 @@ Return type: void
 DecalsEditor.Self
 Definition type: Function
 Return type: [unregistered]
-
------------------------
-
-DecalsEditor.SetBakeToUserDir( Arg0 )
-Definition type: Function
-Return type: void
-
------------------------
-
-DecalsEditor.SetBakedView( Arg0 )
-Definition type: Function
-Return type: void
 
 -----------------------
 
@@ -2603,6 +2969,24 @@ Return type: void
 
 -----------------------
 
+DecalsEditor.SetSelectedObjectsDisabled( Arg0 )
+Definition type: Function
+Return type: void
+
+-----------------------
+
+DecalsEditor.SetSelectedObjectsHidden( Arg0 )
+Definition type: Function
+Return type: void
+
+-----------------------
+
+DecalsEditor.SetSelectedObjectsLocked( Arg0 )
+Definition type: Function
+Return type: void
+
+-----------------------
+
 DecalsEditor.SetSelectionMode
 Definition type: Function
 Return type: void
@@ -2615,13 +2999,7 @@ Return type: void
 
 -----------------------
 
-DecalsEditor.ToggleBakeOnSave
-Definition type: Function
-Return type: void
-
------------------------
-
-DecalsEditor.ToggleBakeToUserDir
+DecalsEditor.ToggleExportIngameDecalsOnSave
 Definition type: Function
 Return type: void
 
@@ -2633,19 +3011,7 @@ Return type: void
 
 -----------------------
 
-DecalsEditor.ToggleSelectedInstancesDisabledStatus
-Definition type: Function
-Return type: void
-
------------------------
-
-DecalsEditor.ToggleSelectedInstancesHiddenStatus
-Definition type: Function
-Return type: void
-
------------------------
-
-DecalsEditor.ToggleSelectedInstancesLock
+DecalsEditor.ToggleLockedDecalsSelectable
 Definition type: Function
 Return type: void
 
@@ -2654,138 +3020,6 @@ Return type: void
 DecalsEditor.ToggleSettingsDockable
 Definition type: Function
 Return type: void
-
------------------------
-
-DecalsEditorDecalInstance
-Description: Map Editor - Decal Instance
-Definition type: Type
-
------------------------
-
-DecalsEditorDecalInstance.AccessSelf
-Definition type: Function
-Return type: [unregistered]
-
------------------------
-
-DecalsEditorDecalInstance.GetDecalSetName
-Definition type: Function
-Return type: CString
-
------------------------
-
-DecalsEditorDecalInstance.GetDepthPriority
-Definition type: Function
-Return type: float
-
------------------------
-
-DecalsEditorDecalInstance.GetName
-Definition type: Function
-Return type: CString
-
------------------------
-
-DecalsEditorDecalInstance.IsDirty
-Definition type: Function
-Return type: bool
-
------------------------
-
-DecalsEditorDecalInstance.IsDisabled
-Definition type: Function
-Return type: bool
-
------------------------
-
-DecalsEditorDecalInstance.IsHidden
-Definition type: Function
-Return type: bool
-
------------------------
-
-DecalsEditorDecalInstance.IsLocked
-Definition type: Function
-Return type: bool
-
------------------------
-
-DecalsEditorDecalInstance.IsSelected
-Definition type: Function
-Return type: bool
-
------------------------
-
-DecalsEditorDecalInstance.Self
-Definition type: Function
-Return type: [unregistered]
-
------------------------
-
-DecalsEditorDecalInstance.ToggleHiddenStatus
-Definition type: Function
-Return type: void
-
------------------------
-
-DecalsEditorDecalInstance.ToggleLock
-Definition type: Function
-Return type: void
-
------------------------
-
-DecalsEditorDecalInstancesList
-Description: Map Editor - List of Decal Instances
-Definition type: Type
-
------------------------
-
-DecalsEditorDecalInstancesList.AccessFilter
-Definition type: Promote
-Return type: DecalsEditorSearchFilter
-
------------------------
-
-DecalsEditorDecalInstancesList.AccessFilter
-Definition type: Function
-Return type: [unregistered]
-
------------------------
-
-DecalsEditorDecalInstancesList.AccessInstances
-Definition type: Function
-Return type: [unregistered]
-
------------------------
-
-DecalsEditorDecalInstancesList.AccessSelf
-Definition type: Function
-Return type: [unregistered]
-
------------------------
-
-DecalsEditorDecalInstancesList.GetInstances
-Definition type: Function
-Return type: [unregistered]
-
------------------------
-
-DecalsEditorDecalInstancesList.MoveSelectedInstances( Arg0 )
-Definition type: Function
-Return type: void
-
------------------------
-
-DecalsEditorDecalInstancesList.Select( Arg0 )
-Definition type: Function
-Return type: void
-
------------------------
-
-DecalsEditorDecalInstancesList.Self
-Definition type: Function
-Return type: [unregistered]
 
 -----------------------
 
@@ -2957,6 +3191,120 @@ Return type: [unregistered]
 
 -----------------------
 
+DecalsEditorInstanceProperties
+Description: Map Editor - Decals Editor Instance Properties
+Definition type: Type
+
+-----------------------
+
+DecalsEditorInstanceProperties.AccessSelf
+Definition type: Function
+Return type: [unregistered]
+
+-----------------------
+
+DecalsEditorInstanceProperties.IsAnyValidInstanceSelected
+Definition type: Function
+Return type: bool
+
+-----------------------
+
+DecalsEditorInstanceProperties.Self
+Definition type: Function
+Return type: [unregistered]
+
+-----------------------
+
+DecalsEditorOutliner
+Description: Map Editor - Decals Editor Outliner
+Definition type: Type
+
+-----------------------
+
+DecalsEditorOutliner.AccessFilter
+Definition type: Promote
+Return type: DecalsEditorSearchFilter
+
+-----------------------
+
+DecalsEditorOutliner.AccessEntriesDatamodel
+Definition type: Function
+Return type: [unregistered]
+
+-----------------------
+
+DecalsEditorOutliner.AccessFilter
+Definition type: Function
+Return type: [unregistered]
+
+-----------------------
+
+DecalsEditorOutliner.AccessSelf
+Definition type: Function
+Return type: [unregistered]
+
+-----------------------
+
+DecalsEditorOutliner.GetCurrentlyDraggingMessage
+Definition type: Function
+Return type: CString
+
+-----------------------
+
+DecalsEditorOutliner.IsDraggingOnTargetPossible
+Definition type: Function
+Return type: bool
+
+-----------------------
+
+DecalsEditorOutliner.OnEntryClick( Arg0 )
+Definition type: Function
+Return type: void
+
+-----------------------
+
+DecalsEditorOutliner.OnEntryDragEnd( Arg0 )
+Definition type: Function
+Return type: void
+
+-----------------------
+
+DecalsEditorOutliner.OnEntryDragEnter( Arg0, Arg1 )
+Definition type: Function
+Return type: void
+
+-----------------------
+
+DecalsEditorOutliner.OnEntryDragExit( Arg0, Arg1 )
+Definition type: Function
+Return type: void
+
+-----------------------
+
+DecalsEditorOutliner.OnEntryDragStart( Arg0 )
+Definition type: Function
+Return type: void
+
+-----------------------
+
+DecalsEditorOutliner.OnEntryDropped( Arg0, Arg1 )
+Definition type: Function
+Return type: void
+
+-----------------------
+
+DecalsEditorOutliner.OnEntryRightClick( Arg0 )
+Definition type: Function
+Return type: void
+
+-----------------------
+
+DecalsEditorOutliner.Self
+Definition type: Function
+Return type: [unregistered]
+
+-----------------------
+
 DecalsEditorSearchFilter
 Description: Decals Editor Search filter
 Definition type: Type
@@ -2993,138 +3341,6 @@ Return type: void
 
 -----------------------
 
-DecalsEditorSettings
-Description: Decals Editor - Settings
-Definition type: Type
-
------------------------
-
-DecalsEditorSettings.AccessLayers
-Definition type: Function
-Return type: [unregistered]
-
------------------------
-
-DecalsEditorSettings.AccessSelf
-Definition type: Function
-Return type: [unregistered]
-
------------------------
-
-DecalsEditorSettings.GetLayers
-Definition type: Function
-Return type: [unregistered]
-
------------------------
-
-DecalsEditorSettings.Self
-Definition type: Function
-Return type: [unregistered]
-
------------------------
-
-DecalsEditorSettingsLayer
-Description: Decals Editor - Settings Layer
-Definition type: Type
-
------------------------
-
-DecalsEditorSettingsLayer.AccessSelf
-Definition type: Function
-Return type: [unregistered]
-
------------------------
-
-DecalsEditorSettingsLayer.CanChangeResolution
-Definition type: Function
-Return type: bool
-
------------------------
-
-DecalsEditorSettingsLayer.GetCanChangeResolutionReason
-Definition type: Function
-Return type: CString
-
------------------------
-
-DecalsEditorSettingsLayer.GetName
-Definition type: Function
-Return type: CString
-
------------------------
-
-DecalsEditorSettingsLayer.GetResolutionHeight
-Definition type: Function
-Return type: int32
-
------------------------
-
-DecalsEditorSettingsLayer.GetResolutionWidth
-Definition type: Function
-Return type: int32
-
------------------------
-
-DecalsEditorSettingsLayer.IsAffectingTransforms
-Definition type: Function
-Return type: bool
-
------------------------
-
-DecalsEditorSettingsLayer.IsDecalsSizeMaintained
-Definition type: Function
-Return type: bool
-
------------------------
-
-DecalsEditorSettingsLayer.IsResolutionAspectLocked
-Definition type: Function
-Return type: bool
-
------------------------
-
-DecalsEditorSettingsLayer.ResetTerrainSettings
-Definition type: Function
-Return type: void
-
------------------------
-
-DecalsEditorSettingsLayer.ResizeTerrain
-Definition type: Function
-Return type: void
-
------------------------
-
-DecalsEditorSettingsLayer.Self
-Definition type: Function
-Return type: [unregistered]
-
------------------------
-
-DecalsEditorSettingsLayer.SetResolutionHeight
-Definition type: Function
-Return type: void
-
------------------------
-
-DecalsEditorSettingsLayer.SetResolutionWidth
-Definition type: Function
-Return type: void
-
------------------------
-
-DecalsEditorSettingsLayer.ToggleMaintainDecalsSize
-Definition type: Function
-Return type: void
-
------------------------
-
-DecalsEditorSettingsLayer.ToggleResolutionAspectLock
-Definition type: Function
-Return type: void
-
------------------------
-
 DecalsEditorViewport
 Description: Map Editor - Decals Editor Viewport
 Definition type: Type
@@ -3152,6 +3368,168 @@ Return type: void
 DecalsEditorViewport.Self
 Definition type: Function
 Return type: [unregistered]
+
+-----------------------
+
+DecalsOutlinerEntryUi
+Description: Map Editor - Decals Outliner Entry UI
+Definition type: Type
+
+-----------------------
+
+DecalsOutlinerEntryUi.AccessSelf
+Definition type: Function
+Return type: [unregistered]
+
+-----------------------
+
+DecalsOutlinerEntryUi.ContainsModifications
+Definition type: Function
+Return type: bool
+
+-----------------------
+
+DecalsOutlinerEntryUi.GetDepthPriorityAsString
+Definition type: Function
+Return type: CString
+
+-----------------------
+
+DecalsOutlinerEntryUi.GetDisplayName
+Definition type: Function
+Return type: CString
+
+-----------------------
+
+DecalsOutlinerEntryUi.GetFormattedDisplayName( Arg0, Arg1, Arg2 )
+Definition type: Function
+Return type: CString
+
+-----------------------
+
+DecalsOutlinerEntryUi.GetIdAsString
+Definition type: Function
+Return type: CString
+
+-----------------------
+
+DecalsOutlinerEntryUi.GetWarningsMessage
+Definition type: Function
+Return type: CPdxStringView
+
+-----------------------
+
+DecalsOutlinerEntryUi.HasWarnings
+Definition type: Function
+Return type: bool
+
+-----------------------
+
+DecalsOutlinerEntryUi.IsDisabled
+Definition type: Function
+Return type: bool
+
+-----------------------
+
+DecalsOutlinerEntryUi.IsDisabledExplicitly
+Definition type: Function
+Return type: bool
+
+-----------------------
+
+DecalsOutlinerEntryUi.IsExpanded
+Definition type: Function
+Return type: bool
+
+-----------------------
+
+DecalsOutlinerEntryUi.IsExternal
+Definition type: Function
+Return type: bool
+
+-----------------------
+
+DecalsOutlinerEntryUi.IsHidden
+Definition type: Function
+Return type: bool
+
+-----------------------
+
+DecalsOutlinerEntryUi.IsHiddenExplicitly
+Definition type: Function
+Return type: bool
+
+-----------------------
+
+DecalsOutlinerEntryUi.IsHovered
+Definition type: Function
+Return type: bool
+
+-----------------------
+
+DecalsOutlinerEntryUi.IsLayer
+Definition type: Function
+Return type: bool
+
+-----------------------
+
+DecalsOutlinerEntryUi.IsLocked
+Definition type: Function
+Return type: bool
+
+-----------------------
+
+DecalsOutlinerEntryUi.IsLockedExplicitly
+Definition type: Function
+Return type: bool
+
+-----------------------
+
+DecalsOutlinerEntryUi.IsSelected
+Definition type: Function
+Return type: bool
+
+-----------------------
+
+DecalsOutlinerEntryUi.IsSerialized
+Definition type: Function
+Return type: bool
+
+-----------------------
+
+DecalsOutlinerEntryUi.Self
+Definition type: Function
+Return type: [unregistered]
+
+-----------------------
+
+DecalsOutlinerEntryUi.SetHovered( Arg0 )
+Definition type: Function
+Return type: void
+
+-----------------------
+
+DecalsOutlinerEntryUi.ToggleDisabled
+Definition type: Function
+Return type: void
+
+-----------------------
+
+DecalsOutlinerEntryUi.ToggleExpanded
+Definition type: Function
+Return type: void
+
+-----------------------
+
+DecalsOutlinerEntryUi.ToggleHidden
+Definition type: Function
+Return type: void
+
+-----------------------
+
+DecalsOutlinerEntryUi.ToggleLock
+Definition type: Function
+Return type: void
 
 -----------------------
 
@@ -4151,18 +4529,6 @@ Return type: [unregistered]
 
 -----------------------
 
-EntityEditorAudioEventHandler.AddSoundParamter( Arg0 )
-Definition type: Function
-Return type: void
-
------------------------
-
-EntityEditorAudioEventHandler.RemoveLastSoundParameter( Arg0 )
-Definition type: Function
-Return type: void
-
------------------------
-
 EntityEditorAudioEventHandler.Self
 Definition type: Function
 Return type: [unregistered]
@@ -4846,12 +5212,6 @@ Return type: [unregistered]
 -----------------------
 
 GraphPanel.ClearSelection
-Definition type: Function
-Return type: void
-
------------------------
-
-GraphPanel.CompoundNodeUpdated( Arg0 )
 Definition type: Function
 Return type: void
 
@@ -6717,6 +7077,102 @@ Return type: [unregistered]
 
 -----------------------
 
+InjectedButton
+Description: Map Editor - Injected Button
+Definition type: Type
+
+-----------------------
+
+InjectedButton.AccessSelf
+Definition type: Function
+Return type: [unregistered]
+
+-----------------------
+
+InjectedButton.GetLabel
+Definition type: Function
+Return type: CString
+
+-----------------------
+
+InjectedButton.GetTooltip
+Definition type: Function
+Return type: CString
+
+-----------------------
+
+InjectedButton.HasIcon
+Definition type: Function
+Return type: bool
+
+-----------------------
+
+InjectedButton.HasLabel
+Definition type: Function
+Return type: bool
+
+-----------------------
+
+InjectedButton.IsCheckbutton
+Definition type: Function
+Return type: bool
+
+-----------------------
+
+InjectedButton.IsChecked
+Definition type: Function
+Return type: bool
+
+-----------------------
+
+InjectedButton.IsEnabled
+Definition type: Function
+Return type: bool
+
+-----------------------
+
+InjectedButton.IsVisible
+Definition type: Function
+Return type: bool
+
+-----------------------
+
+InjectedButton.OnClick
+Definition type: Function
+Return type: void
+
+-----------------------
+
+InjectedButton.Self
+Definition type: Function
+Return type: [unregistered]
+
+-----------------------
+
+InjectedButtonsRegistry
+Description: Map Editor - Injected Buttons Registry
+Definition type: Type
+
+-----------------------
+
+InjectedButtonsRegistry.AccessSelf
+Definition type: Function
+Return type: [unregistered]
+
+-----------------------
+
+InjectedButtonsRegistry.GetButtons
+Definition type: Function
+Return type: [unregistered]
+
+-----------------------
+
+InjectedButtonsRegistry.Self
+Definition type: Function
+Return type: [unregistered]
+
+-----------------------
+
 InspectorPanel
 Description: Map Editor - Spline Network Tool - Anchor Inspector Panel
 Definition type: Type
@@ -8103,6 +8559,42 @@ Return type: void
 
 -----------------------
 
+MapEditorCustomGui
+Description: Map Editor - Custom GUI
+Definition type: Type
+
+-----------------------
+
+MapEditorCustomGui.GetCustomizationRegistry
+Definition type: Promote
+Return type: CustomizationRegistry
+
+-----------------------
+
+MapEditorCustomGui.AccessSelf
+Definition type: Function
+Return type: [unregistered]
+
+-----------------------
+
+MapEditorCustomGui.GetButtonIcon( Arg0 )
+Definition type: Function
+Return type: [unregistered]
+
+-----------------------
+
+MapEditorCustomGui.GetCustomizationRegistry
+Definition type: Function
+Return type: [unregistered]
+
+-----------------------
+
+MapEditorCustomGui.Self
+Definition type: Function
+Return type: [unregistered]
+
+-----------------------
+
 MapEditorGui
 Description: Map Editor - Main GUI
 Definition type: Type
@@ -8113,6 +8605,12 @@ MapEditorGui.AccessLogViewer
 Description: Access Central Log Viewer
 Definition type: Promote
 Return type: LogViewer
+
+-----------------------
+
+MapEditorGui.GetCustomGui
+Definition type: Promote
+Return type: MapEditorCustomGui
 
 -----------------------
 
@@ -8129,9 +8627,51 @@ Return type: [unregistered]
 
 -----------------------
 
+MapEditorGui.CanFrameCameraToSelection
+Definition type: Function
+Return type: bool
+
+-----------------------
+
+MapEditorGui.FrameCameraToSelection
+Definition type: Function
+Return type: void
+
+-----------------------
+
+MapEditorGui.GetCustomGui
+Definition type: Function
+Return type: [unregistered]
+
+-----------------------
+
 MapEditorGui.GetReferenceOverlayOpacity
 Definition type: Function
 Return type: float
+
+-----------------------
+
+MapEditorGui.IsCameraLocked
+Definition type: Function
+Return type: bool
+
+-----------------------
+
+MapEditorGui.IsCameraPitchLocked
+Definition type: Function
+Return type: bool
+
+-----------------------
+
+MapEditorGui.IsCameraYawLocked
+Definition type: Function
+Return type: bool
+
+-----------------------
+
+MapEditorGui.IsFramingCameraFeatureSupported
+Definition type: Function
+Return type: bool
 
 -----------------------
 
@@ -8147,9 +8687,21 @@ Return type: void
 
 -----------------------
 
+MapEditorGui.ResetCameraRotation
+Definition type: Function
+Return type: void
+
+-----------------------
+
 MapEditorGui.Self
 Definition type: Function
 Return type: [unregistered]
+
+-----------------------
+
+MapEditorGui.SetCameraTopDownView
+Definition type: Function
+Return type: void
 
 -----------------------
 
@@ -8166,6 +8718,24 @@ Return type: void
 -----------------------
 
 MapEditorGui.ToggleBordersSettingsOptions
+Definition type: Function
+Return type: void
+
+-----------------------
+
+MapEditorGui.ToggleCameraLock
+Definition type: Function
+Return type: void
+
+-----------------------
+
+MapEditorGui.ToggleCameraPitchLock
+Definition type: Function
+Return type: void
+
+-----------------------
+
+MapEditorGui.ToggleCameraYawLock
 Definition type: Function
 Return type: void
 
@@ -8951,6 +9521,12 @@ Return type: bool
 
 -----------------------
 
+MeshImporter.IsEditorSettingsOpen
+Definition type: Function
+Return type: bool
+
+-----------------------
+
 MeshImporter.IsLogViewOpen
 Definition type: Function
 Return type: bool
@@ -8972,6 +9548,18 @@ Return type: bool
 MeshImporter.IsSettingsDiskFileExist
 Definition type: Function
 Return type: bool
+
+-----------------------
+
+MeshImporter.IsTargetMesh2
+Definition type: Function
+Return type: bool
+
+-----------------------
+
+MeshImporter.OpenImporterSettings
+Definition type: Function
+Return type: void
 
 -----------------------
 
@@ -9515,9 +10103,21 @@ Return type: void
 
 -----------------------
 
-NodeWindow.DescriptionDialog
+NodeWindow.EnterDescriptionEditingMode
 Definition type: Function
 Return type: void
+
+-----------------------
+
+NodeWindow.ExitDescriptionEditingMode
+Definition type: Function
+Return type: void
+
+-----------------------
+
+NodeWindow.IsDescriptionEditingMode
+Definition type: Function
+Return type: bool
 
 -----------------------
 
@@ -9530,12 +10130,6 @@ Return type: void
 NodeWindow.Self
 Definition type: Function
 Return type: [unregistered]
-
------------------------
-
-NodeWindow.SetDescription
-Definition type: Function
-Return type: void
 
 -----------------------
 
@@ -11279,6 +11873,102 @@ Return type: void
 
 -----------------------
 
+SPrimitiveEntryUi
+Description: Map Editor - Universal Spline Editor Structure Primitive Entry UI
+Definition type: Type
+
+-----------------------
+
+SPrimitiveEntryUi.AccessSelf
+Definition type: Function
+Return type: [unregistered]
+
+-----------------------
+
+SPrimitiveEntryUi.GetConnectedToOtherPointDesc
+Definition type: Function
+Return type: CString
+
+-----------------------
+
+SPrimitiveEntryUi.GetPointIndex
+Definition type: Function
+Return type: uint32
+
+-----------------------
+
+SPrimitiveEntryUi.GetPrimitiveIdHash
+Definition type: Function
+Return type: CString
+
+-----------------------
+
+SPrimitiveEntryUi.GetPrimitiveSpriteIndex
+Definition type: Function
+Return type: int32
+
+-----------------------
+
+SPrimitiveEntryUi.GetReferencedByOtherPointsDesc
+Definition type: Function
+Return type: CString
+
+-----------------------
+
+SPrimitiveEntryUi.IsConnectedToOtherPoint
+Definition type: Function
+Return type: bool
+
+-----------------------
+
+SPrimitiveEntryUi.IsPrimitiveHovered
+Definition type: Function
+Return type: bool
+
+-----------------------
+
+SPrimitiveEntryUi.IsPrimitivePoint
+Definition type: Function
+Return type: bool
+
+-----------------------
+
+SPrimitiveEntryUi.IsPrimitiveSelected
+Definition type: Function
+Return type: bool
+
+-----------------------
+
+SPrimitiveEntryUi.IsReferencedByOtherPoints
+Definition type: Function
+Return type: bool
+
+-----------------------
+
+SPrimitiveEntryUi.OnPrimitiveEntryUiClick
+Definition type: Function
+Return type: void
+
+-----------------------
+
+SPrimitiveEntryUi.OnPrimitiveEntryUiRightClick
+Definition type: Function
+Return type: void
+
+-----------------------
+
+SPrimitiveEntryUi.Self
+Definition type: Function
+Return type: [unregistered]
+
+-----------------------
+
+SPrimitiveEntryUi.SetPrimitiveHovered( Arg0 )
+Definition type: Function
+Return type: void
+
+-----------------------
+
 Savable
 Description: Save Dialog - Savable
 Definition type: Type
@@ -12052,12 +12742,6 @@ Return type: [unregistered]
 
 -----------------------
 
-SceneEditorHierarchyEntry.IsBottomDropTargetEntered
-Definition type: Function
-Return type: bool
-
------------------------
-
 SceneEditorHierarchyEntry.IsDropTargetIndicatorVisible
 Definition type: Function
 Return type: bool
@@ -12076,21 +12760,15 @@ Return type: bool
 
 -----------------------
 
+SceneEditorHierarchyEntry.IsSiblingDropTargetEntered
+Definition type: Function
+Return type: bool
+
+-----------------------
+
 SceneEditorHierarchyEntry.Name
 Definition type: Function
 Return type: CString
-
------------------------
-
-SceneEditorHierarchyEntry.OnBottomDropTargetEnter
-Definition type: Function
-Return type: void
-
------------------------
-
-SceneEditorHierarchyEntry.OnCenterDropTargetEnter
-Definition type: Function
-Return type: void
 
 -----------------------
 
@@ -12190,13 +12868,25 @@ Return type: void
 
 -----------------------
 
-SceneHierarchy.OnEntryDroppedAtBottomOf( Arg0 )
+SceneHierarchy.OnEntryDropAsChildEnter( Arg0 )
 Definition type: Function
 Return type: void
 
 -----------------------
 
-SceneHierarchy.OnEntryDroppedAtCenterOf( Arg0 )
+SceneHierarchy.OnEntryDropAsSiblingEnter( Arg0 )
+Definition type: Function
+Return type: void
+
+-----------------------
+
+SceneHierarchy.OnEntryDroppedAsChild( Arg0 )
+Definition type: Function
+Return type: void
+
+-----------------------
+
+SceneHierarchy.OnEntryDroppedAsSibling( Arg0 )
 Definition type: Function
 Return type: void
 
@@ -13149,6 +13839,12 @@ Return type: bool
 
 -----------------------
 
+SplineEntryUi.ContainsModifications
+Definition type: Function
+Return type: bool
+
+-----------------------
+
 SplineEntryUi.GetDisplayName
 Definition type: Function
 Return type: CString
@@ -13185,19 +13881,31 @@ Return type: bool
 
 -----------------------
 
-SplineEntryUi.IsGameSpline
-Definition type: Function
-Return type: bool
-
------------------------
-
 SplineEntryUi.IsHidden
 Definition type: Function
 Return type: bool
 
 -----------------------
 
+SplineEntryUi.IsHiddenExplicitly
+Definition type: Function
+Return type: bool
+
+-----------------------
+
+SplineEntryUi.IsHovered
+Definition type: Function
+Return type: bool
+
+-----------------------
+
 SplineEntryUi.IsLocked
+Definition type: Function
+Return type: bool
+
+-----------------------
+
+SplineEntryUi.IsLockedExplicitly
 Definition type: Function
 Return type: bool
 
@@ -13215,9 +13923,21 @@ Return type: bool
 
 -----------------------
 
+SplineEntryUi.IsSerialized
+Definition type: Function
+Return type: bool
+
+-----------------------
+
 SplineEntryUi.Self
 Definition type: Function
 Return type: [unregistered]
+
+-----------------------
+
+SplineEntryUi.SetHovered( Arg0 )
+Definition type: Function
+Return type: void
 
 -----------------------
 
@@ -13565,7 +14285,7 @@ Return type: [unregistered]
 
 SplineTypeItem.GetId
 Definition type: Function
-Return type: uint8
+Return type: CString
 
 -----------------------
 
@@ -14969,6 +15689,41 @@ Return type: void
 
 -----------------------
 
+ToolPropertyFixed
+Definition type: Type
+
+-----------------------
+
+ToolPropertyFixed.AccessSelf
+Definition type: Function
+Return type: [unregistered]
+
+-----------------------
+
+ToolPropertyFixed.GetFixed
+Definition type: Function
+Return type: CFixedPoint
+
+-----------------------
+
+ToolPropertyFixed.GetValueColor
+Definition type: Function
+Return type: CVector4f
+
+-----------------------
+
+ToolPropertyFixed.Self
+Definition type: Function
+Return type: [unregistered]
+
+-----------------------
+
+ToolPropertyFixed.SetFixed
+Definition type: Function
+Return type: void
+
+-----------------------
+
 ToolPropertyFloat
 Definition type: Type
 
@@ -15433,6 +16188,65 @@ Return type: void
 
 -----------------------
 
+ToolPropertyVec2F
+Definition type: Type
+
+-----------------------
+
+ToolPropertyVec2F.AccessSelf
+Definition type: Function
+Return type: [unregistered]
+
+-----------------------
+
+ToolPropertyVec2F.GetValue
+Definition type: Function
+Return type: [unregistered]
+
+-----------------------
+
+ToolPropertyVec2F.GetValueColor
+Definition type: Function
+Return type: CVector4f
+
+-----------------------
+
+ToolPropertyVec2F.GetX
+Definition type: Function
+Return type: CString
+
+-----------------------
+
+ToolPropertyVec2F.GetY
+Definition type: Function
+Return type: CString
+
+-----------------------
+
+ToolPropertyVec2F.Self
+Definition type: Function
+Return type: [unregistered]
+
+-----------------------
+
+ToolPropertyVec2F.SetValueFromColor
+Definition type: Function
+Return type: void
+
+-----------------------
+
+ToolPropertyVec2F.SetX
+Definition type: Function
+Return type: void
+
+-----------------------
+
+ToolPropertyVec2F.SetY
+Definition type: Function
+Return type: void
+
+-----------------------
+
 ToolPropertyVec2f
 Definition type: Type
 
@@ -15569,6 +16383,77 @@ Return type: void
 -----------------------
 
 ToolPropertyVec2i.SetY
+Definition type: Function
+Return type: void
+
+-----------------------
+
+ToolPropertyVec3F
+Definition type: Type
+
+-----------------------
+
+ToolPropertyVec3F.AccessSelf
+Definition type: Function
+Return type: [unregistered]
+
+-----------------------
+
+ToolPropertyVec3F.GetValue
+Definition type: Function
+Return type: [unregistered]
+
+-----------------------
+
+ToolPropertyVec3F.GetValueColor
+Definition type: Function
+Return type: CVector4f
+
+-----------------------
+
+ToolPropertyVec3F.GetX
+Definition type: Function
+Return type: CString
+
+-----------------------
+
+ToolPropertyVec3F.GetY
+Definition type: Function
+Return type: CString
+
+-----------------------
+
+ToolPropertyVec3F.GetZ
+Definition type: Function
+Return type: CString
+
+-----------------------
+
+ToolPropertyVec3F.Self
+Definition type: Function
+Return type: [unregistered]
+
+-----------------------
+
+ToolPropertyVec3F.SetValueFromColor
+Definition type: Function
+Return type: void
+
+-----------------------
+
+ToolPropertyVec3F.SetX
+Definition type: Function
+Return type: void
+
+-----------------------
+
+ToolPropertyVec3F.SetY
+Definition type: Function
+Return type: void
+
+-----------------------
+
+ToolPropertyVec3F.SetZ
 Definition type: Function
 Return type: void
 
@@ -15716,6 +16601,89 @@ Return type: void
 
 -----------------------
 
+ToolPropertyVec4F
+Definition type: Type
+
+-----------------------
+
+ToolPropertyVec4F.AccessSelf
+Definition type: Function
+Return type: [unregistered]
+
+-----------------------
+
+ToolPropertyVec4F.GetValue
+Definition type: Function
+Return type: [unregistered]
+
+-----------------------
+
+ToolPropertyVec4F.GetValueColor
+Definition type: Function
+Return type: CVector4f
+
+-----------------------
+
+ToolPropertyVec4F.GetW
+Definition type: Function
+Return type: CString
+
+-----------------------
+
+ToolPropertyVec4F.GetX
+Definition type: Function
+Return type: CString
+
+-----------------------
+
+ToolPropertyVec4F.GetY
+Definition type: Function
+Return type: CString
+
+-----------------------
+
+ToolPropertyVec4F.GetZ
+Definition type: Function
+Return type: CString
+
+-----------------------
+
+ToolPropertyVec4F.Self
+Definition type: Function
+Return type: [unregistered]
+
+-----------------------
+
+ToolPropertyVec4F.SetValueFromColor
+Definition type: Function
+Return type: void
+
+-----------------------
+
+ToolPropertyVec4F.SetW
+Definition type: Function
+Return type: void
+
+-----------------------
+
+ToolPropertyVec4F.SetX
+Definition type: Function
+Return type: void
+
+-----------------------
+
+ToolPropertyVec4F.SetY
+Definition type: Function
+Return type: void
+
+-----------------------
+
+ToolPropertyVec4F.SetZ
+Definition type: Function
+Return type: void
+
+-----------------------
+
 ToolPropertyVec4i
 Definition type: Type
 
@@ -15794,6 +16762,60 @@ Return type: void
 -----------------------
 
 ToolPropertyVec4i.SetZ
+Definition type: Function
+Return type: void
+
+-----------------------
+
+ToolsPropertyDraggableValueFixed
+Description: Tools Property Draggable Fixed
+Definition type: Type
+
+-----------------------
+
+ToolsPropertyDraggableValueFixed.AccessSelf
+Definition type: Function
+Return type: [unregistered]
+
+-----------------------
+
+ToolsPropertyDraggableValueFixed.GetValidator
+Definition type: Function
+Return type: [unregistered]
+
+-----------------------
+
+ToolsPropertyDraggableValueFixed.GetValue
+Definition type: Function
+Return type: CFixedPoint
+
+-----------------------
+
+ToolsPropertyDraggableValueFixed.OnMouseDragFinished
+Definition type: Function
+Return type: void
+
+-----------------------
+
+ToolsPropertyDraggableValueFixed.OnMouseDragStarted
+Definition type: Function
+Return type: void
+
+-----------------------
+
+ToolsPropertyDraggableValueFixed.Self
+Definition type: Function
+Return type: [unregistered]
+
+-----------------------
+
+ToolsPropertyDraggableValueFixed.SetValueFromText
+Definition type: Function
+Return type: void
+
+-----------------------
+
+ToolsPropertyDraggableValueFixed.UpdateValue
 Definition type: Function
 Return type: void
 
@@ -15902,6 +16924,96 @@ Return type: void
 -----------------------
 
 ToolsPropertyDraggableValueInt.UpdateValue
+Definition type: Function
+Return type: void
+
+-----------------------
+
+ToolsPropertyDraggableValueVector2F
+Description: Tools Property Draggable Vector2 Fixed
+Definition type: Type
+
+-----------------------
+
+ToolsPropertyDraggableValueVector2F.AccessSelf
+Definition type: Function
+Return type: [unregistered]
+
+-----------------------
+
+ToolsPropertyDraggableValueVector2F.GetValidatorX
+Definition type: Function
+Return type: [unregistered]
+
+-----------------------
+
+ToolsPropertyDraggableValueVector2F.GetValidatorY
+Definition type: Function
+Return type: [unregistered]
+
+-----------------------
+
+ToolsPropertyDraggableValueVector2F.GetX
+Definition type: Function
+Return type: CString
+
+-----------------------
+
+ToolsPropertyDraggableValueVector2F.GetY
+Definition type: Function
+Return type: CString
+
+-----------------------
+
+ToolsPropertyDraggableValueVector2F.OnMouseDragFinishedX
+Definition type: Function
+Return type: void
+
+-----------------------
+
+ToolsPropertyDraggableValueVector2F.OnMouseDragFinishedY
+Definition type: Function
+Return type: void
+
+-----------------------
+
+ToolsPropertyDraggableValueVector2F.OnMouseDragStartedX
+Definition type: Function
+Return type: void
+
+-----------------------
+
+ToolsPropertyDraggableValueVector2F.OnMouseDragStartedY
+Definition type: Function
+Return type: void
+
+-----------------------
+
+ToolsPropertyDraggableValueVector2F.Self
+Definition type: Function
+Return type: [unregistered]
+
+-----------------------
+
+ToolsPropertyDraggableValueVector2F.SetX
+Definition type: Function
+Return type: void
+
+-----------------------
+
+ToolsPropertyDraggableValueVector2F.SetY
+Definition type: Function
+Return type: void
+
+-----------------------
+
+ToolsPropertyDraggableValueVector2F.UpdateValueX
+Definition type: Function
+Return type: void
+
+-----------------------
+
+ToolsPropertyDraggableValueVector2F.UpdateValueY
 Definition type: Function
 Return type: void
 
@@ -16082,6 +17194,132 @@ Return type: void
 -----------------------
 
 ToolsPropertyDraggableValueVector2i.UpdateValueY
+Definition type: Function
+Return type: void
+
+-----------------------
+
+ToolsPropertyDraggableValueVector3F
+Description: Tools Property Draggable Vector3 Fixed
+Definition type: Type
+
+-----------------------
+
+ToolsPropertyDraggableValueVector3F.AccessSelf
+Definition type: Function
+Return type: [unregistered]
+
+-----------------------
+
+ToolsPropertyDraggableValueVector3F.GetValidatorX
+Definition type: Function
+Return type: [unregistered]
+
+-----------------------
+
+ToolsPropertyDraggableValueVector3F.GetValidatorY
+Definition type: Function
+Return type: [unregistered]
+
+-----------------------
+
+ToolsPropertyDraggableValueVector3F.GetValidatorZ
+Definition type: Function
+Return type: [unregistered]
+
+-----------------------
+
+ToolsPropertyDraggableValueVector3F.GetX
+Definition type: Function
+Return type: CString
+
+-----------------------
+
+ToolsPropertyDraggableValueVector3F.GetY
+Definition type: Function
+Return type: CString
+
+-----------------------
+
+ToolsPropertyDraggableValueVector3F.GetZ
+Definition type: Function
+Return type: CString
+
+-----------------------
+
+ToolsPropertyDraggableValueVector3F.OnMouseDragFinishedX
+Definition type: Function
+Return type: void
+
+-----------------------
+
+ToolsPropertyDraggableValueVector3F.OnMouseDragFinishedY
+Definition type: Function
+Return type: void
+
+-----------------------
+
+ToolsPropertyDraggableValueVector3F.OnMouseDragFinishedZ
+Definition type: Function
+Return type: void
+
+-----------------------
+
+ToolsPropertyDraggableValueVector3F.OnMouseDragStartedX
+Definition type: Function
+Return type: void
+
+-----------------------
+
+ToolsPropertyDraggableValueVector3F.OnMouseDragStartedY
+Definition type: Function
+Return type: void
+
+-----------------------
+
+ToolsPropertyDraggableValueVector3F.OnMouseDragStartedZ
+Definition type: Function
+Return type: void
+
+-----------------------
+
+ToolsPropertyDraggableValueVector3F.Self
+Definition type: Function
+Return type: [unregistered]
+
+-----------------------
+
+ToolsPropertyDraggableValueVector3F.SetX
+Definition type: Function
+Return type: void
+
+-----------------------
+
+ToolsPropertyDraggableValueVector3F.SetY
+Definition type: Function
+Return type: void
+
+-----------------------
+
+ToolsPropertyDraggableValueVector3F.SetZ
+Definition type: Function
+Return type: void
+
+-----------------------
+
+ToolsPropertyDraggableValueVector3F.UpdateValueX
+Definition type: Function
+Return type: void
+
+-----------------------
+
+ToolsPropertyDraggableValueVector3F.UpdateValueY
+Definition type: Function
+Return type: void
+
+-----------------------
+
+ToolsPropertyDraggableValueVector3F.UpdateValueZ
 Definition type: Function
 Return type: void
 
@@ -16549,6 +17787,78 @@ Return type: void
 
 -----------------------
 
+ToolsPropertyRangedValueFixed
+Description: Tools Property Ranged Fixed
+Definition type: Type
+
+-----------------------
+
+ToolsPropertyRangedValueFixed.AccessSelf
+Definition type: Function
+Return type: [unregistered]
+
+-----------------------
+
+ToolsPropertyRangedValueFixed.GetMax
+Definition type: Function
+Return type: CFixedPoint
+
+-----------------------
+
+ToolsPropertyRangedValueFixed.GetMin
+Definition type: Function
+Return type: CFixedPoint
+
+-----------------------
+
+ToolsPropertyRangedValueFixed.GetStep
+Definition type: Function
+Return type: CFixedPoint
+
+-----------------------
+
+ToolsPropertyRangedValueFixed.GetValue
+Definition type: Function
+Return type: CFixedPoint
+
+-----------------------
+
+ToolsPropertyRangedValueFixed.GetWheelStep
+Definition type: Function
+Return type: CFixedPoint
+
+-----------------------
+
+ToolsPropertyRangedValueFixed.OnSetValueEnd( Arg0 )
+Definition type: Function
+Return type: void
+
+-----------------------
+
+ToolsPropertyRangedValueFixed.OnSetValueStart( Arg0 )
+Definition type: Function
+Return type: void
+
+-----------------------
+
+ToolsPropertyRangedValueFixed.Self
+Definition type: Function
+Return type: [unregistered]
+
+-----------------------
+
+ToolsPropertyRangedValueFixed.SetValue
+Definition type: Function
+Return type: void
+
+-----------------------
+
+ToolsPropertyRangedValueFixed.SetValueFromText( Arg0 )
+Definition type: Function
+Return type: void
+
+-----------------------
+
 ToolsPropertyRangedValueFloat
 Description: Tools Property Ranged Float
 Definition type: Type
@@ -16795,6 +18105,12 @@ Return type: void
 
 -----------------------
 
+ToolsPropertyValueList.CanAddOrRemoveItems
+Definition type: Function
+Return type: bool
+
+-----------------------
+
 ToolsPropertyValueList.RemoveItem( Arg0 )
 Definition type: Function
 Return type: void
@@ -16858,6 +18174,13 @@ Definition type: Type
 ToolsPropertyVfsMountPath.AccessSelf
 Definition type: Function
 Return type: [unregistered]
+
+-----------------------
+
+ToolsPropertyVfsMountPath.AreBundleValuesMixed
+Description: Only intended to be used with VfsMountPath bundles. Indicates whether the bundle contains multiple different values or not
+Definition type: Function
+Return type: bool
 
 -----------------------
 
@@ -17151,6 +18474,47 @@ Return type: bool
 
 -----------------------
 
+ToolsUndoableValueBundleFixed
+Definition type: Type
+
+-----------------------
+
+ToolsUndoableValueBundleFixed.AccessSelf
+Definition type: Function
+Return type: [unregistered]
+
+-----------------------
+
+ToolsUndoableValueBundleFixed.GetTextboxDisplayValue
+Definition type: Function
+Return type: CString
+
+-----------------------
+
+ToolsUndoableValueBundleFixed.Self
+Definition type: Function
+Return type: [unregistered]
+
+-----------------------
+
+ToolsUndoableValueBundleFixed.SetIsFocused( Arg0 )
+Definition type: Function
+Return type: void
+
+-----------------------
+
+ToolsUndoableValueBundleFixed.SetValueOnFocusOut
+Definition type: Function
+Return type: void
+
+-----------------------
+
+ToolsUndoableValueBundleFixed.ShouldDisplayMixedValuesOverlay
+Definition type: Function
+Return type: bool
+
+-----------------------
+
 ToolsUndoableValueBundleFloat
 Definition type: Type
 
@@ -17356,6 +18720,53 @@ Return type: bool
 
 -----------------------
 
+ToolsUndoableValueBundleVec2F
+Definition type: Type
+
+-----------------------
+
+ToolsUndoableValueBundleVec2F.AccessSelf
+Definition type: Function
+Return type: [unregistered]
+
+-----------------------
+
+ToolsUndoableValueBundleVec2F.GetTextboxDisplayValue( Arg0 )
+Definition type: Function
+Return type: CString
+
+-----------------------
+
+ToolsUndoableValueBundleVec2F.Self
+Definition type: Function
+Return type: [unregistered]
+
+-----------------------
+
+ToolsUndoableValueBundleVec2F.SetIsFocused( Arg0, Arg1 )
+Definition type: Function
+Return type: void
+
+-----------------------
+
+ToolsUndoableValueBundleVec2F.SetValue( Arg0 )
+Definition type: Function
+Return type: void
+
+-----------------------
+
+ToolsUndoableValueBundleVec2F.SetValueOnFocusOut( Arg0 )
+Definition type: Function
+Return type: void
+
+-----------------------
+
+ToolsUndoableValueBundleVec2F.ShouldDisplayMixedValuesOverlay( Arg0 )
+Definition type: Function
+Return type: bool
+
+-----------------------
+
 ToolsUndoableValueBundleVec2f
 Definition type: Type
 
@@ -17445,6 +18856,53 @@ Return type: void
 -----------------------
 
 ToolsUndoableValueBundleVec2i.ShouldDisplayMixedValuesOverlay( Arg0 )
+Definition type: Function
+Return type: bool
+
+-----------------------
+
+ToolsUndoableValueBundleVec3F
+Definition type: Type
+
+-----------------------
+
+ToolsUndoableValueBundleVec3F.AccessSelf
+Definition type: Function
+Return type: [unregistered]
+
+-----------------------
+
+ToolsUndoableValueBundleVec3F.GetTextboxDisplayValue( Arg0 )
+Definition type: Function
+Return type: CString
+
+-----------------------
+
+ToolsUndoableValueBundleVec3F.Self
+Definition type: Function
+Return type: [unregistered]
+
+-----------------------
+
+ToolsUndoableValueBundleVec3F.SetIsFocused( Arg0, Arg1 )
+Definition type: Function
+Return type: void
+
+-----------------------
+
+ToolsUndoableValueBundleVec3F.SetValue( Arg0 )
+Definition type: Function
+Return type: void
+
+-----------------------
+
+ToolsUndoableValueBundleVec3F.SetValueOnFocusOut( Arg0 )
+Definition type: Function
+Return type: void
+
+-----------------------
+
+ToolsUndoableValueBundleVec3F.ShouldDisplayMixedValuesOverlay( Arg0 )
 Definition type: Function
 Return type: bool
 
@@ -17551,6 +19009,53 @@ Return type: void
 -----------------------
 
 ToolsUndoableValueBundleVec3i.ShouldDisplayMixedValuesOverlay( Arg0 )
+Definition type: Function
+Return type: bool
+
+-----------------------
+
+ToolsUndoableValueBundleVec4F
+Definition type: Type
+
+-----------------------
+
+ToolsUndoableValueBundleVec4F.AccessSelf
+Definition type: Function
+Return type: [unregistered]
+
+-----------------------
+
+ToolsUndoableValueBundleVec4F.GetTextboxDisplayValue( Arg0 )
+Definition type: Function
+Return type: CString
+
+-----------------------
+
+ToolsUndoableValueBundleVec4F.Self
+Definition type: Function
+Return type: [unregistered]
+
+-----------------------
+
+ToolsUndoableValueBundleVec4F.SetIsFocused( Arg0, Arg1 )
+Definition type: Function
+Return type: void
+
+-----------------------
+
+ToolsUndoableValueBundleVec4F.SetValue( Arg0 )
+Definition type: Function
+Return type: void
+
+-----------------------
+
+ToolsUndoableValueBundleVec4F.SetValueOnFocusOut( Arg0 )
+Definition type: Function
+Return type: void
+
+-----------------------
+
+ToolsUndoableValueBundleVec4F.ShouldDisplayMixedValuesOverlay( Arg0 )
 Definition type: Function
 Return type: bool
 
@@ -18083,31 +19588,49 @@ Return type: bool
 
 -----------------------
 
-UniversalSplineEditorEdgeProperties
+UniversalSplineEditorEdgesProperties
 Description: Map Editor - Universal Spline Editor Selected Edges Properties
 Definition type: Type
 
 -----------------------
 
-UniversalSplineEditorEdgeProperties.AccessSelf
+UniversalSplineEditorEdgesProperties.AccessPropertyCategories
 Definition type: Function
 Return type: [unregistered]
 
 -----------------------
 
-UniversalSplineEditorEdgeProperties.AreAllSelectedEdgeSplinesLocked
+UniversalSplineEditorEdgesProperties.AccessSelf
+Definition type: Function
+Return type: [unregistered]
+
+-----------------------
+
+UniversalSplineEditorEdgesProperties.AreAllSelectedEdgeSplinesLocked
 Definition type: Function
 Return type: bool
 
 -----------------------
 
-UniversalSplineEditorEdgeProperties.GetNumberOfAffectedEdges
+UniversalSplineEditorEdgesProperties.GetNumberOfAffectedEdges
 Definition type: Function
 Return type: int32
 
 -----------------------
 
-UniversalSplineEditorEdgeProperties.Self
+UniversalSplineEditorEdgesProperties.InjectProperties( Arg0, Arg1 )
+Definition type: Function
+Return type: void
+
+-----------------------
+
+UniversalSplineEditorEdgesProperties.InjectPropertiesUncategorized( Arg0 )
+Definition type: Function
+Return type: void
+
+-----------------------
+
+UniversalSplineEditorEdgesProperties.Self
 Definition type: Function
 Return type: [unregistered]
 
@@ -18125,9 +19648,9 @@ Return type: [unregistered]
 
 -----------------------
 
-UniversalSplineEditorMode.CanFrameCameraToSelection
+UniversalSplineEditorMode.CloneSelectedObjects
 Definition type: Function
-Return type: bool
+Return type: void
 
 -----------------------
 
@@ -18149,9 +19672,9 @@ Return type: void
 
 -----------------------
 
-UniversalSplineEditorMode.FrameCameraToSelection
+UniversalSplineEditorMode.GetCurrentPointPlacingStrategy
 Definition type: Function
-Return type: void
+Return type: CString
 
 -----------------------
 
@@ -18173,6 +19696,24 @@ Return type: int32
 
 -----------------------
 
+UniversalSplineEditorMode.GetPointPlacingStrategyDescription( Arg0 )
+Definition type: Function
+Return type: CPdxStringView
+
+-----------------------
+
+UniversalSplineEditorMode.GetPointPlacingStrategyFlatValue
+Definition type: Function
+Return type: float
+
+-----------------------
+
+UniversalSplineEditorMode.GetPointPlacingStrategyStrings
+Definition type: Function
+Return type: [unregistered]
+
+-----------------------
+
 UniversalSplineEditorMode.IsAnySelectedObjectHidden
 Definition type: Function
 Return type: bool
@@ -18185,9 +19726,45 @@ Return type: bool
 
 -----------------------
 
+UniversalSplineEditorMode.IsBakeSplinesOnSave
+Definition type: Function
+Return type: bool
+
+-----------------------
+
 UniversalSplineEditorMode.IsModeSelected
 Definition type: Function
 Return type: bool
+
+-----------------------
+
+UniversalSplineEditorMode.IsPenBindingMode
+Definition type: Function
+Return type: bool
+
+-----------------------
+
+UniversalSplineEditorMode.IsPenSnappingMode
+Definition type: Function
+Return type: bool
+
+-----------------------
+
+UniversalSplineEditorMode.IsSplineDatabaseModified
+Definition type: Function
+Return type: bool
+
+-----------------------
+
+UniversalSplineEditorMode.IsVerticalEdit
+Definition type: Function
+Return type: bool
+
+-----------------------
+
+UniversalSplineEditorMode.OnSettingsClick
+Definition type: Function
+Return type: void
 
 -----------------------
 
@@ -18203,6 +19780,12 @@ Return type: [unregistered]
 
 -----------------------
 
+UniversalSplineEditorMode.SetCurrentPointPlacingStrategy( Arg0 )
+Definition type: Function
+Return type: void
+
+-----------------------
+
 UniversalSplineEditorMode.SetCurrentSelectionMode( Arg0 )
 Definition type: Function
 Return type: void
@@ -18210,6 +19793,12 @@ Return type: void
 -----------------------
 
 UniversalSplineEditorMode.SetCurrentToolType( Arg0 )
+Definition type: Function
+Return type: void
+
+-----------------------
+
+UniversalSplineEditorMode.SetPointPlacingStrategyFlatValueFromText
 Definition type: Function
 Return type: void
 
@@ -18227,13 +19816,49 @@ Return type: void
 
 -----------------------
 
+UniversalSplineEditorMode.SetVerticalEdit( Arg0 )
+Definition type: Function
+Return type: void
+
+-----------------------
+
+UniversalSplineEditorMode.ToggleBakeSplinesOnSave
+Definition type: Function
+Return type: void
+
+-----------------------
+
+UniversalSplineEditorMode.TogglePenBindingMode
+Definition type: Function
+Return type: void
+
+-----------------------
+
+UniversalSplineEditorMode.TogglePenSnappingMode
+Definition type: Function
+Return type: void
+
+-----------------------
+
 UniversalSplineEditorOutliner
 Description: Map Editor - Universal Spline Editor Outliner
 Definition type: Type
 
 -----------------------
 
+UniversalSplineEditorOutliner.AccessFilter
+Definition type: Promote
+Return type: DecalsEditorSearchFilter
+
+-----------------------
+
 UniversalSplineEditorOutliner.AccessEntriesDatamodel
+Definition type: Function
+Return type: [unregistered]
+
+-----------------------
+
+UniversalSplineEditorOutliner.AccessFilter
 Definition type: Function
 Return type: [unregistered]
 
@@ -18245,7 +19870,67 @@ Return type: [unregistered]
 
 -----------------------
 
+UniversalSplineEditorOutliner.GetCurrentlyDraggingMessage
+Definition type: Function
+Return type: CString
+
+-----------------------
+
+UniversalSplineEditorOutliner.IsDraggingOnTargetPossible
+Definition type: Function
+Return type: bool
+
+-----------------------
+
+UniversalSplineEditorOutliner.OnEntryDragEnd( Arg0 )
+Definition type: Function
+Return type: void
+
+-----------------------
+
+UniversalSplineEditorOutliner.OnEntryDragEnter( Arg0, Arg1 )
+Definition type: Function
+Return type: void
+
+-----------------------
+
+UniversalSplineEditorOutliner.OnEntryDragEnterOnEmptyArea
+Definition type: Function
+Return type: void
+
+-----------------------
+
+UniversalSplineEditorOutliner.OnEntryDragExit( Arg0, Arg1 )
+Definition type: Function
+Return type: void
+
+-----------------------
+
+UniversalSplineEditorOutliner.OnEntryDragStart( Arg0 )
+Definition type: Function
+Return type: void
+
+-----------------------
+
+UniversalSplineEditorOutliner.OnEntryDropped( Arg0, Arg1 )
+Definition type: Function
+Return type: void
+
+-----------------------
+
+UniversalSplineEditorOutliner.OnEntryDroppedOnEmptyArea
+Definition type: Function
+Return type: void
+
+-----------------------
+
 UniversalSplineEditorOutliner.OnSplineEntryUiClick( Arg0 )
+Definition type: Function
+Return type: void
+
+-----------------------
+
+UniversalSplineEditorOutliner.OnSplineEntryUiRightClick( Arg0 )
 Definition type: Function
 Return type: void
 
@@ -18260,6 +19945,12 @@ Return type: [unregistered]
 UniversalSplineEditorPointsProperties
 Description: Map Editor - Universal Spline Editor Selected Points Properties
 Definition type: Type
+
+-----------------------
+
+UniversalSplineEditorPointsProperties.AccessPropertyCategories
+Definition type: Function
+Return type: [unregistered]
 
 -----------------------
 
@@ -18281,49 +19972,73 @@ Return type: int32
 
 -----------------------
 
+UniversalSplineEditorPointsProperties.InjectProperties( Arg0, Arg1 )
+Definition type: Function
+Return type: void
+
+-----------------------
+
+UniversalSplineEditorPointsProperties.InjectPropertiesUncategorized( Arg0 )
+Definition type: Function
+Return type: void
+
+-----------------------
+
 UniversalSplineEditorPointsProperties.Self
 Definition type: Function
 Return type: [unregistered]
 
 -----------------------
 
-UniversalSplineEditorProperties
+UniversalSplineEditorSplinesProperties
 Description: Map Editor - Universal Spline Editor Properties
 Definition type: Type
 
 -----------------------
 
-UniversalSplineEditorProperties.AccessSelf
+UniversalSplineEditorSplinesProperties.AccessPropertyCategories
 Definition type: Function
 Return type: [unregistered]
 
 -----------------------
 
-UniversalSplineEditorProperties.AreAllSelectedSplinesLocked
+UniversalSplineEditorSplinesProperties.AccessSelf
+Definition type: Function
+Return type: [unregistered]
+
+-----------------------
+
+UniversalSplineEditorSplinesProperties.AreAllSelectedSplinesLocked
 Definition type: Function
 Return type: bool
 
 -----------------------
 
-UniversalSplineEditorProperties.GetFirstAffectedSplineName
+UniversalSplineEditorSplinesProperties.GetFirstAffectedSplineName
 Definition type: Function
 Return type: CString
 
 -----------------------
 
-UniversalSplineEditorProperties.GetNumAffectedSplines
+UniversalSplineEditorSplinesProperties.GetNumAffectedSplines
 Definition type: Function
 Return type: int32
 
 -----------------------
 
-UniversalSplineEditorProperties.IsGameSplinePropertiesVisible
+UniversalSplineEditorSplinesProperties.InjectProperties( Arg0, Arg1 )
 Definition type: Function
-Return type: bool
+Return type: void
 
 -----------------------
 
-UniversalSplineEditorProperties.Self
+UniversalSplineEditorSplinesProperties.InjectPropertiesUncategorized( Arg0 )
+Definition type: Function
+Return type: void
+
+-----------------------
+
+UniversalSplineEditorSplinesProperties.Self
 Definition type: Function
 Return type: [unregistered]
 
@@ -18365,24 +20080,6 @@ Return type: CString
 
 -----------------------
 
-UniversalSplineEditorStructure.GetPointIndex( Arg0 )
-Definition type: Function
-Return type: uint32
-
------------------------
-
-UniversalSplineEditorStructure.GetPrimitiveIdHash( Arg0 )
-Definition type: Function
-Return type: CString
-
------------------------
-
-UniversalSplineEditorStructure.GetPrimitiveSpriteIndex( Arg0 )
-Definition type: Function
-Return type: int32
-
------------------------
-
 UniversalSplineEditorStructure.InsertNewPoint
 Definition type: Function
 Return type: void
@@ -18401,24 +20098,6 @@ Return type: bool
 
 -----------------------
 
-UniversalSplineEditorStructure.IsPrimitivePoint( Arg0 )
-Definition type: Function
-Return type: bool
-
------------------------
-
-UniversalSplineEditorStructure.IsPrimitiveSelected( Arg0 )
-Definition type: Function
-Return type: bool
-
------------------------
-
-UniversalSplineEditorStructure.OnPrimitiveEntryUiClick( Arg0 )
-Definition type: Function
-Return type: void
-
------------------------
-
 UniversalSplineEditorStructure.RemoveSelectedPrimitives
 Definition type: Function
 Return type: void
@@ -18431,19 +20110,19 @@ Return type: [unregistered]
 
 -----------------------
 
-UniversalSplineEditorTopbarPanel
+UniversalSplineEditorTopbar
 Description: Map Editor - Universal Spline Editor Topbar
 Definition type: Type
 
 -----------------------
 
-UniversalSplineEditorTopbarPanel.AccessSelf
+UniversalSplineEditorTopbar.AccessSelf
 Definition type: Function
 Return type: [unregistered]
 
 -----------------------
 
-UniversalSplineEditorTopbarPanel.Self
+UniversalSplineEditorTopbar.Self
 Definition type: Function
 Return type: [unregistered]
 
@@ -18458,6 +20137,12 @@ Definition type: Type
 UniversalSplineEditorViewport.AccessSelf
 Definition type: Function
 Return type: [unregistered]
+
+-----------------------
+
+UniversalSplineEditorViewport.CanToggleEditDropdown
+Definition type: Function
+Return type: bool
 
 -----------------------
 
@@ -18476,6 +20161,12 @@ Return type: void
 UniversalSplineEditorViewport.Self
 Definition type: Function
 Return type: [unregistered]
+
+-----------------------
+
+UniversalSplineEditorViewport.ToggleEditDropdown( Arg0 )
+Definition type: Function
+Return type: void
 
 -----------------------
 

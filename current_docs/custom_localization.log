@@ -4,7 +4,7 @@ Custom Localization Documentation:
 
 GetSCCallToArmsTooltip:
 
-Scope: none
+Scope: none/any
 Random Valid: no
 
 Entries:
@@ -16,7 +16,7 @@ empty_text
 
 vote_in_western_schism_resolution_specific:
 
-Scope: none
+Scope: none/any
 Random Valid: no
 
 Entries:
@@ -27,7 +27,7 @@ western_schism_become_neutral
 
 vote_in_fall_of_delhi_resolution_specific:
 
-Scope: none
+Scope: none/any
 Random Valid: no
 
 Entries:
@@ -38,7 +38,7 @@ fall_of_delhi_become_neutral
 
 CultureGroup_adj:
 
-Scope: none
+Scope: none/any
 Random Valid: no
 
 Entries:
@@ -229,7 +229,7 @@ default_RU_culture_group
 
 CultureGroup_adj_wntt:
 
-Scope: none
+Scope: none/any
 Random Valid: no
 Parent: CultureGroup_adj
 Suffix: _wntt
@@ -252,6 +252,17 @@ dangerous_wild_animal_lion
 dangerous_wild_animal_boar
 dangerous_wild_animal_wolf
 dangerous_wild_animal_jaguar
+dangerous_wild_animal_bear
+dangerous_wild_animal_camel
+dangerous_wild_animal_crocodile
+dangerous_wild_animal_hippopotamus
+dangerous_wild_animal_rhinoceros
+dangerous_wild_animal_leopard
+dangerous_wild_animal_hyena
+dangerous_wild_animal_snake
+dangerous_wild_animal_cougar
+dangerous_wild_animal_anaconda
+dangerous_wild_animal_komodo_dragon
 dangerous_wild_animal_dolphin
 dangerous_wild_animal_whale
 dangerous_wild_animal_shark
@@ -774,6 +785,7 @@ Scope: country
 Random Valid: no
 
 Entries:
+cabinet_role_head_of_cabinet_hajib
 cabinet_role_head_of_cabinet_pirate_yarr
 cabinet_role_head_of_cabinet_procurator_of_saint_mark
 cabinet_role_head_of_cabinet_grand_vizier
@@ -1052,6 +1064,18 @@ Entries:
 GetCodFactionInfluenceHolland
 GetHookFactionInfluenceHolland
 hacw_enemy_faction
+
+--------------------
+
+GetFlavorPor17SuccessionConcern:
+
+Scope: country
+Random Valid: no
+
+Entries:
+flavor_por.17.concern_daughter
+flavor_por.17.concern_queen
+flavor_por.17.concern_fallback
 
 --------------------
 
@@ -1607,6 +1631,7 @@ country_history_GEL
 country_history_GEN
 country_history_GEO
 country_history_GLH
+country_history_GRA
 country_history_GRM
 country_history_HAB
 country_history_HAI
@@ -1716,6 +1741,7 @@ Entries:
 country_name_construction_ROM_republic
 country_name_construction_BYZ_greek
 country_name_construction_name
+country_name_construction_prefix_rank_of_name
 country_name_construction_prefix_rank_of_name_but_map_is_just_prefix_rank
 country_name_construction_prefix_name_rank
 country_name_construction_prefix_name
@@ -1788,10 +1814,6 @@ rank_kingdom_seven_kingdoms
 rank_empire_ilkhanate
 rank_empire_persian
 rank_empire_muslim_mamluk
-rank_empire_muslim_marinids
-rank_empire_muslim_zayyanids
-rank_empire_muslim_hafsids
-rank_empire_muslim_nasrids
 rank_empire_tsar
 rank_empire_dynasty
 rank_empire_ethiopia
@@ -1806,6 +1828,7 @@ rank_empire_nahua
 rank_empire_slovene
 rank_empire_serbo_croatian
 rank_empire_bulgarian
+rank_empire_muslim
 rank_empire
 rank_kingdom_revolutionary
 rank_kingdom_pirate_republic
@@ -1844,10 +1867,6 @@ rank_kingdom_mutapa
 rank_kingdom_zimbabwe
 rank_kingdom_persian
 rank_kingdom_muslim_mamluk
-rank_kingdom_muslim_marinids
-rank_kingdom_muslim_zayyanids
-rank_kingdom_muslim_hafsids
-rank_kingdom_muslim_nasrids
 rank_kingdom_muslim
 rank_kingdom_indian
 rank_kingdom_commonwealth_polish_lithuanian
@@ -1882,7 +1901,6 @@ rank_duchy_frisian_freedom
 rank_duchy_republic_high_alemannic
 rank_duchy_republic_novgorod
 rank_duchy_republic
-rank_empire_muslim
 rank_kingdom_papacy
 rank_duchy_order_german_subject
 rank_duchy_order_subject
@@ -1904,10 +1922,6 @@ rank_duchy_karvuna_despotate
 rank_duchy_voivode
 rank_duchy_persian
 rank_duchy_andalusi
-rank_duchy_muslim_marinids
-rank_duchy_muslim_zayyanids
-rank_duchy_muslim_hafsids
-rank_duchy_muslim_nasrids
 rank_duchy_muslim
 rank_duchy_indian
 rank_duchy_dauphiny
@@ -2240,6 +2254,7 @@ nobles_estate_chieftains
 nobles_estate_patriziato
 nobles_estate_patricians
 nobles_estate_szlachta
+nobles_estate_almohads
 nobles_estate_bajorai
 nobles_estate_znat
 nobles_estate_boyars
@@ -2458,7 +2473,6 @@ country_flavor_parliament_german
 country_flavor_parliament_breton
 country_flavor_parliament_welsh
 country_flavor_parliament_ruthenian
-country_flavor_parliament_catalan
 country_flavor_parliament_occitan
 country_flavor_parliament_portuguese_parliament
 country_flavor_parliament_cortes
@@ -2540,6 +2554,28 @@ Entries:
 country_flavor_official_swedish
 country_flavor_official_monarchy
 country_flavor_official
+
+--------------------
+
+GetRichPresenceStatus:
+
+Scope: country
+Random Valid: no
+
+Entries:
+rich_presence_status_bankrupt
+rich_presence_status_disaster
+rich_presence_status_losing_war
+rich_presence_status_winning_war
+rich_presence_status_at_war
+rich_presence_status_ruler_disease
+rich_presence_status_regency
+rich_presence_status_subject
+rich_presence_status_hegemon
+rich_presence_status_io_leader
+rich_presence_status_situation
+rich_presence_status_colonizing
+rich_presence_status_default
 
 --------------------
 
@@ -48120,6 +48156,7 @@ NAVY_NAME_icelandic
 NAVY_NAME_scandinavian
 NAVY_NAME_greek
 NAVY_NAME_tamazight
+NAVY_NAME_maghrebi_dialect
 NAVY_NAME_arabic
 NAVY_NAME_turkish
 NAVY_NAME_persian
@@ -48183,6 +48220,7 @@ Random Valid: no
 
 Entries:
 subunit_structure_army_roman
+subunit_structure_army_basque
 subunit_structure_army_spanish
 subunit_structure_army_german
 subunit_structure_army_italian
@@ -48281,8 +48319,12 @@ subunit_type_army_infantry_levies_danish
 subunit_type_army_infantry_levies_norwegian
 subunit_type_army_infantry_levies_swedish
 subunit_type_army_infantry_levies_french
+subunit_type_army_infantry_levies_basque
 subunit_type_army_infantry_levies_spanish
 subunit_type_army_infantry_levies_english
+subunit_type_army_infantry_levies_maghrebi_dialect
+subunit_type_army_infantry_levies_arabic
+subunit_type_army_infantry_levies_tamazight
 subunit_type_army_infantry_levies
 subunit_type_army_infantry_chinese
 subunit_type_army_infantry_shu_language
@@ -48329,6 +48371,9 @@ subunit_type_army_infantry_scots
 subunit_type_army_infantry_english
 subunit_type_army_infantry_breton
 subunit_type_army_infantry_welsh
+subunit_type_army_infantry_maghrebi_dialect
+subunit_type_army_infantry_arabic
+subunit_type_army_infantry_tamazight
 subunit_type_army_infantry
 
 --------------------
@@ -48359,10 +48404,18 @@ subunit_type_army_cavalry_knights_portuguese
 subunit_type_army_cavalry_knights_french
 subunit_type_army_cavalry_knights_catalan
 subunit_type_army_cavalry_knights_occitan
+subunit_type_army_cavalry_knights_basque
 subunit_type_army_cavalry_knights_spanish
 subunit_type_army_cavalry_knights_scots
 subunit_type_army_cavalry_knights_english
+subunit_type_army_cavalry_knights_arabic
 subunit_type_army_cavalry_knights
+subunit_type_army_cavalry_camelry_maghrebi
+subunit_type_army_cavalry_camelry_arabic
+subunit_type_army_cavalry_camelry_tamazight
+subunit_type_army_cavalry_camelry_basque
+subunit_type_army_cavalry_camelry_spanish
+subunit_type_army_cavalry_camelry
 subunit_type_army_cavalry_chinese
 subunit_type_army_cavalry_shu_language
 subunit_type_army_cavalry_xiang_language
@@ -48389,6 +48442,7 @@ subunit_type_army_cavalry_german
 subunit_type_army_cavalry_catalan
 subunit_type_army_cavalry_occitan
 subunit_type_army_cavalry_portuguese
+subunit_type_army_cavalry_basque
 subunit_type_army_cavalry_spanish
 subunit_type_army_cavalry_french
 subunit_type_army_cavalry_neapolitan_dialect
@@ -48399,6 +48453,8 @@ subunit_type_army_cavalry_irish
 subunit_type_army_cavalry_english
 subunit_type_army_cavalry_welsh
 subunit_type_army_cavalry_welsh
+subunit_type_army_cavalry_arabic
+subunit_type_army_cavalry_tamazight
 subunit_type_army_cavalry
 
 --------------------
@@ -48433,6 +48489,7 @@ subunit_type_army_artillery_high_german
 subunit_type_army_artillery_portuguese
 subunit_type_army_artillery_catalan
 subunit_type_army_artillery_occitan
+subunit_type_army_artillery_basque
 subunit_type_army_artillery_spanish
 subunit_type_army_artillery_french
 subunit_type_army_artillery_sicilian_dialect
@@ -48445,6 +48502,9 @@ subunit_type_army_artillery_scots
 subunit_type_army_artillery_breton
 subunit_type_army_artillery_welsh
 subunit_type_army_artillery_english
+subunit_type_army_artillery_maghrebi_dialect
+subunit_type_army_artillery_arabic
+subunit_type_army_artillery_tamazight
 subunit_type_army_artillery
 
 --------------------
@@ -48477,6 +48537,7 @@ subunit_type_army_auxiliary_frisian
 subunit_type_army_auxiliary_low_german
 subunit_type_army_auxiliary_middle_german
 subunit_type_army_auxiliary_high_german
+subunit_type_army_auxiliary_basque
 subunit_type_army_auxiliary_spanish
 subunit_type_army_auxiliary_occitan
 subunit_type_army_auxiliary_french
@@ -48488,6 +48549,9 @@ subunit_type_army_auxiliary_south_italian
 subunit_type_army_auxiliary_breton
 subunit_type_army_auxiliary_welsh
 subunit_type_army_auxiliary_english
+subunit_type_army_auxiliary_maghrebi_dialect
+subunit_type_army_auxiliary_arabic
+subunit_type_army_auxiliary_tamazight
 subunit_type_army_auxiliary
 
 --------------------
@@ -48498,6 +48562,7 @@ Scope: character
 Random Valid: no
 
 Entries:
+cabinet_role_head_of_cabinet_hajib
 cabinet_role_head_of_cabinet_procurator_of_saint_mark
 cabinet_role_head_of_cabinet_grand_vizier
 cabinet_role_head_of_cabinet_chancellor
@@ -49318,6 +49383,9 @@ Random Valid: no
 
 Entries:
 character_address_holiness
+character_address_all_holiness
+character_address_beatitude
+character_address_eminence
 character_address_imperial_majesty
 character_address_imperial_highness
 character_address_catholic_majesty
@@ -49342,14 +49410,29 @@ Random Valid: no
 
 Entries:
 character_title_guru
+character_title_cardinal
 character_title_saint
 character_title_patriarch
+character_title_grand_master
+character_title_minister
+character_title_prior
+character_title_magister
+character_title_order_member_military
+character_title_order_member
+character_title_order_member_military
+character_title_order_member
+character_title_father
 character_title_doctor
 character_title_colonel
 character_title_nobility_pirate
 character_title_nobility_french
 character_title_nobility_welsh
 character_title_nobility_english
+character_title_nobility_catalan_vowel
+character_title_nobility_catalan
+character_title_nobility_aragonese
+character_title_nobility_spanish
+character_title_nobility_portuguese
 character_title_nobility_malay
 character_title_despot
 
@@ -49360,6 +49443,39 @@ character_title_prefix_female:
 Scope: character
 Random Valid: no
 Parent: character_title_prefix
+Suffix: _female
+
+Entries:
+
+--------------------
+
+character_title_prefix_short:
+
+Scope: character
+Random Valid: no
+
+Entries:
+character_title_cardinal_short
+character_title_doctor_short
+character_title_colonel_short
+character_title_nobility_pirate_short
+character_title_grand_master_short
+character_title_minister_short
+character_title_prior_short
+character_title_magister_short
+character_title_order_member_military_short
+character_title_order_member_short
+character_title_order_member_military_short
+character_title_order_member_short
+character_title_father_short
+
+--------------------
+
+character_title_prefix_short_female:
+
+Scope: character
+Random Valid: no
+Parent: character_title_prefix_short
 Suffix: _female
 
 Entries:
@@ -49531,6 +49647,58 @@ Entries:
 
 --------------------
 
+character_title_prefix_captain_short:
+
+Scope: culture
+Random Valid: no
+
+Entries:
+captain_short_dutch
+captain_short_icelandic
+captain_short_breton
+captain_short_norman
+captain_short_low_german
+captain_short_roman
+captain_short_swedish
+captain_short_spanish
+captain_short_portuguese
+captain_short_occitan
+captain_short_french
+captain_short_frisian
+captain_short_north_italian
+captain_short_italian
+captain_short_german
+captain_short_lithuanian
+captain_short_finnish
+captain_short_polish
+captain_short_czech
+captain_short_hungarian
+captain_short_south_slavic
+captain_short_bulgarian
+captain_short_romanian
+captain_short_greek
+captain_short_russian
+captain_short_ruthenian
+captain_short_basque
+captain_short_welsh
+captain_short_irish
+captain_short_arabic
+captain_short_english
+captain_short_default
+
+--------------------
+
+character_title_prefix_captain_short_female:
+
+Scope: culture
+Random Valid: no
+Parent: character_title_prefix_captain_short
+Suffix: _female
+
+Entries:
+
+--------------------
+
 character_title_prefix_colonel:
 
 Scope: culture
@@ -49596,6 +49764,641 @@ Scope: culture
 Random Valid: no
 Parent: character_title_prefix_colonel
 Suffix: _plural
+
+Entries:
+
+--------------------
+
+character_title_prefix_colonel_short:
+
+Scope: culture
+Random Valid: no
+
+Entries:
+colonel_short_danish
+colonel_short_norwegian
+colonel_short_dutch
+colonel_short_icelandic
+colonel_short_scottish_gaelic
+colonel_short_latvian
+colonel_short_estonian
+colonel_short_breton
+colonel_short_scots
+colonel_short_swedish
+colonel_short_spanish
+colonel_short_portuguese
+colonel_short_occitan
+colonel_short_french
+colonel_short_frisian
+colonel_short_north_italian
+colonel_short_italian
+colonel_short_german
+colonel_short_lithuanian
+colonel_short_finnish
+colonel_short_polish
+colonel_short_czech
+colonel_short_hungarian
+colonel_short_south_slavic
+colonel_short_bulgarian
+colonel_short_romanian
+colonel_short_greek
+colonel_short_russian
+colonel_short_ruthenian
+colonel_short_basque
+colonel_short_welsh
+colonel_short_irish
+colonel_short_arabic
+colonel_short_english
+colonel_short_default
+
+--------------------
+
+character_title_prefix_colonel_short_female:
+
+Scope: culture
+Random Valid: no
+Parent: character_title_prefix_colonel_short
+Suffix: _female
+
+Entries:
+
+--------------------
+
+character_title_prefix_doctor:
+
+Scope: culture
+Random Valid: no
+
+Entries:
+doctor_roman
+doctor_spanish
+doctor_portuguese
+doctor_occitan
+doctor_french
+doctor_north_italian
+doctor_italian
+doctor_romanian
+doctor_english
+doctor_default
+
+--------------------
+
+character_title_prefix_doctor_female:
+
+Scope: culture
+Random Valid: no
+Parent: character_title_prefix_doctor
+Suffix: _female
+
+Entries:
+
+--------------------
+
+character_title_prefix_doctor_short:
+
+Scope: culture
+Random Valid: no
+
+Entries:
+doctor_short_roman
+doctor_short_spanish
+doctor_short_portuguese
+doctor_short_occitan
+doctor_short_french
+doctor_short_north_italian
+doctor_short_italian
+doctor_short_romanian
+doctor_short_english
+doctor_short_default
+
+--------------------
+
+character_title_prefix_doctor_short_female:
+
+Scope: culture
+Random Valid: no
+Parent: character_title_prefix_doctor_short
+Suffix: _female
+
+Entries:
+
+--------------------
+
+character_title_prefix_grand_master:
+
+Scope: culture
+Random Valid: no
+
+Entries:
+grandmaster_catalan
+grandmaster_galician
+grandmaster_aragonese
+grandmaster_spanish
+grandmaster_portuguese
+grandmaster_occitan
+grandmaster_basque
+grandmaster_default
+
+--------------------
+
+character_title_prefix_grand_master_female:
+
+Scope: culture
+Random Valid: no
+Parent: character_title_prefix_grand_master
+Suffix: _female
+
+Entries:
+
+--------------------
+
+character_title_prefix_grand_master_short:
+
+Scope: culture
+Random Valid: no
+Parent: character_title_prefix_grand_master
+Suffix: _short
+
+Entries:
+
+--------------------
+
+character_title_prefix_grand_master_short_female:
+
+Scope: culture
+Random Valid: no
+Parent: character_title_prefix_grand_master
+Suffix: _short_female
+
+Entries:
+
+--------------------
+
+character_title_prefix_magister:
+
+Scope: culture
+Random Valid: no
+
+Entries:
+magister_catalan
+magister_spanish
+magister_portuguese
+magister_occitan
+magister_french
+magister_north_italian
+magister_italian
+magister_german
+magister_polish
+magister_czech
+magister_hungarian
+magister_english
+magister_default
+
+--------------------
+
+character_title_prefix_magister_female:
+
+Scope: culture
+Random Valid: no
+Parent: character_title_prefix_magister
+Suffix: _female
+
+Entries:
+
+--------------------
+
+character_title_prefix_magister_short:
+
+Scope: culture
+Random Valid: no
+Parent: character_title_prefix_magister
+Suffix: _short
+
+Entries:
+
+--------------------
+
+character_title_prefix_magister_short_female:
+
+Scope: culture
+Random Valid: no
+Parent: character_title_prefix_magister
+Suffix: _short_female
+
+Entries:
+
+--------------------
+
+character_title_prefix_minister:
+
+Scope: culture
+Random Valid: no
+
+Entries:
+minister_catalan
+minister_spanish
+minister_portuguese
+minister_occitan
+minister_french
+minister_north_italian
+minister_italian
+minister_default
+
+--------------------
+
+character_title_prefix_minister_female:
+
+Scope: culture
+Random Valid: no
+Parent: character_title_prefix_minister
+Suffix: _female
+
+Entries:
+
+--------------------
+
+character_title_prefix_minister_short:
+
+Scope: culture
+Random Valid: no
+Parent: character_title_prefix_minister
+Suffix: _short
+
+Entries:
+
+--------------------
+
+character_title_prefix_minister_short_female:
+
+Scope: culture
+Random Valid: no
+Parent: character_title_prefix_minister
+Suffix: _short_female
+
+Entries:
+
+--------------------
+
+character_title_prefix_prior:
+
+Scope: culture
+Random Valid: no
+
+Entries:
+prior_catalan
+prior_spanish
+prior_portuguese
+prior_occitan
+prior_french
+prior_north_italian
+prior_italian
+prior_german
+prior_polish
+prior_czech
+prior_hungarian
+prior_english
+prior_default
+
+--------------------
+
+character_title_prefix_prior_female:
+
+Scope: culture
+Random Valid: no
+Parent: character_title_prefix_prior
+Suffix: _female
+
+Entries:
+
+--------------------
+
+character_title_prefix_prior_short:
+
+Scope: culture
+Random Valid: no
+Parent: character_title_prefix_prior
+Suffix: _short
+
+Entries:
+
+--------------------
+
+character_title_prefix_prior_short_female:
+
+Scope: culture
+Random Valid: no
+Parent: character_title_prefix_prior
+Suffix: _short_female
+
+Entries:
+
+--------------------
+
+character_title_prefix_brother:
+
+Scope: culture
+Random Valid: no
+
+Entries:
+brother_catalan
+brother_galician
+brother_aragonese
+brother_leonese
+brother_danish
+brother_norwegian
+brother_dutch
+brother_icelandic
+brother_scottish_gaelic
+brother_slovak
+brother_latvian
+brother_estonian
+brother_breton
+brother_norman
+brother_low_german
+brother_scots
+brother_swedish
+brother_spanish
+brother_portuguese
+brother_occitan
+brother_french
+brother_frisian
+brother_north_italian
+brother_italian
+brother_german
+brother_lithuanian
+brother_finnish
+brother_polish
+brother_czech
+brother_hungarian
+brother_south_slavic
+brother_bulgarian
+brother_romanian
+brother_greek
+brother_russian
+brother_ruthenian
+brother_basque
+brother_welsh
+brother_irish
+brother_arabic
+brother_english
+brother_default
+
+--------------------
+
+character_title_prefix_brother_short:
+
+Scope: culture
+Random Valid: no
+Parent: character_title_prefix_brother
+Suffix: _short
+
+Entries:
+
+--------------------
+
+character_title_prefix_brother_female:
+
+Scope: culture
+Random Valid: no
+Parent: character_title_prefix_brother
+Suffix: _female
+
+Entries:
+
+--------------------
+
+character_title_prefix_brother_short_female:
+
+Scope: culture
+Random Valid: no
+Parent: character_title_prefix_brother
+Suffix: _short_female
+
+Entries:
+
+--------------------
+
+character_title_prefix_brother_knight:
+
+Scope: culture
+Random Valid: no
+Parent: character_title_prefix_brother
+Suffix: _knight
+
+Entries:
+
+--------------------
+
+character_title_prefix_brother_knight_short:
+
+Scope: culture
+Random Valid: no
+Parent: character_title_prefix_brother
+Suffix: _knight_short
+
+Entries:
+
+--------------------
+
+character_title_prefix_father:
+
+Scope: culture
+Random Valid: no
+
+Entries:
+father_catalan
+father_galician
+father_aragonese
+father_leonese
+father_danish
+father_norwegian
+father_dutch
+father_icelandic
+father_scottish_gaelic
+father_slovak
+father_latvian
+father_estonian
+father_breton
+father_norman
+father_low_german
+father_scots
+father_swedish
+father_spanish
+father_portuguese
+father_occitan
+father_french
+father_frisian
+father_north_italian
+father_italian
+father_german
+father_lithuanian
+father_finnish
+father_polish
+father_czech
+father_hungarian
+father_south_slavic
+father_bulgarian
+father_romanian
+father_greek
+father_russian
+father_ruthenian
+father_basque
+father_welsh
+father_irish
+father_arabic
+father_english
+father_default
+
+--------------------
+
+character_title_prefix_father_short:
+
+Scope: culture
+Random Valid: no
+Parent: character_title_prefix_father
+Suffix: _short
+
+Entries:
+
+--------------------
+
+character_title_prefix_father_female:
+
+Scope: culture
+Random Valid: no
+Parent: character_title_prefix_father
+Suffix: _female
+
+Entries:
+
+--------------------
+
+character_title_prefix_father_short_female:
+
+Scope: culture
+Random Valid: no
+Parent: character_title_prefix_father
+Suffix: _short_female
+
+Entries:
+
+--------------------
+
+character_title_prefix_cardinal:
+
+Scope: culture
+Random Valid: no
+
+Entries:
+cardinal_catalan
+cardinal_danish
+cardinal_norwegian
+cardinal_dutch
+cardinal_icelandic
+cardinal_scottish_gaelic
+cardinal_slovak
+cardinal_latvian
+cardinal_estonian
+cardinal_breton
+cardinal_norman
+cardinal_low_german
+cardinal_scots
+cardinal_galician
+cardinal_latin
+cardinal_swedish
+cardinal_spanish
+cardinal_portuguese
+cardinal_occitan
+cardinal_french
+cardinal_frisian
+cardinal_north_italian
+cardinal_italian
+cardinal_german
+cardinal_lithuanian
+cardinal_finnish
+cardinal_polish
+cardinal_czech
+cardinal_hungarian
+cardinal_south_slavic
+cardinal_bulgarian
+cardinal_romanian
+cardinal_greek
+cardinal_russian
+cardinal_ruthenian
+cardinal_basque
+cardinal_welsh
+cardinal_irish
+cardinal_english
+cardinal_default
+
+--------------------
+
+character_title_prefix_cardinal_female:
+
+Scope: culture
+Random Valid: no
+Parent: character_title_prefix_cardinal
+Suffix: _female
+
+Entries:
+
+--------------------
+
+character_title_prefix_cardinal_short:
+
+Scope: culture
+Random Valid: no
+
+Entries:
+cardinal_short_catalan
+cardinal_short_danish
+cardinal_short_norwegian
+cardinal_short_dutch
+cardinal_short_icelandic
+cardinal_short_scottish_gaelic
+cardinal_short_slovak
+cardinal_short_latvian
+cardinal_short_estonian
+cardinal_short_breton
+cardinal_short_norman
+cardinal_short_low_german
+cardinal_short_scots
+cardinal_short_galician
+cardinal_short_latin
+cardinal_short_swedish
+cardinal_short_spanish
+cardinal_short_portuguese
+cardinal_short_occitan
+cardinal_short_french
+cardinal_short_frisian
+cardinal_short_north_italian
+cardinal_short_italian
+cardinal_short_german
+cardinal_short_lithuanian
+cardinal_short_finnish
+cardinal_short_polish
+cardinal_short_czech
+cardinal_short_hungarian
+cardinal_short_south_slavic
+cardinal_short_bulgarian
+cardinal_short_romanian
+cardinal_short_greek
+cardinal_short_russian
+cardinal_short_ruthenian
+cardinal_short_basque
+cardinal_short_welsh
+cardinal_short_irish
+cardinal_short_english
+cardinal_short_default
+
+--------------------
+
+character_title_prefix_cardinal_short_female:
+
+Scope: culture
+Random Valid: no
+Parent: character_title_prefix_cardinal_short
+Suffix: _female
 
 Entries:
 
@@ -51904,6 +52707,7 @@ UNION_OF_THE_CROWNS_NAME
 IBERIAN_UNION_NAME
 HABSBURG_UNION_NAME
 PERSONALIZED_UNION_NAME
+TRIPLE_UNION_NAME
 DOUBLE_UNION_NAME
 union
 
