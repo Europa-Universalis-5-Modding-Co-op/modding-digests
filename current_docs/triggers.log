@@ -11412,6 +11412,12 @@ Traits: <, <=, =, !=, >, >=
 Reads gamestate for all scopes.
 **Supported Scopes**: estate  
 
+## tariffs_paid_to
+gold the scope country's trades paid in tariffs last month to markets owned by the target. tariffs_paid_to = { target = X [*value >/</>=/<= Y* or *value = { min max }*  }
+Traits: <, <=, =, !=, >, >=
+Reads gamestate for all scopes.
+**Supported Scopes**: country  
+
 ## this_antagonism_towards_prev
 Gets the current scope country's antagonism towards the previous scope country
 Traits: <, <=, =, !=, >, >=

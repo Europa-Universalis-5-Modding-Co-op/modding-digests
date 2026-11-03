@@ -560,6 +560,12 @@ Expected Scope: none/any
 
 --------------------
 
+yearly_flavor_ire_pulse:
+From Code: No
+Expected Scope: country
+
+--------------------
+
 d009_bfts_transfer_subject:
 From Code: No
 Expected Scope: none/any
