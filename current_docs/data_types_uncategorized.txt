@@ -4480,6 +4480,12 @@ Return type: CString
 
 -----------------------
 
+GetDateStringWithHour
+Definition type: Global function
+Return type: CString
+
+-----------------------
+
 GetDebugFontColor
 Definition type: Global function
 Return type: CVector4f
@@ -38277,6 +38283,12 @@ Return type: bool
 
 -----------------------
 
+AdvanceDefinition.IsContentHighlighted
+Definition type: Function
+Return type: bool
+
+-----------------------
+
 AdvanceDefinition.Self
 Definition type: Function
 Return type: [unregistered]
@@ -49119,6 +49131,12 @@ Return type: bool
 
 -----------------------
 
+BuildingType.IsContentHighlighted
+Definition type: Function
+Return type: bool
+
+-----------------------
+
 BuildingType.IsEstablishmentSystemEnabled
 Definition type: Function
 Return type: bool
@@ -49795,6 +49813,12 @@ Return type: CString
 BureaucracyType.GetTooltip
 Definition type: Function
 Return type: CString
+
+-----------------------
+
+BureaucracyType.IsContentHighlighted
+Definition type: Function
+Return type: bool
 
 -----------------------
 
@@ -50815,6 +50839,12 @@ Return type: bool
 
 -----------------------
 
+CabinetAction.IsContentHighlighted
+Definition type: Function
+Return type: bool
+
+-----------------------
+
 CabinetAction.IsRebelCrackdown
 Definition type: Function
 Return type: bool
@@ -51361,6 +51391,12 @@ Return type: bool
 -----------------------
 
 Calling.HasPreferredSocietalValues
+Definition type: Function
+Return type: bool
+
+-----------------------
+
+Calling.IsContentHighlighted
 Definition type: Function
 Return type: bool
 
@@ -53275,6 +53311,12 @@ Return type: CString
 CharacterInteraction.GetTooltip
 Definition type: Function
 Return type: CString
+
+-----------------------
+
+CharacterInteraction.IsContentHighlighted
+Definition type: Function
+Return type: bool
 
 -----------------------
 
@@ -61574,6 +61616,12 @@ Return type: CString
 
 -----------------------
 
+CountryInteraction.IsContentHighlighted
+Definition type: Function
+Return type: bool
+
+-----------------------
+
 CountryInteraction.Self
 Definition type: Function
 Return type: [unregistered]
@@ -64102,6 +64150,59 @@ Return type: [unregistered]
 
 -----------------------
 
+DLCRelatedTagItem
+Definition type: Type
+
+-----------------------
+
+DLCRelatedTagItem.GetRelatedCountry
+Definition type: Promote
+Return type: Country
+
+-----------------------
+
+DLCRelatedTagItem.GetRelatedFormableCountry
+Definition type: Promote
+Return type: FormableCountry
+
+-----------------------
+
+DLCRelatedTagItem.AccessSelf
+Definition type: Function
+Return type: [unregistered]
+
+-----------------------
+
+DLCRelatedTagItem.GetRelatedCountry
+Definition type: Function
+Return type: [unregistered]
+
+-----------------------
+
+DLCRelatedTagItem.GetRelatedFormableCountry
+Definition type: Function
+Return type: [unregistered]
+
+-----------------------
+
+DLCRelatedTagItem.HasRelatedCountry
+Definition type: Function
+Return type: bool
+
+-----------------------
+
+DLCRelatedTagItem.HasRelatedFormableCountry
+Definition type: Function
+Return type: bool
+
+-----------------------
+
+DLCRelatedTagItem.Self
+Definition type: Function
+Return type: [unregistered]
+
+-----------------------
+
 DatabaseModifier
 Definition type: Type
 
@@ -64274,6 +64375,12 @@ Return type: bool
 -----------------------
 
 Decision.IsAllowedForCountry( Arg0 )
+Definition type: Function
+Return type: bool
+
+-----------------------
+
+Decision.IsContentHighlighted
 Definition type: Function
 Return type: bool
 
@@ -67522,6 +67629,12 @@ Return type: CString
 -----------------------
 
 DisasterType.HasHint
+Definition type: Function
+Return type: bool
+
+-----------------------
+
+DisasterType.IsContentHighlighted
 Definition type: Function
 Return type: bool
 
@@ -70851,6 +70964,12 @@ Return type: bool
 
 -----------------------
 
+EstatePrivilege.IsContentHighlighted
+Definition type: Function
+Return type: bool
+
+-----------------------
+
 EstatePrivilege.IsCountryUnlock
 Definition type: Function
 Return type: bool
@@ -72456,6 +72575,12 @@ Return type: [unregistered]
 
 -----------------------
 
+ExpeditionType.GetLeaderConditions
+Definition type: Function
+Return type: CString
+
+-----------------------
+
 ExpeditionType.GetName
 Definition type: Function
 Return type: CString
@@ -72493,6 +72618,12 @@ Return type: bool
 -----------------------
 
 ExpeditionType.HasIcon
+Definition type: Function
+Return type: bool
+
+-----------------------
+
+ExpeditionType.HasLeaderRequirements
 Definition type: Function
 Return type: bool
 
@@ -74494,6 +74625,12 @@ Return type: bool
 
 -----------------------
 
+FormableCountry.IsContentHighlighted
+Definition type: Function
+Return type: bool
+
+-----------------------
+
 FormableCountry.Self
 Definition type: Function
 Return type: [unregistered]
@@ -75347,6 +75484,12 @@ Return type: CString
 
 -----------------------
 
+GameDLC.GetFeaturesDesc
+Definition type: Function
+Return type: CString
+
+-----------------------
+
 GameDLC.GetFirstRelatedCountry
 Definition type: Function
 Return type: [unregistered]
@@ -75360,12 +75503,6 @@ Return type: [unregistered]
 -----------------------
 
 GameDLC.GetName
-Definition type: Function
-Return type: CString
-
------------------------
-
-GameDLC.GetTooltip
 Definition type: Function
 Return type: CString
 
@@ -75555,12 +75692,6 @@ Return type: bool
 
 -----------------------
 
-GameLobby.CanOpenMultiplayerTT
-Definition type: Function
-Return type: CString
-
------------------------
-
 GameLobby.CanStart
 Definition type: Function
 Return type: bool
@@ -75678,12 +75809,6 @@ Return type: [unregistered]
 GameLobby.GetStartButtonText
 Definition type: Function
 Return type: CString
-
------------------------
-
-GameLobby.GetTopSocietalValues
-Definition type: Function
-Return type: [unregistered]
 
 -----------------------
 
@@ -75938,7 +76063,25 @@ Return type: [unregistered]
 
 -----------------------
 
+GameLobbyDLCView.GetHighlightedShowcaseItems
+Definition type: Function
+Return type: [unregistered]
+
+-----------------------
+
 GameLobbyDLCView.GetRelatedCountries
+Definition type: Function
+Return type: [unregistered]
+
+-----------------------
+
+GameLobbyDLCView.GetSecondaryRelatedTags
+Definition type: Function
+Return type: [unregistered]
+
+-----------------------
+
+GameLobbyDLCView.GetShowcaseCarouselItems
 Definition type: Function
 Return type: [unregistered]
 
@@ -75962,7 +76105,7 @@ Return type: [unregistered]
 
 -----------------------
 
-GameLobbyDLCView.HasDLC
+GameLobbyDLCView.IsShowcaseScrolling
 Definition type: Function
 Return type: bool
 
@@ -75971,6 +76114,24 @@ Return type: bool
 GameLobbyDLCView.Self
 Definition type: Function
 Return type: [unregistered]
+
+-----------------------
+
+GameLobbyDLCView.ShowcaseScrollLeft
+Definition type: Function
+Return type: void
+
+-----------------------
+
+GameLobbyDLCView.ShowcaseScrollRight
+Definition type: Function
+Return type: void
+
+-----------------------
+
+GameLobbyDLCView.ShowcaseScrollStop
+Definition type: Function
+Return type: void
 
 -----------------------
 
@@ -76245,6 +76406,12 @@ Return type: CString
 -----------------------
 
 GenericAction.HasIcon
+Definition type: Function
+Return type: bool
+
+-----------------------
+
+GenericAction.IsContentHighlighted
 Definition type: Function
 Return type: bool
 
@@ -79453,6 +79620,12 @@ Return type: bool
 
 -----------------------
 
+GovernmentReform.IsContentHighlighted
+Definition type: Function
+Return type: bool
+
+-----------------------
+
 GovernmentReform.IsMajor
 Definition type: Function
 Return type: bool
@@ -80961,6 +81134,12 @@ Return type: CString
 
 -----------------------
 
+HeirSelection.IsContentHighlighted
+Definition type: Function
+Return type: bool
+
+-----------------------
+
 HeirSelection.IsLocked( Arg0 )
 Definition type: Function
 Return type: bool
@@ -82283,6 +82462,12 @@ Return type: CString
 
 -----------------------
 
+ImplementedPolicy.GetModifierTextForOrganization( Arg0 )
+Definition type: Function
+Return type: CString
+
+-----------------------
+
 ImplementedPolicy.GetName
 Definition type: Function
 Return type: CString
@@ -83341,6 +83526,12 @@ Return type: CString
 IndustryType.GetTooltip
 Definition type: Function
 Return type: CString
+
+-----------------------
+
+IndustryType.IsContentHighlighted
+Definition type: Function
+Return type: bool
 
 -----------------------
 
@@ -90086,6 +90277,12 @@ Return type: bool
 
 -----------------------
 
+Law.IsContentHighlighted
+Definition type: Function
+Return type: bool
+
+-----------------------
+
 Law.IsUnionCoreLaw
 Definition type: Function
 Return type: bool
@@ -90520,6 +90717,12 @@ Return type: [unregistered]
 -----------------------
 
 LevySetup.HasAge
+Definition type: Function
+Return type: bool
+
+-----------------------
+
+LevySetup.IsContentHighlighted
 Definition type: Function
 Return type: bool
 
@@ -91114,6 +91317,12 @@ Return type: Goods
 
 -----------------------
 
+Location.GetRawMaterialBonusModifier
+Definition type: Promote
+Return type: StaticModifier
+
+-----------------------
+
 Location.GetRegion
 Definition type: Promote
 Return type: Region
@@ -91397,6 +91606,12 @@ Return type: CString
 -----------------------
 
 Location.GetAttritionDescription
+Definition type: Function
+Return type: CString
+
+-----------------------
+
+Location.GetAttritionDescriptionForCountry( Arg0 )
 Definition type: Function
 Return type: CString
 
@@ -92416,6 +92631,12 @@ Return type: CString
 
 -----------------------
 
+Location.GetMigrationChangeCompact
+Definition type: Function
+Return type: CString
+
+-----------------------
+
 Location.GetMigrationInfo
 Definition type: Function
 Return type: CString
@@ -92999,6 +93220,12 @@ Return type: [unregistered]
 -----------------------
 
 Location.GetRawMaterial
+Definition type: Function
+Return type: [unregistered]
+
+-----------------------
+
+Location.GetRawMaterialBonusModifier
 Definition type: Function
 Return type: [unregistered]
 
@@ -93678,6 +93905,12 @@ Return type: bool
 -----------------------
 
 Location.HasRawMaterial
+Definition type: Function
+Return type: bool
+
+-----------------------
+
+Location.HasRawMaterialBonusModifier
 Definition type: Function
 Return type: bool
 
@@ -99978,7 +100211,19 @@ Return type: [unregistered]
 
 -----------------------
 
-Merchant.GetAverageTradeCapacityProfitInfo
+Merchant.GetAverageIncomePerTradeCapacity
+Definition type: Function
+Return type: CFixedPoint
+
+-----------------------
+
+Merchant.GetAverageUpkeepPerTradeCapacity
+Definition type: Function
+Return type: CFixedPoint
+
+-----------------------
+
+Merchant.GetAverageUpkeepPerTradeCapacityInfo
 Definition type: Function
 Return type: CString
 
@@ -104922,6 +105167,12 @@ Return type: CString
 
 -----------------------
 
+Omen.IsContentHighlighted
+Definition type: Function
+Return type: bool
+
+-----------------------
+
 Omen.Self
 Definition type: Function
 Return type: [unregistered]
@@ -109419,6 +109670,12 @@ Return type: bool
 -----------------------
 
 Policy.IsCentralizing
+Definition type: Function
+Return type: bool
+
+-----------------------
+
+Policy.IsContentHighlighted
 Definition type: Function
 Return type: bool
 
@@ -118020,6 +118277,12 @@ Return type: CString
 
 -----------------------
 
+ReligiousAspect.IsContentHighlighted
+Definition type: Function
+Return type: bool
+
+-----------------------
+
 ReligiousAspect.Self
 Definition type: Function
 Return type: [unregistered]
@@ -119160,6 +119423,12 @@ Return type: [unregistered]
 -----------------------
 
 ReligiousOrderType.HasValidCallings
+Definition type: Function
+Return type: bool
+
+-----------------------
+
+ReligiousOrderType.IsContentHighlighted
 Definition type: Function
 Return type: bool
 
@@ -128585,6 +128854,12 @@ Return type: bool
 
 -----------------------
 
+Situation.IsContentHighlighted
+Definition type: Function
+Return type: bool
+
+-----------------------
+
 Situation.Self
 Definition type: Function
 Return type: [unregistered]
@@ -129383,6 +129658,12 @@ Return type: CString
 SocietalValue.GetTooltip
 Definition type: Function
 Return type: CString
+
+-----------------------
+
+SocietalValue.IsContentHighlighted
+Definition type: Function
+Return type: bool
 
 -----------------------
 
@@ -132221,6 +132502,12 @@ Return type: bool
 
 -----------------------
 
+SubUnitType.IsContentHighlighted
+Definition type: Function
+Return type: bool
+
+-----------------------
+
 SubUnitType.IsForLevy
 Definition type: Function
 Return type: bool
@@ -132764,6 +133051,12 @@ Return type: bool
 -----------------------
 
 SubjectType.HasSubjectBenefits
+Definition type: Function
+Return type: bool
+
+-----------------------
+
+SubjectType.IsContentHighlighted
 Definition type: Function
 Return type: bool
 
@@ -136361,6 +136654,12 @@ Return type: bool
 -----------------------
 
 TownRightsType.HasUpgradesTo
+Definition type: Function
+Return type: bool
+
+-----------------------
+
+TownRightsType.IsContentHighlighted
 Definition type: Function
 Return type: bool
 
@@ -141644,6 +141943,12 @@ Return type: bool
 
 -----------------------
 
+UniqueContentItem.IsContentHighlighted
+Definition type: Function
+Return type: bool
+
+-----------------------
+
 UniqueContentItem.IsCountryInteraction
 Definition type: Function
 Return type: bool
@@ -141681,6 +141986,12 @@ Return type: bool
 -----------------------
 
 UniqueContentItem.IsGovernmentReform
+Definition type: Function
+Return type: bool
+
+-----------------------
+
+UniqueContentItem.IsHeaderColor( Arg0 )
 Definition type: Function
 Return type: bool
 
@@ -141775,6 +142086,12 @@ Return type: GameConceptTooltip
 
 -----------------------
 
+UniqueContentTypeCategory.GetPluralConcept
+Definition type: Promote
+Return type: GameConceptTooltip
+
+-----------------------
+
 UniqueContentTypeCategory.AccessSelf
 Definition type: Function
 Return type: [unregistered]
@@ -141796,6 +142113,24 @@ Return type: CPdxStringView
 UniqueContentTypeCategory.GetItems
 Definition type: Function
 Return type: [unregistered]
+
+-----------------------
+
+UniqueContentTypeCategory.GetPluralConcept
+Definition type: Function
+Return type: [unregistered]
+
+-----------------------
+
+UniqueContentTypeCategory.IsConceptKey( Arg0 )
+Definition type: Function
+Return type: bool
+
+-----------------------
+
+UniqueContentTypeCategory.IsHeaderColor( Arg0 )
+Definition type: Function
+Return type: bool
 
 -----------------------
 

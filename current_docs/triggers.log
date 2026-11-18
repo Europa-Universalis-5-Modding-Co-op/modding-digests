@@ -3084,6 +3084,13 @@ Reads gamestate for all scopes.
 **Supported Scopes**: country  
 **Supported Targets**: country  
 
+## can_launch_conquistador_from_homeland
+Can the target country reach this area with a conquistador from a port in its capital area or capital region, within naval range?
+Traits: country tag/country scope
+Reads gamestate for all scopes.
+**Supported Scopes**: area  
+**Supported Targets**: country  
+
 ## can_lead_expedition
 Check if the previous-scope character meets the leader requirements for this expedition type
 Traits: yes/no 

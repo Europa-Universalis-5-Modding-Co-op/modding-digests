@@ -854,6 +854,12 @@ Expected Scope: none/any
 
 --------------------
 
+d009_gc_losing_war:
+From Code: No
+Expected Scope: none/any
+
+--------------------
+
 on_character_moved_country:
 From Code: Yes
 Expected Scope: none/any
@@ -1372,12 +1378,6 @@ Expected Scope: country
 
 on_international_organization_disbanding:
 From Code: Yes
-Expected Scope: none/any
-
---------------------
-
-d009_gc_winning_war:
-From Code: No
 Expected Scope: none/any
 
 --------------------

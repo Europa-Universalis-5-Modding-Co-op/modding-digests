@@ -1,5 +1,6 @@
 # Release 1.4.5
 ## Breaking Changes
+- `Setup/start` moved into bookmark folders
 - Removed complacency mechanic
 - Removed cardinal scope
 ## Type Documentation
